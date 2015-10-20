@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D45323F-5450-4B2F-890F-93C4EC73267F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <StartupObject>ADSReportGenerator.modMain</StartupObject>
+    <RootNamespace>ADSReportGenerator</RootNamespace>
+    <AssemblyName>ADSReportGenerator8</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ManifestCertificateThumbprint>E06138B61DA15844E5F1404A3A04623E288FA5C4</ManifestCertificateThumbprint>
+    <ManifestKeyFile>ADSReportGenerator_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ADSReportGenerator8.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ADSReportGenerator8.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="GrapeCity.ActiveReports.Chart.v8, Version=8.0.133.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Design.Win.v8, Version=8.0.133.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Diagnostics.v8, Version=8.0.133.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Document.v8, Version=8.0.133.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Excel.v8, Version=8.0.133.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Image.v8, Version=8.0.133.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Pdf.v8, Version=8.0.133.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Rdf.v8, Version=8.0.133.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Word.v8, Version=8.0.133.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Extensibility.v8, Version=8.0.133.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.v8, Version=8.0.133.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Win.v8, Version=8.0.133.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ADSReportGenerator" />
+    <Import Include="ADSReportGenerator.My" />
+    <Import Include="ADSReportGenerator.My.Resources" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="rptEMEATimberStdDoorSizes.Designer.vb">
+      <DependentUpon>rptEMEATimberStdDoorSizes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEMEATimberStdDoorSizes.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptEMEACoverLetter.Designer.vb">
+      <DependentUpon>rptEMEACoverLetter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEMEACoverLetter.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptEMEAQuoteTerms.Designer.vb">
+      <DependentUpon>rptEMEAQuoteTerms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEMEAQuoteTerms.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptEMEADoorSummary.Designer.vb">
+      <DependentUpon>rptEMEADoorSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEMEADoorSummary.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptEMEAHWScheduleSummary.Designer.vb">
+      <DependentUpon>rptEMEAHWScheduleSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEMEAHWScheduleSummary.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataCls.vb" />
+    <Compile Include="modMain.vb" />
+    <Compile Include="modWinAPI.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="rptAPACBuildingSummary.Designer.vb">
+      <DependentUpon>rptAPACBuildingSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptAPACBuildingSummary.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptAPACDoorHardwareSchedule.designer.vb">
+      <DependentUpon>rptAPACDoorHardwareSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptAPACDoorHardwareSchedule.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptCompareHWSets.Designer.vb">
+      <DependentUpon>rptCompareHWSets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptCompareHWSets.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptCompareDoors.designer.vb">
+      <DependentUpon>rptCompareDoors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptCompareDoors.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDoorEstimateReport.Designer.vb">
+      <DependentUpon>rptDoorEstimateReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptDoorEstimateReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDoorFrameSchedule.Designer.vb">
+      <DependentUpon>rptDoorFrameSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptDoorFrameSchedule.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptAddRemoveDoors.designer.vb">
+      <DependentUpon>rptAddRemoveDoors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptAddRemoveDoors.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptAddRemoveHWSets.designer.vb">
+      <DependentUpon>rptAddRemoveHWSets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptAddRemoveHWSets.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptEMEAHWSchedule.Designer.vb">
+      <DependentUpon>rptEMEAHWSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEMEAHWSchedule.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptEMEAHWSetSummary.designer.vb">
+      <DependentUpon>rptEMEAHWSetSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEMEAHWSetSummary.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptHWEstimate.Designer.vb">
+      <DependentUpon>rptHWEstimate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptHWEstimate.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptHWSchedule.Designer.vb">
+      <DependentUpon>rptHWSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptHWSchedule.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptHWSetEstimate.Designer.vb">
+      <DependentUpon>rptHWSetEstimate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptHWSetEstimate.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptUnmatchHW.designer.vb">
+      <DependentUpon>rptUnmatchHW.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptUnmatchHW.vb">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="rptEMEATimberStdDoorSizes.resx">
+      <DependentUpon>rptEMEATimberStdDoorSizes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEMEACoverLetter.resx">
+      <DependentUpon>rptEMEACoverLetter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEMEAQuoteTerms.resx">
+      <DependentUpon>rptEMEAQuoteTerms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEMEADoorSummary.resx">
+      <DependentUpon>rptEMEADoorSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEMEAHWScheduleSummary.resx">
+      <DependentUpon>rptEMEAHWScheduleSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptAPACBuildingSummary.resx">
+      <DependentUpon>rptAPACBuildingSummary.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptAPACDoorHardwareSchedule.resx">
+      <DependentUpon>rptAPACDoorHardwareSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCompareHWSets.resx">
+      <DependentUpon>rptCompareHWSets.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCompareDoors.resx">
+      <DependentUpon>rptCompareDoors.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDoorEstimateReport.resx">
+      <DependentUpon>rptDoorEstimateReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDoorFrameSchedule.resx">
+      <DependentUpon>rptDoorFrameSchedule.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptAddRemoveDoors.resx">
+      <DependentUpon>rptAddRemoveDoors.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptAddRemoveHWSets.resx">
+      <DependentUpon>rptAddRemoveHWSets.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEMEAHWSchedule.resx">
+      <DependentUpon>rptEMEAHWSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEMEAHWSetSummary.resx">
+      <DependentUpon>rptEMEAHWSetSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptHWEstimate.resx">
+      <DependentUpon>rptHWEstimate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptHWSchedule.resx">
+      <DependentUpon>rptHWSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptHWSetEstimate.resx">
+      <DependentUpon>rptHWSetEstimate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptUnmatchHW.resx">
+      <DependentUpon>rptUnmatchHW.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ADSReportGenerator_TemporaryKey.pfx" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="ActiveReports.Chart">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Vbe.Interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="office">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
