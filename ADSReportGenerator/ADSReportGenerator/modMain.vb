@@ -144,7 +144,7 @@ Module ModMain
                 'QUOTETERMSúMETRICú28640úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Quote_Terms.pdfúPDFúúú4344úRev72
 
                 ' emea timber standard door sizes report
-                'TIMBERSTDDOORSIZESúMETRICú28640úúC:\Users\wrightj\Documents\CGI\AA\Output\Timber_Std_Door_Sizes.pdfúPDFúúDoor Summaryú4344úRev72
+                'TIMBERSTDDOORSIZESúMETRICú28618úúC:\Users\wrightj\Documents\CGI\AA\Output\Timber_Std_Door_Sizes.pdfúPDFúúDoor Summaryú4344úRev72
 
                 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -3901,39 +3901,75 @@ ErrHandler:
         "       AH.SetName, " & _
         "       AD.Thickness, " & _
         "       AD.FireRating + '/' + AD.AcousticRating AS Rating, " & _
-        "       AD.FrameDepth " & _
+        "       CASE RIGHT(MAX(FrameDepthArray.FrameDepthList),1) WHEN ',' THEN LEFT(MAX(FrameDepthArray.FrameDepthList), LEN(MAX(FrameDepthArray.FrameDepthList))-1) ELSE REPLACE(SUBSTRING(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '), 0, LEN(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '))), RTRIM(RIGHT(SUBSTRING(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '), 0, LEN(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '))), CHARINDEX(',', REVERSE(SUBSTRING(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '), 0, LEN(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '))))))), ' and' + RTRIM(RIGHT(SUBSTRING(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '), 0, LEN(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '))), CHARINDEX(',', REVERSE(SUBSTRING(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '), 0, LEN(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '))))) - 1))) END AS FrameDepthList " & _
         "   FROM AAOSProjects AP " & _
         "   INNER JOIN AAOSDoors AD ON	AP.id = AD.ProjectID " & _
-        "   LEFT OUTER JOIN AAOSHWSets AH ON AP.id = AH.ProjectID AND AD.hwset = AH.setname " & _
+        "   INNER JOIN AAOSHWSets AH ON AP.id = AH.ProjectID AND AD.hwset = AH.setname " & _
+        "   LEFT OUTER JOIN ( " & _
+        "   	SELECT	DISTINCT (ProjectID) ProjectID, " & _
+        "   			STUFF((	SELECT ' ', ' ', + AD.FrameDepth [text()] " & _
+        "   					FROM   (SELECT	TOP 10000 (ProjectID), " & _
+        "   									CASE WHEN LEN(CAST (AD.FrameDepth AS VARCHAR(MAX))) > 0 THEN (CAST(AD.FrameDepth AS VARCHAR(MAX)) + ',' ) " & _
+        "   									ELSE NULL " & _
+        "   									END FrameDepth " & _
+        "   							FROM   AAOSDoors AD " & _
+        "   							WHERE  ProjectID = @ProjectID " & _
+        "   							AND	   AD.FrameDepth != '' " & _
+        "   							GROUP  BY ProjectID,AD.FrameDepth " & _
+        "   							ORDER BY AD.FrameDepth) AD " & _
+        "                       WHERE  ProjectID = @ProjectID " & _
+        "   					FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ' " & _
+        "   	                ) FrameDepthList " & _
+        "   	FROM   AAOSDoors AD " & _
+        "   	WHERE  AD.ProjectID = @ProjectID " & _
+        "   	GROUP  BY AD.ProjectID) FrameDepthArray ON FrameDepthArray.ProjectID = AP.id " & _
         "   WHERE AP.id = @ProjectID " & _
         "   GROUP BY " & _
         "       AH.SetName, " & _
         "       AD.Thickness, " & _
         "       AD.AcousticRating, " & _
-        "       AD.FireRating, " & _
-        "       AD.FrameDepth " & _
+        "       AD.FireRating " & _
         "   ORDER BY " & _
         "       AH.SetName "
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
-        Dim iQty As Integer
-        Dim dv1 As New DataView(dc1.DT.Clone)
-        Dim iFind As Integer
-        Dim drv As DataRowView
-        Dim str1 As String = ""
-        Dim dValue As Double
-        Dim curSet As String = ""
-        Dim curQty As Integer = 0
-        Dim curMarkList As String = ""
-        Dim curTotPrice As Double
+        Dim strQ2 As String
+        strQ2 = "    DECLARE @ProjectID INT" & _
+        "   SET @ProjectID = " & PrjID1.ToString & _
+        "   SELECT " & _
+        "       CASE MAX(AH.Leaf) WHEN 'A' THEN 'Single Leaf' WHEN 'B' THEN 'Equal Leaf Pairs' WHEN  'I' THEN 'Unequal Leaf Pairs' ELSE '' END AS Leaf, " & _
+        "       -1 AS ModuleSize, " & _
+        "       AD.Extra1 + CASE WHEN ISNULL(AD.Extra1,'') = '' THEN '' ELSE  ' x ' END + AD.Extra2 AS StructuralOpeningSize, " & _
+        "       CAST(AD.RoughWidth AS VARCHAR(MAX)) + ' x ' + CAST(AD.RoughHeight AS VARCHAR(MAX)) AS TimberFrameSize, " & _
+        "       CAST(AD.Width AS VARCHAR(MAX)) + ' x ' + CAST(AD.Height AS VARCHAR(MAX)) AS DoorLeafSize, " & _
+        "       -1 AS KickPlateSize " & _
+        "   FROM AAOSProjects AP " & _
+        "   INNER JOIN AAOSDoors AD ON	AP.id = AD.ProjectID " & _
+        "   INNER JOIN AAOSHWSets AH ON AP.id = AH.ProjectID AND AD.hwset = AH.setname " & _
+        "   WHERE AP.id = @ProjectID " & _
+        "   GROUP BY " & _
+        "       AD.Extra1 + CASE WHEN ISNULL(AD.Extra1,'') ='' THEN '' ELSE  ' x ' END + AD.Extra2, " & _
+        "       CAST(AD.RoughWidth AS VARCHAR(MAX)) + ' x ' + CAST(AD.RoughHeight AS VARCHAR(MAX)), " & _
+        "       CAST(AD.Width AS VARCHAR(MAX)) + ' x ' + CAST(AD.Height AS VARCHAR(MAX)) " & _
+        "   ORDER BY 1,5 "
+
+        'Dim file As System.IO.StreamWriter
+        'file = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\wrightj\Documents\test.txt", True)
+        'file.WriteLine(strQ)
+        'file.Close()
+
+        Dim dc As New DataCls(strQ, DataDB, False, False, False)
+
+        Dim dc2 As New DataCls(strQ2, DataDB, False, False, False)
 
         Dim rpt As New rptEMEATimberStdDoorSizes
-        rpt.DataSource = dc1.DT
+        rpt.DataSource = dc2.DT
         rpt.sReportTitle = arguments(7)
         rpt.sRevisionText = RevisionTxt
         rpt.sHash = Hash
         rpt.ISO = ReportLangISO
+        rpt.subDC = dc1
         rpt.Run()
 
         If My.Computer.FileSystem.DirectoryExists(Path.GetDirectoryName(arguments(4))) = False Then
@@ -4093,9 +4129,9 @@ ErrHandler:
         " HW.Description ProductCode, " & _
         " HW.TypeDescription   ProductDescription, " & _
         " PH.UOM, " & _
-        " Sum(ISNULL(NULLIF(HW.Qty, ''), 0) * ISNULL(Doors.Qty, 0)) Quantity, " & _
+        " Sum(ISNULL(NULLIF(HW.Qty, ''), 0) * ISNULL(Doors.Qty, 1)) Quantity, " & _
         " CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2)) AS UnitRate, " & _
-        " (SUM(ISNULL(NULLIF(HW.Qty, ''), 0) * ISNULL(Doors.Qty, 0))) * (CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2))) AS ExtendedRate, " & _
+        " (SUM(ISNULL(NULLIF(HW.Qty, ''), 0) * ISNULL(Doors.Qty, 1))) * (CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2))) AS ExtendedRate, " & _
         " Ltrim(Max(Notes.List)) AS SetNotes ," & _
         " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
         " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
@@ -4109,10 +4145,10 @@ ErrHandler:
         " RIGHT OUTER JOIN AAOSHWSets HW ON PH.Item = HW.Product " & _
         " LEFT OUTER JOIN AAOSProjects AP ON HW.ProjectID = AP.ID " & _
         " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
-        " left outer join AAOSConsultants CS on AP.consultant = CS.id" & _
-        " left outer JOIN AAOSProjectHardware APH ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
-        " left outer JOIN " & AAOSDBName & ".dbo.hardwarestandard HST ON  CASE WHEN CHARINDEX(',', APH.IDs) = 0 THEN -1 ELSE LEFT(APH.IDs, CHARINDEX(',', APH.IDs)-1) END = HST.HDW_STD_ID " & _
-        " left outer JOIN " & AAOSDBName & ".dbo.images img ON  HST.Img1 = img.Image_id " & _
+        " LEFT OUTER JOIN AAOSConsultants CS on AP.consultant = CS.id" & _
+        " LEFT OUTER JOIN AAOSProjectHardware APH ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
+        " LEFT OUTER JOIN " & AAOSDBName & ".dbo.hardwarestandard HST ON  CASE WHEN CHARINDEX(',', APH.IDs) = 0 THEN -1 ELSE LEFT(APH.IDs, CHARINDEX(',', APH.IDs)-1) END = HST.HDW_STD_ID " & _
+        " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON  HST.Img1 = img.Image_id " & _
         " LEFT OUTER JOIN (SELECT ProjectID, " & _
                             " SetName, " & _
                             " Sum(Cast (QTY AS INT)) Qty, " & _
@@ -4159,7 +4195,7 @@ ErrHandler:
         " AND (PH.ProjectID = @ProjectID) " & _
         " AND ISNULL(NULLIF(HW.Qty, ''), 0) != 0 " & _
         " AND ISNULL(CASE WHEN DOORS.QTY = 0 THEN 0 WHEN DOORS.QTY > 0 THEN 1 END, 0) = " & _
-        " CASE @DOORFILTER WHEN 0 THEN 0 WHEN 1 THEN 1 ELSE ISNULL(CASE WHEN DOORS.QTY = 0 THEN 0 WHEN DOORS.QTY > 0 THEN 1 END, 0) END" & _
+        " CASE @DOORFILTER WHEN 0 THEN 1 WHEN 1 THEN 0 ELSE ISNULL(CASE WHEN DOORS.QTY = 0 THEN 0 WHEN DOORS.QTY > 0 THEN 1 END, 0) END" & _
         " GROUP  BY AP.ID,AP.ProjectName, (ACS.FirstName + ' '  + ACS.LastName),HW.Description,HW.TypeDescription,CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2)),PH.UOM, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title,filename" & _
         " ORDER  BY HW.Description "
 
