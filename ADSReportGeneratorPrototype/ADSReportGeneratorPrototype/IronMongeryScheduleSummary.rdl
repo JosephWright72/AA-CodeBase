@@ -1,0 +1,2250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DS_AAOS">
+      <DataSourceReference>sDS_AAOS</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>a12fbbfa-b1e1-4174-9afe-86983a91d0f7</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="DS_ADS">
+      <DataSourceReference>sDS_ADS</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>a5ae3756-a01c-488c-ab19-ea22e1cb900f</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DS_ListFieldText">
+      <SharedDataSet>
+        <SharedDataSetReference>sDS_ListFieldText</SharedDataSetReference>
+        <QueryParameters>
+          <QueryParameter Name="@Locale">
+            <Value>=Parameters!ReportLangISO.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@ReportName">
+            <Value>rptEMEAHWScheduleSummary</Value>
+          </QueryParameter>
+          <QueryParameter Name="@FormName">
+            <Value>rptGenericHeaders</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="@Usage2Name">
+            <Value>Text Box</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Debug">
+            <Value>0</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="Locale">
+          <DataField>Locale</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FormName">
+          <DataField>FormName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ColName">
+          <DataField>ColName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VisibleColText">
+          <DataField>VisibleColText</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Usage2Value">
+          <DataField>Usage2Value</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DS_ListFooterText">
+      <SharedDataSet>
+        <SharedDataSetReference>sDS_ListFieldText</SharedDataSetReference>
+        <QueryParameters>
+          <QueryParameter Name="@Locale">
+            <Value>=Parameters!ReportLangISO.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@ReportName">
+            <Value>rptEMEAHWScheduleSummary</Value>
+          </QueryParameter>
+          <QueryParameter Name="@FormName">
+            <Value>rptPageFooters</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Usage2Name">
+            <Value>SimpleView</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Debug">
+            <Value>0</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="Locale">
+          <DataField>Locale</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FormName">
+          <DataField>FormName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ColName">
+          <DataField>ColName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VisibleColText">
+          <DataField>VisibleColText</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Usage2Value">
+          <DataField>Usage2Value</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DS_GetProjectDetails">
+      <Query>
+        <DataSourceName>DS_ADS</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@ProjectID">
+            <Value>=Parameters!ProjectID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Debug">
+            <Value>0</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>spRS_GetProjectDetails</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ProjectReference">
+          <DataField>ProjectReference</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectName">
+          <DataField>ProjectName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProjectOwner">
+          <DataField>ProjectOwner</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TodaysDateEN">
+          <DataField>TodaysDateEN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TodaysDate">
+          <DataField>TodaysDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="SpecConsult">
+          <DataField>SpecConsult</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrjOwnEmail">
+          <DataField>PrjOwnEmail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SpecConEmail">
+          <DataField>SpecConEmail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrjOwnNumber">
+          <DataField>PrjOwnNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SpecConNumber">
+          <DataField>SpecConNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrjOwnTitle">
+          <DataField>PrjOwnTitle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SpecConTitle">
+          <DataField>SpecConTitle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DS_ListHWScheduleSummary">
+      <Query>
+        <DataSourceName>DS_ADS</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@ProjectID">
+            <Value>=Parameters!ProjectID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DoorFilter">
+            <Value>=Parameters!optHWSetFilter.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Debug">
+            <Value>0</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>spRS_ListHWScheduleSummary</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ProductCode">
+          <DataField>ProductCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProductDescription">
+          <DataField>ProductDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UOM">
+          <DataField>UOM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="UnitRate">
+          <DataField>UnitRate</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ExtendedRate">
+          <DataField>ExtendedRate</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SetNotes">
+          <DataField>SetNotes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HDW_STD_ID">
+          <DataField>HDW_STD_ID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DS_ListImageFilenames">
+      <SharedDataSet>
+        <SharedDataSetReference>sDS_ListImageFilenames</SharedDataSetReference>
+        <QueryParameters>
+          <QueryParameter Name="@ImagesPath">
+            <Value>=Parameters!ImagesPath.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Debug">
+            <Value>0</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="HDW_STD_ID">
+          <DataField>HDW_STD_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Image">
+          <DataField>Image</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="HWScheduleSummary">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.25in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.75in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.75in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.75in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ThimbnailImageLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblThumbnailImg", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Visibility>
+                            <Hidden>=Not(Parameters!optShowImages.Value)</Hidden>
+                          </Visibility>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ProductCodeLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblProductCode", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ProductDescriptionLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblProductDesc", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="QuantityLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblQuantity", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="UnitLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblUnit", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="UnitRateLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblUnitRate", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ExtendedRateLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblExtendedRate", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>1in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Image Name="ThumbnailImageValue">
+                          <Source>External</Source>
+                          <Value>="File:"+Lookup(CInt(Fields!HDW_STD_ID.Value), Fields!HDW_STD_ID.Value, Fields!Image.Value, "DS_ListImageFilenames")</Value>
+                          <Sizing>FitProportional</Sizing>
+                          <Visibility>
+                            <Hidden>=Not(Parameters!optShowImages.Value)</Hidden>
+                          </Visibility>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Image>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ProductCode">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ProductCode.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ProductCode</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Top</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ProductDescription">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ProductDescription.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ProductDescription</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Top</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Quantity">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Quantity.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <Format>#,##0</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Quantity</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Top</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="UnitValue">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!UOM.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Top</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="UnitRateValue">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!UnitRate.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <Format>#,##0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Top</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ExtendedRateValue">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ExtendedRate.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <Format>#,##0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Top</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TotalLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblTotalSum", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText") &amp; " " &amp; Lookup("lblCurSymbol", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>6</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TotalValue">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!ExtendedRate.Value)</Value>
+                                  <Style>
+                                    <Format>#,##0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=Not(Parameters!optShowImages.Value)</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=Not(Parameters!optShowProductCode.Value)</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=Not(Parameters!optShowUnitRate.Value)</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=Not(Parameters!optShowExtendedRate.Value)</Hidden>
+                  </Visibility>
+                </TablixMember>
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                  <RepeatOnNewPage>true</RepeatOnNewPage>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=Not(Parameters!optShowExtendedRate.Value)</Hidden>
+                  </Visibility>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <RepeatColumnHeaders>true</RepeatColumnHeaders>
+            <RepeatRowHeaders>true</RepeatRowHeaders>
+            <KeepTogether>true</KeepTogether>
+            <DataSetName>DS_ListHWScheduleSummary</DataSetName>
+            <Height>1.5in</Height>
+            <Width>7.5in</Width>
+            <Visibility>
+              <Hidden>=Not(Parameters!optShowImages.Value)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Textbox Name="NotesValue">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Lookup("lblNotes", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText") &amp; vbCrLf</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!SetNotes.Value, "DS_ListHWScheduleSummary")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.25in</Top>
+            <Left>0.25in</Left>
+            <Height>0.7in</Height>
+            <Width>7.25in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="TableNoImagesHWScheduleSummary">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.25in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.75in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.75in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.75in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesProductCodeLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblProductCode", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesProductDescriptionLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblProductDesc", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesQuantityLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblQuantity", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesUnitLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblUnit", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesUnitRateLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblUnitRate", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesExtendedRateLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblExtendedRate", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesProductCode">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ProductCode.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Top</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesProductDescription">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ProductDescription.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Top</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesQuantity">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Quantity.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <Format>#,##0</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Top</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesUnitValue">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!UOM.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Top</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesUnitRateValue">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!UnitRate.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <Format>#,##0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Top</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesExtendedRateValue">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ExtendedRate.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <Format>#,##0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Top</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesTotalLabel">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Lookup("lblTotalSum", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText") &amp; " " &amp; Lookup("lblCurSymbol", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>5</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TableNoImagesTotalValue">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!ExtendedRate.Value)</Value>
+                                  <Style>
+                                    <Format>#,##0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=Not Parameters!optShowProductCode.Value</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=Not Parameters!optShowUnitRate.Value</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=Not Parameters!optShowExtendedRate.Value</Hidden>
+                  </Visibility>
+                </TablixMember>
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                  <RepeatOnNewPage>true</RepeatOnNewPage>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details2" />
+                </TablixMember>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=Not Parameters!optShowExtendedRate.Value</Hidden>
+                  </Visibility>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <RepeatColumnHeaders>true</RepeatColumnHeaders>
+            <RepeatRowHeaders>true</RepeatRowHeaders>
+            <KeepTogether>true</KeepTogether>
+            <DataSetName>DS_ListHWScheduleSummary</DataSetName>
+            <Top>1.5in</Top>
+            <Height>0.75in</Height>
+            <Width>6.5in</Width>
+            <ZIndex>2</ZIndex>
+            <Visibility>
+              <Hidden>=Parameters!optShowImages.Value</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>2.95in</Height>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <TopBorder>
+            <Style>None</Style>
+          </TopBorder>
+        </Style>
+      </Body>
+      <Width>7.75in</Width>
+      <Page>
+        <PageHeader>
+          <Height>1.9in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Image Name="imgLogoEN">
+              <Source>Embedded</Source>
+              <Value>assaabloyablogo</Value>
+              <Sizing>FitProportional</Sizing>
+              <Left>5.95in</Left>
+              <Height>0.35in</Height>
+              <Width>1.8in</Width>
+              <Visibility>
+                <Hidden>=IIf(Parameters!ReportLangISO.Value = "NO", True, False)</Hidden>
+              </Visibility>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Image Name="imgLogoNO">
+              <Source>Embedded</Source>
+              <Value>Trioving_no_1</Value>
+              <Sizing>Fit</Sizing>
+              <Left>6.5in</Left>
+              <Height>0.65in</Height>
+              <Width>1.2in</Width>
+              <ZIndex>1</ZIndex>
+              <Visibility>
+                <Hidden>=IIf(Parameters!ReportLangISO.Value &lt;&gt; "NO", True, False)</Hidden>
+              </Visibility>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Textbox Name="ReportTitle">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Lookup("lblTitle", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                      <Style>
+                        <FontSize>18pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:WatermarkTextbox>Title</rd:WatermarkTextbox>
+              <Height>0.35in</Height>
+              <Width>5.95in</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ProjectNameLabel">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Lookup("lblPrjName", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1in</Top>
+              <Height>0.2in</Height>
+              <Width>1in</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="DateLabel">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Lookup("lblDate", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.6in</Top>
+              <Height>0.2in</Height>
+              <Width>1in</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="RevisionNoLabel">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Lookup("lblRevNo", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.4in</Top>
+              <Height>0.2in</Height>
+              <Width>1in</Width>
+              <ZIndex>5</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ProjectRefLabel">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Lookup("lblPrjRef", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.2in</Top>
+              <Height>0.2in</Height>
+              <Width>1in</Width>
+              <ZIndex>6</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ProjectOwnerLabel">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Lookup("lblPrjOwner", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1in</Top>
+              <Left>4.35in</Left>
+              <Height>0.2in</Height>
+              <Width>1.1in</Width>
+              <ZIndex>7</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="PageNoLabel">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Lookup("lblPage", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.6in</Top>
+              <Left>4.35in</Left>
+              <Height>0.2in</Height>
+              <Width>1.1in</Width>
+              <ZIndex>8</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="EmailLabel">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Lookup("lblEmail", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.4in</Top>
+              <Left>4.35in</Left>
+              <Height>0.2in</Height>
+              <Width>1.1in</Width>
+              <ZIndex>9</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ContactNoLabel">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Lookup("lblContactNo", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.2in</Top>
+              <Left>4.35in</Left>
+              <Height>0.2in</Height>
+              <Width>1.1in</Width>
+              <ZIndex>10</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ProjectNameValue">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!ProjectName.Value, "DS_GetProjectDetails")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1in</Top>
+              <Left>1.25in</Left>
+              <Height>0.2in</Height>
+              <Width>2.75in</Width>
+              <ZIndex>11</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="DateValue">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=IIf(Parameters!ReportLangISO.Value = "EN", First(Fields!TodaysDateEN.Value, "DS_GetProjectDetails"), Format(Now, "dd.MM.yyyy"))</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.6in</Top>
+              <Left>1.25in</Left>
+              <Height>0.2in</Height>
+              <Width>2.75in</Width>
+              <ZIndex>12</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="RevisionNoValue">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Parameters!RevisionTxt.Value</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.4in</Top>
+              <Left>1.25in</Left>
+              <Height>0.2in</Height>
+              <Width>2.75in</Width>
+              <ZIndex>13</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ProjectRefValue">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!ProjectReference.Value, "DS_GetProjectDetails")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.2in</Top>
+              <Left>1.25in</Left>
+              <Height>0.2in</Height>
+              <Width>2.75in</Width>
+              <ZIndex>14</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ProjectOwnerValue">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!ProjectOwner.Value, "DS_GetProjectDetails")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1in</Top>
+              <Left>5.6in</Left>
+              <Height>0.2in</Height>
+              <Width>2.15in</Width>
+              <ZIndex>15</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ContactNoValue">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!SpecConNumber.Value, "DS_GetProjectDetails")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.2in</Top>
+              <Left>5.6in</Left>
+              <Height>0.2in</Height>
+              <Width>2.15in</Width>
+              <ZIndex>16</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="EmailValue">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!SpecConEmail.Value, "DS_GetProjectDetails")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.4in</Top>
+              <Left>5.6in</Left>
+              <Height>0.2in</Height>
+              <Width>2.15in</Width>
+              <ZIndex>17</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="PageNoValue">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!PageNumber.ToString() + Lookup("lblOf", Fields!ColName.Value, Fields!VisibleColText.Value, "DS_ListFieldText") + Globals!TotalPages.ToString()</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.6in</Top>
+              <Left>5.6in</Left>
+              <Height>0.2in</Height>
+              <Width>2.15in</Width>
+              <ZIndex>18</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <BottomBorder>
+              <Style>Solid</Style>
+              <Width>1pt</Width>
+            </BottomBorder>
+          </Style>
+        </PageHeader>
+        <PageFooter>
+          <Height>0.62in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="FooterText">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Lookup("txtFooter", Fields!ColName.Value, Fields!Usage2Value.Value, "DS_ListFooterText")</Value>
+                      <Style>
+                        <FontSize>6.5pt</FontSize>
+                        <Format>#,##</Format>
+                        <Color>DimGray</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Height>0.62in</Height>
+              <Width>7.75in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <VerticalAlign>Middle</VerticalAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
+        <PageHeight>11.69in</PageHeight>
+        <PageWidth>8.27in</PageWidth>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
+        <TopMargin>0.25in</TopMargin>
+        <BottomMargin>0.25in</BottomMargin>
+        <ColumnSpacing>0.05118in</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="ReportLangISO">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EN</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ReportLangISO</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="ImagesPath">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>C:\Collateral Data UK\</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ImagesPath</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="ProjectID">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>28487</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ProjectID</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="optHWSetFilter">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>2</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>optHWSetFilter</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="optShowImages">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>optShowImages</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="optShowProductCode">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>optShowProductCode</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="optShowUnitRate">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>optShowUnitRate</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="optShowExtendedRate">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>optShowExtendedRate</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="RevisionTxt">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>72</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>RevisionTxt</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
+  <EmbeddedImages>
+    <EmbeddedImage Name="assaabloyablogo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAR8AAAArCAYAAABBy4xCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAABhKSURBVHhe7d11j/w2twfw/MrMzMzMVZkZpIIKKvzTvo77RqqqlapKJZVJZeaqzMzMDPf2E437ZFPbcTLZ3T5X+5Wi2Zkk9vFhHzvZRf/7F6oFLGABC5hjLDb5XMACFrCAOcV/Zebz7bffVl988UX1xx9/VL/++mv1+++/V0sssUS11FJLVSussEK13HLLVcsvv3y1+OKLT+6YDr/88kv11VdfVd9///2M/mDZZZetVlpppbrfpZdeuv5tAQuYBjF9o+v0md4FnVtllVVG0/H5wNTOB1MeeOCBybd/4s8//6w22WSTatNNN538Mgyczbvvvlu99tprM4TSBuEstthitQPacMMNq4022qhab731ejsGDu7tt9+u3nrrrbrvXH/A+ay44orV9ttvX6211lq1ckwDfH3sscfqfmMYi6/TgqE89NBDVUqN8GzLLbfsRWdXm32waNGiaplllqkPxrr66qt3Bibyzuk02R544IGjGr4xv/fee9Wbb75Zffjhh9XPP/8c1TcIOm48a6+9drX11ltXa6655gx6whg4qqCjbbj+oIMOmnwbhtdff7164YUX6n5i+Omnn2qb2GKLLSa//AdTOx/GefXVV9dZRxsYxEg23njj6vjjjx8kLEx89tlnq1deeaU2RP1otwv6JTyf66yzTrXDDjtU22233eRsGpTgqaeeql566aXayekrNrY2mv1xRLvuumvd39BsKMfXAOM66aST5jXjonzXXnttbdwxBP6fcsopxfLn+C+99NL63hJZd0E7EGTJYDnElD58/PHH1VVXXTX5NhPaWm211aozzzxzFOcjyNBvBvzll1/WNAbn0gW0BJtYd911q7333rvmNWj3xhtvrIM12TR5EMDBnXzyyVHH
+UAJyuuaaa+rPGL2hz/PPPz8ajBf/n78w+bs3DPCJJ56ofvjhh2rJJZesmdY8CMen87IQRtkHL774YnXLLbdUn3zyyd9timQlcF3o/8cff6yFQKlyWZDzBMbw+WRjKlWwZn+c0DvvvFO9+uqrtTL0HTc8/fTTdeqN1jD29mFcsp8h7Y8B8ueoyRc9xt8+/E7J+8r/5Zdfrj9T7fY5Ar/8zSAElTfeeKP66KOP6oxBltyE85xqux0HIzMOjqvEQeRA366//vpaN+lM0Lc+Om5cPr/77rvq+eefr2mn49oyNrOFcF2bl3SLbdGhIQHskUceqdvn3JrthgOvDzvssGqDDTaY3DETU3GP0r3//vuTb2nwzgy6DxjfXXfdVf9dknnkQEkwSFpL2Dx1GyHaEZ7+plEs92qD0emv79jRR6iUJQcKy0HPF77++ut6atoF8pe5/htANkE+9OG6666rs925BrnJGMfQNwhj0q4xmTGYYsrA6WEKZPjkk09OvpVD+2YHqYyXzAUcU8IUphqx6IF5XYxjRJRPpCwBBt5///2dQuFZ20cO2sPsW2+9dYbChQiEzjH705ZrbrvttlpYpWDQqVS2CfS6dj6MBzhIil1CJ12ZLzpToA+yR/pQqptjQGC944476r+7eNcXxvTpp59WN9xwQ61zO+20U519p3TV9c8991wv/cSrXE0sYP/9968zoBSmGrl0EfFdwOAQzbvgOulcrl0Kz7NKf82/w6Ef53KePgjHdCHgvvvuq9tLKYJz2uTlm/35Hs6loE0ZCmGVKrgpR4lSuobzF8HnA+oUpfJHp0LqWAhyzh1k0xUg0G/69dlnn01+mV2Yzj366KO17uRkjO72WJp/52BM+K1kQff23HPP+jMFdPTRT5m8skKKfvSZlsq8chhccA7TlBLlAwRttdVW9Rww5w3vvffe2hPH2iUQA95xxx3rCnq7iIV5lEjmpN4CMQZphzAuuOCC2iAUdlOrU65FN2aGYl4T
+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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Trioving_no_1">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>22f3d239-a404-4bac-967d-65ec0ae4a491</rd:ReportID>
+</Report>

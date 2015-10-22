@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "ADSReportGeneratorPrototype", "ADSReportGeneratorPrototype\ADSReportGeneratorPrototype.rptproj", "{B5245C2C-2B3F-408D-BDA2-CB588E33044F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugLocal|Any CPU = DebugLocal|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5245C2C-2B3F-408D-BDA2-CB588E33044F}.Debug|Any CPU.ActiveCfg = Debug
+		{B5245C2C-2B3F-408D-BDA2-CB588E33044F}.Debug|Any CPU.Build.0 = Debug
+		{B5245C2C-2B3F-408D-BDA2-CB588E33044F}.Debug|Any CPU.Deploy.0 = Debug
+		{B5245C2C-2B3F-408D-BDA2-CB588E33044F}.DebugLocal|Any CPU.ActiveCfg = DebugLocal
+		{B5245C2C-2B3F-408D-BDA2-CB588E33044F}.DebugLocal|Any CPU.Build.0 = DebugLocal
+		{B5245C2C-2B3F-408D-BDA2-CB588E33044F}.DebugLocal|Any CPU.Deploy.0 = DebugLocal
+		{B5245C2C-2B3F-408D-BDA2-CB588E33044F}.Release|Any CPU.ActiveCfg = Release
+		{B5245C2C-2B3F-408D-BDA2-CB588E33044F}.Release|Any CPU.Build.0 = Release
+		{B5245C2C-2B3F-408D-BDA2-CB588E33044F}.Release|Any CPU.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
