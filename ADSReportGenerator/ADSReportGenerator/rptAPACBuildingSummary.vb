@@ -15,6 +15,8 @@ Public Class rptAPACBuildingSummary
 
     Public sReportTitle As String
 
+    Property sPgFooterProjID As String
+
     Private Sub rptAPACBuildingSummaryStart(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ReportStart
         lblReportTitle.Text = sReportTitle
     End Sub

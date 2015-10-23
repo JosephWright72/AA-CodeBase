@@ -267,10 +267,17 @@
     <Compile Include="rptHWSetEstimate.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptRFI.vb" />
     <Compile Include="rptUnmatchHW.designer.vb">
       <DependentUpon>rptUnmatchHW.vb</DependentUpon>
     </Compile>
     <Compile Include="rptUnmatchHW.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptEMEATimberStdDoorSizesSub.Designer.vb">
+      <DependentUpon>rptEMEATimberStdDoorSizesSub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEMEATimberStdDoorSizesSub.vb">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
@@ -348,6 +355,9 @@
     <EmbeddedResource Include="rptUnmatchHW.resx">
       <DependentUpon>rptUnmatchHW.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEMEATimberStdDoorSizesSub.resx">
+      <DependentUpon>rptEMEATimberStdDoorSizesSub.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

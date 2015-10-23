@@ -2528,6 +2528,18 @@
         xV2KuxV2KuxV/9kL
 </value>
   </data>
+  <data name="txtPageCount.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtQty.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtUnits.OutputFormat" xml:space="preserve">
+    <value>#,##0.00</value>
+  </data>
+  <data name="txtUnitRate.OutputFormat" xml:space="preserve">
+    <value>#,##0.00</value>
+  </data>
   <data name="txtQty.OutputFormat" xml:space="preserve">
     <value>#,##0</value>
   </data>

@@ -45,11 +45,11 @@ Partial Public Class rptEMEAHWSchedule
         Me.txtDate = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblPage = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.ReportInfo1 = New GrapeCity.ActiveReports.SectionReportModel.ReportInfo()
-        Me.ReportInfo3 = New GrapeCity.ActiveReports.SectionReportModel.ReportInfo()
         Me.lblOf = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.txtContactNumber = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblContactNo = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.txtEmail = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.txtPageCount = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.Detail1 = New GrapeCity.ActiveReports.SectionReportModel.Detail()
         Me.txtProductCode = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.txtDescription = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
@@ -97,11 +97,11 @@ Partial Public Class rptEMEAHWSchedule
         CType(Me.txtDate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblPage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReportInfo1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ReportInfo3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblOf, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtContactNumber, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblContactNo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEmail, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtPageCount, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtProductCode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDescription, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtQty, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -124,7 +124,7 @@ Partial Public Class rptEMEAHWSchedule
         '
         'PageHeader1
         '
-        Me.PageHeader1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblThumbnailImg, Me.lblProductDesc, Me.lblQuantity, Me.lblTitle, Me.lblUnit, Me.lblUnitRate, Me.Line1, Me.lblProductCode, Me.lblSetNo, Me.txtSetName, Me.imgLogoEN, Me.imgLogoNO, Me.lblFinish, Me.lblEmail, Me.txtRev, Me.lblRevNo, Me.lblPrjRef, Me.txtProjectName, Me.txtPrjRef, Me.lblPrjOwner, Me.txtProjectOwner, Me.lblPrjName, Me.lblDate, Me.txtDate, Me.lblPage, Me.ReportInfo1, Me.ReportInfo3, Me.lblOf, Me.txtContactNumber, Me.lblContactNo, Me.txtEmail})
+        Me.PageHeader1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblThumbnailImg, Me.lblProductDesc, Me.lblQuantity, Me.lblTitle, Me.lblUnit, Me.lblUnitRate, Me.Line1, Me.lblProductCode, Me.lblSetNo, Me.txtSetName, Me.imgLogoEN, Me.imgLogoNO, Me.lblFinish, Me.lblEmail, Me.txtRev, Me.lblRevNo, Me.lblPrjRef, Me.txtProjectName, Me.txtPrjRef, Me.lblPrjOwner, Me.txtProjectOwner, Me.lblPrjName, Me.lblDate, Me.txtDate, Me.lblPage, Me.ReportInfo1, Me.lblOf, Me.txtContactNumber, Me.lblContactNo, Me.txtEmail, Me.txtPageCount})
         Me.PageHeader1.Height = 2.5525!
         Me.PageHeader1.Name = "PageHeader1"
         '
@@ -423,36 +423,24 @@ Partial Public Class rptEMEAHWSchedule
         '
         Me.ReportInfo1.FormatString = "{PageNumber}"
         Me.ReportInfo1.Height = 0.2!
-        Me.ReportInfo1.Left = 6.017!
+        Me.ReportInfo1.Left = 6.0!
         Me.ReportInfo1.MultiLine = False
         Me.ReportInfo1.Name = "ReportInfo1"
-        Me.ReportInfo1.Style = "font-size: 10pt; text-align: left; ddo-char-set: 1"
+        Me.ReportInfo1.Style = "font-size: 10pt; text-align: right; ddo-char-set: 1"
         Me.ReportInfo1.Top = 1.581!
-        Me.ReportInfo1.Width = 0.06599998!
-        '
-        'ReportInfo3
-        '
-        Me.ReportInfo3.CanShrink = True
-        Me.ReportInfo3.FormatString = "{PageCount}"
-        Me.ReportInfo3.Height = 0.2!
-        Me.ReportInfo3.Left = 6.396!
-        Me.ReportInfo3.MultiLine = False
-        Me.ReportInfo3.Name = "ReportInfo3"
-        Me.ReportInfo3.Style = "font-size: 10pt; text-align: left; ddo-char-set: 1"
-        Me.ReportInfo3.Top = 1.581!
-        Me.ReportInfo3.Width = 0.06599998!
+        Me.ReportInfo1.Width = 0.2!
         '
         'lblOf
         '
         Me.lblOf.Height = 0.2!
-        Me.lblOf.Left = 6.083001!
+        Me.lblOf.Left = 6.17!
         Me.lblOf.MultiLine = False
         Me.lblOf.Name = "lblOf"
         Me.lblOf.Style = "font-size: 10pt; text-align: center; ddo-char-set: 1"
         Me.lblOf.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Max
         Me.lblOf.Text = "of"
         Me.lblOf.Top = 1.581!
-        Me.lblOf.Width = 0.3130001!
+        Me.lblOf.Width = 0.2200002!
         '
         'txtContactNumber
         '
@@ -487,6 +475,20 @@ Partial Public Class rptEMEAHWSchedule
         Me.txtEmail.Text = "EmailAddress"
         Me.txtEmail.Top = 1.381!
         Me.txtEmail.Width = 2.105001!
+        '
+        'txtPageCount
+        '
+        Me.txtPageCount.Height = 0.2!
+        Me.txtPageCount.Left = 6.4!
+        Me.txtPageCount.MultiLine = False
+        Me.txtPageCount.Name = "txtPageCount"
+        Me.txtPageCount.OutputFormat = resources.GetString("txtPageCount.OutputFormat")
+        Me.txtPageCount.Style = "font-size: 10pt; text-align: left; ddo-char-set: 1"
+        Me.txtPageCount.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Min
+        Me.txtPageCount.SummaryType = GrapeCity.ActiveReports.SectionReportModel.SummaryType.PageCount
+        Me.txtPageCount.Text = "PageTotal"
+        Me.txtPageCount.Top = 1.581!
+        Me.txtPageCount.Width = 0.467!
         '
         'Detail1
         '
@@ -778,11 +780,11 @@ Partial Public Class rptEMEAHWSchedule
         CType(Me.txtDate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblPage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReportInfo1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ReportInfo3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblOf, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtContactNumber, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblContactNo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEmail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtPageCount, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtProductCode, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDescription, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtQty, System.ComponentModel.ISupportInitialize).EndInit()
@@ -858,10 +860,10 @@ Partial Public Class rptEMEAHWSchedule
     Private WithEvents txtDate As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents lblPage As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents ReportInfo1 As GrapeCity.ActiveReports.SectionReportModel.ReportInfo
-    Private WithEvents ReportInfo3 As GrapeCity.ActiveReports.SectionReportModel.ReportInfo
     Private WithEvents lblOf As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents txtContactNumber As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents lblContactNo As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents txtEmail As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents lblTotal As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents txtPageCount As GrapeCity.ActiveReports.SectionReportModel.TextBox
 End Class

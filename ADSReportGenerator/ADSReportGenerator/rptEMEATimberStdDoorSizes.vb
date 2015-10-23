@@ -29,8 +29,18 @@ Public Class rptEMEATimberStdDoorSizes
 
     Private Sub Detail1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Detail1.Format
 
-        Thickness.Text = FEETINCH(Val(Thickness.Text))
+        'TimberFrameSize.Text = FEETINCH(Val(TimberFrameSize.Text))
+        'Dim str1 As String = txtUnits.Value.ToString.Replace("$", "")
+        'str1 = str1.Replace(",", "")
+        'dGrandTotalList += Val(str1)
 
+        'str1 = txtExtended.Value.ToString.Replace("$", "")
+        'str1 = str1.Replace(",", "")
+        'dGrandTotalExtended += Val(str1)
+
+    End Sub
+
+    Private Sub GroupFooter1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SubGroupFooter.Format
 
         'Dim str1 As String = txtUnits.Value.ToString.Replace("$", "")
         'str1 = str1.Replace(",", "")
@@ -64,16 +74,21 @@ Public Class rptEMEATimberStdDoorSizes
         IsListFinished = True
     End Sub
 
-    Private Sub PageFooter1_BeforePrint(ByVal sender As Object, ByVal e As System.EventArgs) Handles PageFooter1.BeforePrint
+    Private Sub PageFooter1_BeforePrint(ByVal sender As Object, ByVal e As System.EventArgs) Handles PageFooter.BeforePrint
         'lblPageNumber.Text = "Page " & txtPageNumber.Text & " of " & txtPageCount.Text
     End Sub
 
-    Private Sub PageFooter1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PageFooter1.Format
+    Private Sub PageFooter1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PageFooter.Format
         'lblDateTime.Text = Now
         'lblPageNumber.Text = "Page " & txtPageNumber.Text & " of " & txtPageCount.Text
     End Sub
 
+    Dim rpt As rptEMEATimberStdDoorSizesSub
+    Public subDC As DataCls
+
     Private Sub rptHWEstimate_ReportStart(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ReportStart
+
+        rpt = New rptEMEATimberStdDoorSizesSub()
 
         ReportName.Text = sHash.Item("lblTitle")
         ' lblCurSymbol2.Visible = optShowExtendedRate
@@ -115,8 +130,6 @@ Public Class rptEMEATimberStdDoorSizes
             imgLogoNO.Visible = ISO.Equals("NO")
         End If
 
-        FrameDepths.DataField = "FrameDepth "
-
         'txtEmailSO.Visible = ISO.Equals("BE")
 
         'If ISO.Equals("BE") Then
@@ -133,6 +146,14 @@ Public Class rptEMEATimberStdDoorSizes
     End Sub
 
     Private Sub ReportFooter1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+
+    End Sub
+
+    Private Sub GroupHeader1_Format(sender As Object, e As EventArgs) Handles SubGroupHeader.Format
+        rpt.DataSource = subDC.DT
+
+        Me.SubReport1.Report = rpt
 
 
     End Sub

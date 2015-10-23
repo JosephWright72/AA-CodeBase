@@ -22,6 +22,8 @@ Public Class rptAPACDoorHardwareSchedule
     Public showFrameType As Boolean
     Public showHWSet As Boolean
 
+    Property sPgFooterProjID As String
+
 
 
     Private Sub rptAPACDoorHardwareScheduleStart(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ReportStart
