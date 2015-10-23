@@ -4171,7 +4171,25 @@ ErrHandler:
         " LEFT OUTER JOIN AAOSProjects AP ON HW.ProjectID = AP.ID " & _
         " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
         " LEFT OUTER JOIN AAOSConsultants CS on AP.consultant = CS.id" & _
-        " LEFT OUTER JOIN AAOSProjectHardware APH ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
+        " LEFT OUTER JOIN (" & _
+        " SELECT [Description], MIN(x.ImageID) AS ImageID, ProjectID FROM AAOSProjectHardware APH" & _
+        " INNER JOIN (" & _
+        " SELECT A.ID, Split.a.value('.', 'VARCHAR(MAX)') AS ImageID " & _
+        " FROM  (" & _
+        " SELECT ID,  CAST ('<M>' + REPLACE([imageids], ',', '</M><M>') + '</M>' AS XML) AS String" & _
+        " FROM  AAOSProjectHardware" & _
+        " WHERE ProjectID = @ProjectID)" & _
+        " AS A CROSS APPLY String.nodes ('/M') AS Split(a)" & _
+        " WHERE ISNULL(Split.a.value('.', 'VARCHAR(MAX)'),'') <> ''" & _
+        " UNION" & _
+        " SELECT ID,ImageIDs FROM AAOSProjectHardware where ProjectID = @ProjectID AND ISNULL(ImageIDs,'') ='' ) x" & _
+        " INNER JOIN" & _
+        " (SELECT Image_id, [Filename]" & _
+        " FROM AAOS.dbo.images img" & _
+        " WHERE (NOT (UPPER([Filename]) LIKE '%.PDF') OR ISNULL([Filename],'') = '')) img" & _
+        " ON  x.ImageID = img.Image_id" & _
+        " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
+        " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
         " LEFT OUTER JOIN " & AAOSDBName & ".dbo.hardwarestandard HST ON  CASE WHEN CHARINDEX(',', APH.IDs) = 0 THEN -1 ELSE LEFT(APH.IDs, CHARINDEX(',', APH.IDs)-1) END = HST.HDW_STD_ID " & _
         " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON  HST.Img1 = img.Image_id " & _
         " LEFT OUTER JOIN (SELECT ProjectID, " & _
@@ -4224,10 +4242,6 @@ ErrHandler:
         " GROUP  BY AP.ID,AP.ProjectName,AP.OriginalProjectID,AP.RevisionNumber,PH.DHI, (ACS.FirstName + ' '  + ACS.LastName),HW.Description,HW.TypeDescription,CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2)),PH.UOM, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title,[Filename]" & _
         " ORDER  BY PH.DHI "
 
-        'Dim file As System.IO.StreamWriter
-        'file = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\wrightj\Documents\test.txt", True)
-        'file.WriteLine(strQ)
-        'file.Close()
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
