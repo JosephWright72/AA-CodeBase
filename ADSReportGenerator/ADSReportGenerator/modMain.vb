@@ -6,6 +6,14 @@ Imports System.Data.SqlClient
 
 
 Module ModMain
+    Public D0 As String = Chr(249)
+    Public D As String = Chr(250) ' ú
+    Public L As String = Chr(255) ' ÿ
+    Public D1 As String = Chr(251) ' û
+    Public D2 As String = Chr(252) ' ü
+    Public D3 As String = Chr(253) ' ý
+    Public D4 As String = Chr(254) ' þ
+    Public D20 As String = Chr(200) ' È
     Public SpecDir As String = GetADSCommandDirectory() & "\Specs\"
     Private image As Net.Mime.MediaTypeNames.Image
     Private page As Integer
@@ -295,6 +303,10 @@ GetOut:
                     Exit Sub
                 Case "HARDWARESCHEDULE"
                     CreateHardwareSchedule(arguments)
+                    End
+                    Exit Sub
+                Case "RFIREPORT"
+                    'CreateRFI(arguments)
                     End
                     Exit Sub
                 Case "TIMBERSTDDOORSIZES"
@@ -1841,11 +1853,15 @@ ErrHandler:
 
             strQ = "SELECT AAOSProjects.ID,Cast(AAOSProjects.ID AS nvarchar(max)) + " + "'(" + RevNo + ")'" + " IDRev,AAOSProjects.ProjectName,AAOSProjects.ArchProjectID, AAOSProjects.KeyingSystem," & _
              "(AAOSProjects.Address1 + CHAR(13)+CHAR(10) + AAOSProjects.Address2 + CHAR(13)+ CHAR(10) + AAOSProjects.Address3) AS Address " & _
-             ",AAOSProjects.Notes," & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description AS Description, " & _
+             ",AAOSProjects.Notes,Vnd.ABBR, Vnd.NAME, AAOSHWSets.Product, AAOSHWSets.Description AS Description, " & _
              "sum(Cast(AAOSHWSets.Qty as int) * AAOSDOORS.Qty) as Qty, AAOSHWSets.ProjectID,AAOSHWSets.TypeDescription , " & _
              "AAOSFirms.LastName as ArchCompany,(AAOSConsultants.FirstName + ' ' + AAOSConsultants.LastName) as SalesRep, " & _
-             AAOSDBName & ".DBO.HardwareType.Description as HWType " & _
-             "FROM AAOSHWSets  LEFT OUTER JOIN  " & AAOSDBName & ".dbo.Vendor ON AAOSHWSets.Mfr = " & AAOSDBName & ".dbo.Vendor.ABBR  " & _
+             AAOSDBName & ".DBO.HardwareType.Description as HWType, " & _
+             "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+             "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max)) " & _
+             "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
+             "FROM AAOSHWSets  " & _
+             "LEFT OUTER JOIN  (select distinct name,abbr from " & AAOSDBName & ".dbo.vendor) Vnd on  AAOSHWSets.Mfr = Vnd.ABBR " & _
              "LEFT OUTER JOIN AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID  " & _
              "LEFT OUTER JOIN AAOSFirms ON AAOSProjects.Architect = AAOSFirms.ID  " & _
              "LEFT OUTER JOIN AAOSConsultants ON AAOSProjects.ArchConsultant = AAOSConsultants.ID " & _
@@ -1854,8 +1870,8 @@ ErrHandler:
              "JOIN AAOSDoors ON AAOSReportJoin.JoinValue =  AAOSDoors.UniqueMark  " & _
              "AND AAOSReportJoin.ProjectID = AAOSDoors.ProjectID and AAOSDoors.HWSet = AAOSHWSets.SetName  " & _
              "WHERE(AAOSHWSets.ProjectID = " & PrjID1.ToString & " And AAOSReportJoin.UserID = " & UsrID.ToString & " And AAOSHWSets.DHI <> 100000) " & _
-             "Group By AAOSProjects.ID,AAOSProjects.ProjectName,AAOSProjects.ArchProjectID,AAOSProjects.KeyingSystem,AAOSProjects.Address1,AAOSProjects.Address2," & _
-             "AAOSProjects.Address3, AAOSProjects.Notes, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description, " & _
+             "Group By AAOSProjects.ID,AAOSProjects.OriginalProjectID,AAOSProjects.RevisionNumber,AAOSProjects.ProjectName,AAOSProjects.ArchProjectID,AAOSProjects.KeyingSystem,AAOSProjects.Address1,AAOSProjects.Address2," & _
+             "AAOSProjects.Address3, AAOSProjects.Notes, Vnd.NAME, Vnd.ABBR,AAOSHWSets.Product, AAOSHWSets.Description, " & _
              "AAOSHWSets.ProjectID, AAOSHWSets.TypeDescription, AAOSHWSets.DHI, " & _
              "AAOSFirms.LastName, AAOSConsultants.FirstName, AAOSConsultants.LastName, " & AAOSDBName & ".DBO.HardwareType.Description " & _
              "Order By AAOSHWSets.DHI"
@@ -1865,33 +1881,17 @@ ErrHandler:
 
         Else
 
-            'strQ = "SELECT AAOSProjects.ID,AAOSProjects.ProjectName, " & _
-            '"(AAOSProjects.Address1 + CHAR(13)+CHAR(10) + AAOSProjects.Address2 + CHAR(13)+ CHAR(10) + AAOSProjects.Address3) AS Address " & _
-            '",AAOSProjects.Notes, AAOS.dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description AS Description, " & _
-            '"sum(Cast(AAOSHWSets.Qty as int)) as Qty, AAOSHWSets.ProjectID,AAOSHWSets.TypeDescription , " & _
-            '"AAOSFirms.LastName as ArchCompany,(AAOSConsultants.FirstName + ' ' + AAOSConsultants.LastName) as SalesRep, " & _
-            '"AAOS.DBO.HardwareType.Description as HWType " & _
-            '"FROM AAOSHWSets  LEFT OUTER JOIN  AAOS.dbo.Vendor ON AAOSHWSets.Mfr = AAOS.dbo.Vendor.ABBR  " & _
-            '"LEFT OUTER JOIN AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID  " & _
-            '"LEFT OUTER JOIN AAOSFirms ON AAOSProjects.Architect = AAOSFirms.ID  " & _
-            '"LEFT OUTER JOIN AAOSConsultants ON AAOSProjects.ArchConsultant = AAOSConsultants.ID " & _
-            '"LEFT OUTER JOIN AAOS.DBO.HardwareType on SUBSTRING(Product,0,3) = AAOS.DBO.HardwareType.HDW_TYPE_ID " & _
-            '"JOIN AAOSDoors ON AAOSHWSets.ProjectID =  AAOSDoors.ProjectID  " & _
-            '"AND  AAOSDoors.HWSet = AAOSHWSets.SetName " & _
-            '"WHERE(AAOSHWSets.ProjectID = " & PrjID1.ToString & " And AAOSHWSets.DHI <> 100000) " & _
-            '"Group By AAOSProjects.ID,AAOSProjects.ProjectName,AAOSProjects.Address1,AAOSProjects.Address2, " & _
-            '"AAOSProjects.Address3, AAOSProjects.Notes, AAOS.dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description, " & _
-            '"AAOSHWSets.ProjectID, AAOSHWSets.TypeDescription, AAOSHWSets.DHI, " & _
-            '"AAOSFirms.LastName, AAOSConsultants.FirstName, AAOSConsultants.LastName, AAOS.DBO.HardwareType.Description " & _
-            '"Order By AAOSHWSets.DHI"
-
             strQ = "SELECT AAOSProjects.ID,Cast(AAOSProjects.ID AS nvarchar(max)) + " + "'(" + RevNo + ")'" + " IDRev,AAOSProjects.ProjectName, AAOSProjects.ArchProjectID,AAOSProjects.KeyingSystem,  " & _
             "(AAOSProjects.Address1 + CHAR(13)+CHAR(10) + AAOSProjects.Address2 + CHAR(13)+ CHAR(10) + AAOSProjects.Address3) AS Address " & _
-            ",AAOSProjects.Notes,AAOSHWSets.Mfr ," & AAOSDBName & ".dbo.Vendor.ABBR, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description AS Description, " & _
+            ",AAOSProjects.Notes,AAOSHWSets.Mfr ,Vnd.ABBR, Vnd.NAME, AAOSHWSets.Product, AAOSHWSets.Description AS Description, " & _
             "sum(Cast(AAOSHWSets.Qty as int) * AAOSDOORS.Qty) as Qty, AAOSHWSets.ProjectID,AAOSHWSets.TypeDescription ,  " & _
             "AAOSFirms.LastName as ArchCompany,(AAOSConsultants.FirstName + ' ' + AAOSConsultants.LastName) as SalesRep,  " & _
-             AAOSDBName & ".DBO.HardwareType.Description as HWType  " & _
-            "FROM AAOSHWSets  LEFT OUTER JOIN  " & AAOSDBName & ".dbo.Vendor ON AAOSHWSets.Mfr = " & AAOSDBName & ".dbo.Vendor.ABBR   " & _
+             AAOSDBName & ".DBO.HardwareType.Description as HWType,  " & _
+            "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+            "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max))  " & _
+            "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
+            "FROM AAOSHWSets  " & _
+            "LEFT OUTER JOIN  (select distinct name,abbr from " & AAOSDBName & ".dbo.vendor) Vnd on  AAOSHWSets.Mfr = Vnd.ABBR " & _
             "LEFT OUTER JOIN AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID   " & _
             "LEFT OUTER JOIN AAOSFirms ON AAOSProjects.Architect = AAOSFirms.ID   " & _
             "LEFT OUTER JOIN AAOSConsultants ON AAOSProjects.ArchConsultant = AAOSConsultants.ID  " & _
@@ -1899,9 +1899,9 @@ ErrHandler:
             "JOIN AAOSDoors ON AAOSHWSets.ProjectID =  AAOSDoors.ProjectID   " & _
             "AND  AAOSDoors.HWSet = AAOSHWSets.SetName " & _
             "WHERE(AAOSHWSets.ProjectID = " & PrjID1.ToString & " And AAOSHWSets.DHI <> 100000) " & _
-            "Group By AAOSProjects.ID,AAOSProjects.ProjectName,AAOSProjects.ArchProjectID,AAOSProjects.KeyingSystem,AAOSProjects.Address1,AAOSProjects.Address2,  " & _
-            "AAOSProjects.Address3, AAOSProjects.Notes, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description, " & _
-            "AAOSHWSets.ProjectID, AAOSHWSets.TypeDescription, AAOSHWSets.DHI, AAOSHWSets.Mfr, " & AAOSDBName & ".dbo.Vendor.ABBR, " & _
+            "Group By AAOSProjects.ID,AAOSProjects.OriginalProjectID,AAOSProjects.RevisionNumber,AAOSProjects.ProjectName,AAOSProjects.ArchProjectID,AAOSProjects.KeyingSystem,AAOSProjects.Address1,AAOSProjects.Address2,  " & _
+            "AAOSProjects.Address3, AAOSProjects.Notes, Vnd.NAME, AAOSHWSets.Product, AAOSHWSets.Description, " & _
+            "AAOSHWSets.ProjectID, AAOSHWSets.TypeDescription, AAOSHWSets.DHI, AAOSHWSets.Mfr, Vnd.ABBR, " & _
             "AAOSFirms.LastName, AAOSConsultants.FirstName, AAOSConsultants.LastName, " & AAOSDBName & ".DBO.HardwareType.Description " & _
             "Order By AAOSHWSets.DHI"
 
@@ -1921,6 +1921,7 @@ ErrHandler:
         rpt.DataSource = dc1.DT
         rpt.sReportTitle = arguments(7)
         rpt.tbRevision.Text = RevNo
+        rpt.sPgFooterProjID = NullCheckStr(dc1.DT.Rows(0)("NewProjID"))
         rpt.Run()
 
         If My.Computer.FileSystem.DirectoryExists(Path.GetDirectoryName(arguments(4))) = False Then
@@ -2004,46 +2005,22 @@ ErrHandler:
            "AAOSHWSets.Qty * AAOSDoors.Qty as Qty, AAOSHWSets.ProjectID,AAOSHWSets.TypeDescription ,AAOSHWSets.SetNotes, " & _
            "AAOSFirms.LastName as ArchCompany,(AAOSConsultants.FirstName + ' ' + AAOSConsultants.LastName) as SalesRep, " & _
            "AAOSDoors.Level, AAOSDoors.Height, AAOSDoors.Width, AAOSDoors.DoorMaterial, AAOSDoors.Thickness, " & _
-           "AAOSDoors.Handing, AAOSDoors.FrameMaterial,  CONVERT(nvarchar(max),AAOSDoors.Notes) as DoorNotes, Case when AAOSDoors.Qty = 1 then AAOSDoors.Mark else AAOSDoors.Mark + ' x '+ Cast(AAOSDoors.Qty as VARCHAR(5))  end Mark, AAOSDoors.ToRoom, AAOSHWSets.Finish,AAOSDoors.HWSet " & _
-           "FROM AAOSHWSets  LEFT OUTER JOIN  " & AAOSDBName & ".dbo.Vendor ON AAOSHWSets.Mfr = " & AAOSDBName & ".dbo.Vendor.ABBR  " & _
-           "LEFT OUTER JOIN AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID  " & _
-           "LEFT OUTER JOIN AAOSFirms ON AAOSProjects.Architect = AAOSFirms.ID  " & _
-           "LEFT OUTER JOIN AAOSConsultants ON AAOSProjects.ArchConsultant = AAOSConsultants.ID " & _
-           "JOIN AAOSReportJoin on AAOSHWSets.ProjectID = AAOSReportJoin.ProjectID  " & _
-           "JOIN AAOSDoors ON AAOSReportJoin.JoinValue =  AAOSDoors.UniqueMark  " & _
-           "AND AAOSReportJoin.ProjectID = AAOSDoors.ProjectID and AAOSDoors.HWSet = AAOSHWSets.SetName  " & _
+           "AAOSDoors.Handing, AAOSDoors.FrameMaterial,  CONVERT(nvarchar(max),AAOSDoors.Notes) as DoorNotes, Case when AAOSDoors.Qty = 1 then AAOSDoors.Mark else AAOSDoors.Mark + ' x '+ Cast(AAOSDoors.Qty as VARCHAR(5))  end Mark, AAOSDoors.ToRoom, AAOSHWSets.Finish,AAOSDoors.HWSet, " & _
+           "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+           "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max))  " & _
+           "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
            "WHERE(AAOSHWSets.ProjectID = " & PrjID1.ToString & " And AAOSReportJoin.UserID = " & UsrID.ToString & " And AAOSHWSets.DHI <> 100000) " & _
-           "Group By AAOSProjects.ID,AAOSProjects.ProjectName,AAOSProjects.ArchProjectID, AAOSProjects.KeyingSystem,AAOSProjects.Address1, AAOSProjects.Address2,AAOSProjects.Address3,AAOSProjects.City, " & _
+           "Group By AAOSProjects.ID,AAOSProjects.OriginalProjectID,AAOSProjects.RevisionNumber,AAOSProjects.ProjectName,AAOSProjects.ArchProjectID, AAOSProjects.KeyingSystem,AAOSProjects.Address1, AAOSProjects.Address2,AAOSProjects.Address3,AAOSProjects.City, " & _
            "AAOSProjects.State, AAOSProjects.Zip, AAOSProjects.Notes, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description, " & _
            "AAOSHWSets.Price, AAOSHWSets.Qty, AAOSHWSets.ProjectID, AAOSHWSets.TypeDescription, AAOSHWSets.SetNotes,AAOSHWSets.DHI, AAOSHWSets.SetDesc,  " & _
            "AAOSFirms.LastName, AAOSConsultants.FirstName, AAOSConsultants.LastName," & _
            "AAOSDoors.Level, AAOSDoors.Height, AAOSDoors.Width, AAOSDoors.DoorMaterial, AAOSDoors.Thickness, " & _
-           "AAOSDoors.Handing, AAOSDoors.FrameMaterial,  CONVERT(nvarchar(max),AAOSDoors.Notes) , AAOSDoors.Mark, AAOSDoors.Qty, AAOSDoors.ToRoom, AAOSHWSets.Finish,AAOSDoors.HWSet " & _
-           "Order By AAOSDoors.Mark, AAOSHWSets.DHI"
+           "AAOSDoors.Handing, AAOSDoors.FrameMaterial,  CONVERT(nvarchar(max),AAOSDoors.Notes) , AAOSDoors.Mark, AAOSDoors.Qty, AAOSDoors.ToRoom, AAOSHWSets.Finish,AAOSDoors.HWSet,AAOSDoors.id " & _
+           "Order By AAOSDoors.id, AAOSHWSets.DHI"
         Else
 
 
-            ' strQ = "SELECT AAOSProjects.ID,AAOSProjects.ProjectName, " & _
-            '"(AAOSProjects.Address1 + CHAR(13)+CHAR(10) + AAOSProjects.Address2 + CHAR(13)+ CHAR(10) + AAOSProjects.Address3) AS Address " & _
-            ' ",AAOSProjects.Notes, AAOS.dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description AS Description, " & _
-            '"sum(Cast(AAOSHWSets.Qty as int)) as Qty, AAOSHWSets.ProjectID,AAOSHWSets.TypeDescription , " & _
-            '"AAOSFirms.LastName as ArchCompany,(AAOSConsultants.FirstName + ' ' + AAOSConsultants.LastName) as SalesRep, " & _
-            '"AAOSDoors.Level, AAOSDoors.Height, AAOSDoors.Width, AAOSDoors.DoorMaterial, AAOSDoors.Thickness, " & _
-            '"AAOSDoors.Handing, AAOSDoors.FrameMaterial, AAOSDoors.Mark " & _
-            '"FROM AAOSHWSets  LEFT OUTER JOIN  AAOS.dbo.Vendor ON AAOSHWSets.Mfr = AAOS.dbo.Vendor.ABBR  " & _
-            '"LEFT OUTER JOIN AAOSDoors ON  AAOSHWSets.ProjectID = AAOSDoors.ProjectID " & _
-            '"LEFT OUTER JOIN AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID  " & _
-            '"LEFT OUTER JOIN AAOSFirms ON AAOSProjects.Architect = AAOSFirms.ID  " & _
-            '"LEFT OUTER JOIN AAOSConsultants ON AAOSProjects.ArchConsultant = AAOSConsultants.ID " & _
-            '"WHERE(AAOSHWSets.ProjectID = " & PrjID1.ToString & " And AAOSHWSets.DHI <> 100000 AND (CHARINDEX('deleted', ChangeLog) < 1)) " & _
-            '"Group By AAOSProjects.ID,AAOSProjects.ProjectName,AAOSProjects.Address1,AAOSProjects.Address2, " & _
-            '"AAOSProjects.Address3, AAOSProjects.Notes, AAOS.dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description, " & _
-            '"AAOSHWSets.Price, AAOSHWSets.Qty, AAOSHWSets.ProjectID, AAOSHWSets.TypeDescription, AAOSHWSets.DHI, " & _
-            '"AAOSFirms.LastName, AAOSConsultants.FirstName, AAOSConsultants.LastName, " & _
-            '"AAOSDoors.Level, AAOSDoors.Height, AAOSDoors.Width, AAOSDoors.DoorMaterial, AAOSDoors.Thickness, " & _
-            '"AAOSDoors.Handing, AAOSDoors.FrameMaterial, AAOSDoors.Mark " & _
-            '"Order By AAOSDoors.Mark"
-
+            
 
             strQ = "SELECT AAOSProjects.ID, Cast(AAOSProjects.ID AS nvarchar(max)) + " + "'(" + RevNo + ")'" + " IDRev, AAOSProjects.ProjectName,AAOSProjects.ArchProjectID,AAOSProjects.KeyingSystem, " & _
                    "(AAOSProjects.Address1 +  ' ' + AAOSProjects.Address2 +  ' '  + AAOSProjects.Address3 + ' ' + AAOSProjects.City  + ' ' + AAOSProjects.State  + ' ' + AAOSPROJECTS.Zip) AS Address " & _
@@ -2052,21 +2029,25 @@ ErrHandler:
                    "AAOSFirms.LastName as ArchCompany,(AAOSConsultants.FirstName + ' ' + AAOSConsultants.LastName) as SalesRep, " & _
                    "AAOSDoors.Level, AAOSDoors.Height, AAOSDoors.Width, AAOSDoors.DoorMaterial, AAOSDoors.Thickness, " & _
                    "AAOSDoors.Handing, AAOSDoors.FrameMaterial, CONVERT(nvarchar(max),AAOSDoors.Notes) as DoorNotes," & _
-                   " Case when AAOSDoors.Qty = 1 then AAOSDoors.Mark else AAOSDoors.Mark + ' x '+ Cast(AAOSDoors.Qty as VARCHAR(5))  end Mark, AAOSDoors.ToRoom, AAOSHWSets.Finish,AAOSDoors.HWSet  " & _
+                   " Case when AAOSDoors.Qty = 1 then AAOSDoors.Mark else AAOSDoors.Mark + ' x '+ Cast(AAOSDoors.Qty as VARCHAR(5))  end Mark, AAOSDoors.ToRoom, AAOSHWSets.Finish,AAOSDoors.HWSet,  " & _
+                   "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+                   "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max))  " & _
+                   "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
                    "FROM AAOSHWSets  LEFT OUTER JOIN  " & AAOSDBName & ".dbo.Vendor ON AAOSHWSets.Mfr = " & AAOSDBName & ".dbo.Vendor.ABBR  " & _
                    "LEFT OUTER JOIN AAOSDoors ON  AAOSHWSets.ProjectID = AAOSDoors.ProjectID and AAOSHWSets.SetName = AAOSDoors.HWSet " & _
                    "LEFT OUTER JOIN AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID  " & _
                    "LEFT OUTER JOIN AAOSFirms ON AAOSProjects.Architect = AAOSFirms.ID  " & _
                    "LEFT OUTER JOIN AAOSConsultants ON AAOSProjects.ArchConsultant = AAOSConsultants.ID " & _
-                   "WHERE( AAOSHWSets.ProjectID = " & PrjID1.ToString & " And AAOSHWSets.DHI <> 100000 AND (CHARINDEX('deleted', ChangeLog) < 1)) " & _
-                   "Group By AAOSProjects.ID,AAOSProjects.ProjectName,AAOSProjects.ArchProjectID,AAOSProjects.KeyingSystem,AAOSProjects.Address1,AAOSProjects.Address2,AAOSProjects.Address3,AAOSProjects.City, " & _
+                   "INNER JOIN AAOSReportJoin ON AAOSDoors.ProjectID = AAOSReportJoin.ProjectID  AND AAOSDoors.UniqueMark = AAOSReportJoin.JoinValue " & _
+                   "WHERE( AAOSHWSets.ProjectID = " & PrjID1.ToString & " and AAOSReportJoin.UserID = " & UsrID.ToString & " And AAOSHWSets.DHI <> 100000 AND (CHARINDEX('deleted', ChangeLog) < 1)) " & _
+                   "Group By AAOSProjects.ID,AAOSProjects.OriginalProjectID,AAOSProjects.RevisionNumber,AAOSProjects.ProjectName,AAOSProjects.ArchProjectID,AAOSProjects.KeyingSystem,AAOSProjects.Address1,AAOSProjects.Address2,AAOSProjects.Address3,AAOSProjects.City, " & _
                    "AAOSProjects.State, AAOSProjects.Zip, AAOSProjects.Notes, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description, AAOSHWSets.SetNotes, " & _
                    "AAOSHWSets.Qty, AAOSHWSets.ProjectID, AAOSHWSets.TypeDescription, AAOSHWSets.DHI, AAOSHWSets.SetDesc, " & _
                    "AAOSFirms.LastName, AAOSConsultants.FirstName, AAOSConsultants.LastName, " & _
                    "AAOSDoors.Level, AAOSDoors.Height, AAOSDoors.Width, AAOSDoors.DoorMaterial, AAOSDoors.Thickness, " & _
                    "AAOSDoors.Handing, AAOSDoors.FrameMaterial, CONVERT(nvarchar(max),AAOSDoors.Notes) ," & _
-                   " AAOSDoors.Mark,AAOSDoors.Qty, AAOSDoors.ToRoom, AAOSHWSets.Finish,AAOSDoors.HWSet  " & _
-                   "Order By AAOSDoors.Mark, AAOSHWSets.DHI"
+                   " AAOSDoors.Mark,AAOSDoors.Qty, AAOSDoors.ToRoom, AAOSHWSets.Finish,AAOSDoors.HWSet,AAOSDoors.id " & _
+                   "Order By AAOSDoors.id, AAOSHWSets.DHI"
 
         End If
 
@@ -2087,6 +2068,7 @@ ErrHandler:
         rpt.showFrameType = showFrameType
         rpt.showHWSet = showHWSet
         rpt.tbRevision.Text = RevNo
+        rpt.sPgFooterProjID = NullCheckStr(dc1.DT.Rows(0)("NewProjID"))
 
 
         rpt.DataSource = dc1.DT
@@ -2158,58 +2140,40 @@ ErrHandler:
         DataDB.Open()
         Dim strQ As String
 
-        'strQ = "SELECT AAOSProjects.ProjectName, AAOS.dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description, AAOSHWSets.Price, AAOSHWSets.SetName, AAOSHWSets.Qty, AAOSHWSets.ProjectID " & _
-        '    "FROM AAOSHWSets LEFT OUTER JOIN  " & _
-        '    "AAOS.dbo.Vendor ON AAOSHWSets.Mfr = AAOS.dbo.Vendor.ABBR LEFT OUTER JOIN " & _
-        '    "AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID " & _
-        '    "WHERE (AAOSHWSets.ProjectID = " & PrjID1.ToString & ") " & _
-        '    "ORDER BY AAOSProjects.ProjectName, AAOS.dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description"
 
         If isFiltered Then
 
             strQ = "SELECT AAOSProjects.ProjectName, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, " & _
                     " AAOSHWSets.Description AS Description,AAOSHWSets.Price, AAOSHWSets.SetName, " & _
-                    "AAOSHWSets.Qty, AAOSHWSets.ProjectID FROM AAOSHWSets " & _
+                    "AAOSHWSets.Qty, AAOSHWSets.ProjectID, " & _
+                    "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+                    "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max))  " & _
+                    "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
+                    "FROM AAOSHWSets " & _
                     "LEFT OUTER JOIN  " & AAOSDBName & ".dbo.Vendor ON AAOSHWSets.Mfr = " & AAOSDBName & ".dbo.Vendor.ABBR " & _
                     "LEFT OUTER JOIN AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID " & _
                     "JOIN AAOSReportJoin on AAOSHWSets.ProjectID = AAOSReportJoin.ProjectID " & _
                     "JOIN AAOSDoors ON AAOSReportJoin.JoinValue =  AAOSDoors.UniqueMark " & _
                     "AND AAOSReportJoin.ProjectID = AAOSDoors.ProjectID and AAOSDoors.HWSet = AAOSHWSets.SetName " & _
                     "WHERE(AAOSHWSets.ProjectID =" & PrjID1.ToString & " and AAOSReportJoin.UserID =" & UsrID.ToString & "AND AAOSHWSets.DHI <> 100000)" & _
-                    "Group By AAOSProjects.ProjectName, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product,AAOSHWSets.Description," & _
+                    "Group By AAOSProjects.ID,AAOSProjects.OriginalProjectID,AAOSProjects.RevisionNumber," & _
+                    "AAOSProjects.ProjectName, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description, " & _
                     "AAOSHWSets.Price, AAOSHWSets.SetName, AAOSHWSets.Qty, AAOSHWSets.ProjectID " & _
                     "ORDER BY AAOSProjects.ProjectName, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, Description,Price,SetName"
         Else
-            'strQ = "SELECT AAOSProjects.ProjectName, AAOS.dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description, AAOSHWSets.Price, AAOSHWSets.SetName, AAOSHWSets.Qty, AAOSHWSets.ProjectID " & _
-            '    "FROM AAOSHWSets LEFT OUTER JOIN  " & _
-            '    "AAOS.dbo.Vendor ON AAOSHWSets.Mfr = AAOS.dbo.Vendor.ABBR LEFT OUTER JOIN " & _
-            '    "AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID " & _
-            '    "WHERE (AAOSHWSets.ProjectID = " & PrjID1.ToString & ") " & _
-            '    "ORDER BY AAOSProjects.ProjectName, AAOS.dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description,SetName"
 
-            strQ = "SELECT AAOSProjects.ProjectName, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description, AAOSHWSets.Price, AAOSHWSets.SetName, AAOSHWSets.Qty, AAOSHWSets.ProjectID " & _
-                "FROM AAOSHWSets LEFT OUTER JOIN  " & _
-                AAOSDBName & ".dbo.Vendor ON AAOSHWSets.Mfr = " & AAOSDBName & ".dbo.Vendor.ABBR LEFT OUTER JOIN " & _
-                "AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID " & _
-                "WHERE (AAOSHWSets.SetName in (select distinct HWSet from AAOSDOORS where ProjectID = " & PrjID1.ToString & ") AND AAOSHWSets.ProjectID = " & PrjID1.ToString & " AND AAOSHWSets.DHI <> 100000 AND " & AAOSDBName & ".dbo.Vendor.VENDOR_TYPE_ID = 3)" & _
-                "ORDER BY AAOSProjects.ProjectName, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description,SetName"
+            strQ = "SELECT AAOSProjects.ProjectName, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description, AAOSHWSets.Price, AAOSHWSets.SetName, AAOSHWSets.Qty, AAOSHWSets.ProjectID, " & _
+                    "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+                    "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max))  " & _
+                    "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
+                    "FROM AAOSHWSets LEFT OUTER JOIN  " & _
+                    AAOSDBName & ".dbo.Vendor ON AAOSHWSets.Mfr = " & AAOSDBName & ".dbo.Vendor.ABBR LEFT OUTER JOIN " & _
+                    "AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID " & _
+                    "WHERE (AAOSHWSets.SetName in (select distinct HWSet from AAOSDOORS where ProjectID = " & PrjID1.ToString & ") AND AAOSHWSets.ProjectID = " & PrjID1.ToString & " AND AAOSHWSets.DHI <> 100000 AND " & AAOSDBName & ".dbo.Vendor.VENDOR_TYPE_ID = 3)" & _
+                    "ORDER BY AAOSProjects.ProjectName, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description,SetName"
 
 
         End If
-
-
-
-        'strQ = "SELECT AAOSProjects.ProjectName, AAOS.dbo.Vendor.NAME, AAOSHWSets.Product, " & _
-        '        "AAOSHWSets.Description AS  Description,AAOSHWSets.Price, AAOSHWSets.SetName, " & _
-        '        "AAOSHWSets.Qty, AAOSHWSets.ProjectID FROM AAOSHWSets " & _
-        '        "LEFT OUTER JOIN  AAOS.dbo.Vendor ON AAOSHWSets.Mfr = AAOS.dbo.Vendor.ABBR " & _
-        '        "LEFT OUTER JOIN AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID " & _
-        '        "JOIN AAOSReportJoin on AAOSHWSets.ProjectID = AAOSReportJoin.ProjectID " & _
-        '        "JOIN AAOSDoors ON AAOSReportJoin.JoinValue =  AAOSDoors.UniqueMark " & _
-        '        "AND AAOSReportJoin.ProjectID = AAOSDoors.ProjectID and AAOSDoors.HWSet = AAOSHWSets.SetName " & _
-        '        "WHERE(AAOSHWSets.ProjectID =" & PrjID1.ToString & " and AAOSReportJoin.UserID =" & UsrID.ToString & ")" & _
-        '       "ORDER BY AAOSProjects.ProjectName, AAOS.dbo.Vendor.NAME, AAOSHWSets.Product, Description,Price,SetName"
-
 
 
 
@@ -2226,13 +2190,14 @@ ErrHandler:
         Dim dv1 As New DataView(dc1.DT.Clone)
         Dim iFind As Integer
         Dim drv As DataRowView
-        Dim dvFind(dc1.DT.Columns.Count - 4) As System.Object
+        Dim dvFind(dc1.DT.Columns.Count - 5) As System.Object
         Dim str1 As String = ""
         Dim dValue As Double
         For i As Integer = 0 To dc1.DT.Columns.Count - 1
             If dc1.DT.Columns(i).ColumnName.ToUpper = "QTY" Then Continue For
             If dc1.DT.Columns(i).ColumnName.ToUpper = "PROJECTID" Then Continue For
             If dc1.DT.Columns(i).ColumnName.ToUpper = "SETNAME" Then Continue For
+            If dc1.DT.Columns(i).ColumnName.ToUpper = "NEWPROJID" Then Continue For
             str1 &= dc1.DT.Columns(i).ColumnName & ","
         Next
         str1 = str1.Substring(0, str1.Length - 1)
@@ -2262,6 +2227,7 @@ ErrHandler:
 
                 If dc1.DT.Columns(j).ColumnName.ToUpper = "PROJECTID" Then Continue For
                 If dc1.DT.Columns(j).ColumnName.ToUpper = "SETNAME" Then Continue For
+                If dc1.DT.Columns(j).ColumnName.ToUpper = "NEWPROJID" Then Continue For
 
                 dvFind(j) = dc1.DT.Rows(i).Item(j)
             Next
@@ -2346,14 +2312,14 @@ ErrHandler:
 
         DataDB = New SqlClient.SqlConnection("Data Source=SQLOLEDB.1;Password=" & DBPass & ";Persist Security Info=True;User ID=" & DBUser & ";Initial Catalog=" & ADSDBName & ";Data Source=" & DBServerPort)
 
-        Dim query As String = "SELECT AAOSHWSets.SetName, " + _
-                                "AAOSHWSets.Qty, AAOSHWSets.SetDesc, AAOSHWSets.TypeDescription, AAOSHWSets.Description, AAOSHWSets.Finish, " + _
-                                "MAX(AAOS.dbo.Vendor.NAME) [Manufacturer], AAOSHWSets.SetNotes " + _
-                            "FROM AAOSHWSets LEFT JOIN AAOS.dbo.Vendor " + _
-                            "ON AAOSHWSets.Mfr = AAOS.dbo.Vendor.ABBR " + _
-                            "WHERE AAOSHWSets.ProjectID = " + arguments(2) + " And DHI <> 100000 " + _
-                            "GROUP BY AAOSHWSets.ProjectID, AAOSHWSets.SetName, AAOSHWSets.Qty, AAOSHWSets.SetDesc, AAOSHWSets.TypeDescription, " + _
-                                "AAOSHWSets.Description, AAOSHWSets.Finish, AAOSHWSets.SetNotes, AAOSHWSets.DHI " + _
+        Dim query As String = "SELECT AAOSHWSets.SetName, " +
+                                "AAOSHWSets.Qty, AAOSHWSets.SetDesc, AAOSHWSets.TypeDescription, AAOSHWSets.Description, AAOSHWSets.Finish, " +
+                                "MAX(" + AAOSDBName + ".dbo.Vendor.NAME) [Manufacturer], AAOSHWSets.SetNotes " +
+                            "FROM AAOSHWSets LEFT JOIN " + AAOSDBName + ".dbo.Vendor " +
+                            "ON AAOSHWSets.Mfr = " + AAOSDBName + ".dbo.Vendor.ABBR " +
+                            "WHERE AAOSHWSets.ProjectID = " + arguments(2) + " And DHI <> 100000 " +
+                            "GROUP BY AAOSHWSets.ProjectID, AAOSHWSets.SetName, AAOSHWSets.Qty, AAOSHWSets.SetDesc, AAOSHWSets.TypeDescription, " +
+                                "AAOSHWSets.Description, AAOSHWSets.Finish, AAOSHWSets.SetNotes, AAOSHWSets.DHI " +
                             "ORDER BY AAOSHWSets.SetName, AAOSHWSets.DHI"
 
         Dim dtable As New DataTable
@@ -2436,6 +2402,96 @@ ErrHandler:
         Resume
     End Sub
 
+    '    Private Sub CreateRFI(ByVal arguments() As String)
+    '        On Error GoTo ErrHandler
+    '        Dim projectID As Integer = arguments(2)
+
+    '        DataDB = New SqlClient.SqlConnection("Data Source=SQLOLEDB.1;Password=" & DBPass & ";Persist Security Info=True;User ID=" & DBUser & ";Initial Catalog=" & ADSDBName & ";Data Source=" & DBServerPort)
+
+    '        Dim query As String = "SELECT AAOSProjects.ProjectName, Mark, RFI FROM AAOSDoors INNER JOIN AAOSProjects ON AAOSDoors.ProjectID = AAOSProjects.ID WHERE ProjectID = " & projectID & " AND (CHARINDEX('deleted', ChangeLog) < 1) AND RFI <> ''"
+
+    '        Dim dtable As New DataTable
+    '        DataDB.Open()
+    '        Using dataAdapter As New SqlDataAdapter(query, DataDB)
+    '            dataAdapter.Fill(dtable)
+    '        End Using
+
+    '        Dim newTable As New DataTable
+    '        newTable.Columns.Add("ProjectName")
+    '        newTable.Columns.Add("Mark")
+    '        newTable.Columns.Add("User")
+    '        newTable.Columns.Add("Comment")
+    '        For Each row As DataRow In dtable.Rows
+    '            Dim rfi() As String = Split(row("RFI"), D3)
+    '            For Each s As String In rfi
+    '                If s <> "" Then
+    '                    Dim newRow As DataRow = newTable.NewRow
+    '                    newRow("ProjectName") = row("ProjectName")
+    '                    newRow("Mark") = row("Mark")
+    '                    Dim userComment() As String = Split(s, D2)
+    '                    Dim user As String = ""
+    '                    Dim comment As String = ""
+    '                    If userComment.Length >= 3 Then
+    '                        user = userComment(1).Replace(" - ", vbCrLf)
+    '                        comment = userComment(2)
+    '                    Else
+    '                        user = userComment(0).Replace(" - ", vbCrLf)
+    '                        comment = userComment(1)
+    '                    End If
+    '                    newRow("User") = user
+    '                    newRow("Comment") = comment
+    '                    newTable.Rows.Add(newRow)
+    '                End If
+    '            Next
+    '        Next
+
+    '        Dim rpt As New rptRFI
+    '        rpt.DataSource = newTable
+    '        rpt.Run()
+
+    '        If My.Computer.FileSystem.DirectoryExists(Path.GetDirectoryName(arguments(4))) = False Then
+    '            My.Computer.FileSystem.CreateDirectory(Path.GetDirectoryName(arguments(4)))
+    '        End If
+
+    '        Select Case arguments(5).ToUpper
+    '            Case "PDF"
+    '                Dim rptexp As New GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport
+    '                rptexp.Export(rpt.Document, arguments(4))
+    '                rptexp.Dispose()
+    '                rptexp = Nothing
+    '            Case "XLS", "EXCEL"
+    '                Dim rptxls As New GrapeCity.ActiveReports.Export.Excel.Section.XlsExport
+    '                rptxls.Export(rpt.Document, arguments(4))
+    '                rptxls.Dispose()
+    '                rptxls = Nothing
+    '            Case "RTF"
+    '                Dim rptrtf As New GrapeCity.ActiveReports.Export.Word.Section.RtfExport
+    '                rptrtf.EnableShapes = True
+    '                rptrtf.Export(rpt.Document, arguments(4))
+    '                rptrtf.Dispose()
+    '                rptrtf = Nothing
+    '        End Select
+
+    '        rpt.Dispose()
+    '        rpt = Nothing
+
+    '        WriteToConsole("SUCCESSFULL")
+
+    'GetOut:
+    '        If DataDB IsNot Nothing Then
+    '            If DataDB.State <> ConnectionState.Closed Then DataDB.Close()
+    '            DataDB.Dispose()
+    '            DataDB = Nothing
+    '        End If
+    '        Exit Sub
+    'ErrHandler:
+    '        WriteToConsole("ERROR - RFI " & Err.Description)
+    '        GoTo GetOut
+    '        Exit Sub
+    '        Resume Next
+    '        Resume
+    '        'End Sub
+
 
     Private Sub CreateHardwareSetEstimate(ByVal arguments() As String, Optional ByVal ShowCost As Boolean = False)
         On Error GoTo ErrHandler
@@ -2449,25 +2505,6 @@ ErrHandler:
 
         Dim strQ As String
 
-        'strQ = "SELECT AAOSProjects.ProjectName, AAOSProjects.JobName, AAOSProjects.Description AS ProjectDescription, AAOSHWSets.Price, AAOSHWSets.Product, AAOSHWSets.Qty, " & _
-        '            "AAOSHWSets.SetName, AAOSHWSets.Description, AAOSHWSets.TypeDescription, AAOSHWSets.Finish, AAOSHWSets.ProjectID " & _
-        '            "FROM AAOSProjectHardware RIGHT OUTER JOIN " & _
-        '            "AAOSHWSets ON AAOSProjectHardware.Item = AAOSHWSets.Product LEFT OUTER JOIN " & _
-        '            "AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID " & _
-        '            "WHERE (AAOSHWSets.ProjectID = " & PrjID1.ToString & ") AND (AAOSProjects.ID = " & PrjID1.ToString & ") AND (AAOSProjectHardware.ProjectID = " & PrjID1.ToString & ")" &
-
-        'strQ = "SELECT AAOSDOORS.UniqueMark,AAOSProjects.ProjectName, AAOSProjects.JobName, " & _
-        '        "AAOSProjects.Description AS ProjectDescription, AAOSHWSets.Price, " & _
-        '        "AAOSHWSets.Product, AAOSHWSets.Qty, AAOSHWSets.SetName, AAOSHWSets.Description, " & _
-        '        "AAOSHWSets.TypeDescription, AAOSHWSets.Finish, AAOSHWSets.ProjectID " & _
-        '        "FROM AAOSProjectHardware RIGHT OUTER JOIN AAOSHWSets ON AAOSProjectHardware.Item = AAOSHWSets.Product " & _
-        '        "AND  AAOSProjectHardware.ProjectID = AAOSHWSets.ProjectID " & _
-        '        "LEFT JOIN AAOSProjects ON AAOSProjectHardware.ProjectID = AAOSProjects.ID " & _
-        '        "JOIN AAOSReportJoin on AAOSProjectHardware.ProjectID = AAOSReportJoin.ProjectID " & _
-        '        "JOIN AAOSDoors ON AAOSReportJoin.JoinValue =  AAOSDoors.UniqueMark " & _
-        '        "AND AAOSReportJoin.ProjectID = AAOSDoors.ProjectID and AAOSDoors.HWSet = AAOSHWSets.SetName " & _
-        '        "WHERE(AAOSProjectHardware.ProjectID =" & PrjID1.ToString & " and AAOSReportJoin.UserID =" & UsrID.ToString & ")"
-
 
         If isFiltered Then
 
@@ -2477,20 +2514,27 @@ ErrHandler:
                     "AAOSHWSets.Qty, AAOSHWSets.SetName, " & _
                     "AAOSHWSets.Description, " & _
                     "AAOSHWSets.TypeDescription, " & _
-                    "AAOSHWSets.Finish, AAOSHWSets.ProjectID FROM AAOSProjectHardware RIGHT OUTER JOIN AAOSHWSets " & _
+                    "AAOSHWSets.Finish, AAOSHWSets.ProjectID, " & _
+                    "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+                    "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max)) " & _
+                    "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
+                    "FROM AAOSProjectHardware RIGHT OUTER JOIN AAOSHWSets " & _
                     "ON AAOSProjectHardware.Item = AAOSHWSets.Product AND  AAOSProjectHardware.ProjectID = AAOSHWSets.ProjectID " & _
                     "LEFT JOIN AAOSProjects ON AAOSProjectHardware.ProjectID = AAOSProjects.ID " & _
                     "JOIN AAOSReportJoin on AAOSProjectHardware.ProjectID = AAOSReportJoin.ProjectID " & _
                     "JOIN AAOSDoors ON AAOSReportJoin.JoinValue =  AAOSDoors.UniqueMark AND AAOSReportJoin.ProjectID = AAOSDoors.ProjectID " & _
                     "and AAOSDoors.HWSet = AAOSHWSets.SetName " & _
                     "WHERE(AAOSProjectHardware.ProjectID =" & PrjID1.ToString & " and AAOSReportJoin.UserID =" & UsrID.ToString & ")" & _
-                    "group by AAOSProjects.ProjectName,AAOSProjects.JobName, " & _
+                    "group by AAOSProjects.ProjectName,AAOSProjects.JobName, AAOSProjects.ID, AAOSProjects.OriginalProjectID, AAOSProjects.RevisionNumber, " & _
                     "AAOSHWSets.Price, AAOSHWSets.Product,Cast(AAOSProjects.Description AS nvarchar(max)), AAOSHWSets.Price," & _
                     "AAOSHWSets.Product,AAOSHWSets.Qty,AAOSHWSets.SetName, AAOSHWSets.Description, " & _
                     "AAOSHWSets.TypeDescription,AAOSHWSets.Finish, AAOSHWSets.ProjectID,AAOSProjectHardware.DHI order by AAOSProjectHardware.DHI"
         Else
             strQ = "SELECT AAOSProjects.ProjectName, AAOSProjects.JobName,AAOSProjectHardware.DHI, AAOSProjects.Description AS ProjectDescription, AAOSHWSets.Price, AAOSHWSets.Product, AAOSHWSets.Qty, " & _
-            "AAOSHWSets.SetName, AAOSHWSets.Description, AAOSHWSets.TypeDescription, AAOSHWSets.Finish, AAOSHWSets.ProjectID " & _
+            "AAOSHWSets.SetName, AAOSHWSets.Description, AAOSHWSets.TypeDescription, AAOSHWSets.Finish, AAOSHWSets.ProjectID, " & _
+            "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+            "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max)) " & _
+            "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
             "FROM AAOSProjectHardware RIGHT OUTER JOIN " & _
             "AAOSHWSets ON AAOSProjectHardware.Item = AAOSHWSets.Product LEFT OUTER JOIN " & _
             "AAOSProjects ON AAOSHWSets.ProjectID = AAOSProjects.ID " & _
@@ -2498,26 +2542,6 @@ ErrHandler:
 
 
         End If
-
-
-        'strQ = "SELECT AAOSProjects.ProjectName, AAOSProjects.JobName, AAOSProjectHardware.DHI," & _
-        '"AAOSProjects.Description AS ProjectDescription" & _
-        '", AAOSHWSets.Price, AAOSHWSets.Product, " & _
-        '"AAOSHWSets.Qty, AAOSHWSets.SetName, " & _
-        '"AAOSHWSets.Description," & _
-        '"AAOSHWSets.TypeDescription, " & _
-        '"AAOSHWSets.Finish, AAOSHWSets.ProjectID FROM AAOSProjectHardware RIGHT OUTER JOIN AAOSHWSets " & _
-        '"ON AAOSProjectHardware.Item = AAOSHWSets.Product AND  AAOSProjectHardware.ProjectID = AAOSHWSets.ProjectID " & _
-        '"LEFT JOIN AAOSProjects ON AAOSProjectHardware.ProjectID = AAOSProjects.ID " & _
-        '"JOIN AAOSReportJoin on AAOSProjectHardware.ProjectID = AAOSReportJoin.ProjectID " & _
-        '"JOIN AAOSDoors ON AAOSReportJoin.JoinValue =  AAOSDoors.UniqueMark AND AAOSReportJoin.ProjectID = AAOSDoors.ProjectID " & _
-        '"and AAOSDoors.HWSet = AAOSHWSets.SetName " & _
-        '"WHERE(AAOSProjectHardware.ProjectID =" & PrjID1.ToString & " and AAOSReportJoin.UserID =" & UsrID.ToString & ")" & _
-        '" order by AAOSProjectHardware.DHI"
-
-
-
-
 
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
@@ -2662,27 +2686,18 @@ ErrHandler:
 
 
         If IsDoor Then
-            'strQ = "SELECT AAOSProjects.ProjectName, AAOSProjects.JobName, AAOSDoorEstimate.ReportID, AAOSDoorEstimate.ProjectID, AAOSDoorEstimate.Category, " & _
-            '              "AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc, " & _
-            '              "AAOSDoorEstimate.Series, AAOSDoorEstimate.Gauge, AAOSDoorEstimate.SteelType, AAOSDoorEstimate.List, AAOSDoorEstimate.NC, " & _
-            '              "AAOSDoorEstimate.Adj, AAOSDoorEstimate.Adj1, AAOSDoorEstimate.Adj2, AAOSDoorEstimate.Adj3, AAOSDoorEstimate.Adj4, AAOSDoorEstimate.Material, " & _
-            '              "SUM(AAOSDoorEstimate.Qty) AS TotalQty, AAOSDoorEstimate.Net AS TotalNet, SUM(AAOSDoorEstimate.Extended) AS TotalExtended " & _
-            '    "FROM AAOSDoorEstimate LEFT OUTER JOIN " & _
-            '    "AAOSProjects ON AAOSDoorEstimate.ProjectID = AAOSProjects.ID " & sWhere & _
-            '    "GROUP BY AAOSProjects.ProjectName, AAOSProjects.JobName, AAOSDoorEstimate.ReportID, AAOSDoorEstimate.ProjectID, AAOSDoorEstimate.Category, " & _
-            '              "AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc,  " & _
-            '              "AAOSDoorEstimate.Series, AAOSDoorEstimate.Gauge, AAOSDoorEstimate.SteelType, AAOSDoorEstimate.List, AAOSDoorEstimate.NC, " & _
-            '              "AAOSDoorEstimate.Adj, AAOSDoorEstimate.Adj1, AAOSDoorEstimate.Adj2, AAOSDoorEstimate.Adj3, AAOSDoorEstimate.Adj4, AAOSDoorEstimate.Material, AAOSDoorEstimate.Extended, AAOSDoorEstimate.Net " & _
-            '    "ORDER BY AAOSDoorEstimate.Material, AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Category, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc"
 
             strQ = "SELECT AAOSProjects.ProjectName, AAOSProjects.JobName, AAOSDoorEstimate.ReportID, AAOSDoorEstimate.ProjectID, AAOSDoorEstimate.Category, " & _
                           "AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc, " & _
                           "AAOSDoorEstimate.Series, AAOSDoorEstimate.Gauge, AAOSDoorEstimate.SteelType, AAOSDoorEstimate.List, AAOSDoorEstimate.NC, " & _
                           "AAOSDoorEstimate.Adj, AAOSDoorEstimate.Adj1, AAOSDoorEstimate.Adj2, AAOSDoorEstimate.Adj3, AAOSDoorEstimate.Adj4, AAOSDoorEstimate.Material, " & _
+                          "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+                          "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max)) " & _
+                          "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID," & _
                           "SUM(AAOSDoorEstimate.Qty) AS TotalQty, AAOSDoorEstimate.Net AS TotalNet, SUM(AAOSDoorEstimate.Extended) AS TotalExtended " & _
                 "FROM AAOSDoorEstimate LEFT OUTER JOIN " & _
                 "AAOSProjects ON AAOSDoorEstimate.ProjectID = AAOSProjects.ID " & sWhere & _
-                "GROUP BY AAOSProjects.ProjectName, AAOSProjects.JobName, AAOSDoorEstimate.ReportID, AAOSDoorEstimate.ProjectID, AAOSDoorEstimate.Category, " & _
+                "GROUP BY AAOSProjects.id,AAOSProjects.OriginalProjectID ,AAOSProjects.RevisionNumber,AAOSProjects.ProjectName, AAOSProjects.JobName, AAOSDoorEstimate.ReportID, AAOSDoorEstimate.ProjectID, AAOSDoorEstimate.Category, " & _
                           "AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc,  " & _
                           "AAOSDoorEstimate.Series, AAOSDoorEstimate.Gauge, AAOSDoorEstimate.SteelType, AAOSDoorEstimate.List, AAOSDoorEstimate.NC, " & _
                           "AAOSDoorEstimate.Adj, AAOSDoorEstimate.Adj1, AAOSDoorEstimate.Adj2, AAOSDoorEstimate.Adj3, AAOSDoorEstimate.Adj4, AAOSDoorEstimate.Material, AAOSDoorEstimate.Net " & _
@@ -2692,32 +2707,21 @@ ErrHandler:
 
 
         Else
-            'strQ = "SELECT AAOSProjects.ProjectName, AAOSProjects.JobName, AAOSDoorEstimate.ReportID, AAOSDoorEstimate.ProjectID, AAOSDoorEstimate.Category, " & _
-            '              "AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc, AAOSDoorEstimate.FrameDesign, AAOSDoorEstimate.FrameHead, " & _
-            '              "AAOSDoorEstimate.FrameFace, AAOSDoorEstimate.Series, AAOSDoorEstimate.Gauge, AAOSDoorEstimate.SteelType, AAOSDoorEstimate.List, AAOSDoorEstimate.NC, " & _
-            '              "AAOSDoorEstimate.Adj, AAOSDoorEstimate.Adj1, AAOSDoorEstimate.Adj2, AAOSDoorEstimate.Adj3, AAOSDoorEstimate.Adj4, AAOSDoorEstimate.Material, " & _
-            '              "SUM(AAOSDoorEstimate.Qty) AS TotalQty, AAOSDoorEstimate.Net AS TotalNet, SUM(AAOSDoorEstimate.Extended) AS TotalExtended " & _
-            '    "FROM AAOSDoorEstimate LEFT OUTER JOIN " & _
-            '    "AAOSProjects ON AAOSDoorEstimate.ProjectID = AAOSProjects.ID " & sWhere & _
-            '    "GROUP BY AAOSProjects.ProjectName, AAOSProjects.JobName, AAOSDoorEstimate.ReportID, AAOSDoorEstimate.ProjectID, AAOSDoorEstimate.Category, " & _
-            '              "AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc, AAOSDoorEstimate.FrameDesign, AAOSDoorEstimate.FrameHead, " & _
-            '              "AAOSDoorEstimate.FrameFace, AAOSDoorEstimate.Series, AAOSDoorEstimate.Gauge, AAOSDoorEstimate.SteelType, AAOSDoorEstimate.List, AAOSDoorEstimate.NC, " & _
-            '              "AAOSDoorEstimate.Adj, AAOSDoorEstimate.Adj1, AAOSDoorEstimate.Adj2, AAOSDoorEstimate.Adj3, AAOSDoorEstimate.Adj4, AAOSDoorEstimate.Material, AAOSDoorEstimate.Extended, AAOSDoorEstimate.Net " & _
-            '    "ORDER BY AAOSDoorEstimate.Material, AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Category, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc"
-
             strQ = "SELECT AAOSProjects.ProjectName, AAOSProjects.JobName, AAOSDoorEstimate.ReportID, AAOSDoorEstimate.ProjectID, AAOSDoorEstimate.Category, " & _
-                                      "AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc, AAOSDoorEstimate.FrameDesign, AAOSDoorEstimate.FrameHead, " & _
-                                      "AAOSDoorEstimate.FrameFace, AAOSDoorEstimate.Series, AAOSDoorEstimate.Gauge, AAOSDoorEstimate.SteelType, AAOSDoorEstimate.List, AAOSDoorEstimate.NC, " & _
-                                      "AAOSDoorEstimate.Adj, AAOSDoorEstimate.Adj1, AAOSDoorEstimate.Adj2, AAOSDoorEstimate.Adj3, AAOSDoorEstimate.Adj4, AAOSDoorEstimate.Material, " & _
-                                      "SUM(AAOSDoorEstimate.Qty) AS TotalQty, AAOSDoorEstimate.Net AS TotalNet, SUM(AAOSDoorEstimate.Extended) AS TotalExtended " & _
-                            "FROM AAOSDoorEstimate LEFT OUTER JOIN " & _
-                            "AAOSProjects ON AAOSDoorEstimate.ProjectID = AAOSProjects.ID " & sWhere & _
-                            "GROUP BY AAOSProjects.ProjectName, AAOSProjects.JobName, AAOSDoorEstimate.ReportID, AAOSDoorEstimate.ProjectID, AAOSDoorEstimate.Category, " & _
-                                      "AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc, AAOSDoorEstimate.FrameDesign, AAOSDoorEstimate.FrameHead, " & _
-                                      "AAOSDoorEstimate.FrameFace, AAOSDoorEstimate.Series, AAOSDoorEstimate.Gauge, AAOSDoorEstimate.SteelType, AAOSDoorEstimate.List, AAOSDoorEstimate.NC, " & _
-                                      "AAOSDoorEstimate.Adj, AAOSDoorEstimate.Adj1, AAOSDoorEstimate.Adj2, AAOSDoorEstimate.Adj3, AAOSDoorEstimate.Adj4, AAOSDoorEstimate.Material, AAOSDoorEstimate.Net " & _
-                            "ORDER BY AAOSDoorEstimate.Material, AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Category, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc"
-
+                                                  "AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc, AAOSDoorEstimate.FrameDesign, AAOSDoorEstimate.FrameHead, " & _
+                                                  "AAOSDoorEstimate.FrameFace, AAOSDoorEstimate.Series, AAOSDoorEstimate.Gauge, AAOSDoorEstimate.SteelType, AAOSDoorEstimate.List, AAOSDoorEstimate.NC, " & _
+                                                  "AAOSDoorEstimate.Adj, AAOSDoorEstimate.Adj1, AAOSDoorEstimate.Adj2, AAOSDoorEstimate.Adj3, AAOSDoorEstimate.Adj4, AAOSDoorEstimate.Material, " & _
+                                                  "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+                                                  "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max)) " & _
+                                                  "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID," & _
+                                                  "SUM(AAOSDoorEstimate.Qty) AS TotalQty, AAOSDoorEstimate.Net AS TotalNet, SUM(AAOSDoorEstimate.Extended) AS TotalExtended " & _
+                                        "FROM AAOSDoorEstimate LEFT OUTER JOIN " & _
+                                        "AAOSProjects ON AAOSDoorEstimate.ProjectID = AAOSProjects.ID " & sWhere & _
+                                        "GROUP BY AAOSProjects.id,AAOSProjects.OriginalProjectID ,AAOSProjects.RevisionNumber,AAOSProjects.ProjectName, AAOSProjects.JobName, AAOSDoorEstimate.ReportID, AAOSDoorEstimate.ProjectID, AAOSDoorEstimate.Category, " & _
+                                                  "AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc, AAOSDoorEstimate.FrameDesign, AAOSDoorEstimate.FrameHead, " & _
+                                                  "AAOSDoorEstimate.FrameFace, AAOSDoorEstimate.Series, AAOSDoorEstimate.Gauge, AAOSDoorEstimate.SteelType, AAOSDoorEstimate.List, AAOSDoorEstimate.NC, " & _
+                                                  "AAOSDoorEstimate.Adj, AAOSDoorEstimate.Adj1, AAOSDoorEstimate.Adj2, AAOSDoorEstimate.Adj3, AAOSDoorEstimate.Adj4, AAOSDoorEstimate.Material, AAOSDoorEstimate.Net " & _
+                                        "ORDER BY AAOSDoorEstimate.Material, AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Category, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc"
 
         End If
 
@@ -2876,6 +2880,9 @@ ErrHandler:
        " SET ARITHABORT ON" & _
        " SELECT AP.PROJECTNAME," & _
        " AP.ID ProjectReference," & _
+       "CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+       "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+       "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
        " HW.SETNAME,HW.SETDESC," & _
        " Max(TOTALS.PRICE) AS Price," & _
        " Max(DOORS.QTY) AS Qty," & _
@@ -2932,7 +2939,7 @@ ErrHandler:
                         " WHERE  AAOSHWSETS.PROJECTID=@PROJECTID " & _
                         " GROUP  BY AAOSHWSETS.PROJECTID,SETNAME) TOTALS ON TOTALS.PROJECTID=HW.PROJECTID AND TOTALS.SETNAME=HW.SETNAME " & _
        " WHERE  HW.PROJECTID=@PROJECTID " & _
-       " GROUP  BY AP.PROJECTNAME,AP.ID, HW.SETNAME,HW.SETDESC,ACS.FIRSTNAME,ACS.LASTNAME,ACS.EMAIL,NOTES.LIST, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title "
+       " GROUP  BY AP.PROJECTNAME,AP.ID,AP.OriginalProjectID, AP.RevisionNumber, HW.SETNAME,HW.SETDESC,ACS.FIRSTNAME,ACS.LASTNAME,ACS.EMAIL,NOTES.LIST, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title "
 
 
 
@@ -3128,6 +3135,9 @@ ErrHandler:
        " HW.TYPEDESCRIPTION," & _
        " AP.PROJECTNAME," & _
        " AP.ID ProjectReference," & _
+       " CASE WHEN AP.OriginalProjectID IS NULL or AP.OriginalProjectID <> '0' " & _
+       " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+       " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID, " & _
        " CASE WHEN Len(PH.PRICE)=0 THEN '0' ELSE PH.PRICE END AS singlePrice," & _
        " PH.UOM," & _
        " (ACS.FIRSTNAME+' ' +ACS.LASTNAME) as SalesRep," & _
@@ -3198,6 +3208,9 @@ ErrHandler:
        " HW.TYPEDESCRIPTION," & _
        " AP.PROJECTNAME," & _
        " AP.ID ProjectReference," & _
+       " CASE WHEN AP.OriginalProjectID IS NULL or AP.OriginalProjectID <> '0' " & _
+       " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+       " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID, " & _
        " CASE WHEN Len(PH.PRICE)=0 THEN '0' ELSE PH.PRICE END AS singlePrice," & _
        " PH.UOM," & _
        " (ACS.FIRSTNAME+' ' +ACS.LASTNAME) as SalesRep," & _
@@ -3268,6 +3281,9 @@ ErrHandler:
        " HW.TYPEDESCRIPTION," & _
        " AP.PROJECTNAME," & _
        " AP.ID ProjectReference," & _
+       " CASE WHEN AP.OriginalProjectID IS NULL or AP.OriginalProjectID <> '0' " & _
+       " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+       " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID, " & _
        " CASE WHEN Len(PH.PRICE)=0 THEN '0' ELSE PH.PRICE END AS singlePrice," & _
        " PH.UOM," & _
        " (ACS.FIRSTNAME+' ' +ACS.LASTNAME) as SalesRep," & _
@@ -3523,6 +3539,9 @@ ErrHandler:
 
         strQ = "SELECT " & _
          " AP.id ProjectReference, " & _
+         "CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+         "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+         "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
          " AP.projectname ProjectName, " & _
          " CASE WHEN DAY(getdate()) in (1,21,31) THEN convert(varchar,DAY(getdate())) + 'st '" & _
          " WHEN DAY(getdate()) IN (2,22) then convert(varchar,DAY(getdate())) + 'nd '" & _
@@ -3715,6 +3734,9 @@ ErrHandler:
         strQ = " DECLARE @ProjectID INT" & _
        " SET @ProjectID = " & PrjID1.ToString & _
        " SELECT AP.id   ProjectReference, " & _
+       "CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+       "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+       "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
        "AP.projectname ProjectName, " & _
        "AD.Mark DoorNumber, " & _
        "AH.setname     SetReference, " & _
@@ -3735,7 +3757,7 @@ ErrHandler:
        " LEFT OUTER JOIN AAOSHWSets AH ON AP.id = AH.ProjectID AND " & _
        "  AD.hwset = AH.setname " & _
        " WHERE  AP.id = @ProjectID " & _
-       " GROUP  BY AP.id,AP.projectname,AD.Mark,AH.setname,AD.id, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title" & _
+       " GROUP  BY AP.id,AP.projectname,AP.OriginalProjectID,AP.RevisionNumber,AD.Mark,AH.setname,AD.id, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title" & _
        " ORDER  BY AD.id "
 
 
@@ -4122,10 +4144,13 @@ ErrHandler:
         "" & _
         " SELECT AP.ID ProjectReference, " & _
         " AP.ProjectName, " & _
+         "CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+         "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+         "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
         " (ACS.FirstName + ' ' + ACS.LastName) AS ProjectOwner, " & _
         " CASE WHEN Day(Getdate()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'st ' WHEN Day(Getdate()) IN ( 2, 22 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd ' WHEN Day(Getdate()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd ' ELSE CONVERT(VARCHAR, Day(Getdate())) + 'th ' END + Datename(month, Getdate()) + ' ' " & _
         " + CONVERT(VARCHAR, Year(Getdate()))TodaysDateEN, getdate() TodaysDate, " & _
-        "'" & ImagesPath & "' + CASE WHEN LEFT(FileName, 1) = '\' THEN RIGHT(FileName, LEN(FileName)-1) ELSE FileName END as Image," & _
+        "'" & ImagesPath & "' + CASE WHEN LEFT([FileName], 1) = '\' THEN RIGHT([FileName], LEN([FileName])-1) ELSE [FileName] END as Image," & _
         " HW.Description ProductCode, " & _
         " HW.TypeDescription   ProductDescription, " & _
         " PH.UOM, " & _
@@ -4196,8 +4221,13 @@ ErrHandler:
         " AND ISNULL(NULLIF(HW.Qty, ''), 0) != 0 " & _
         " AND ISNULL(CASE WHEN DOORS.QTY = 0 THEN 0 WHEN DOORS.QTY > 0 THEN 1 END, 0) = " & _
         " CASE @DOORFILTER WHEN 0 THEN 1 WHEN 1 THEN 0 ELSE ISNULL(CASE WHEN DOORS.QTY = 0 THEN 0 WHEN DOORS.QTY > 0 THEN 1 END, 0) END" & _
-        " GROUP  BY AP.ID,AP.ProjectName, (ACS.FirstName + ' '  + ACS.LastName),HW.Description,HW.TypeDescription,CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2)),PH.UOM, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title,filename" & _
-        " ORDER  BY HW.Description "
+        " GROUP  BY AP.ID,AP.ProjectName,AP.OriginalProjectID,AP.RevisionNumber,PH.DHI, (ACS.FirstName + ' '  + ACS.LastName),HW.Description,HW.TypeDescription,CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2)),PH.UOM, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title,[Filename]" & _
+        " ORDER  BY PH.DHI "
+
+        'Dim file As System.IO.StreamWriter
+        'file = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\wrightj\Documents\test.txt", True)
+        'file.WriteLine(strQ)
+        'file.Close()
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
@@ -4370,6 +4400,9 @@ ErrHandler:
         strQ = "SELECT " & _
          " AP.id ProjectReference, " & _
          " AP.projectname ProjectName, " & _
+         "CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+         "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+         "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
          " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
          " CASE WHEN DAY(getdate()) in (1,21,31) THEN convert(varchar,DAY(getdate())) + 'st '" & _
          " WHEN DAY(getdate()) IN (2,22) then convert(varchar,DAY(getdate())) + 'nd '" & _
