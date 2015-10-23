@@ -3197,7 +3197,7 @@ ErrHandler:
        "" & _
        "" & _
        "" & _
-       "    IF @DOORFILTER=1 " & _
+       "    IF @DOORFILTER=0 " & _
        " SELECT " & _
        " '1' AS Filter," & _
        " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT(FileName, 1) = '\' THEN RIGHT(FileName, LEN(FileName)-1) ELSE FileName END as Image," & _
