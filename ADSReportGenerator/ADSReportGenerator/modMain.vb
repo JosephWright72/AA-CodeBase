@@ -2020,7 +2020,7 @@ ErrHandler:
         Else
 
 
-            
+
 
             strQ = "SELECT AAOSProjects.ID, Cast(AAOSProjects.ID AS nvarchar(max)) + " + "'(" + RevNo + ")'" + " IDRev, AAOSProjects.ProjectName,AAOSProjects.ArchProjectID,AAOSProjects.KeyingSystem, " & _
                    "(AAOSProjects.Address1 +  ' ' + AAOSProjects.Address2 +  ' '  + AAOSProjects.Address3 + ' ' + AAOSProjects.City  + ' ' + AAOSProjects.State  + ' ' + AAOSPROJECTS.Zip) AS Address " & _
@@ -4190,8 +4190,7 @@ ErrHandler:
         " ON  x.ImageID = img.Image_id" & _
         " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
         " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
-        " LEFT OUTER JOIN " & AAOSDBName & ".dbo.hardwarestandard HST ON  CASE WHEN CHARINDEX(',', APH.IDs) = 0 THEN -1 ELSE LEFT(APH.IDs, CHARINDEX(',', APH.IDs)-1) END = HST.HDW_STD_ID " & _
-        " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON  HST.Img1 = img.Image_id " & _
+        " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON APH.ImageID= img.Image_ID " & _
         " LEFT OUTER JOIN (SELECT ProjectID, " & _
                             " SetName, " & _
                             " Sum(Cast (QTY AS INT)) Qty, " & _
