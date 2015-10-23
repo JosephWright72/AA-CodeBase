@@ -444,7 +444,7 @@ Partial Public Class rptEMEAHWSchedule
         '
         'txtContactNumber
         '
-        Me.txtContactNumber.DataField = "ContactNumber"
+        Me.txtContactNumber.DataField = "PrjOwnNumber"
         Me.txtContactNumber.Height = 0.2!
         Me.txtContactNumber.Left = 6.017!
         Me.txtContactNumber.Name = "txtContactNumber"
