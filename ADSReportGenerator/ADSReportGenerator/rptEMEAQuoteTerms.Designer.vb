@@ -40,6 +40,7 @@ Partial Public Class rptEMEAQuoteTerms
         Me.txtContactNumber = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblContactNo = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.txtEmail = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.imgLogoNO = New GrapeCity.ActiveReports.SectionReportModel.Picture()
         Me.Detail1 = New GrapeCity.ActiveReports.SectionReportModel.Detail()
         Me.txtGenCon = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.txtTechNote = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
@@ -51,7 +52,6 @@ Partial Public Class rptEMEAQuoteTerms
         Me.lblGenRem = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.PageFooter1 = New GrapeCity.ActiveReports.SectionReportModel.PageFooter()
         Me.txtFooter = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.imgLogoNO = New GrapeCity.ActiveReports.SectionReportModel.Picture()
         CType(Me.lblTitle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgLogoEN, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblEmail, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,6 +72,7 @@ Partial Public Class rptEMEAQuoteTerms
         CType(Me.txtContactNumber, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblContactNo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEmail, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgLogoNO, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtGenCon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTechNote, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtAddDet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,7 +82,6 @@ Partial Public Class rptEMEAQuoteTerms
         CType(Me.lblAddDet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblGenRem, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtFooter, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.imgLogoNO, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'PageHeader1
@@ -331,6 +331,17 @@ Partial Public Class rptEMEAQuoteTerms
         Me.txtEmail.Top = 1.402!
         Me.txtEmail.Width = 2.105001!
         '
+        'imgLogoNO
+        '
+        Me.imgLogoNO.Height = 0.567!
+        Me.imgLogoNO.HyperLink = Nothing
+        Me.imgLogoNO.ImageData = CType(resources.GetObject("imgLogoNO.ImageData"), System.IO.Stream)
+        Me.imgLogoNO.Left = 6.976!
+        Me.imgLogoNO.Name = "imgLogoNO"
+        Me.imgLogoNO.SizeMode = GrapeCity.ActiveReports.SectionReportModel.SizeModes.Zoom
+        Me.imgLogoNO.Top = 0.0!
+        Me.imgLogoNO.Width = 1.218999!
+        '
         'Detail1
         '
         Me.Detail1.CanShrink = True
@@ -418,7 +429,7 @@ Partial Public Class rptEMEAQuoteTerms
         Me.lblGenRem.Name = "lblGenRem"
         Me.lblGenRem.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 1"
-        Me.lblGenRem.Text = "General Remarks"
+        Me.lblGenRem.Text = "Revision Notes" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.lblGenRem.Top = 5.198!
         Me.lblGenRem.Width = 2.535!
         '
@@ -442,17 +453,6 @@ Partial Public Class rptEMEAQuoteTerms
     "www.assaabloy.co.uk"
         Me.txtFooter.Top = 0.0!
         Me.txtFooter.Width = 7.847!
-        '
-        'imgLogoNO
-        '
-        Me.imgLogoNO.Height = 0.567!
-        Me.imgLogoNO.HyperLink = Nothing
-        Me.imgLogoNO.ImageData = CType(resources.GetObject("imgLogoNO.ImageData"), System.IO.Stream)
-        Me.imgLogoNO.Left = 6.976!
-        Me.imgLogoNO.Name = "imgLogoNO"
-        Me.imgLogoNO.SizeMode = GrapeCity.ActiveReports.SectionReportModel.SizeModes.Zoom
-        Me.imgLogoNO.Top = 0.0!
-        Me.imgLogoNO.Width = 1.218999!
         '
         'rptEMEAQuoteTerms
         '
@@ -494,6 +494,7 @@ Partial Public Class rptEMEAQuoteTerms
         CType(Me.txtContactNumber, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblContactNo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEmail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgLogoNO, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtGenCon, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTechNote, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtAddDet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -503,7 +504,6 @@ Partial Public Class rptEMEAQuoteTerms
         CType(Me.lblAddDet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblGenRem, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtFooter, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.imgLogoNO, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub

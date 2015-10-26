@@ -2945,7 +2945,6 @@ ErrHandler:
 
 
 
-
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
         strQ = "SELECT HWSet, SUM(Qty) AS Qty FROM AAOSDoors WHERE ProjectID = " & PrjID1.ToString & " AND (CHARINDEX('deleted', ChangeLog) < 1) GROUP BY HWSet ORDER BY HWSet"
@@ -3127,7 +3126,7 @@ ErrHandler:
        " IF @DOORFILTER=2 " & _
        " SELECT " & _
        " '2' AS Filter," & _
-       " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT(FileName, 1) = '\' THEN RIGHT(FileName, LEN(FileName)-1) ELSE FileName END as Image," & _
+       " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT([FileName], 1) = '\' THEN RIGHT([FileName], LEN([FileName])-1) ELSE [FileName] END as Image," & _
        " CASE WHEN Len(HW.PRICE)=0 THEN '0' ELSE HW.PRICE END AS totSetItemPrice," & _
        " HW.PRODUCT," & _
        " CASE WHEN HW.QTY = '' THEN 0 ELSE ISNULL(HW.QTY,0) END AS QTY," & _
@@ -3186,9 +3185,26 @@ ErrHandler:
        "                    (Charindex('deleted', CHANGELOG)<1) " & _
        "                    GROUP  BY PROJECTID,HWSET) DOORS" & _
        "                    ON DOORS.HWSET=HW.SETNAME AND DOORS.PROJECTID=HW.PROJECTID " & _
-       " left outer JOIN AAOSProjectHardware APH ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
-       " left outer JOIN " & AAOSDBName & ".dbo.hardwarestandard HST ON  LEFT(APH.IDs, CHARINDEX(',', APH.IDs)-1) = HST.HDW_STD_ID " & _
-       " left outer JOIN " & AAOSDBName & ".dbo.images img ON  HST.Img1 = img.Image_id " & _
+       " LEFT OUTER JOIN (" & _
+       " SELECT [Description], MIN(x.ImageID) AS ImageID, ProjectID FROM AAOSProjectHardware APH" & _
+       " INNER JOIN (" & _
+       " SELECT A.ID, Split.a.value('.', 'VARCHAR(MAX)') AS ImageID " & _
+       " FROM  (" & _
+       " SELECT ID,  CAST ('<M>' + REPLACE([imageids], ',', '</M><M>') + '</M>' AS XML) AS String" & _
+       " FROM  AAOSProjectHardware" & _
+       " WHERE ProjectID = @ProjectID)" & _
+       " AS A CROSS APPLY String.nodes ('/M') AS Split(a)" & _
+       " WHERE ISNULL(Split.a.value('.', 'VARCHAR(MAX)'),'') <> ''" & _
+       " UNION" & _
+       " SELECT ID,ImageIDs FROM AAOSProjectHardware where ProjectID = @ProjectID AND ISNULL(ImageIDs,'') ='' ) x" & _
+       " INNER JOIN" & _
+       " (SELECT Image_id, [Filename]" & _
+       " FROM " & AAOSDBName & ".dbo.images img" & _
+       " WHERE (NOT (UPPER([Filename]) LIKE '%.PDF') OR ISNULL([Filename],'') = '')) img" & _
+       " ON  x.ImageID = img.Image_id" & _
+       " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
+       " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
+       " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON APH.ImageID= img.Image_ID " & _
        "  WHERE  (HW.PROJECTID=@PROJECTID) " & _
        "  AND ( AP.ID=@PROJECTID)" & _
        "  AND (PH.PROJECTID=@PROJECTID) " & _
@@ -3200,7 +3216,7 @@ ErrHandler:
        "    IF @DOORFILTER=0 " & _
        " SELECT " & _
        " '1' AS Filter," & _
-       " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT(FileName, 1) = '\' THEN RIGHT(FileName, LEN(FileName)-1) ELSE FileName END as Image," & _
+       " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT([FileName], 1) = '\' THEN RIGHT([FileName], LEN([FileName])-1) ELSE [FileName] END as Image," & _
        " CASE WHEN Len(HW.PRICE)=0 THEN '0' ELSE HW.PRICE END AS totSetItemPrice," & _
        " HW.PRODUCT," & _
        " CASE WHEN HW.QTY = '' THEN 0 ELSE ISNULL(HW.QTY,0) END AS QTY," & _
@@ -3259,9 +3275,26 @@ ErrHandler:
        "                    (Charindex('deleted', CHANGELOG)<1) " & _
        "                    GROUP  BY PROJECTID,HWSET) DOORS" & _
        "                    ON DOORS.HWSET=HW.SETNAME AND DOORS.PROJECTID=HW.PROJECTID " & _
-       " left outer JOIN AAOSProjectHardware APH ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
-       " left outer JOIN " & AAOSDBName & ".dbo.hardwarestandard HST ON  LEFT(APH.IDs, CHARINDEX(',', APH.IDs)-1) = HST.HDW_STD_ID " & _
-       " left outer JOIN " & AAOSDBName & ".dbo.images img ON  HST.Img1 = img.Image_id " & _
+       " LEFT OUTER JOIN (" & _
+       " SELECT [Description], MIN(x.ImageID) AS ImageID, ProjectID FROM AAOSProjectHardware APH" & _
+       " INNER JOIN (" & _
+       " SELECT A.ID, Split.a.value('.', 'VARCHAR(MAX)') AS ImageID " & _
+       " FROM  (" & _
+       " SELECT ID,  CAST ('<M>' + REPLACE([imageids], ',', '</M><M>') + '</M>' AS XML) AS String" & _
+       " FROM  AAOSProjectHardware" & _
+       " WHERE ProjectID = @ProjectID)" & _
+       " AS A CROSS APPLY String.nodes ('/M') AS Split(a)" & _
+       " WHERE ISNULL(Split.a.value('.', 'VARCHAR(MAX)'),'') <> ''" & _
+       " UNION" & _
+       " SELECT ID,ImageIDs FROM AAOSProjectHardware where ProjectID = @ProjectID AND ISNULL(ImageIDs,'') ='' ) x" & _
+       " INNER JOIN" & _
+       " (SELECT Image_id, [Filename]" & _
+       " FROM " & AAOSDBName & ".dbo.images img" & _
+       " WHERE (NOT (UPPER([Filename]) LIKE '%.PDF') OR ISNULL([Filename],'') = '')) img" & _
+       " ON  x.ImageID = img.Image_id" & _
+       " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
+       " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
+       " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON APH.ImageID= img.Image_ID " & _
        "      WHERE  (HW.PROJECTID=@PROJECTID) AND " & _
        "      (AP.ID=@PROJECTID) AND " & _
        "      (PH.PROJECTID=@PROJECTID) AND " & _
@@ -3273,7 +3306,7 @@ ErrHandler:
        "" & _
        " SELECT " & _
        " '0' AS Filter," & _
-       " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT(FileName, 1) = '\' THEN RIGHT(FileName, LEN(FileName)-1) ELSE FileName END as Image," & _
+       " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT([FileName], 1) = '\' THEN RIGHT([FileName], LEN([FileName])-1) ELSE [FileName] END as Image," & _
        " CASE WHEN Len(HW.PRICE)=0 THEN '0' ELSE HW.PRICE END AS totSetItemPrice," & _
        " HW.PRODUCT," & _
        " CASE WHEN HW.QTY = '' THEN 0 ELSE ISNULL(HW.QTY,0) END AS QTY," & _
@@ -3332,17 +3365,32 @@ ErrHandler:
        "                    (Charindex('deleted', CHANGELOG)<1) " & _
        "                    GROUP  BY PROJECTID,HWSET) DOORS" & _
        "                    ON DOORS.HWSET=HW.SETNAME AND DOORS.PROJECTID=HW.PROJECTID " & _
-       " left outer JOIN AAOSProjectHardware APH ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
-       " left outer JOIN " & AAOSDBName & ".dbo.hardwarestandard HST ON  LEFT(APH.IDs, CHARINDEX(',', APH.IDs)-1) = HST.HDW_STD_ID " & _
-       " left outer JOIN " & AAOSDBName & ".dbo.images img ON  HST.Img1 = img.Image_id " & _
+       " LEFT OUTER JOIN (" & _
+       " SELECT [Description], MIN(x.ImageID) AS ImageID, ProjectID FROM AAOSProjectHardware APH" & _
+       " INNER JOIN (" & _
+       " SELECT A.ID, Split.a.value('.', 'VARCHAR(MAX)') AS ImageID " & _
+       " FROM  (" & _
+       " SELECT ID,  CAST ('<M>' + REPLACE([imageids], ',', '</M><M>') + '</M>' AS XML) AS String" & _
+       " FROM  AAOSProjectHardware" & _
+       " WHERE ProjectID = @ProjectID)" & _
+       " AS A CROSS APPLY String.nodes ('/M') AS Split(a)" & _
+       " WHERE ISNULL(Split.a.value('.', 'VARCHAR(MAX)'),'') <> ''" & _
+       " UNION" & _
+       " SELECT ID,ImageIDs FROM AAOSProjectHardware where ProjectID = @ProjectID AND ISNULL(ImageIDs,'') ='' ) x" & _
+       " INNER JOIN" & _
+       " (SELECT Image_id, [Filename]" & _
+       " FROM " & AAOSDBName & ".dbo.images img" & _
+       " WHERE (NOT (UPPER([Filename]) LIKE '%.PDF') OR ISNULL([Filename],'') = '')) img" & _
+       " ON  x.ImageID = img.Image_id" & _
+       " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
+       " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
+       " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON APH.ImageID= img.Image_ID " & _
        "      WHERE  (HW.PROJECTID=@PROJECTID) AND " & _
        "      (AP.ID=@PROJECTID) AND " & _
        "      (PH.PROJECTID=@PROJECTID) AND " & _
        "      ISNULL(DOORS.QTY, 0)=0 " & _
        "      ORDER  BY HW.SETNAME,PH.DHI " & _
        " END "
-
-
 
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
@@ -3976,11 +4024,6 @@ ErrHandler:
         "       CAST(AD.Width AS VARCHAR(MAX)) + ' x ' + CAST(AD.Height AS VARCHAR(MAX)) " & _
         "   ORDER BY 1,5 "
 
-        'Dim file As System.IO.StreamWriter
-        'file = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\wrightj\Documents\test.txt", True)
-        'file.WriteLine(strQ)
-        'file.Close()
-
         Dim dc As New DataCls(strQ, DataDB, False, False, False)
 
         Dim dc2 As New DataCls(strQ2, DataDB, False, False, False)
@@ -4154,9 +4197,9 @@ ErrHandler:
         " HW.Description ProductCode, " & _
         " HW.TypeDescription   ProductDescription, " & _
         " PH.UOM, " & _
-        " Sum(ISNULL(NULLIF(HW.Qty, ''), 0) * ISNULL(Doors.Qty, 1)) Quantity, " & _
+        " Sum(ISNULL(NULLIF(HW.Qty, ''), 0) * ISNULL(NULLIF(Doors.Qty,''), 1)) Quantity, " & _
         " CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2)) AS UnitRate, " & _
-        " (SUM(ISNULL(NULLIF(HW.Qty, ''), 0) * ISNULL(Doors.Qty, 1))) * (CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2))) AS ExtendedRate, " & _
+        " (Sum(ISNULL(NULLIF(HW.Qty, ''), 0) * ISNULL(NULLIF(Doors.Qty,''), 0))) * (CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2))) AS ExtendedRate, " & _
         " Ltrim(Max(Notes.List)) AS SetNotes ," & _
         " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
         " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
@@ -4185,53 +4228,53 @@ ErrHandler:
         " SELECT ID,ImageIDs FROM AAOSProjectHardware where ProjectID = @ProjectID AND ISNULL(ImageIDs,'') ='' ) x" & _
         " INNER JOIN" & _
         " (SELECT Image_id, [Filename]" & _
-        " FROM AAOS.dbo.images img" & _
+        " FROM " & AAOSDBName & ".dbo.images img" & _
         " WHERE (NOT (UPPER([Filename]) LIKE '%.PDF') OR ISNULL([Filename],'') = '')) img" & _
         " ON  x.ImageID = img.Image_id" & _
         " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
         " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
         " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON APH.ImageID= img.Image_ID " & _
         " LEFT OUTER JOIN (SELECT ProjectID, " & _
-                            " SetName, " & _
-                            " Sum(Cast (QTY AS INT)) Qty, " & _
-                            " Sum(Cast(CASE WHEN Len(AAOSHWSets.Price) = 0 THEN '0.00' " & _
-                            " ELSE AAOSHWSets.Price " & _
-                            " END AS DECIMAL(18, 2)) * Cast (QTY AS INT)) Price " & _
-                            " FROM   AAOSHWSets " & _
-                            " WHERE  AAOSHWSets.ProjectID = @ProjectID " & _
-                            " GROUP  BY AAOSHWsets.ProjectID,SetName) Totals ON Totals.ProjectID = HW.ProjectID AND " & _
-                            " Totals.SetName = HW.SetName " & _
-                            " LEFT OUTER JOIN (SELECT ProjectID, " & _
-                                            " HWSet, " & _
-                                            " Sum(QTY)   Qty, " & _
-                                            " Stuff((SELECT ', ' + Cast(Mark AS VARCHAR(250)) [text()] " & _
-                                            " FROM   AAOSDoors " & _
-                                            " WHERE  HWSet = T.HWSet AND " & _
-                                            " ProjectID = @ProjectID " & _
-                                            " FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
-                                            " FROM   AAOSDoors T " & _
-                                            " WHERE  ProjectID = @ProjectID AND " & _
-                                            " (Charindex('deleted', ChangeLog) < 1) " & _
-                                            " GROUP  BY ProjectID,HWSet) Doors ON Doors.HWSet = HW.SetName AND " & _
-                                            " Doors.ProjectID = HW.ProjectID " & _
-                            " LEFT OUTER JOIN (SELECT DISTINCT (ProjectID)ProjectID, " & _
-                                            " Stuff((SELECT ' ', " & _
-                                            " Char(13), " & _
-                                            " +SetNotes [text()] " & _
-                                            " FROM   (SELECT DISTINCT (ProjectID), " & _
-                                                            " CASE WHEN Len(SetNotes) > 0 THEN (SetName + ' : ' " & _
-                                                            " + Replace(Replace(SetNotes, Char(13), ' '), Char(10), ' ')) " & _
-                                                            " ELSE NULL " & _
-                                                            " END SetNotes " & _
-                                                            " FROM   AAOSHWSets T " & _
-                                                            " WHERE  ProjectID = @ProjectID AND " & _
-                                                            " setnotes != '' " & _
-                                                            " GROUP  BY ProjectID,SetName,SetNotes) A " & _
-                                            " WHERE  ProjectID = @ProjectID " & _
-                                            " FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
-                                " FROM   AAOSHWSets T " & _
-                                " WHERE  ProjectID = @ProjectID " & _
-                                " GROUP  BY ProjectID,SetNotes) Notes ON Notes.ProjectID = AP.id " & _
+        " SetName, " & _
+        " Sum(Cast (QTY AS INT)) Qty, " & _
+        " Sum(Cast(CASE WHEN Len(AAOSHWSets.Price) = 0 THEN '0.00' " & _
+        " ELSE AAOSHWSets.Price " & _
+        " END AS DECIMAL(18, 2)) * Cast (QTY AS INT)) Price " & _
+        " FROM   AAOSHWSets " & _
+        " WHERE  AAOSHWSets.ProjectID = @ProjectID " & _
+        " GROUP  BY AAOSHWsets.ProjectID,SetName) Totals ON Totals.ProjectID = HW.ProjectID AND " & _
+        " Totals.SetName = HW.SetName " & _
+        " LEFT OUTER JOIN (SELECT ProjectID, " & _
+        " HWSet, " & _
+        " Sum(QTY)   Qty, " & _
+        " Stuff((SELECT ', ' + Cast(Mark AS VARCHAR(250)) [text()] " & _
+        " FROM   AAOSDoors " & _
+        " WHERE  HWSet = T.HWSet AND " & _
+        " ProjectID = @ProjectID " & _
+        " FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
+        " FROM   AAOSDoors T " & _
+        " WHERE  ProjectID = @ProjectID AND " & _
+        " (Charindex('deleted', ChangeLog) < 1) " & _
+        " GROUP  BY ProjectID,HWSet) Doors ON Doors.HWSet = HW.SetName AND " & _
+        " Doors.ProjectID = HW.ProjectID " & _
+        " LEFT OUTER JOIN (SELECT DISTINCT (ProjectID)ProjectID, " & _
+        " Stuff((SELECT ' ', " & _
+        " Char(13), " & _
+        " +SetNotes [text()] " & _
+        " FROM   (SELECT DISTINCT (ProjectID), " & _
+        " CASE WHEN Len(SetNotes) > 0 THEN (SetName + ' : ' " & _
+        " + Replace(Replace(SetNotes, Char(13), ' '), Char(10), ' ')) " & _
+        " ELSE NULL " & _
+        " END SetNotes " & _
+        " FROM   AAOSHWSets T " & _
+        " WHERE  ProjectID = @ProjectID AND " & _
+        " setnotes != '' " & _
+        " GROUP  BY ProjectID,SetName,SetNotes) A " & _
+        " WHERE  ProjectID = @ProjectID " & _
+        " FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
+        " FROM   AAOSHWSets T " & _
+        " WHERE  ProjectID = @ProjectID " & _
+        " GROUP  BY ProjectID,SetNotes) Notes ON Notes.ProjectID = AP.id " & _
         " WHERE  (HW.ProjectID = @ProjectID) " & _
         " AND (AP.ID = @ProjectID) " & _
         " AND (PH.ProjectID = @ProjectID) " & _

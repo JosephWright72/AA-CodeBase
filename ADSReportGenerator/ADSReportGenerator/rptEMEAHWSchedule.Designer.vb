@@ -620,54 +620,54 @@ Partial Public Class rptEMEAHWSchedule
         'GroupFooter1
         '
         Me.GroupFooter1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblTotDoors, Me.txtTotDoors, Me.lblDoorRefNums, Me.txtDoorList, Me.lblCurSymbol, Me.tbComments, Me.lblNotes, Me.txtTotal, Me.lblTotal})
-        Me.GroupFooter1.Height = 1.925333!
+        Me.GroupFooter1.Height = 1.592!
         Me.GroupFooter1.Name = "GroupFooter1"
         '
         'lblTotDoors
         '
         Me.lblTotDoors.Height = 0.2291667!
         Me.lblTotDoors.HyperLink = Nothing
-        Me.lblTotDoors.Left = 0.057!
+        Me.lblTotDoors.Left = 0.055!
         Me.lblTotDoors.Name = "lblTotDoors"
         Me.lblTotDoors.Style = "font-size: 10pt; font-weight: bold; text-align: left; vertical-align: middle; ddo" & _
     "-char-set: 1"
         Me.lblTotDoors.Text = "Total Number of Doors:"
-        Me.lblTotDoors.Top = 0.29!
+        Me.lblTotDoors.Top = 0.3!
         Me.lblTotDoors.Width = 1.79!
         '
         'txtTotDoors
         '
         Me.txtTotDoors.DataField = "TotDoors"
-        Me.txtTotDoors.Height = 0.2291667!
-        Me.txtTotDoors.Left = 1.892!
+        Me.txtTotDoors.Height = 0.229!
+        Me.txtTotDoors.Left = 1.89!
         Me.txtTotDoors.Name = "txtTotDoors"
         Me.txtTotDoors.Style = "font-size: 10pt; text-align: left; vertical-align: middle; ddo-char-set: 1"
         Me.txtTotDoors.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Min
         Me.txtTotDoors.Text = "TotDoors"
-        Me.txtTotDoors.Top = 0.29!
-        Me.txtTotDoors.Width = 0.6385001!
+        Me.txtTotDoors.Top = 0.3!
+        Me.txtTotDoors.Width = 0.64!
         '
         'lblDoorRefNums
         '
         Me.lblDoorRefNums.Height = 0.2291667!
         Me.lblDoorRefNums.HyperLink = Nothing
-        Me.lblDoorRefNums.Left = 0.05900008!
+        Me.lblDoorRefNums.Left = 0.055!
         Me.lblDoorRefNums.Name = "lblDoorRefNums"
         Me.lblDoorRefNums.Style = "font-size: 10pt; font-weight: bold; text-align: left; vertical-align: middle; ddo" & _
     "-char-set: 1"
         Me.lblDoorRefNums.Text = "Door Reference Numbers:"
-        Me.lblDoorRefNums.Top = 0.798!
+        Me.lblDoorRefNums.Top = 0.6!
         Me.lblDoorRefNums.Width = 1.7965!
         '
         'txtDoorList
         '
         Me.txtDoorList.DataField = "Mark"
         Me.txtDoorList.Height = 0.2291667!
-        Me.txtDoorList.Left = 1.847!
+        Me.txtDoorList.Left = 1.84!
         Me.txtDoorList.Name = "txtDoorList"
         Me.txtDoorList.Style = "font-size: 10pt; text-align: left; vertical-align: middle; ddo-char-set: 1"
         Me.txtDoorList.Text = "Door#'s"
-        Me.txtDoorList.Top = 0.798!
+        Me.txtDoorList.Top = 0.6!
         Me.txtDoorList.Width = 6.301001!
         '
         'lblCurSymbol
@@ -686,24 +686,24 @@ Partial Public Class rptEMEAHWSchedule
         Me.tbComments.CanShrink = True
         Me.tbComments.DataField = "SetNotes"
         Me.tbComments.Height = 0.2040001!
-        Me.tbComments.Left = 0.059!
+        Me.tbComments.Left = 0.055!
         Me.tbComments.Name = "tbComments"
         Me.tbComments.ShrinkToFit = True
         Me.tbComments.Style = "ddo-shrink-to-fit: true"
         Me.tbComments.Text = Nothing
-        Me.tbComments.Top = 1.634!
+        Me.tbComments.Top = 1.3!
         Me.tbComments.Width = 7.971!
         '
         'lblNotes
         '
         Me.lblNotes.Height = 0.2284999!
         Me.lblNotes.HyperLink = Nothing
-        Me.lblNotes.Left = 0.05700009!
+        Me.lblNotes.Left = 0.055!
         Me.lblNotes.Name = "lblNotes"
         Me.lblNotes.Style = "font-size: 10pt; font-weight: bold; text-align: left; vertical-align: middle; ddo" & _
     "-char-set: 1"
         Me.lblNotes.Text = "Notes"
-        Me.lblNotes.Top = 1.343!
+        Me.lblNotes.Top = 1.0!
         Me.lblNotes.Width = 1.621!
         '
         'txtTotal
