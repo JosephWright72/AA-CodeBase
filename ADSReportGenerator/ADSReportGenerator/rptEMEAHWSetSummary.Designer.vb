@@ -272,7 +272,7 @@ Partial Public Class rptEMEAHWSetSummary
         '
         'txtPrjRef
         '
-        Me.txtPrjRef.DataField = "ProjectReference"
+        Me.txtPrjRef.DataField = "NewProjID"
         Me.txtPrjRef.Height = 0.2!
         Me.txtPrjRef.Left = 1.246!
         Me.txtPrjRef.Name = "txtPrjRef"
