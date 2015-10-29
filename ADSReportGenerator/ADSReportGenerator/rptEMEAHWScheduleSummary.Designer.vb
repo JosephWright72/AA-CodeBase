@@ -539,7 +539,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.Picture1.ImageData = Nothing
         Me.Picture1.Left = 0.0!
         Me.Picture1.Name = "Picture1"
-        Me.Picture1.SizeMode = GrapeCity.ActiveReports.SectionReportModel.SizeModes.Stretch
+        Me.Picture1.SizeMode = GrapeCity.ActiveReports.SectionReportModel.SizeModes.Zoom
         Me.Picture1.Top = 0.05!
         Me.Picture1.Width = 1.0!
         '
