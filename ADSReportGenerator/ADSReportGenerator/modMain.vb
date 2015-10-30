@@ -3392,6 +3392,10 @@ ErrHandler:
        "      ORDER  BY HW.SETNAME,PH.DHI " & _
        " END "
 
+        Dim file As System.IO.StreamWriter
+        file = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\wrightj\Documents\test.txt", True)
+        file.WriteLine(strQ)
+        file.Close()
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
@@ -3921,7 +3925,7 @@ ErrHandler:
         ", VisibleColText" & _
         " FROM dbo.FormFields" & _
         " WHERE Locale = '" & ReportLangISO.ToString & "'" & _
-        " and FormName in ('rptEMEATimberStdDoorSizes','rptGenericHeaders') and Usage2Name != 'Text Box'"
+        " and FormName in ('rptEMEATimberStdDoorSizes','rptGenericHeaders') and Usage2Name != 'Text Box' AND [Required] = 1"
 
         Dim dcLANG As New DataCls(strQLang, DataDB, False, False, False)
 
@@ -3946,7 +3950,7 @@ ErrHandler:
         ", Usage2Value" & _
         " FROM dbo.FormFields" & _
         " WHERE Locale = '" & ReportLangISO.ToString & "'" & _
-        " and FormName   in ('rptPageFooters', 'rptEMEATimberStdDoorSizes') AND usage2name != 'SimpleView'"
+        " and FormName   in ('rptPageFooters', 'rptEMEATimberStdDoorSizes') AND usage2name != 'SimpleView' AND [Required] = 1"
 
         Dim dcFOOT As New DataCls(strQFooter, DataDB, False, False, False)
 
@@ -3961,70 +3965,25 @@ ErrHandler:
         'Translation End
         ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-        DataDB = New SqlClient.SqlConnection("Data Source=SQLOLEDB.1;Password=" & DBPass & ";Persist Security Info=True;User ID=" & DBUser & ";Initial Catalog=" & ADSDBName & ";Data Source=" & DBServerPort)
+        DataDB = New SqlClient.SqlConnection("Data Source=SQLOLEDB.1;Password=" & DBPass & ";Persist Security Info=True;User ID=" & DBUser & ";Initial Catalog=" & AAOSDBName & ";Data Source=" & DBServerPort)
         DataDB.Open()
         Dim strQ As String
 
-        strQ = "    DECLARE @ProjectID INT" & _
-        "   SET @ProjectID = " & PrjID1.ToString & _
-        "   SELECT " & _
-        "       AH.SetName, " & _
-        "       AD.Thickness, " & _
-        "       AD.FireRating + '/' + AD.AcousticRating AS Rating, " & _
-        "       CASE RIGHT(MAX(FrameDepthArray.FrameDepthList),1) WHEN ',' THEN LEFT(MAX(FrameDepthArray.FrameDepthList), LEN(MAX(FrameDepthArray.FrameDepthList))-1) ELSE REPLACE(SUBSTRING(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '), 0, LEN(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '))), RTRIM(RIGHT(SUBSTRING(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '), 0, LEN(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '))), CHARINDEX(',', REVERSE(SUBSTRING(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '), 0, LEN(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '))))))), ' and' + RTRIM(RIGHT(SUBSTRING(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '), 0, LEN(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '))), CHARINDEX(',', REVERSE(SUBSTRING(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '), 0, LEN(REPLACE(LTRIM(MAX(FrameDepthArray.FrameDepthList)), '  ', ' '))))) - 1))) END AS FrameDepthList " & _
-        "   FROM AAOSProjects AP " & _
-        "   INNER JOIN AAOSDoors AD ON	AP.id = AD.ProjectID " & _
-        "   INNER JOIN AAOSHWSets AH ON AP.id = AH.ProjectID AND AD.hwset = AH.setname " & _
-        "   LEFT OUTER JOIN ( " & _
-        "   	SELECT	DISTINCT (ProjectID) ProjectID, " & _
-        "   			STUFF((	SELECT ' ', ' ', + AD.FrameDepth [text()] " & _
-        "   					FROM   (SELECT	TOP 10000 (ProjectID), " & _
-        "   									CASE WHEN LEN(CAST (AD.FrameDepth AS VARCHAR(MAX))) > 0 THEN (CAST(AD.FrameDepth AS VARCHAR(MAX)) + ',' ) " & _
-        "   									ELSE NULL " & _
-        "   									END FrameDepth " & _
-        "   							FROM   AAOSDoors AD " & _
-        "   							WHERE  ProjectID = @ProjectID " & _
-        "   							AND	   AD.FrameDepth != '' " & _
-        "   							GROUP  BY ProjectID,AD.FrameDepth " & _
-        "   							ORDER BY AD.FrameDepth) AD " & _
-        "                       WHERE  ProjectID = @ProjectID " & _
-        "   					FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ' " & _
-        "   	                ) FrameDepthList " & _
-        "   	FROM   AAOSDoors AD " & _
-        "   	WHERE  AD.ProjectID = @ProjectID " & _
-        "   	GROUP  BY AD.ProjectID) FrameDepthArray ON FrameDepthArray.ProjectID = AP.id " & _
-        "   WHERE AP.id = @ProjectID " & _
-        "   GROUP BY " & _
-        "       AH.SetName, " & _
-        "       AD.Thickness, " & _
-        "       AD.AcousticRating, " & _
-        "       AD.FireRating " & _
-        "   ORDER BY " & _
-        "       AH.SetName "
+        strQ = "SELECT PARSENAME(FF.Usage1Value, 3) AS SetName, PARSENAME(FF.Usage1Value, 2) AS Thickness, PARSENAME(FF.Usage1Value, 1) AS Rating" & _
+                "  FROM FormFields FF WHERE	FF.FormName = 'rptEMEATimberStdDoorSizes' AND FF.ColName LIKE 'STD_HW_SETS%' ORDER BY FF.Usage1Name "
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
         Dim strQ2 As String
-        strQ2 = "    DECLARE @ProjectID INT" & _
-        "   SET @ProjectID = " & PrjID1.ToString & _
-        "   SELECT " & _
-        "       CASE MAX(AH.Leaf) WHEN 'A' THEN 'Single Leaf' WHEN 'B' THEN 'Equal Leaf Pairs' WHEN  'I' THEN 'Unequal Leaf Pairs' ELSE '' END AS Leaf, " & _
-        "       -1 AS ModuleSize, " & _
-        "       AD.Extra1 + CASE WHEN ISNULL(AD.Extra1,'') = '' THEN '' ELSE  ' x ' END + AD.Extra2 AS StructuralOpeningSize, " & _
-        "       CAST(AD.RoughWidth AS VARCHAR(MAX)) + ' x ' + CAST(AD.RoughHeight AS VARCHAR(MAX)) AS TimberFrameSize, " & _
-        "       CAST(AD.Width AS VARCHAR(MAX)) + ' x ' + CAST(AD.Height AS VARCHAR(MAX)) AS DoorLeafSize, " & _
-        "       -1 AS KickPlateSize " & _
-        "   FROM AAOSProjects AP " & _
-        "   INNER JOIN AAOSDoors AD ON	AP.id = AD.ProjectID " & _
-        "   INNER JOIN AAOSHWSets AH ON AP.id = AH.ProjectID AND AD.hwset = AH.setname " & _
-        "   WHERE AP.id = @ProjectID " & _
-        "   GROUP BY " & _
-        "       AD.Extra1 + CASE WHEN ISNULL(AD.Extra1,'') ='' THEN '' ELSE  ' x ' END + AD.Extra2, " & _
-        "       CAST(AD.RoughWidth AS VARCHAR(MAX)) + ' x ' + CAST(AD.RoughHeight AS VARCHAR(MAX)), " & _
-        "       CAST(AD.Width AS VARCHAR(MAX)) + ' x ' + CAST(AD.Height AS VARCHAR(MAX)) " & _
-        "   ORDER BY 1,5 "
-
-        Dim dc As New DataCls(strQ, DataDB, False, False, False)
+        strQ2 = " SELECT PARSENAME(FF.Usage2Value, 1) AS Leaf, PARSENAME(FF.Usage1Value,4) AS ModuleSize, " & _
+                "   PARSENAME(FF.Usage1Value,3) AS StructuralOpeningSize, PARSENAME(FF.Usage1Value,2) AS TimberFrameSize, " & _
+                "   PARSENAME(FF.Usage1Value,2) AS DoorLeafSize, PARSENAME(FF.Usage2Value,3) AS KickPlateSize, " & _
+                "   FF2.Usage1Value AS FrameDepthList, PARSENAME(FF.Usage2Value,2) AS DoorTypes " & _
+                " FROM FormFields FF " & _
+                "   INNER JOIN (SELECT FF.Usage1Value FROM FormFields FF WHERE FF.FormName = 'rptEMEATimberStdDoorSizes' " & _
+                "   AND FF.ColName = 'STD_FRAME_DEPTHS') FF2 ON 1=1 " & _
+                "   WHERE FF.FormName = 'rptEMEATimberStdDoorSizes' AND FF.ColName LIKE 'STD_DOOR_SIZES%' " & _
+                "   ORDER BY FF.ColNumber, CAST (PARSENAME(FF.Usage1Value,4) AS INT) "
 
         Dim dc2 As New DataCls(strQ2, DataDB, False, False, False)
 
@@ -4041,22 +4000,18 @@ ErrHandler:
             My.Computer.FileSystem.CreateDirectory(Path.GetDirectoryName(arguments(4)))
         End If
 
-
         Select Case arguments(5).ToUpper
             Case "PDF"
-                'Dim rptexp As New DataDynamics.ActiveReports.Export.Pdf.PdfExport
                 Dim rptexp As New GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport
                 rptexp.Export(rpt.Document, arguments(4))
                 rptexp.Dispose()
                 rptexp = Nothing
             Case "XLS", "EXCEL"
-                'Dim rptxls As New DataDynamics.ActiveReports.Export.Xls.XlsExport
                 Dim rptxls As New GrapeCity.ActiveReports.Export.Excel.Section.XlsExport
                 rptxls.Export(rpt.Document, arguments(4))
                 rptxls.Dispose()
                 rptxls = Nothing
             Case "RTF"
-                'Dim rptrtf As New DataDynamics.ActiveReports.Export.Rtf.RtfExport
                 Dim rptrtf As New GrapeCity.ActiveReports.Export.Word.Section.RtfExport
                 rptrtf.EnableShapes = True
                 rptrtf.Export(rpt.Document, arguments(4))

@@ -14,8 +14,6 @@ Imports GrapeCity.ActiveReports
 Public Class rptEMEATimberStdDoorSizes
     Private iDoorQty As Integer
     Public totDoorList As String = ""
-    'Private dTotalListPrice As Double
-    'Private dTotalExtended As Double
     Private dGrandTotalList As Double
     Private dGrandTotalExtended As Double
     Private IsListFinished As Boolean = True
@@ -29,58 +27,12 @@ Public Class rptEMEATimberStdDoorSizes
 
     Private Sub Detail1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Detail1.Format
 
-        'TimberFrameSize.Text = FEETINCH(Val(TimberFrameSize.Text))
-        'Dim str1 As String = txtUnits.Value.ToString.Replace("$", "")
-        'str1 = str1.Replace(",", "")
-        'dGrandTotalList += Val(str1)
-
-        'str1 = txtExtended.Value.ToString.Replace("$", "")
-        'str1 = str1.Replace(",", "")
-        'dGrandTotalExtended += Val(str1)
-
-    End Sub
-
-    Private Sub GroupFooter1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SubGroupFooter.Format
-
-        'Dim str1 As String = txtUnits.Value.ToString.Replace("$", "")
-        'str1 = str1.Replace(",", "")
-        'dGrandTotalList += Val(str1)
-
-        'str1 = txtExtended.Value.ToString.Replace("$", "")
-        'str1 = str1.Replace(",", "")
-        'dGrandTotalExtended += Val(str1)
-
-    End Sub
-
-    Private Sub ghManufacturer_Format(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        If IsListFinished = False Then
-            '        txtManufacturer.Text = txtManufacturer.Value & " - Continued"
-        Else
-            'dTotalListPrice = 0
-            '  iDoorQty = 0
-            'TotalExtended = 0
+        If METRIC_OUTPUT <> 1 Then
+            StructuralOpeningSizeValue.Text = FEETINCH(Val(StructuralOpeningSizeValue.Text.Substring(0, InStr(StructuralOpeningSizeValue.Text, "x") - 1))) + " x " + FEETINCH(Val(StructuralOpeningSizeValue.Text.Substring(InStr(StructuralOpeningSizeValue.Text, "x") + 1, StructuralOpeningSizeValue.Text.Length - ((InStr(StructuralOpeningSizeValue.Text, "x") + 1)))))
+            TimberFrameSizeValue.Text = FEETINCH(Val(TimberFrameSizeValue.Text.Substring(0, InStr(TimberFrameSizeValue.Text, "x") - 1))) + " x " + FEETINCH(Val(TimberFrameSizeValue.Text.Substring(InStr(TimberFrameSizeValue.Text, "x") + 1, TimberFrameSizeValue.Text.Length - ((InStr(TimberFrameSizeValue.Text, "x") + 1)))))
+            DoorLeafSizeValue.Text = FEETINCH(Val(DoorLeafSizeValue.Text.Substring(0, InStr(DoorLeafSizeValue.Text, "x") - 1))) + " x " + FEETINCH(Val(DoorLeafSizeValue.Text.Substring(InStr(DoorLeafSizeValue.Text, "x") + 1, DoorLeafSizeValue.Text.Length - ((InStr(DoorLeafSizeValue.Text, "x") + 1)))))
         End If
-        IsListFinished = False
 
-
-    End Sub
-
-    Private Sub gfManufacturer_Format(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        'txtTotalListPrice.Value = dTotalListPrice
-        'txtTotDoors.Value = iDoorQty
-        'txtDoorList.Value = totDoorList.Substring(0, totDoorList.Length - 2)
-
-        'txtTotalExtended.Value = dTotalExtended
-        IsListFinished = True
-    End Sub
-
-    Private Sub PageFooter1_BeforePrint(ByVal sender As Object, ByVal e As System.EventArgs) Handles PageFooter.BeforePrint
-        'lblPageNumber.Text = "Page " & txtPageNumber.Text & " of " & txtPageCount.Text
-    End Sub
-
-    Private Sub PageFooter1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PageFooter.Format
-        'lblDateTime.Text = Now
-        'lblPageNumber.Text = "Page " & txtPageNumber.Text & " of " & txtPageCount.Text
     End Sub
 
     Dim rpt As rptEMEATimberStdDoorSizesSub
@@ -89,72 +41,66 @@ Public Class rptEMEATimberStdDoorSizes
     Private Sub rptHWEstimate_ReportStart(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ReportStart
 
         rpt = New rptEMEATimberStdDoorSizesSub()
+        rpt.sHash = sHash
 
-        ReportName.Text = sHash.Item("lblTitle")
-        ' lblCurSymbol2.Visible = optShowExtendedRate
-        'txtArchitect.Visible = optArchitect
-        'txtContractor.Visible = optContractor
-        'txtOwner.Visible = optOwner
-
-        'txtRev.Text = sRevisionText
-
-        'lblPrjName.Text = sHash.Item("lblPrjName")
-        'lblPrjRef.Text = sHash.Item("lblPrjRef")
-        'lblRevNo.Text = sHash.Item("lblRevNo")
-        'lblPrjOwner.Text = sHash.Item("lblPrjOwner")
-        'lblContactNo.Text = sHash.Item("lblContactNo")
-        'lblEmail.Text = sHash.Item("lblEmail")
-
-        'txtMainBody.Text = sHash.Item("txtMainBody")
-        'txtFooter.Text = sHash.Item("txtFooter")
+        lblReportName.Text = sHash.Item("lblTitle")
+        txtStandardFrameDepths.Text = sHash.Item("txtStandardFrameDepths")
+        lblModuleSize.Text = sHash.Item("lblModuleSize")
+        lblStructuralOpeningSize.Text = sHash.Item("lblStructuralOpeningSize")
+        lblTimberFrameSize.Text = sHash.Item("lblTimberFrameSize")
+        lblDoorLeafSize.Text = sHash.Item("lblDoorLeafSize")
+        lblKickplateSize.Text = sHash.Item("lblKickplateSize")
+        lblDoorTypes.Text = sHash.Item("lblDoorTypes")
+        txtAllSizesIn.Text = sHash.Item("txtAllSizesIn")
 
         If ISO.Equals("EN") Then
-            '    txtDate.DataField = "TodaysDateEN"
             imgLogoEN.Visible = ISO.Equals("EN")
             imgLogoNO.Visible = ISO.Equals("NO")
         ElseIf ISO.Equals("NO") Then
-            '    txtDate.OutputFormat = "dd.MM.yyyy"
             imgLogoEN.Visible = ISO.Equals("EN")
             imgLogoNO.Visible = ISO.Equals("NO")
         ElseIf ISO.Equals("BE") Then
-            '    txtDate.OutputFormat = "dd.MM.yyyy"
             imgLogoEN.Visible = ISO.Equals("BE")
             imgLogoNO.Visible = ISO.Equals("NO")
         ElseIf ISO.Equals("AU") Then
-            '    txtDate.DataField = "TodaysDateEN"
             imgLogoEN.Visible = ISO.Equals("AU")
             imgLogoNO.Visible = ISO.Equals("NO")
         ElseIf ISO.Equals("US") Then
-            '    txtDate.OutputFormat = "MM.dd.yyyy"
             imgLogoEN.Visible = ISO.Equals("US")
             imgLogoNO.Visible = ISO.Equals("NO")
         End If
 
-        'txtEmailSO.Visible = ISO.Equals("BE")
-
-        'If ISO.Equals("BE") Then
-        '    txtProjectOwner.DataField = "SpecConsult"
-        '    txtContactNumber.DataField = "SpecConNumber"
-        '    txtPrjOwnSO.DataField = "SpecConsult"
-        '    txtTitleSO.DataField = "SpecConTitle"
-        '    txtConNumSO.DataField = "SpecConNumber"
-        '    txtEmailSO.DataField = "SpecConEmail"
-        '    txtEmail.DataField = "SpecConEmail"
-        'End If
-
-
-    End Sub
-
-    Private Sub ReportFooter1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
+        If METRIC_OUTPUT = 1 Then
+            txtAllSizesIn.Text = txtAllSizesIn.Text + FEETINCH(Val("1")).Replace("1", "")
+        Else
+            txtAllSizesIn.Text = txtAllSizesIn.Text + " feet and inches"
+        End If
 
     End Sub
 
     Private Sub GroupHeader1_Format(sender As Object, e As EventArgs) Handles SubGroupHeader.Format
         rpt.DataSource = subDC.DT
 
-        Me.SubReport1.Report = rpt
+        Me.EMEATimberStdDoorSizesSub.Report = rpt
 
+        If METRIC_OUTPUT = 1 Then
+            FrameDepthList.Text = FrameDepthList.Text + FEETINCH(Val("-1")).Replace("-1", "")
+            txtSizeInfo.Text = sHash.Item("txtSizeInfo")
+        Else
+            Dim FrameDepthArray As Object
+            Dim i As Long
+
+            FrameDepthArray = Split(FrameDepthList.Text, ",")
+            FrameDepthList.Text = ""
+            For i = 0 To UBound(FrameDepthArray)
+                FrameDepthList.Text = FrameDepthList.Text + FEETINCH(Val(FrameDepthArray(i))) + ", "
+            Next i
+
+            FrameDepthList.Text = FrameDepthList.Text.Substring(0, FrameDepthList.Text.Length - 2)
+
+            txtSizeInfo.Text = sHash.Item("txtSizeInfo").ToString.Replace("63mm", FEETINCH(Val(63 * 0.0032808)))
+        End If
 
     End Sub
+
 End Class

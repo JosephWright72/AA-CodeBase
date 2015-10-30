@@ -22,76 +22,65 @@ Partial Public Class rptEMEATimberStdDoorSizesSub
         Me.Rating = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.GroupHeader1 = New GrapeCity.ActiveReports.SectionReportModel.GroupHeader()
         Me.GroupFooter1 = New GrapeCity.ActiveReports.SectionReportModel.GroupFooter()
-        Me.FrameDepthList = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         CType(Me.HWSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Thickness, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Rating, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FrameDepthList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
         '
         Me.Detail.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.HWSet, Me.Thickness, Me.Rating})
-        Me.Detail.Height = 0.1770834!
+        Me.Detail.Height = 0.2!
         Me.Detail.Name = "Detail"
         '
         'HWSet
         '
         Me.HWSet.DataField = "SetName"
-        Me.HWSet.Height = 0.17!
-        Me.HWSet.Left = 1.75!
+        Me.HWSet.Height = 0.2!
+        Me.HWSet.Left = 1.0!
         Me.HWSet.Name = "HWSet"
         Me.HWSet.Style = "font-size: 9pt; font-weight: bold; text-align: left; ddo-char-set: 1"
         Me.HWSet.Text = "HW Set"
-        Me.HWSet.Top = 0.003541723!
+        Me.HWSet.Top = 0.0!
         Me.HWSet.Width = 1.0!
         '
         'Thickness
         '
         Me.Thickness.DataField = "Thickness"
-        Me.Thickness.Height = 0.17!
-        Me.Thickness.Left = 2.75!
+        Me.Thickness.Height = 0.2!
+        Me.Thickness.Left = 2.0!
         Me.Thickness.Name = "Thickness"
         Me.Thickness.Style = "font-size: 9pt; font-weight: bold; text-align: left; ddo-char-set: 1"
         Me.Thickness.Text = "Thickness"
-        Me.Thickness.Top = 0.003541723!
+        Me.Thickness.Top = 0.0!
         Me.Thickness.Width = 1.0!
         '
         'Rating
         '
         Me.Rating.DataField = "Rating"
-        Me.Rating.Height = 0.17!
-        Me.Rating.Left = 3.75!
+        Me.Rating.Height = 0.2!
+        Me.Rating.Left = 3.0!
         Me.Rating.Name = "Rating"
         Me.Rating.Style = "font-size: 9pt; font-weight: bold; text-align: left; ddo-char-set: 1"
         Me.Rating.Text = "Rating"
-        Me.Rating.Top = 0.003541723!
+        Me.Rating.Top = 0.0!
         Me.Rating.Width = 1.0!
         '
         'GroupHeader1
         '
+        Me.GroupHeader1.Height = 0.0!
         Me.GroupHeader1.Name = "GroupHeader1"
         '
         'GroupFooter1
         '
-        Me.GroupFooter1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.FrameDepthList})
         Me.GroupFooter1.Name = "GroupFooter1"
         '
-        'FrameDepthList
-        '
-        Me.FrameDepthList.Height = 0.17!
-        Me.FrameDepthList.Left = 1.25!
-        Me.FrameDepthList.Name = "FrameDepthList"
-        Me.FrameDepthList.Style = "font-size: 9pt; font-weight: normal; text-align: left; ddo-char-set: 1"
-        Me.FrameDepthList.Text = "Frame DepthList"
-        Me.FrameDepthList.Top = 0.04!
-        Me.FrameDepthList.Width = 4.0!
-        '
-        'SectionReport1
+        'rptEMEATimberStdDoorSizesSub
         '
         Me.MasterReport = False
         Me.PageSettings.PaperHeight = 11.0!
         Me.PageSettings.PaperWidth = 8.5!
+        Me.PrintWidth = 3.989584!
         Me.Sections.Add(Me.GroupHeader1)
         Me.Sections.Add(Me.Detail)
         Me.Sections.Add(Me.GroupFooter1)
@@ -104,7 +93,6 @@ Partial Public Class rptEMEATimberStdDoorSizesSub
         CType(Me.HWSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Thickness, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Rating, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FrameDepthList, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -113,5 +101,4 @@ Partial Public Class rptEMEATimberStdDoorSizesSub
     Private WithEvents Rating As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents GroupHeader1 As GrapeCity.ActiveReports.SectionReportModel.GroupHeader
     Private WithEvents GroupFooter1 As GrapeCity.ActiveReports.SectionReportModel.GroupFooter
-    Private WithEvents FrameDepthList As GrapeCity.ActiveReports.SectionReportModel.TextBox
 End Class
