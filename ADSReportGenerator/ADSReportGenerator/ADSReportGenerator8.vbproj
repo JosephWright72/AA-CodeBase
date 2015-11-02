@@ -280,8 +280,17 @@
     <Compile Include="rptEMEATimberStdDoorSizesSub.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptEMEADoorScheduleSummary.Designer.vb">
+      <DependentUpon>rptEMEADoorScheduleSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEMEADoorScheduleSummary.vb">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="rptEMEADoorScheduleSummary.resx">
+      <DependentUpon>rptEMEADoorScheduleSummary.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptEMEATimberStdDoorSizes.resx">
       <DependentUpon>rptEMEATimberStdDoorSizes.vb</DependentUpon>
     </EmbeddedResource>
