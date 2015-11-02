@@ -204,7 +204,7 @@ Partial Public Class rptEMEATimberStdDoorSizes
         'PageFooter
         '
         Me.PageFooter.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.txtFooter})
-        Me.PageFooter.Height = 0.6819167!
+        Me.PageFooter.Height = 0.62!
         Me.PageFooter.Name = "PageFooter"
         '
         'txtFooter
