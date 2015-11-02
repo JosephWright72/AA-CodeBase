@@ -38,7 +38,7 @@ Public Class rptEMEATimberStdDoorSizes
     Dim rpt As rptEMEATimberStdDoorSizesSub
     Public subDC As DataCls
 
-    Private Sub rptHWEstimate_ReportStart(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ReportStart
+    Private Sub rpt_ReportStart(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ReportStart
 
         rpt = New rptEMEATimberStdDoorSizesSub()
         rpt.sHash = sHash
