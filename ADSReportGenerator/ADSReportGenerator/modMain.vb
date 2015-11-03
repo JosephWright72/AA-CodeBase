@@ -160,6 +160,9 @@ Module ModMain
                 ' emea door schedule summary by door type report
                 'DOORSCHEDULESUMMARYBYDOORTYPEúMETRICú28395úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary_By_Door_Type.pdfúPDFúúDoor Schedule Summary By Door Typeú4344ú2ú2útrueútrueútrueútrueúRev72
 
+                ' emea doors and ironmongery set summary report
+                'DOORSANDIRONMONGERYSETSUMMARYúMETRICú28520úúC:\Users\wrightj\Documents\CGI\AA\Output\Doors_And_Ironmongery_Set_Summary.pdfúPDFúúDoors and Ironmongery Set Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
+
                 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 
@@ -325,6 +328,10 @@ GetOut:
                     Exit Sub
                 Case "DOORSCHEDULESUMMARYBYDOORTYPE"
                     CreateDoorScheduleSummaryByDoorType(arguments)
+                    End
+                    Exit Sub
+                Case "DOORSANDIRONMONGERYSETSUMMARY"
+                    CreateDoorsAndIronmongerySetSummary(arguments)
                     End
                     Exit Sub
                 Case Else
@@ -4230,6 +4237,177 @@ ErrHandler:
     '9 - Project ID
     '10 - Rev No
 
+    Private Sub CreateDoorsAndIronmongerySetSummary(ByVal arguments() As String)
+        On Error GoTo ErrHandler
+
+        Dim PrjID1 As Integer = arguments(2)
+        Dim UsrID As Integer = arguments(8)
+        Dim RevisionTxt As String = arguments(9)
+        Dim optShowUnitRate As Boolean = arguments(13)
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        'Translation Start
+
+        DataDB = New SqlClient.SqlConnection("Data Source=SQLOLEDB.1;Password=" & DBPass & ";Persist Security Info=True;User ID=" & DBUser & ";Initial Catalog=" & AAOSDBName & ";Data Source=" & DBServerPort)
+        DataDB.Open()
+
+        Dim strQLang As String
+
+        strQLang = "SELECT Locale" & _
+        ", FormName" & _
+        ", ColName" & _
+        ", VisibleColText" & _
+        " FROM dbo.FormFields" & _
+        " WHERE Locale = '" & ReportLangISO.ToString & "'" & _
+        " and FormName in ('rptEMEADoorsIronmongerySetSummary','rptGenericHeaders') and Usage2Name != 'Text Box' AND [Required] = 1"
+
+        Dim dcLANG As New DataCls(strQLang, DataDB, False, False, False)
+
+        Dim dvLANG As New DataView(dcLANG.DT)
+
+        Dim Hash As Hashtable = New Hashtable()
+
+        For Each rowView As DataRowView In dvLANG
+            Hash.Add(rowView("ColName"), rowView("VisibleColText"))
+        Next
+
+        DataDB.Close()
+
+        DataDB = New SqlClient.SqlConnection("Data Source=SQLOLEDB.1;Password=" & DBPass & ";Persist Security Info=True;User ID=" & DBUser & ";Initial Catalog=" & AAOSDBName & ";Data Source=" & DBServerPort)
+        DataDB.Open()
+
+        Dim strQFooter As String
+
+        strQFooter = "SELECT Locale" & _
+        ", FormName" & _
+        ", ColName" & _
+        ", Usage2Value" & _
+        " FROM dbo.FormFields" & _
+        " WHERE Locale = '" & ReportLangISO.ToString & "'" & _
+        " and FormName   in ('rptPageFooters', 'rptEMEADoorsIronmongerySetSummary') AND usage2name != 'SimpleView' AND [Required] = 1"
+
+        Dim dcFOOT As New DataCls(strQFooter, DataDB, False, False, False)
+
+        Dim dvFOOT As New DataView(dcFOOT.DT)
+
+        For Each rowView As DataRowView In dvFOOT
+            Hash.Add(rowView("ColName"), rowView("Usage2Value"))
+        Next
+
+        DataDB.Close()
+
+        'Translation End
+        ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+        DataDB = New SqlClient.SqlConnection("Data Source=SQLOLEDB.1;Password=" & DBPass & ";Persist Security Info=True;User ID=" & DBUser & ";Initial Catalog=" & ADSDBName & ";Data Source=" & DBServerPort)
+        DataDB.Open()
+        Dim strQ As String
+
+        strQ = " DECLARE @ProjectID INT SET @ProjectID = " & PrjID1.ToString & " SET ARITHABORT ON" & _
+                " SELECT AP.ID, AP.ProjectName, CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+                "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
+                "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
+                "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AH.SetDesc, AH.SetName, AD.Qty, " & _
+                "   CAST((AD.DoorPrice/CASE WHEN AD.Qty = 0 THEN 1 ELSE AD.Qty END) AS DECIMAL(18, 2)) AS UnitRate, " & _
+                "   CASE WHEN DAY(GETDATE()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'st ' WHEN DAY(GETDATE()) IN ( 2, 22 ) " & _
+                "   THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'nd ' WHEN DAY(GETDATE()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'rd ' " & _
+                "   ELSE CONVERT(VARCHAR, DAY(GETDATE())) + 'th ' END + DATENAME(MONTH, GETDATE()) + ' '  + CONVERT(VARCHAR, YEAR(GETDATE())) " & _
+                "   TodaysDateEN, GETDATE() TodaysDate, " & _
+                "   LTRIM(MAX(Notes.List)) AS SetNotes " & _
+                " FROM AAOSDoors AD " & _
+                " LEFT OUTER JOIN AAOSProjects AP ON AP.ID = AD.ProjectID " & _
+                " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
+                " LEFT OUTER JOIN AAOSHWSets AH ON AP.ID = AH.ProjectID AND AD.HWSet = AH.SetName " & _
+                " LEFT OUTER JOIN ( " & _
+                "   SELECT DISTINCT (ProjectID)ProjectID, STUFF(( " & _
+                "       SELECT ' ',  Char(13),  +SetNotes [text()] " & _
+                "       FROM   ( " & _
+                "           SELECT DISTINCT (ProjectID), " & _
+                "               CASE WHEN Len(SetNotes) > 0 THEN (SetName + ' : '  + Replace(Replace(SetNotes, Char(13), ' '), Char(10), ' ')) " & _
+                "               ELSE NULL  END SetNotes  " & _
+                "           FROM  AAOSHWSets T " & _
+                "           WHERE ProjectID = @ProjectID AND SetNotes != '' " & _
+                "           GROUP BY ProjectID,	SetName, SetNotes) A " & _
+                "       WHERE ProjectID = @ProjectID  FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
+                "   FROM AAOSHWSets T " & _
+                "   WHERE ProjectID = @ProjectID " & _
+                "   GROUP BY ProjectID,	SetNotes) Notes " & _
+                " ON Notes.ProjectID = AP.ID " & _
+                " WHERE AP.ID = @ProjectID " & _
+                " GROUP BY AP.ID, AP.ProjectName, AP.OriginalProjectID, AP.RevisionNumber, ACS.FirstName, ACS.LastName, AD.Mark, AH.SetDesc, AH.SetName, " & _
+                " AD.DoorPrice, AD.Qty "
+
+        Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
+
+        Dim rpt As New rptEMEADoorsIronmongerySetSummary
+        rpt.DataSource = dc1.DT
+        rpt.sReportTitle = arguments(7)
+        rpt.sRevisionText = RevisionTxt
+        rpt.sHash = Hash
+        rpt.ISO = ReportLangISO
+        rpt.optShowUnitRate = optShowUnitRate
+        rpt.Run()
+
+        If My.Computer.FileSystem.DirectoryExists(Path.GetDirectoryName(arguments(4))) = False Then
+            My.Computer.FileSystem.CreateDirectory(Path.GetDirectoryName(arguments(4)))
+        End If
+
+        Select Case arguments(5).ToUpper
+            Case "PDF"
+                Dim rptexp As New GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport
+                rptexp.Export(rpt.Document, arguments(4))
+                rptexp.Dispose()
+                rptexp = Nothing
+            Case "XLS", "EXCEL"
+                Dim rptxls As New GrapeCity.ActiveReports.Export.Excel.Section.XlsExport
+                rptxls.Export(rpt.Document, arguments(4))
+                rptxls.Dispose()
+                rptxls = Nothing
+            Case "RTF"
+                Dim rptrtf As New GrapeCity.ActiveReports.Export.Word.Section.RtfExport
+                rptrtf.EnableShapes = True
+                rptrtf.Export(rpt.Document, arguments(4))
+                rptrtf.Dispose()
+                rptrtf = Nothing
+        End Select
+        rpt.Dispose()
+        rpt = Nothing
+
+        WriteToConsole("SUCCESSFUL")
+
+GetOut:
+        If dc1 IsNot Nothing Then
+            dc1.Dispose()
+            dc1 = Nothing
+        End If
+
+        If DataDB IsNot Nothing Then
+            If DataDB.State <> ConnectionState.Closed Then DataDB.Close()
+            DataDB.Dispose()
+            DataDB = Nothing
+        End If
+        Exit Sub
+ErrHandler:
+        WriteToConsole("ERROR - CreateDoorsIronmongerySetSummary " & Err.Description)
+        GoTo GetOut
+        Exit Sub
+        Resume Next
+        Resume
+    End Sub
+
+    '// Door Schedule Summary
+
+    'Arguments
+    '1 - Report Name
+    '2 - UOM - Imperial or Metric
+    '3 - ProjectID 1
+    '4 - ProjectID 2
+    '5 - Save To Path
+    '6 - File Format - PDF or EXCEL
+    '7 - SQL Statement or Where clause
+    '8 - Report Title
+    '9 - Project ID
+    '10 - Rev No
+
     Private Sub CreateDoorScheduleSummaryByDoorType(ByVal arguments() As String)
         On Error GoTo ErrHandler
 
@@ -4251,15 +4429,7 @@ ErrHandler:
         ", VisibleColText" & _
         " FROM dbo.FormFields" & _
         " WHERE Locale = '" & ReportLangISO.ToString & "'" & _
-        " AND FormName in ('rptEMEADoorScheduleSummaryByDoorType','rptGenericHeaders') and Usage2Name != 'Text Box' AND [Required] = 1" & _
-        " AND ColName != 'lblTitle' " & _
-        " UNION SELECT Locale" & _
-        ", FormName" & _
-        ", ColName" & _
-        ", VisibleColText" & _
-        " FROM dbo.FormFields" & _
-        " WHERE Locale = '" & ReportLangISO.ToString & "'" & _
-        " and FormName in ('rptEMEADoorScheduleSummary','rptGenericHeaders') and Usage2Name != 'Text Box' AND [Required] = 1"
+        " AND FormName in ('rptEMEADoorScheduleSummaryByDoorType','rptGenericHeaders') and Usage2Name != 'Text Box' AND [Required] = 1"
 
         Dim dcLANG As New DataCls(strQLang, DataDB, False, False, False)
 
