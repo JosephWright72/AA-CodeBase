@@ -298,8 +298,17 @@
     <Compile Include="rptEMEADoorsIronmongerySetSummary.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptEMEADetailDoorSchedule.Designer.vb">
+      <DependentUpon>rptEMEADetailDoorSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEMEADetailDoorSchedule.vb">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="rptEMEADetailDoorSchedule.resx">
+      <DependentUpon>rptEMEADetailDoorSchedule.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptEMEADoorScheduleSummary.resx">
       <DependentUpon>rptEMEADoorScheduleSummary.vb</DependentUpon>
     </EmbeddedResource>
