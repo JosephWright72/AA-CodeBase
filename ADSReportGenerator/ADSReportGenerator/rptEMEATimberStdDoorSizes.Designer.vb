@@ -86,7 +86,7 @@ Partial Public Class rptEMEATimberStdDoorSizes
     "ical-align: middle; ddo-char-set: 1"
         Me.lblReportName.Text = "ReportName"
         Me.lblReportName.Top = 0.0!
-        Me.lblReportName.Width = 3.0!
+        Me.lblReportName.Width = 6.0!
         '
         'imgLogoEN
         '

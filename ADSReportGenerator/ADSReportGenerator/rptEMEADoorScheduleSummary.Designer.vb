@@ -22,21 +22,21 @@ Partial Public Class rptEMEADoorScheduleSummary
         Me.lblReportName = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.imgLogoEN = New GrapeCity.ActiveReports.SectionReportModel.Picture()
         Me.imgLogoNO = New GrapeCity.ActiveReports.SectionReportModel.Picture()
-        Me.txtRev = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.lblRevNo = New GrapeCity.ActiveReports.SectionReportModel.Label()
-        Me.lblPrjRef = New GrapeCity.ActiveReports.SectionReportModel.Label()
-        Me.txtProjectName = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.txtPrjRef = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.lblPrjOwner = New GrapeCity.ActiveReports.SectionReportModel.Label()
-        Me.txtProjectOwner = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.lblPrjName = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.RevisionNoValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.lblRevisionNo = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.lblProjectRef = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.ProjectNameValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.ProjectRefValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.lblProjectOwner = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.ProjectOwnerValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.lblProjectName = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.lblDate = New GrapeCity.ActiveReports.SectionReportModel.Label()
-        Me.txtDate = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.DateValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblPage = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.CurrentPageNumber = New GrapeCity.ActiveReports.SectionReportModel.ReportInfo()
         Me.lblOf = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.PageCount = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.Line1 = New GrapeCity.ActiveReports.SectionReportModel.Line()
+        Me.Line = New GrapeCity.ActiveReports.SectionReportModel.Line()
         Me.lblFromRoom = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblDoorRef = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblToRoom = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
@@ -79,16 +79,16 @@ Partial Public Class rptEMEADoorScheduleSummary
         CType(Me.lblReportName,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.imgLogoEN,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.imgLogoNO,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtRev,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblRevNo,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblPrjRef,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtProjectName,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtPrjRef,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblPrjOwner,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtProjectOwner,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblPrjName,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RevisionNoValue,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblRevisionNo,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblProjectRef,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.ProjectNameValue,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.ProjectRefValue,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblProjectOwner,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.ProjectOwnerValue,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblProjectName,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.lblDate,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtDate,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.DateValue,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.lblPage,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.CurrentPageNumber,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.lblOf,System.ComponentModel.ISupportInitialize).BeginInit
@@ -128,7 +128,7 @@ Partial Public Class rptEMEADoorScheduleSummary
         '
         'PageHeader
         '
-        Me.PageHeader.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblReportName, Me.imgLogoEN, Me.imgLogoNO, Me.txtRev, Me.lblRevNo, Me.lblPrjRef, Me.txtProjectName, Me.txtPrjRef, Me.lblPrjOwner, Me.txtProjectOwner, Me.lblPrjName, Me.lblDate, Me.txtDate, Me.lblPage, Me.CurrentPageNumber, Me.lblOf, Me.PageCount, Me.Line1, Me.lblFromRoom, Me.lblDoorRef, Me.lblToRoom, Me.lblMaterial, Me.lblConfiguration, Me.lblQuantity, Me.lblFireRating, Me.lblAcousticRating, Me.lblFrameWidth, Me.lblFrameHeight, Me.lblFrameDepth, Me.lblUnitRate})
+        Me.PageHeader.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblReportName, Me.imgLogoEN, Me.imgLogoNO, Me.RevisionNoValue, Me.lblRevisionNo, Me.lblProjectRef, Me.ProjectNameValue, Me.ProjectRefValue, Me.lblProjectOwner, Me.ProjectOwnerValue, Me.lblProjectName, Me.lblDate, Me.DateValue, Me.lblPage, Me.CurrentPageNumber, Me.lblOf, Me.PageCount, Me.Line, Me.lblFromRoom, Me.lblDoorRef, Me.lblToRoom, Me.lblMaterial, Me.lblConfiguration, Me.lblQuantity, Me.lblFireRating, Me.lblAcousticRating, Me.lblFrameWidth, Me.lblFrameHeight, Me.lblFrameDepth, Me.lblUnitRate})
         Me.PageHeader.Height = 1.9!
         Me.PageHeader.Name = "PageHeader"
         '
@@ -142,7 +142,7 @@ Partial Public Class rptEMEADoorScheduleSummary
     "ical-align: middle; ddo-char-set: 1"
         Me.lblReportName.Text = "ReportName"
         Me.lblReportName.Top = 0!
-        Me.lblReportName.Width = 3!
+        Me.lblReportName.Width = 6!
         '
         'imgLogoEN
         '
@@ -166,96 +166,96 @@ Partial Public Class rptEMEADoorScheduleSummary
         Me.imgLogoNO.Top = 0!
         Me.imgLogoNO.Width = 1.2!
         '
-        'txtRev
+        'RevisionNoValue
         '
-        Me.txtRev.Height = 0.2!
-        Me.txtRev.Left = 1.2!
-        Me.txtRev.Name = "txtRev"
-        Me.txtRev.Style = "font-size: 10pt; text-align: left; ddo-char-set: 1"
-        Me.txtRev.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Max
-        Me.txtRev.Text = "Num"
-        Me.txtRev.Top = 1.2!
-        Me.txtRev.Width = 2.8!
+        Me.RevisionNoValue.Height = 0.2!
+        Me.RevisionNoValue.Left = 1.2!
+        Me.RevisionNoValue.Name = "RevisionNoValue"
+        Me.RevisionNoValue.Style = "font-size: 10pt; text-align: left; ddo-char-set: 1"
+        Me.RevisionNoValue.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Max
+        Me.RevisionNoValue.Text = "Revision No"
+        Me.RevisionNoValue.Top = 1.2!
+        Me.RevisionNoValue.Width = 2.8!
         '
-        'lblRevNo
+        'lblRevisionNo
         '
-        Me.lblRevNo.Height = 0.2!
-        Me.lblRevNo.HyperLink = Nothing
-        Me.lblRevNo.Left = 0!
-        Me.lblRevNo.Name = "lblRevNo"
-        Me.lblRevNo.Style = "text-align: left"
-        Me.lblRevNo.Text = "Revision No."
-        Me.lblRevNo.Top = 1.2!
-        Me.lblRevNo.Width = 1!
+        Me.lblRevisionNo.Height = 0.2!
+        Me.lblRevisionNo.HyperLink = Nothing
+        Me.lblRevisionNo.Left = 0!
+        Me.lblRevisionNo.Name = "lblRevisionNo"
+        Me.lblRevisionNo.Style = "text-align: left"
+        Me.lblRevisionNo.Text = "Revision No."
+        Me.lblRevisionNo.Top = 1.2!
+        Me.lblRevisionNo.Width = 1!
         '
-        'lblPrjRef
+        'lblProjectRef
         '
-        Me.lblPrjRef.Height = 0.2!
-        Me.lblPrjRef.HyperLink = Nothing
-        Me.lblPrjRef.Left = 0!
-        Me.lblPrjRef.Name = "lblPrjRef"
-        Me.lblPrjRef.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
+        Me.lblProjectRef.Height = 0.2!
+        Me.lblProjectRef.HyperLink = Nothing
+        Me.lblProjectRef.Left = 0!
+        Me.lblProjectRef.Name = "lblProjectRef"
+        Me.lblProjectRef.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
     "rtical-align: middle; ddo-char-set: 1"
-        Me.lblPrjRef.Text = "Project Ref."
-        Me.lblPrjRef.Top = 1!
-        Me.lblPrjRef.Width = 1!
+        Me.lblProjectRef.Text = "Project Ref."
+        Me.lblProjectRef.Top = 1!
+        Me.lblProjectRef.Width = 1!
         '
-        'txtProjectName
+        'ProjectNameValue
         '
-        Me.txtProjectName.DataField = "ProjectName"
-        Me.txtProjectName.Height = 0.2!
-        Me.txtProjectName.Left = 1.2!
-        Me.txtProjectName.Name = "txtProjectName"
-        Me.txtProjectName.Style = "text-align: left; vertical-align: middle"
-        Me.txtProjectName.Text = "ProjectName"
-        Me.txtProjectName.Top = 0.8!
-        Me.txtProjectName.Width = 2.8!
+        Me.ProjectNameValue.DataField = "ProjectName"
+        Me.ProjectNameValue.Height = 0.2!
+        Me.ProjectNameValue.Left = 1.2!
+        Me.ProjectNameValue.Name = "ProjectNameValue"
+        Me.ProjectNameValue.Style = "text-align: left; vertical-align: middle"
+        Me.ProjectNameValue.Text = "ProjectName"
+        Me.ProjectNameValue.Top = 0.8!
+        Me.ProjectNameValue.Width = 2.8!
         '
-        'txtPrjRef
+        'ProjectRefValue
         '
-        Me.txtPrjRef.DataField = "NewProjID"
-        Me.txtPrjRef.Height = 0.2!
-        Me.txtPrjRef.Left = 1.2!
-        Me.txtPrjRef.Name = "txtPrjRef"
-        Me.txtPrjRef.Style = "text-align: left; vertical-align: middle"
-        Me.txtPrjRef.Text = "ProjRef"
-        Me.txtPrjRef.Top = 1!
-        Me.txtPrjRef.Width = 2.8!
+        Me.ProjectRefValue.DataField = "NewProjID"
+        Me.ProjectRefValue.Height = 0.2!
+        Me.ProjectRefValue.Left = 1.2!
+        Me.ProjectRefValue.Name = "ProjectRefValue"
+        Me.ProjectRefValue.Style = "text-align: left; vertical-align: middle"
+        Me.ProjectRefValue.Text = "Project Ref"
+        Me.ProjectRefValue.Top = 1!
+        Me.ProjectRefValue.Width = 2.8!
         '
-        'lblPrjOwner
+        'lblProjectOwner
         '
-        Me.lblPrjOwner.Height = 0.2!
-        Me.lblPrjOwner.HyperLink = Nothing
-        Me.lblPrjOwner.Left = 4.8!
-        Me.lblPrjOwner.Name = "lblPrjOwner"
-        Me.lblPrjOwner.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
+        Me.lblProjectOwner.Height = 0.2!
+        Me.lblProjectOwner.HyperLink = Nothing
+        Me.lblProjectOwner.Left = 4.8!
+        Me.lblProjectOwner.Name = "lblProjectOwner"
+        Me.lblProjectOwner.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
     "rtical-align: middle; ddo-char-set: 1"
-        Me.lblPrjOwner.Text = "Project Owner"
-        Me.lblPrjOwner.Top = 0.8!
-        Me.lblPrjOwner.Width = 1!
+        Me.lblProjectOwner.Text = "Project Owner"
+        Me.lblProjectOwner.Top = 0.8!
+        Me.lblProjectOwner.Width = 1!
         '
-        'txtProjectOwner
+        'ProjectOwnerValue
         '
-        Me.txtProjectOwner.DataField = "ProjectOwner"
-        Me.txtProjectOwner.Height = 0.2!
-        Me.txtProjectOwner.Left = 6!
-        Me.txtProjectOwner.Name = "txtProjectOwner"
-        Me.txtProjectOwner.Style = "text-align: left; vertical-align: middle"
-        Me.txtProjectOwner.Text = "ProjectOwner"
-        Me.txtProjectOwner.Top = 0.8!
-        Me.txtProjectOwner.Width = 2!
+        Me.ProjectOwnerValue.DataField = "ProjectOwner"
+        Me.ProjectOwnerValue.Height = 0.2!
+        Me.ProjectOwnerValue.Left = 6!
+        Me.ProjectOwnerValue.Name = "ProjectOwnerValue"
+        Me.ProjectOwnerValue.Style = "text-align: left; vertical-align: middle"
+        Me.ProjectOwnerValue.Text = "ProjectOwner"
+        Me.ProjectOwnerValue.Top = 0.8!
+        Me.ProjectOwnerValue.Width = 2!
         '
-        'lblPrjName
+        'lblProjectName
         '
-        Me.lblPrjName.Height = 0.2!
-        Me.lblPrjName.HyperLink = Nothing
-        Me.lblPrjName.Left = 0!
-        Me.lblPrjName.Name = "lblPrjName"
-        Me.lblPrjName.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
+        Me.lblProjectName.Height = 0.2!
+        Me.lblProjectName.HyperLink = Nothing
+        Me.lblProjectName.Left = 0!
+        Me.lblProjectName.Name = "lblProjectName"
+        Me.lblProjectName.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
     "rtical-align: middle; ddo-char-set: 1"
-        Me.lblPrjName.Text = "Project Name"
-        Me.lblPrjName.Top = 0.8!
-        Me.lblPrjName.Width = 1!
+        Me.lblProjectName.Text = "Project Name"
+        Me.lblProjectName.Top = 0.8!
+        Me.lblProjectName.Width = 1!
         '
         'lblDate
         '
@@ -269,16 +269,16 @@ Partial Public Class rptEMEADoorScheduleSummary
         Me.lblDate.Top = 1!
         Me.lblDate.Width = 1!
         '
-        'txtDate
+        'DateValue
         '
-        Me.txtDate.DataField = "TodaysDate"
-        Me.txtDate.Height = 0.2!
-        Me.txtDate.Left = 6!
-        Me.txtDate.Name = "txtDate"
-        Me.txtDate.Style = "text-align: left; vertical-align: middle"
-        Me.txtDate.Text = "TodaysDate"
-        Me.txtDate.Top = 1!
-        Me.txtDate.Width = 2!
+        Me.DateValue.DataField = "TodaysDate"
+        Me.DateValue.Height = 0.2!
+        Me.DateValue.Left = 6!
+        Me.DateValue.Name = "DateValue"
+        Me.DateValue.Style = "text-align: left; vertical-align: middle"
+        Me.DateValue.Text = "TodaysDate"
+        Me.DateValue.Top = 1!
+        Me.DateValue.Width = 2!
         '
         'lblPage
         '
@@ -313,7 +313,7 @@ Partial Public Class rptEMEADoorScheduleSummary
         Me.lblOf.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Max
         Me.lblOf.Text = "of"
         Me.lblOf.Top = 1.2!
-        Me.lblOf.Width = 0.2200002!
+        Me.lblOf.Width = 0.2!
         '
         'PageCount
         '
@@ -329,18 +329,18 @@ Partial Public Class rptEMEADoorScheduleSummary
         Me.PageCount.Top = 1.2!
         Me.PageCount.Width = 0.46!
         '
-        'Line1
+        'Line
         '
-        Me.Line1.Height = 0!
-        Me.Line1.Left = 0!
-        Me.Line1.LineWeight = 2!
-        Me.Line1.Name = "Line"
-        Me.Line1.Top = 1.6!
-        Me.Line1.Width = 8.27!
-        Me.Line1.X1 = 8.27!
-        Me.Line1.X2 = 0!
-        Me.Line1.Y1 = 1.6!
-        Me.Line1.Y2 = 1.6!
+        Me.Line.Height = 0!
+        Me.Line.Left = 0!
+        Me.Line.LineWeight = 2!
+        Me.Line.Name = "Line"
+        Me.Line.Top = 1.6!
+        Me.Line.Width = 8.27!
+        Me.Line.X1 = 8.27!
+        Me.Line.X2 = 0!
+        Me.Line.Y1 = 1.6!
+        Me.Line.Y2 = 1.6!
         '
         'lblFromRoom
         '
@@ -356,7 +356,7 @@ Partial Public Class rptEMEADoorScheduleSummary
         'lblDoorRef
         '
         Me.lblDoorRef.Height = 0.2!
-        Me.lblDoorRef.Left = 4.768372E-07!
+        Me.lblDoorRef.Left = 0!
         Me.lblDoorRef.Name = "lblDoorRef"
         Me.lblDoorRef.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical"& _ 
     "-align: middle; ddo-char-set: 1"
@@ -498,7 +498,7 @@ Partial Public Class rptEMEADoorScheduleSummary
         Me.DoorRefValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.DoorRefValue.DataField = "Mark"
         Me.DoorRefValue.Height = 0.2!
-        Me.DoorRefValue.Left = 0.0!
+        Me.DoorRefValue.Left = 0!
         Me.DoorRefValue.Name = "DoorRefValue"
         Me.DoorRefValue.Style = "color: Blue; font-family: Arial; font-size: 9pt; font-weight: normal; text-align:"& _ 
     " left; vertical-align: middle; ddo-char-set: 1"
@@ -664,9 +664,7 @@ Partial Public Class rptEMEADoorScheduleSummary
         Me.Footer.OutputFormat = resources.GetString("Footer.OutputFormat")
         Me.Footer.Style = "color: DimGray; font-size: 6.5pt; text-align: center; vertical-align: middle; ddo"& _ 
     "-char-set: 1"
-        Me.Footer.Text = "ASSA ABLOY UK Specification"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"School Street, Willenhall, West Midlands, UK, WV13 3"& _ 
-    "PWT"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"T: +44 (0)845 223 2124 F: +44 (0)845 223 2125 "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"E: info@assaabloy.co.uk W: "& _ 
-    "www.assaabloy.co.uk"
+        Me.Footer.Text = "Footer Text"
         Me.Footer.Top = 0!
         Me.Footer.Width = 8.27!
         '
@@ -822,16 +820,16 @@ Partial Public Class rptEMEADoorScheduleSummary
         CType(Me.lblReportName,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.imgLogoEN,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.imgLogoNO,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtRev,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblRevNo,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblPrjRef,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtProjectName,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtPrjRef,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblPrjOwner,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtProjectOwner,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblPrjName,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RevisionNoValue,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblRevisionNo,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblProjectRef,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.ProjectNameValue,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.ProjectRefValue,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblProjectOwner,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.ProjectOwnerValue,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblProjectName,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.lblDate,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtDate,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.DateValue,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.lblPage,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.CurrentPageNumber,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.lblOf,System.ComponentModel.ISupportInitialize).EndInit
@@ -874,16 +872,16 @@ End Sub
     Private WithEvents imgLogoEN As GrapeCity.ActiveReports.SectionReportModel.Picture
     Private WithEvents imgLogoNO As GrapeCity.ActiveReports.SectionReportModel.Picture
     Private WithEvents Footer As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents txtRev As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents lblRevNo As GrapeCity.ActiveReports.SectionReportModel.Label
-    Private WithEvents lblPrjRef As GrapeCity.ActiveReports.SectionReportModel.Label
-    Private WithEvents txtProjectName As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents txtPrjRef As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents lblPrjOwner As GrapeCity.ActiveReports.SectionReportModel.Label
-    Private WithEvents txtProjectOwner As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents lblPrjName As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents RevisionNoValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents lblRevisionNo As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents lblProjectRef As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents ProjectNameValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents ProjectRefValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents lblProjectOwner As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents ProjectOwnerValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents lblProjectName As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents lblDate As GrapeCity.ActiveReports.SectionReportModel.Label
-    Private WithEvents txtDate As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents DateValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents lblPage As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents CurrentPageNumber As GrapeCity.ActiveReports.SectionReportModel.ReportInfo
     Private WithEvents lblOf As GrapeCity.ActiveReports.SectionReportModel.TextBox
@@ -925,4 +923,5 @@ End Sub
     Private WithEvents RemarksRightLine As GrapeCity.ActiveReports.SectionReportModel.Line
     Private WithEvents RemarksBottomLine As GrapeCity.ActiveReports.SectionReportModel.Line
     Private WithEvents RemarksLeftLine As GrapeCity.ActiveReports.SectionReportModel.Line
+    Private WithEvents Line As GrapeCity.ActiveReports.SectionReportModel.Line
 End Class

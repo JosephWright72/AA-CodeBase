@@ -12,6 +12,16 @@ Public Class rptEMEADoorScheduleSummary
 
         lblReportName.Text = sHash.Item("lblTitle")
 
+        lblProjectName.Text = sHash.Item("lblPrjName")
+        lblProjectRef.Text = sHash.Item("lblPrjRef")
+        lblRevisionNo.Text = sHash.Item("lblRevNo")
+        lblProjectOwner.Text = sHash.Item("lblPrjOwner")
+        lblOf.Text = sHash.Item("lblOf")
+        lblPage.Text = sHash.Item("lblPage")
+        lblDate.Text = sHash.Item("lblDate")
+
+        RevisionNoValue.Text = sRevisionText
+
         lblDoorRef.Text = sHash.Item("lblDoorRef")
         lblToRoom.Text = sHash.Item("lblToRoom")
         lblFromRoom.Text = sHash.Item("lblFromRoom")
@@ -28,6 +38,8 @@ Public Class rptEMEADoorScheduleSummary
         lblCurSymbolTotal.Text = sHash.Item("lblCurSymbol")
         lblTotalSum.Text = sHash.Item("lblTotalSum")
         lblTotDoors.Text = sHash.Item("lblTotDoors")
+
+        Footer.Text = sHash.Item("txtFooter")
 
         If ISO.Equals("EN") Then
             imgLogoEN.Visible = ISO.Equals("EN")
@@ -47,15 +59,15 @@ Public Class rptEMEADoorScheduleSummary
         End If
 
         If ISO.Equals("EN") Then
-            txtDate.DataField = "TodaysDateEN"
+            DateValue.DataField = "TodaysDateEN"
             imgLogoEN.Visible = ISO.Equals("EN")
             imgLogoNO.Visible = ISO.Equals("NO")
         ElseIf ISO.Equals("NO") Then
-            txtDate.OutputFormat = "dd.MM.yyyy"
+            DateValue.OutputFormat = "dd.MM.yyyy"
             imgLogoEN.Visible = ISO.Equals("EN")
             imgLogoNO.Visible = ISO.Equals("NO")
         ElseIf ISO.Equals("BE") Then
-            txtDate.OutputFormat = "dd.MM.yyyy"
+            DateValue.OutputFormat = "dd.MM.yyyy"
             imgLogoEN.Visible = ISO.Equals("BE")
             imgLogoNO.Visible = ISO.Equals("NO")
         End If

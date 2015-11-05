@@ -2534,15 +2534,6 @@
   <data name="Footer.OutputFormat" xml:space="preserve">
     <value>#,##</value>
   </data>
-  <data name="Footer.OutputFormat" xml:space="preserve">
-    <value>#,##</value>
-  </data>
-  <data name="TotalSumValue.OutputFormat" xml:space="preserve">
-    <value>#,##0.00</value>
-  </data>
-  <data name="TotalDoorsValue.OutputFormat" xml:space="preserve">
-    <value>#,##0</value>
-  </data>
   <data name="TotalSumValue.OutputFormat" xml:space="preserve">
     <value>#,##0.00</value>
   </data>
