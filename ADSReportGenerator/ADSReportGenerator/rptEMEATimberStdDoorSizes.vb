@@ -25,7 +25,7 @@ Public Class rptEMEATimberStdDoorSizes
     Public sHash As Hashtable
     Public ISO As String
 
-    Private Sub Detail1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Detail1.Format
+    Private Sub Detail1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Detail.Format
 
         If METRIC_OUTPUT <> 1 Then
             StructuralOpeningSizeValue.Text = FEETINCH(Val(StructuralOpeningSizeValue.Text.Substring(0, InStr(StructuralOpeningSizeValue.Text, "x") - 1))) + " x " + FEETINCH(Val(StructuralOpeningSizeValue.Text.Substring(InStr(StructuralOpeningSizeValue.Text, "x") + 1, StructuralOpeningSizeValue.Text.Length - ((InStr(StructuralOpeningSizeValue.Text, "x") + 1)))))
@@ -52,6 +52,8 @@ Public Class rptEMEATimberStdDoorSizes
         lblKickplateSize.Text = sHash.Item("lblKickplateSize")
         lblDoorTypes.Text = sHash.Item("lblDoorTypes")
         txtAllSizesIn.Text = sHash.Item("txtAllSizesIn")
+
+        Footer.Text = sHash.Item("txtFooter")
 
         If ISO.Equals("EN") Then
             imgLogoEN.Visible = ISO.Equals("EN")

@@ -93,11 +93,11 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.HWSumValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.GrandTotalValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.imgDoorHandingDiagramEN = New GrapeCity.ActiveReports.SectionReportModel.Picture()
-        Me.lblDoorHandingDiagram = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblDrawingsUsed = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.DrawingsUsedValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.TextBox1 = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.lblDoorHandingDiagram = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.Spacer2 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.TextBox1 = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         CType(Me.RevisionNoValue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblRevisionNo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblProjectRef, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -172,11 +172,11 @@ Partial Public Class rptEMEADetailDoorSchedule
         CType(Me.HWSumValue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GrandTotalValue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgDoorHandingDiagramEN, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblDoorHandingDiagram, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblDrawingsUsed, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DrawingsUsedValue, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblDoorHandingDiagram, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Spacer2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'RevisionNoValue
@@ -208,7 +208,7 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblRevisionNo.Name = "lblRevisionNo"
         Me.lblRevisionNo.Style = "font-weight: bold; text-align: left; white-space: nowrap; ddo-char-set: 1; ddo-wr" & _
     "ap-mode: nowrap"
-        Me.lblRevisionNo.Text = "Revision No."
+        Me.lblRevisionNo.Text = "lblRevisionNo"
         Me.lblRevisionNo.Top = 1.0!
         Me.lblRevisionNo.Width = 2.0!
         '
@@ -224,7 +224,7 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblProjectRef.Name = "lblProjectRef"
         Me.lblProjectRef.Style = "font-size: 10pt; font-weight: bold; text-align: left; text-decoration: none; vert" & _
     "ical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
-        Me.lblProjectRef.Text = "Project Ref."
+        Me.lblProjectRef.Text = "lblProjectRef"
         Me.lblProjectRef.Top = 0.8!
         Me.lblProjectRef.Width = 2.0!
         '
@@ -274,7 +274,7 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblProjectOwner.Name = "lblProjectOwner"
         Me.lblProjectOwner.Style = "font-size: 10pt; font-weight: bold; text-align: left; text-decoration: none; vert" & _
     "ical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
-        Me.lblProjectOwner.Text = "Project Owner"
+        Me.lblProjectOwner.Text = "lblProjectOwner"
         Me.lblProjectOwner.Top = 0.6!
         Me.lblProjectOwner.Width = 2.000002!
         '
@@ -307,7 +307,7 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblProjectName.Name = "lblProjectName"
         Me.lblProjectName.Style = "font-size: 10pt; font-weight: bold; text-align: left; text-decoration: none; vert" & _
     "ical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
-        Me.lblProjectName.Text = "Project Name"
+        Me.lblProjectName.Text = "lblProjectName"
         Me.lblProjectName.Top = 0.6!
         Me.lblProjectName.Width = 2.0!
         '
@@ -323,7 +323,7 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Style = "font-size: 10pt; font-weight: bold; text-align: left; text-decoration: none; vert" & _
     "ical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
-        Me.lblDate.Text = "Date"
+        Me.lblDate.Text = "lblDate"
         Me.lblDate.Top = 0.8!
         Me.lblDate.Width = 2.000002!
         '
@@ -356,7 +356,7 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblPage.Name = "lblPage"
         Me.lblPage.Style = "font-size: 10pt; font-weight: bold; text-align: left; text-decoration: none; vert" & _
     "ical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
-        Me.lblPage.Text = "Page" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblPage.Text = "lblPage"
         Me.lblPage.Top = 1.0!
         Me.lblPage.Width = 2.000002!
         '
@@ -1434,22 +1434,6 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.imgDoorHandingDiagramEN.Top = 0.4!
         Me.imgDoorHandingDiagramEN.Width = 6.0!
         '
-        'lblDoorHandingDiagram
-        '
-        Me.lblDoorHandingDiagram.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblDoorHandingDiagram.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.lblDoorHandingDiagram.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblDoorHandingDiagram.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.lblDoorHandingDiagram.CanGrow = False
-        Me.lblDoorHandingDiagram.Height = 0.2!
-        Me.lblDoorHandingDiagram.Left = 0.0!
-        Me.lblDoorHandingDiagram.Name = "lblDoorHandingDiagram"
-        Me.lblDoorHandingDiagram.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical" & _
-    "-align: middle; ddo-char-set: 1"
-        Me.lblDoorHandingDiagram.Text = "lblDoorHandingDiagram"
-        Me.lblDoorHandingDiagram.Top = 0.2!
-        Me.lblDoorHandingDiagram.Width = 6.0!
-        '
         'lblDrawingsUsed
         '
         Me.lblDrawingsUsed.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
@@ -1482,21 +1466,21 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.DrawingsUsedValue.Top = 0.4!
         Me.DrawingsUsedValue.Width = 6.0!
         '
-        'TextBox1
+        'lblDoorHandingDiagram
         '
-        Me.TextBox1.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.TextBox1.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.TextBox1.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.TextBox1.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.TextBox1.DataField = "HWSetNetPrice"
-        Me.TextBox1.Height = 0.2!
-        Me.TextBox1.Left = 24.0!
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Style = "color: Black; font-weight: bold; vertical-align: middle; ddo-char-set: 1"
-        Me.TextBox1.SummaryType = GrapeCity.ActiveReports.SectionReportModel.SummaryType.GrandTotal
-        Me.TextBox1.Text = "HW Price Total"
-        Me.TextBox1.Top = 0.0!
-        Me.TextBox1.Width = 1.000002!
+        Me.lblDoorHandingDiagram.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblDoorHandingDiagram.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblDoorHandingDiagram.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblDoorHandingDiagram.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblDoorHandingDiagram.CanGrow = False
+        Me.lblDoorHandingDiagram.Height = 0.2!
+        Me.lblDoorHandingDiagram.Left = 0.0!
+        Me.lblDoorHandingDiagram.Name = "lblDoorHandingDiagram"
+        Me.lblDoorHandingDiagram.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical" & _
+    "-align: middle; ddo-char-set: 1"
+        Me.lblDoorHandingDiagram.Text = "lblDoorHandingDiagram"
+        Me.lblDoorHandingDiagram.Top = 0.2!
+        Me.lblDoorHandingDiagram.Width = 6.0!
         '
         'Spacer2
         '
@@ -1511,6 +1495,19 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.Spacer2.Text = ""
         Me.Spacer2.Top = 0.0!
         Me.Spacer2.Width = 1.0!
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.TextBox1.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.TextBox1.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.TextBox1.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.TextBox1.Height = 0.2!
+        Me.TextBox1.Left = 24.0!
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Style = "color: Black; font-weight: bold; vertical-align: middle; ddo-char-set: 1"
+        Me.TextBox1.Top = 0.0!
+        Me.TextBox1.Width = 1.000002!
         '
         'rptEMEADetailDoorSchedule
         '
@@ -1601,11 +1598,11 @@ Partial Public Class rptEMEADetailDoorSchedule
         CType(Me.HWSumValue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GrandTotalValue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.imgDoorHandingDiagramEN, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblDoorHandingDiagram, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblDrawingsUsed, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DrawingsUsedValue, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblDoorHandingDiagram, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Spacer2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -1688,6 +1685,6 @@ Partial Public Class rptEMEADetailDoorSchedule
     Private WithEvents imgDoorHandingDiagramEN As GrapeCity.ActiveReports.SectionReportModel.Picture
     Private WithEvents DrawingsUsedValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents Spacer As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents TextBox1 As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents Spacer2 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents TextBox1 As GrapeCity.ActiveReports.SectionReportModel.TextBox
 End Class

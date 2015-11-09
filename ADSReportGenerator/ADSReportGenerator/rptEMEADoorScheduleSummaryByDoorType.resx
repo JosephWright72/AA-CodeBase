@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="PageCount.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageCount.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
   <data name="imgLogoEN.ImageData" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEttc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5l
@@ -2528,17 +2534,17 @@
         xV2KuxV2KuxV/9kL
 </value>
   </data>
-  <data name="PageCount.OutputFormat" xml:space="preserve">
-    <value />
+  <data name="Footer.OutputFormat" xml:space="preserve">
+    <value>#,##</value>
   </data>
   <data name="Footer.OutputFormat" xml:space="preserve">
     <value>#,##</value>
   </data>
-  <data name="TotalSumValue.OutputFormat" xml:space="preserve">
-    <value>#,##0.00</value>
-  </data>
   <data name="TotalDoorsValue.OutputFormat" xml:space="preserve">
     <value>#,##0</value>
+  </data>
+  <data name="TotalSumValue.OutputFormat" xml:space="preserve">
+    <value>#,##0.00</value>
   </data>
   <metadata name="$this.ScriptEditorPositionForUndo" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>

@@ -134,37 +134,37 @@ Module ModMain
                 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
                 ' emea ironmongery set summary
-                'IRONMONGERYSETSUMMARYúMETRICú28640úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Ironmongery_Set_Summary.pdfúPDFúúIronmongery Set Summaryú4344útrueúRev72
+                'IRONMONGERYSETSUMMARYúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Ironmongery_Set_Summary.pdfúPDFúúIronmongery Set Summaryú4344útrueúRev72
 
                 ' emea ironmongery schedule
-                'IRONMONGERYSCHEDULEúMETRICú28640úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Ironmongery_Schedule.pdfúPDFúúIronmongery Scheduleú4344ú2ú2útrueútrueútrueútrueúRev72
+                'IRONMONGERYSCHEDULEúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Ironmongery_Schedule.pdfúPDFúúIronmongery Scheduleú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea ironmongery schedule summary
-                'IRONMONGERYSCHEDULESUMMARYúMETRICú28640úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Ironmongery_Schedule_Summary.pdfúPDFúúIronmongery Schedule Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
+                'IRONMONGERYSCHEDULESUMMARYúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Ironmongery_Schedule_Summary.pdfúPDFúúIronmongery Schedule Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea door summary
-                'DOORSUMMARYúMETRICú28640úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Door_Summary.pdfúPDFúúDoor Summaryú4344úRev72
+                'DOORSUMMARYúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Door_Summary.pdfúPDFúúDoor Summaryú4344úRev72
 
                 ' emea cover letter
-                'COVERLETTERúMETRICú28640úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Cover_Letter.pdfúPDFúúú4344úTrueúFalseúFalseúRev72
+                'COVERLETTERúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Cover_Letter.pdfúPDFúúú4344úTrueúFalseúFalseúRev72
 
                 ' emea quotations terms
-                'QUOTETERMSúMETRICú28640úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Quote_Terms.pdfúPDFúúú4344úRev72
+                'QUOTETERMSúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Quote_Terms.pdfúPDFúúú4344úRev72
 
                 ' emea timber standard door sizes report
-                'TIMBERSTDDOORSIZESúMETRICú28618úúC:\Users\wrightj\Documents\CGI\AA\Output\Timber_Std_Door_Sizes.pdfúPDFúúDoor Summaryú4344úRev72
+                'TIMBERSTDDOORSIZESúMETRICú28618úúC:\Users\wrightj\Documents\CGI\AA\Output\Timber_Std_Door_Sizes.pdfúPDFúúú4344úRev72
 
                 ' emea door schedule summary report
-                'DOORSCHEDULESUMMARYúMETRICú28395úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary.pdfúPDFúúDoor Schedule Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
+                'DOORSCHEDULESUMMARYúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary.pdfúPDFúúDoor Schedule Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea door schedule summary by door type report
-                'DOORSCHEDULESUMMARYBYDOORTYPEúMETRICú28395úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary_By_Door_Type.pdfúPDFúúDoor Schedule Summary By Door Typeú4344ú2ú2útrueútrueútrueútrueúRev72
+                'DOORSCHEDULESUMMARYBYDOORTYPEúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary_By_Door_Type.pdfúPDFúúDoor Schedule Summary By Door Typeú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea doors and ironmongery set summary report
-                'DOORSANDIRONMONGERYSETSUMMARYúMETRICú28520úúC:\Users\wrightj\Documents\CGI\AA\Output\Doors_And_Ironmongery_Set_Summary.pdfúPDFúúDoors and Ironmongery Set Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
+                'DOORSANDIRONMONGERYSETSUMMARYúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\Doors_And_Ironmongery_Set_Summary.pdfúPDFúúDoors and Ironmongery Set Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea detail door schedule report
-                'DETAILDOORSCHEDULEúMETRICú28520úúC:\Users\wrightj\Documents\CGI\AA\Output\Detail_Door_Schedule.pdfúPDFúúDetail Door Scheduleú4344ú2ú2útrueútrueútrueútrueúRev72
+                'DETAILDOORSCHEDULEúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\Detail_Door_Schedule.xlsúXLSúúDetail Door Scheduleú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -1885,7 +1885,7 @@ ErrHandler:
              "sum(Cast(AAOSHWSets.Qty as int) * AAOSDOORS.Qty) as Qty, AAOSHWSets.ProjectID,AAOSHWSets.TypeDescription , " & _
              "AAOSFirms.LastName as ArchCompany,(AAOSConsultants.FirstName + ' ' + AAOSConsultants.LastName) as SalesRep, " & _
              AAOSDBName & ".DBO.HardwareType.Description as HWType, " & _
-             "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+             "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
              "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max)) " & _
              "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
              "FROM AAOSHWSets  " & _
@@ -1915,7 +1915,7 @@ ErrHandler:
             "sum(Cast(AAOSHWSets.Qty as int) * AAOSDOORS.Qty) as Qty, AAOSHWSets.ProjectID,AAOSHWSets.TypeDescription ,  " & _
             "AAOSFirms.LastName as ArchCompany,(AAOSConsultants.FirstName + ' ' + AAOSConsultants.LastName) as SalesRep,  " & _
              AAOSDBName & ".DBO.HardwareType.Description as HWType,  " & _
-            "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+            "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
             "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max))  " & _
             "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
             "FROM AAOSHWSets  " & _
@@ -2034,7 +2034,7 @@ ErrHandler:
            "AAOSFirms.LastName as ArchCompany,(AAOSConsultants.FirstName + ' ' + AAOSConsultants.LastName) as SalesRep, " & _
            "AAOSDoors.Level, AAOSDoors.Height, AAOSDoors.Width, AAOSDoors.DoorMaterial, AAOSDoors.Thickness, " & _
            "AAOSDoors.Handing, AAOSDoors.FrameMaterial,  CONVERT(nvarchar(max),AAOSDoors.Notes) as DoorNotes, Case when AAOSDoors.Qty = 1 then AAOSDoors.Mark else AAOSDoors.Mark + ' x '+ Cast(AAOSDoors.Qty as VARCHAR(5))  end Mark, AAOSDoors.ToRoom, AAOSHWSets.Finish,AAOSDoors.HWSet, " & _
-           "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+           "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
            "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max))  " & _
            "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
            "WHERE(AAOSHWSets.ProjectID = " & PrjID1.ToString & " And AAOSReportJoin.UserID = " & UsrID.ToString & " And AAOSHWSets.DHI <> 100000) " & _
@@ -2058,7 +2058,7 @@ ErrHandler:
                    "AAOSDoors.Level, AAOSDoors.Height, AAOSDoors.Width, AAOSDoors.DoorMaterial, AAOSDoors.Thickness, " & _
                    "AAOSDoors.Handing, AAOSDoors.FrameMaterial, CONVERT(nvarchar(max),AAOSDoors.Notes) as DoorNotes," & _
                    " Case when AAOSDoors.Qty = 1 then AAOSDoors.Mark else AAOSDoors.Mark + ' x '+ Cast(AAOSDoors.Qty as VARCHAR(5))  end Mark, AAOSDoors.ToRoom, AAOSHWSets.Finish,AAOSDoors.HWSet,  " & _
-                   "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+                   "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                    "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max))  " & _
                    "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
                    "FROM AAOSHWSets  LEFT OUTER JOIN  " & AAOSDBName & ".dbo.Vendor ON AAOSHWSets.Mfr = " & AAOSDBName & ".dbo.Vendor.ABBR  " & _
@@ -2174,7 +2174,7 @@ ErrHandler:
             strQ = "SELECT AAOSProjects.ProjectName, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, " & _
                     " AAOSHWSets.Description AS Description,AAOSHWSets.Price, AAOSHWSets.SetName, " & _
                     "AAOSHWSets.Qty, AAOSHWSets.ProjectID, " & _
-                    "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+                    "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                     "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max))  " & _
                     "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
                     "FROM AAOSHWSets " & _
@@ -2191,7 +2191,7 @@ ErrHandler:
         Else
 
             strQ = "SELECT AAOSProjects.ProjectName, " & AAOSDBName & ".dbo.Vendor.NAME, AAOSHWSets.Product, AAOSHWSets.Description, AAOSHWSets.Price, AAOSHWSets.SetName, AAOSHWSets.Qty, AAOSHWSets.ProjectID, " & _
-                    "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+                    "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                     "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max))  " & _
                     "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
                     "FROM AAOSHWSets LEFT OUTER JOIN  " & _
@@ -2543,7 +2543,7 @@ ErrHandler:
                     "AAOSHWSets.Description, " & _
                     "AAOSHWSets.TypeDescription, " & _
                     "AAOSHWSets.Finish, AAOSHWSets.ProjectID, " & _
-                    "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+                    "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                     "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max)) " & _
                     "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
                     "FROM AAOSProjectHardware RIGHT OUTER JOIN AAOSHWSets " & _
@@ -2560,7 +2560,7 @@ ErrHandler:
         Else
             strQ = "SELECT AAOSProjects.ProjectName, AAOSProjects.JobName,AAOSProjectHardware.DHI, AAOSProjects.Description AS ProjectDescription, AAOSHWSets.Price, AAOSHWSets.Product, AAOSHWSets.Qty, " & _
             "AAOSHWSets.SetName, AAOSHWSets.Description, AAOSHWSets.TypeDescription, AAOSHWSets.Finish, AAOSHWSets.ProjectID, " & _
-            "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+            "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
             "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max)) " & _
             "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID " & _
             "FROM AAOSProjectHardware RIGHT OUTER JOIN " & _
@@ -2719,7 +2719,7 @@ ErrHandler:
                           "AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc, " & _
                           "AAOSDoorEstimate.Series, AAOSDoorEstimate.Gauge, AAOSDoorEstimate.SteelType, AAOSDoorEstimate.List, AAOSDoorEstimate.NC, " & _
                           "AAOSDoorEstimate.Adj, AAOSDoorEstimate.Adj1, AAOSDoorEstimate.Adj2, AAOSDoorEstimate.Adj3, AAOSDoorEstimate.Adj4, AAOSDoorEstimate.Material, " & _
-                          "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+                          "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                           "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max)) " & _
                           "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID," & _
                           "SUM(AAOSDoorEstimate.Qty) AS TotalQty, AAOSDoorEstimate.Net AS TotalNet, SUM(AAOSDoorEstimate.Extended) AS TotalExtended " & _
@@ -2739,7 +2739,7 @@ ErrHandler:
                                                   "AAOSDoorEstimate.CategorySort, AAOSDoorEstimate.Name, AAOSDoorEstimate.SizeDesc, AAOSDoorEstimate.FrameDesign, AAOSDoorEstimate.FrameHead, " & _
                                                   "AAOSDoorEstimate.FrameFace, AAOSDoorEstimate.Series, AAOSDoorEstimate.Gauge, AAOSDoorEstimate.SteelType, AAOSDoorEstimate.List, AAOSDoorEstimate.NC, " & _
                                                   "AAOSDoorEstimate.Adj, AAOSDoorEstimate.Adj1, AAOSDoorEstimate.Adj2, AAOSDoorEstimate.Adj3, AAOSDoorEstimate.Adj4, AAOSDoorEstimate.Material, " & _
-                                                  "CASE WHEN OriginalProjectID IS NOT NULL AND OriginalProjectID <> '0' " & _
+                                                  "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                                                   "THEN CAST(AAOSProjects.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AAOSProjects.RevisionNumber AS nvarchar(max)) " & _
                                                   "ELSE CAST(AAOSProjects.ID AS nvarchar(max)) END as NewProjID," & _
                                                   "SUM(AAOSDoorEstimate.Qty) AS TotalQty, AAOSDoorEstimate.Net AS TotalNet, SUM(AAOSDoorEstimate.Extended) AS TotalExtended " & _
@@ -2908,7 +2908,7 @@ ErrHandler:
        " SET ARITHABORT ON" & _
        " SELECT AP.PROJECTNAME," & _
        " AP.ID ProjectReference," & _
-       "CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+       "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
        "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
        "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
        " HW.SETNAME,HW.SETDESC," & _
@@ -3162,7 +3162,7 @@ ErrHandler:
        " HW.TYPEDESCRIPTION," & _
        " AP.PROJECTNAME," & _
        " AP.ID ProjectReference," & _
-       " CASE WHEN AP.OriginalProjectID IS NULL or AP.OriginalProjectID <> '0' " & _
+       " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
        " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
        " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID, " & _
        " CASE WHEN Len(PH.PRICE)=0 THEN '0' ELSE PH.PRICE END AS singlePrice," & _
@@ -3252,7 +3252,7 @@ ErrHandler:
        " HW.TYPEDESCRIPTION," & _
        " AP.PROJECTNAME," & _
        " AP.ID ProjectReference," & _
-       " CASE WHEN AP.OriginalProjectID IS NULL or AP.OriginalProjectID <> '0' " & _
+       " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
        " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
        " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID, " & _
        " CASE WHEN Len(PH.PRICE)=0 THEN '0' ELSE PH.PRICE END AS singlePrice," & _
@@ -3342,7 +3342,7 @@ ErrHandler:
        " HW.TYPEDESCRIPTION," & _
        " AP.PROJECTNAME," & _
        " AP.ID ProjectReference," & _
-       " CASE WHEN AP.OriginalProjectID IS NULL or AP.OriginalProjectID <> '0' " & _
+       " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
        " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
        " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID, " & _
        " CASE WHEN Len(PH.PRICE)=0 THEN '0' ELSE PH.PRICE END AS singlePrice," & _
@@ -3619,7 +3619,7 @@ ErrHandler:
 
         strQ = "SELECT " & _
          " AP.id ProjectReference, " & _
-         "CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+         "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
          "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
          "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
          " AP.projectname ProjectName, " & _
@@ -3814,7 +3814,7 @@ ErrHandler:
         strQ = " DECLARE @ProjectID INT" & _
        " SET @ProjectID = " & PrjID1.ToString & _
        " SELECT AP.id   ProjectReference, " & _
-       "CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+       "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
        "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
        "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
        "AP.projectname ProjectName, " & _
@@ -3936,8 +3936,6 @@ ErrHandler:
     Private Sub CreateTimberStdDoorSizes(ByVal arguments() As String)
         On Error GoTo ErrHandler
 
-        Dim PrjID1 As Integer = arguments(2)
-        Dim UsrID As Integer = arguments(8)
         Dim RevisionTxt As String = arguments(9)
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         'Translation Start
@@ -4089,9 +4087,8 @@ ErrHandler:
         On Error GoTo ErrHandler
 
         Dim PrjID1 As Integer = arguments(2)
-        Dim UsrID As Integer = arguments(8)
-        Dim RevisionTxt As String = arguments(9)
         Dim optShowUnitRate As Boolean = arguments(13)
+        Dim RevisionTxt As String = arguments(15)
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         'Translation Start
 
@@ -4151,7 +4148,7 @@ ErrHandler:
         Dim strQ As String
 
         strQ = " DECLARE @ProjectID INT SET @ProjectID = " & PrjID1.ToString & " SET ARITHABORT ON" & _
-                " SELECT AP.ID, AP.ProjectName, CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+                " SELECT AP.ID, AP.ProjectName, CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                 "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
                 "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
                 "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AD.ToRoom, AD.FromRoom, " & _
@@ -4169,7 +4166,8 @@ ErrHandler:
                 " LEFT OUTER JOIN AAOSHWSets AH ON AP.ID = AH.ProjectID AND AD.HWSet = AH.SetName " & _
                 " WHERE AP.ID = @ProjectID " & _
                 " GROUP BY AP.ID, AP.ProjectName, AP.OriginalProjectID, AP.RevisionNumber, ACS.FirstName, ACS.LastName, AD.Mark, AD.ToRoom, AD.FromRoom, " & _
-                " AD.DoorMaterial, AD.UOM, AD.Qty, AD.FireRating, AD.AcousticRating, AD.RoughWidth, AD.RoughHeight, AD.FrameDepth, AD.DoorPrice, AD.Qty "
+                " AD.DoorMaterial, AD.UOM, AD.Qty, AD.FireRating, AD.AcousticRating, AD.RoughWidth, AD.RoughHeight, AD.FrameDepth, AD.DoorPrice, AD.Qty " & _
+                " ORDER BY AD.Mark ASC "
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
@@ -4248,9 +4246,8 @@ ErrHandler:
         On Error GoTo ErrHandler
 
         Dim PrjID1 As Integer = arguments(2)
-        Dim UsrID As Integer = arguments(8)
-        Dim RevisionTxt As String = arguments(9)
         Dim optShowUnitRate As Boolean = arguments(13)
+        Dim RevisionTxt As String = arguments(15)
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         'Translation Start
 
@@ -4310,7 +4307,7 @@ ErrHandler:
         Dim strQ As String
 
         strQ = " DECLARE @ProjectID INT SET @ProjectID = " & PrjID1.ToString & " SET ARITHABORT ON" & _
-                " SELECT AP.ID, AP.ProjectName, CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+                " SELECT AP.ID, AP.ProjectName, CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                 "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
                 "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
                 "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AH.SetDesc, AH.SetName, AD.Qty, " & _
@@ -4341,7 +4338,8 @@ ErrHandler:
                 " ON Notes.ProjectID = AP.ID " & _
                 " WHERE AP.ID = @ProjectID " & _
                 " GROUP BY AP.ID, AP.ProjectName, AP.OriginalProjectID, AP.RevisionNumber, ACS.FirstName, ACS.LastName, AD.Mark, AH.SetDesc, AH.SetName, " & _
-                " AD.DoorPrice, AD.Qty "
+                " AD.DoorPrice, AD.Qty " & _
+                " ORDER BY AD.Mark ASC "
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
@@ -4419,9 +4417,8 @@ ErrHandler:
         On Error GoTo ErrHandler
 
         Dim PrjID1 As Integer = arguments(2)
-        Dim UsrID As Integer = arguments(8)
-        Dim RevisionTxt As String = arguments(9)
         Dim optShowUnitRate As Boolean = arguments(13)
+        Dim RevisionTxt As String = arguments(15)
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         'Translation Start
 
@@ -4481,7 +4478,7 @@ ErrHandler:
         Dim strQ As String
 
         strQ = " DECLARE @ProjectID INT SET @ProjectID = " & PrjID1.ToString & " SET ARITHABORT ON" & _
-                " SELECT AP.ID, AP.ProjectName, CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+                " SELECT AP.ID, AP.ProjectName, CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                 "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
                 "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
                 "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.DoorElevation, AD.ArchDoorType, AD.DoorMaterial, " & _
@@ -4497,8 +4494,9 @@ ErrHandler:
                 " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
                 " LEFT OUTER JOIN AAOSHWSets AH ON AP.ID = AH.ProjectID AND AD.HWSet = AH.SetName " & _
                 " WHERE AP.ID = @ProjectID " & _
-                " GROUP BY AP.ID, AP.ProjectName, AP.OriginalProjectID, AP.RevisionNumber, ACS.FirstName, ACS.LastName, AD.DoorElevation, AD.ArchDoorType, " & _
-                " AD.DoorMaterial, AD.UOM, AD.Qty, AD.FireRating, AD.AcousticRating, AD.Qty, AD.DoorPrice "
+                " GROUP BY AP.ID, AP.ProjectName, AP.OriginalProjectID, AP.RevisionNumber, ACS.FirstName, ACS.LastName, AD.Mark, AD.DoorElevation, AD.ArchDoorType, " & _
+                " AD.DoorMaterial, AD.UOM, AD.Qty, AD.FireRating, AD.AcousticRating, AD.Qty, AD.DoorPrice " & _
+                " ORDER BY AD.DoorElevation ASC "
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
@@ -4576,9 +4574,7 @@ ErrHandler:
         On Error GoTo ErrHandler
 
         Dim PrjID1 As Integer = arguments(2)
-        Dim UsrID As Integer = arguments(8)
         Dim RevisionTxt As String = arguments(9)
-        Dim optShowUnitRate As Boolean = arguments(13)
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         'Translation Start
 
@@ -4638,7 +4634,7 @@ ErrHandler:
         Dim strQ As String
 
         strQ = " DECLARE @ProjectID INT SET @ProjectID = " & PrjID1.ToString & " SET ARITHABORT ON" & _
-                " SELECT AP.ID, AP.ProjectName, CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+                " SELECT AP.ID, AP.ProjectName, CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                 "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
                 "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
                 "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AD.ToRoom, AD.FromRoom, AD.DoorElevation, AD.FireRating, " & _
@@ -4657,7 +4653,8 @@ ErrHandler:
                 " LEFT OUTER JOIN AAOSProjects AP ON AP.ID = AD.ProjectID " & _
                 " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
                 " LEFT OUTER JOIN AAOSHWSets AH ON AP.ID = AH.ProjectID AND AD.HWSet = AH.SetName " & _
-                " WHERE AP.ID = @ProjectID "
+                " WHERE AP.ID = @ProjectID " & _
+                " ORDER BY AD.Mark ASC "
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
@@ -4815,7 +4812,7 @@ ErrHandler:
         "" & _
         " SELECT AP.ID ProjectReference, " & _
         " AP.ProjectName, " & _
-         "CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+         "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
          "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
          "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
         " (ACS.FirstName + ' ' + ACS.LastName) AS ProjectOwner, " & _
@@ -5084,7 +5081,7 @@ ErrHandler:
         strQ = "SELECT " & _
          " AP.id ProjectReference, " & _
          " AP.projectname ProjectName, " & _
-         "CASE WHEN AP.OriginalProjectID IS NOT NULL or AP.OriginalProjectID <> '0' " & _
+         "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
          "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
          "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
          " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
