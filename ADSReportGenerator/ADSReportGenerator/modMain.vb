@@ -4837,7 +4837,6 @@ ErrHandler:
         " Sum(ISNULL(NULLIF(HW.Qty, ''), 0) * ISNULL(NULLIF(Doors.Qty,''), 1)) Quantity, " & _
         " CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2)) AS UnitRate, " & _
         " (Sum(ISNULL(NULLIF(HW.Qty, ''), 0) * ISNULL(NULLIF(Doors.Qty,''), 0))) * (CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2))) AS ExtendedRate, " & _
-        " Ltrim(Max(Notes.List)) AS SetNotes ," & _
         " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
         " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
         " ACS.Email AS PrjOwnEmail ," & _
@@ -4894,24 +4893,6 @@ ErrHandler:
         " (Charindex('deleted', ChangeLog) < 1) " & _
         " GROUP  BY ProjectID,HWSet) Doors ON Doors.HWSet = HW.SetName AND " & _
         " Doors.ProjectID = HW.ProjectID " & _
-        " LEFT OUTER JOIN (SELECT DISTINCT (ProjectID)ProjectID, " & _
-        " Stuff((SELECT ' ', " & _
-        " Char(13), " & _
-        " +SetNotes [text()] " & _
-        " FROM   (SELECT DISTINCT (ProjectID), " & _
-        " CASE WHEN Len(SetNotes) > 0 THEN (SetName + ' : ' " & _
-        " + Replace(Replace(SetNotes, Char(13), ' '), Char(10), ' ')) " & _
-        " ELSE NULL " & _
-        " END SetNotes " & _
-        " FROM   AAOSHWSets T " & _
-        " WHERE  ProjectID = @ProjectID AND " & _
-        " setnotes != '' " & _
-        " GROUP  BY ProjectID,SetName,SetNotes) A " & _
-        " WHERE  ProjectID = @ProjectID " & _
-        " FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
-        " FROM   AAOSHWSets T " & _
-        " WHERE  ProjectID = @ProjectID " & _
-        " GROUP  BY ProjectID,SetNotes) Notes ON Notes.ProjectID = AP.id " & _
         " WHERE  (HW.ProjectID = @ProjectID) " & _
         " AND (AP.ID = @ProjectID) " & _
         " AND (PH.ProjectID = @ProjectID) " & _

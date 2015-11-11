@@ -120,7 +120,6 @@ Public Class rptEMEAHWScheduleSummary
 
         lblQuantity.Text = sHash.Item("lblQuantity")
         lblUnit.Text = sHash.Item("lblSetPrice")
-        lblNotes.Text = sHash.Item("lblNotes")
         lblCurSymbol.Text = sHash.Item("lblCurSymbol")
         lblDate.Text = sHash.Item("lblDate")
         lblThumbnailImg.Text = sHash.Item("lblThumbnailImg")

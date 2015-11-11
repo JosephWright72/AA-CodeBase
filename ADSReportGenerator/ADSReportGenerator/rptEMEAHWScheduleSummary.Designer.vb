@@ -66,8 +66,6 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblTotalSum = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.lblCurSymbol = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.txtTotalForProject = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.lblNotes = New GrapeCity.ActiveReports.SectionReportModel.Label()
-        Me.txtComments = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         CType(Me.lblThumbnailImg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblProductDesc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,8 +106,6 @@ Partial Public Class rptEMEAHWScheduleSummary
         CType(Me.lblTotalSum, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblCurSymbol, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTotalForProject, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblNotes, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtComments, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'PageHeader1
@@ -597,8 +593,8 @@ Partial Public Class rptEMEAHWScheduleSummary
         '
         'GroupFooter1
         '
-        Me.GroupFooter1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblTotalSum, Me.lblCurSymbol, Me.txtTotalForProject, Me.lblNotes, Me.txtComments})
-        Me.GroupFooter1.Height = 2.252416!
+        Me.GroupFooter1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblTotalSum, Me.lblCurSymbol, Me.txtTotalForProject})
+        Me.GroupFooter1.Height = 1.0!
         Me.GroupFooter1.Name = "GroupFooter1"
         '
         'lblTotalSum
@@ -636,29 +632,6 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.txtTotalForProject.Text = Nothing
         Me.txtTotalForProject.Top = 0.233!
         Me.txtTotalForProject.Width = 0.9350004!
-        '
-        'lblNotes
-        '
-        Me.lblNotes.Height = 0.2284999!
-        Me.lblNotes.HyperLink = Nothing
-        Me.lblNotes.Left = 0.179!
-        Me.lblNotes.Name = "lblNotes"
-        Me.lblNotes.Style = "font-size: 10pt; font-weight: bold; text-align: left; vertical-align: middle; ddo" & _
-    "-char-set: 1"
-        Me.lblNotes.Text = "Notes"
-        Me.lblNotes.Top = 1.0!
-        Me.lblNotes.Width = 1.621!
-        '
-        'txtComments
-        '
-        Me.txtComments.CanShrink = True
-        Me.txtComments.DataField = "SetNotes"
-        Me.txtComments.Height = 0.692!
-        Me.txtComments.Left = 0.179!
-        Me.txtComments.Name = "txtComments"
-        Me.txtComments.Text = Nothing
-        Me.txtComments.Top = 1.3!
-        Me.txtComments.Width = 7.846001!
         '
         'rptEMEAHWScheduleSummary
         '
@@ -724,8 +697,6 @@ Partial Public Class rptEMEAHWScheduleSummary
         CType(Me.lblTotalSum, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblCurSymbol, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTotalForProject, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblNotes, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtComments, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -774,8 +745,6 @@ Partial Public Class rptEMEAHWScheduleSummary
     Private WithEvents lblDate As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents txtDate As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents lblPage As GrapeCity.ActiveReports.SectionReportModel.Label
-    Private WithEvents lblNotes As GrapeCity.ActiveReports.SectionReportModel.Label
-    Private WithEvents txtComments As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents ReportInfo1 As GrapeCity.ActiveReports.SectionReportModel.ReportInfo
     Private WithEvents ReportInfo3 As GrapeCity.ActiveReports.SectionReportModel.ReportInfo
     Private WithEvents lblOf As GrapeCity.ActiveReports.SectionReportModel.TextBox
