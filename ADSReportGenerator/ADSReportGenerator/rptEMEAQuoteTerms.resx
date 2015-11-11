@@ -2528,6 +2528,12 @@
         xV2KuxV2KuxV/9kL
 </value>
   </data>
+  <data name="PageCount.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFooter.OutputFormat" xml:space="preserve">
+    <value>#,##</value>
+  </data>
   <data name="txtFooter.OutputFormat" xml:space="preserve">
     <value>#,##</value>
   </data>

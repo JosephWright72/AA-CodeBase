@@ -24,8 +24,8 @@ Partial Public Class rptEMEACoverLetter
         Me.txtPrjRef = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblPrjOwner = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.txtProjectOwner = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.txtRev = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.lblRevNo = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.RevisionValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.lblRev = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.txtContactNumber = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.txtArchitect = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.txtContractor = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
@@ -60,8 +60,8 @@ Partial Public Class rptEMEACoverLetter
         CType(Me.txtPrjRef, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblPrjOwner, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtProjectOwner, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtRev, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblRevNo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RevisionValue, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblRev, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtContactNumber, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtArchitect, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtContractor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,7 +92,7 @@ Partial Public Class rptEMEACoverLetter
         '
         'PageHeader1
         '
-        Me.PageHeader1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblPrjRef, Me.txtProjectName, Me.txtPrjRef, Me.lblPrjOwner, Me.txtProjectOwner, Me.txtRev, Me.lblRevNo, Me.txtContactNumber, Me.txtArchitect, Me.txtContractor, Me.txtOwner, Me.lblFAO, Me.Line1, Me.txtCompanyName, Me.txtAddress1, Me.txtAddress2, Me.txtAddress3, Me.txtCity, Me.txtPostcode, Me.lblPrjName, Me.lblContactNo, Me.txtDate, Me.imgLogoEN, Me.lblEmail, Me.txtEmail, Me.imgLogoNO})
+        Me.PageHeader1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblPrjRef, Me.txtProjectName, Me.txtPrjRef, Me.lblPrjOwner, Me.txtProjectOwner, Me.RevisionValue, Me.lblRev, Me.txtContactNumber, Me.txtArchitect, Me.txtContractor, Me.txtOwner, Me.lblFAO, Me.Line1, Me.txtCompanyName, Me.txtAddress1, Me.txtAddress2, Me.txtAddress3, Me.txtCity, Me.txtPostcode, Me.lblPrjName, Me.lblContactNo, Me.txtDate, Me.imgLogoEN, Me.lblEmail, Me.txtEmail, Me.imgLogoNO})
         Me.PageHeader1.Height = 3.573333!
         Me.PageHeader1.Name = "PageHeader1"
         '
@@ -121,7 +121,7 @@ Partial Public Class rptEMEACoverLetter
         '
         'txtPrjRef
         '
-        Me.txtPrjRef.DataField = "NewProjID"
+        Me.txtPrjRef.DataField = "ProjectReference"
         Me.txtPrjRef.Height = 0.2!
         Me.txtPrjRef.Left = 6.09!
         Me.txtPrjRef.Name = "txtPrjRef"
@@ -153,27 +153,28 @@ Partial Public Class rptEMEACoverLetter
         Me.txtProjectOwner.Top = 1.6!
         Me.txtProjectOwner.Width = 2.103!
         '
-        'txtRev
+        'RevisionValue
         '
-        Me.txtRev.Height = 0.2!
-        Me.txtRev.Left = 6.09!
-        Me.txtRev.Name = "txtRev"
-        Me.txtRev.Style = "font-size: 10pt; text-align: left; ddo-char-set: 1"
-        Me.txtRev.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Max
-        Me.txtRev.Text = "Num"
-        Me.txtRev.Top = 1.4!
-        Me.txtRev.Width = 2.103!
+        Me.RevisionValue.DataField = "Revision"
+        Me.RevisionValue.Height = 0.2!
+        Me.RevisionValue.Left = 6.09!
+        Me.RevisionValue.Name = "RevisionValue"
+        Me.RevisionValue.Style = "font-size: 10pt; text-align: left; ddo-char-set: 1"
+        Me.RevisionValue.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Max
+        Me.RevisionValue.Text = "Revision"
+        Me.RevisionValue.Top = 1.4!
+        Me.RevisionValue.Width = 2.103!
         '
-        'lblRevNo
+        'lblRev
         '
-        Me.lblRevNo.Height = 0.2!
-        Me.lblRevNo.HyperLink = Nothing
-        Me.lblRevNo.Left = 4.768999!
-        Me.lblRevNo.Name = "lblRevNo"
-        Me.lblRevNo.Style = "text-align: left"
-        Me.lblRevNo.Text = "Revision No."
-        Me.lblRevNo.Top = 1.4!
-        Me.lblRevNo.Width = 1.170001!
+        Me.lblRev.Height = 0.2!
+        Me.lblRev.HyperLink = Nothing
+        Me.lblRev.Left = 4.768999!
+        Me.lblRev.Name = "lblRev"
+        Me.lblRev.Style = "text-align: left"
+        Me.lblRev.Text = "Revision"
+        Me.lblRev.Top = 1.4!
+        Me.lblRev.Width = 1.170001!
         '
         'txtContactNumber
         '
@@ -492,14 +493,16 @@ Partial Public Class rptEMEACoverLetter
         'rptEMEACoverLetter
         '
         Me.MasterReport = False
+        Me.PageSettings.DefaultPaperSize = False
         Me.PageSettings.Margins.Bottom = 0.2!
         Me.PageSettings.Margins.Left = 0.2!
         Me.PageSettings.Margins.Right = 0.2!
         Me.PageSettings.Margins.Top = 0.2!
         Me.PageSettings.Orientation = GrapeCity.ActiveReports.Document.Section.PageOrientation.Portrait
-        Me.PageSettings.PaperHeight = 11.69!
+        Me.PageSettings.PaperHeight = 11.69291!
+        Me.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.A4
         Me.PageSettings.PaperWidth = 8.27!
-        Me.PrintWidth = 8.194918!
+        Me.PrintWidth = 8.2!
         Me.Sections.Add(Me.PageHeader1)
         Me.Sections.Add(Me.Detail1)
         Me.Sections.Add(Me.PageFooter1)
@@ -514,8 +517,8 @@ Partial Public Class rptEMEACoverLetter
         CType(Me.txtPrjRef, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblPrjOwner, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtProjectOwner, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtRev, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblRevNo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RevisionValue, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblRev, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtContactNumber, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtArchitect, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtContractor, System.ComponentModel.ISupportInitialize).EndInit()
@@ -559,9 +562,9 @@ Partial Public Class rptEMEACoverLetter
     End Sub
     Private WithEvents lblPrjOwner As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents txtProjectOwner As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents lblRevNo As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents lblRev As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents txtFooter As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents txtRev As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents RevisionValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents txtContactNumber As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents txtArchitect As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents txtContractor As GrapeCity.ActiveReports.SectionReportModel.TextBox

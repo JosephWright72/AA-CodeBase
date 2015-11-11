@@ -145,26 +145,29 @@ Module ModMain
                 ' emea door summary
                 'DOORSUMMARYúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Door_Summary.pdfúPDFúúDoor Summaryú4344úRev72
 
-                ' emea cover letter
-                'COVERLETTERúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Cover_Letter.pdfúPDFúúú4344úTrueúFalseúFalseúRev72
-
                 ' emea quotations terms
                 'QUOTETERMSúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Quote_Terms.pdfúPDFúúú4344úRev72
 
+                ' emea cover letter
+                'COVERLETTERúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Cover_Letter.pdfúPDFúúú4344úTrueúFalseúFalseúRev72
+
+                ' emea quotations terms doors
+                'QUOTETERMSDOORSúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Quote_Terms.rtfúRTFúúú4344úRev72
+
                 ' emea timber standard door sizes report
-                'TIMBERSTDDOORSIZESúMETRICú28618úúC:\Users\wrightj\Documents\CGI\AA\Output\Timber_Std_Door_Sizes.pdfúPDFúúú4344úRev72
+                'TIMBERSTDDOORSIZESúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\Timber_Std_Door_Sizes.pdfúPDFúúú4344úRev72
 
                 ' emea door schedule summary report
-                'DOORSCHEDULESUMMARYúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary.pdfúPDFúúDoor Schedule Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
+                'DOORSCHEDULESUMMARYúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary.rtfúRTFúúDoor Schedule Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea door schedule summary by door type report
-                'DOORSCHEDULESUMMARYBYDOORTYPEúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary_By_Door_Type.pdfúPDFúúDoor Schedule Summary By Door Typeú4344ú2ú2útrueútrueútrueútrueúRev72
+                'DOORSCHEDULESUMMARYBYDOORTYPEúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary_By_Door_Type.rtfúRTFúúDoor Schedule Summary By Door Typeú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea doors and ironmongery set summary report
-                'DOORSANDIRONMONGERYSETSUMMARYúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\Doors_And_Ironmongery_Set_Summary.pdfúPDFúúDoors and Ironmongery Set Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
+                'DOORSANDIRONMONGERYSETSUMMARYúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\Doors_And_Ironmongery_Set_Summary.pdfúPDFúúDoors and Ironmongery Set Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea detail door schedule report
-                'DETAILDOORSCHEDULEúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\Detail_Door_Schedule.xlsúXLSúúDetail Door Scheduleú4344ú2ú2útrueútrueútrueútrueúRev72
+                'DETAILDOORSCHEDULEúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\Detail_Door_Schedule.xlsúXLSúúDetail Door Scheduleú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -310,6 +313,10 @@ GetOut:
                     End
                     Exit Sub
                 Case "QUOTETERMS"
+                    CreateQuoteTerms(arguments)
+                    End
+                    Exit Sub
+                Case "QUOTETERMSDOORS"
                     CreateQuoteTerms(arguments)
                     End
                     Exit Sub
@@ -3619,9 +3626,10 @@ ErrHandler:
 
         strQ = "SELECT " & _
          " AP.id ProjectReference, " & _
-         "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
-         "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
-         "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
+         " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
+         " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+         " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
+         " CAST(AP.RevisionNumber AS nvarchar(max)) AS Revision," & _
          " AP.projectname ProjectName, " & _
          " CASE WHEN DAY(getdate()) in (1,21,31) THEN convert(varchar,DAY(getdate())) + 'st '" & _
          " WHEN DAY(getdate()) IN (2,22) then convert(varchar,DAY(getdate())) + 'nd '" & _
@@ -4151,6 +4159,7 @@ ErrHandler:
                 " SELECT AP.ID, AP.ProjectName, CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                 "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
                 "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
+                "   CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
                 "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AD.ToRoom, AD.FromRoom, " & _
                 "   AD.DoorMaterial, CASE MAX(AH.Leaf) WHEN 'A' THEN 'Single' WHEN 'B' THEN 'Equal Pair' WHEN  'I' THEN 'Unequal Pairs'  " & _
                 "   ELSE 'Single' END AS Leaf, AD.Qty, AD.FireRating, AD.AcousticRating, ROUND(AD.RoughWidth,1) AS FrameWidth, " & _
@@ -4310,6 +4319,7 @@ ErrHandler:
                 " SELECT AP.ID, AP.ProjectName, CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                 "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
                 "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
+                "   CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
                 "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AH.SetDesc, AH.SetName, AD.Qty, " & _
                 "   CAST((AD.DoorPrice/CASE WHEN AD.Qty = 0 THEN 1 ELSE AD.Qty END) AS DECIMAL(18, 2)) AS UnitRate, " & _
                 "   CASE WHEN DAY(GETDATE()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'st ' WHEN DAY(GETDATE()) IN ( 2, 22 ) " & _
@@ -4481,6 +4491,7 @@ ErrHandler:
                 " SELECT AP.ID, AP.ProjectName, CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                 "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
                 "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
+                "   CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
                 "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.DoorElevation, AD.ArchDoorType, AD.DoorMaterial, " & _
                 "   CASE MAX(AH.Leaf) WHEN 'A' THEN 'Single' WHEN 'B' THEN 'Equal Pair' WHEN  'I' THEN 'Unequal Pairs' " & _
                 "   ELSE 'Single' END AS Leaf, AD.Qty, AD.FireRating, AD.AcousticRating, " & _
@@ -4637,6 +4648,7 @@ ErrHandler:
                 " SELECT AP.ID, AP.ProjectName, CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
                 "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
                 "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
+                "   CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
                 "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AD.ToRoom, AD.FromRoom, AD.DoorElevation, AD.FireRating, " & _
                 "   AD.AcousticRating, AD.Undercut, AD.Thickness, AD.DoorFinish, AD.DoorEdge, AH.SetName, 'TBD' AS Glass, 'TBD' AS Aperture, " & _
                 "   AD.FrameDepth, AD.Extra1, AD.Extra2,  ROUND(AD.RoughWidth,1) AS FrameWidth, ROUND(AD.RoughHeight,1) AS FrameHeight, " & _
@@ -5081,9 +5093,10 @@ ErrHandler:
         strQ = "SELECT " & _
          " AP.id ProjectReference, " & _
          " AP.projectname ProjectName, " & _
-         "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
-         "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
-         "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
+         " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
+         " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+         " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
+         " CAST(AP.RevisionNumber AS nvarchar(max)) AS Revision, " & _
          " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
          " CASE WHEN DAY(getdate()) in (1,21,31) THEN convert(varchar,DAY(getdate())) + 'st '" & _
          " WHEN DAY(getdate()) IN (2,22) then convert(varchar,DAY(getdate())) + 'nd '" & _
@@ -5141,6 +5154,7 @@ ErrHandler:
         rpt.sRevisionText = RevisionTxt
         rpt.sHash = Hash
         rpt.ISO = ReportLangISO
+        rpt.sReportVariant = arguments(0)
         rpt.Run()
 
         If My.Computer.FileSystem.DirectoryExists(Path.GetDirectoryName(arguments(4))) = False Then

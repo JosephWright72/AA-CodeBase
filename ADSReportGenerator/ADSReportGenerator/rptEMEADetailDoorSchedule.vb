@@ -12,13 +12,13 @@ Public Class rptEMEADetailDoorSchedule
 
         lblProjectName.Text = sHash.Item("lblPrjName")
         lblProjectRef.Text = sHash.Item("lblPrjRef")
-        lblRevisionNo.Text = sHash.Item("lblRevNo")
+        lblRev.Text = sHash.Item("lblRev")
         lblProjectOwner.Text = sHash.Item("lblPrjOwner")
         lblOf.Text = sHash.Item("lblOf")
         lblPage.Text = sHash.Item("lblPage")
         lblDate.Text = sHash.Item("lblDate")
 
-        RevisionNoValue.Text = sRevisionText
+        RevisionValue.Text = sRevisionText
 
         lblDoorRef.Text = sHash.Item("lblDoorRef")
         lblToRoom.Text = sHash.Item("lblToRoom")
@@ -83,15 +83,39 @@ Public Class rptEMEADetailDoorSchedule
         DoorsetSumValue.OutputFormat = sHash.Item("lblCurSymbol") + "#,##0.00"
         HWSumValue.OutputFormat = sHash.Item("lblCurSymbol") + "#,##0.00"
         GrandTotalValue.OutputFormat = sHash.Item("lblCurSymbol") + "#,##0.00"
+
+        If METRIC_OUTPUT = 1 Then
+            lblThickness.Text = lblThickness.Text + " (mm)"
+            lblFrameDepth.Text = lblFrameDepth.Text + " (mm)"
+            lblSOWidth.Text = lblSOWidth.Text + " (mm)"
+            lblSOHeight.Text = lblSOHeight.Text + " (mm)"
+            lblFrameWidth.Text = lblFrameWidth.Text + " (mm)"
+            lblFrameHeight.Text = lblFrameHeight.Text + " (mm)"
+        Else
+            lblThickness.Text = lblThickness.Text + " (feet and inches)"
+            lblFrameDepth.Text = lblFrameDepth.Text + " (feet and inches)"
+            lblSOWidth.Text = lblSOWidth.Text + " (feet and inches)"
+            lblSOHeight.Text = lblSOHeight.Text + " (feet and inches)"
+            lblFrameWidth.Text = lblFrameWidth.Text + " (feet and inches)"
+            lblFrameHeight.Text = lblFrameHeight.Text + " (feet and inches)"
+        End If
+
     End Sub
 
     Private Sub Detail_Format(sender As Object, e As EventArgs) Handles Detail.Format
-        ThicknessValue.Text = FEETINCH(Val(ThicknessValue.Text))
-        FrameDepthValue.Text = FEETINCH(Val(FrameDepthValue.Text))
-        SOWidthValue.Text = FEETINCH(Val(SOWidthValue.Text))
-        SOHeightValue.Text = FEETINCH(Val(SOHeightValue.Text))
-        FrameWidthValue.Text = FEETINCH(Val(FrameWidthValue.Text))
-        FrameHeightValue.Text = FEETINCH(Val(FrameHeightValue.Text))
+
+        If DoorPriceValue.Text.Length < 8 Then DoorPriceValue.Text = Space(8 - DoorPriceValue.Text.Length) & DoorPriceValue.Text
+        If HWPriceValue.Text.Length < 8 Then HWPriceValue.Text = Space(8 - HWPriceValue.Text.Length) & HWPriceValue.Text
+        If TotalValue.Text.Length < 8 Then TotalValue.Text = Space(8 - TotalValue.Text.Length) & TotalValue.Text
+
+    End Sub
+
+    Private Sub GroupFooter_Format(sender As Object, e As EventArgs) Handles GroupFooter.Format
+
+        If DoorsetSumValue.Text.Length < 10 Then DoorsetSumValue.Text = Space(10 - DoorsetSumValue.Text.Length) & DoorsetSumValue.Text
+        If HWSumValue.Text.Length < 10 Then HWSumValue.Text = Space(10 - HWSumValue.Text.Length) & HWSumValue.Text
+        If GrandTotalValue.Text.Length < 10 Then GrandTotalValue.Text = Space(10 - GrandTotalValue.Text.Length) & GrandTotalValue.Text
+
     End Sub
 
 End Class

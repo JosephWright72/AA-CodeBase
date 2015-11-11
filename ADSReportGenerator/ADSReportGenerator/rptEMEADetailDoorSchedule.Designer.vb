@@ -16,8 +16,8 @@ Partial Public Class rptEMEADetailDoorSchedule
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rptEMEADetailDoorSchedule))
-        Me.RevisionNoValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.lblRevisionNo = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.RevisionValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.lblRev = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.lblProjectRef = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.ProjectNameValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.ProjectRefValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
@@ -95,11 +95,11 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.imgDoorHandingDiagramEN = New GrapeCity.ActiveReports.SectionReportModel.Picture()
         Me.lblDrawingsUsed = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.DrawingsUsedValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.TextBox1 = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblDoorHandingDiagram = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.Spacer2 = New GrapeCity.ActiveReports.SectionReportModel.Label()
-        Me.TextBox1 = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        CType(Me.RevisionNoValue, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblRevisionNo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RevisionValue, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblRev, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblProjectRef, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProjectNameValue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProjectRefValue, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,43 +174,44 @@ Partial Public Class rptEMEADetailDoorSchedule
         CType(Me.imgDoorHandingDiagramEN, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblDrawingsUsed, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DrawingsUsedValue, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblDoorHandingDiagram, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Spacer2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
-        'RevisionNoValue
+        'RevisionValue
         '
-        Me.RevisionNoValue.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.RevisionNoValue.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.RevisionNoValue.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.RevisionNoValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.RevisionNoValue.CanGrow = False
-        Me.RevisionNoValue.Height = 0.2!
-        Me.RevisionNoValue.Left = 2.0!
-        Me.RevisionNoValue.Name = "RevisionNoValue"
-        Me.RevisionNoValue.Style = "font-size: 10pt; text-align: left; white-space: nowrap; ddo-char-set: 1; ddo-wrap" & _
+        Me.RevisionValue.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.RevisionValue.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.RevisionValue.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.RevisionValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.RevisionValue.CanGrow = False
+        Me.RevisionValue.DataField = "Revision"
+        Me.RevisionValue.Height = 0.2!
+        Me.RevisionValue.Left = 2.0!
+        Me.RevisionValue.Name = "RevisionValue"
+        Me.RevisionValue.Style = "font-size: 10pt; text-align: left; white-space: nowrap; ddo-char-set: 1; ddo-wrap" & _
     "-mode: nowrap"
-        Me.RevisionNoValue.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Max
-        Me.RevisionNoValue.Text = "Revision No"
-        Me.RevisionNoValue.Top = 1.0!
-        Me.RevisionNoValue.Width = 3.0!
+        Me.RevisionValue.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Max
+        Me.RevisionValue.Text = "Revision"
+        Me.RevisionValue.Top = 1.0!
+        Me.RevisionValue.Width = 3.0!
         '
-        'lblRevisionNo
+        'lblRev
         '
-        Me.lblRevisionNo.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblRevisionNo.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.lblRevisionNo.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblRevisionNo.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblRevisionNo.Height = 0.2!
-        Me.lblRevisionNo.HyperLink = Nothing
-        Me.lblRevisionNo.Left = 0.0!
-        Me.lblRevisionNo.Name = "lblRevisionNo"
-        Me.lblRevisionNo.Style = "font-weight: bold; text-align: left; white-space: nowrap; ddo-char-set: 1; ddo-wr" & _
+        Me.lblRev.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblRev.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblRev.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblRev.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblRev.Height = 0.2!
+        Me.lblRev.HyperLink = Nothing
+        Me.lblRev.Left = 0.0!
+        Me.lblRev.Name = "lblRev"
+        Me.lblRev.Style = "font-weight: bold; text-align: left; white-space: nowrap; ddo-char-set: 1; ddo-wr" & _
     "ap-mode: nowrap"
-        Me.lblRevisionNo.Text = "lblRevisionNo"
-        Me.lblRevisionNo.Top = 1.0!
-        Me.lblRevisionNo.Width = 2.0!
+        Me.lblRev.Text = "lblRev"
+        Me.lblRev.Top = 1.0!
+        Me.lblRev.Width = 2.0!
         '
         'lblProjectRef
         '
@@ -252,7 +253,7 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.ProjectRefValue.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.ProjectRefValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.ProjectRefValue.CanGrow = False
-        Me.ProjectRefValue.DataField = "NewProjID"
+        Me.ProjectRefValue.DataField = "ID"
         Me.ProjectRefValue.Height = 0.2!
         Me.ProjectRefValue.Left = 2.0!
         Me.ProjectRefValue.Name = "ProjectRefValue"
@@ -521,8 +522,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblFrameWidth.Height = 0.2!
         Me.lblFrameWidth.Left = 16.0!
         Me.lblFrameWidth.Name = "lblFrameWidth"
-        Me.lblFrameWidth.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical" & _
-    "-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
+        Me.lblFrameWidth.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: right; vertica" & _
+    "l-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblFrameWidth.Text = "lblFrameWidth"
         Me.lblFrameWidth.Top = 1.2!
         Me.lblFrameWidth.Width = 1.0!
@@ -537,8 +538,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblFrameHeight.Height = 0.2!
         Me.lblFrameHeight.Left = 17.0!
         Me.lblFrameHeight.Name = "lblFrameHeight"
-        Me.lblFrameHeight.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical" & _
-    "-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
+        Me.lblFrameHeight.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: right; vertica" & _
+    "l-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblFrameHeight.Text = "lblFrameHeight"
         Me.lblFrameHeight.Top = 1.2!
         Me.lblFrameHeight.Width = 1.0!
@@ -553,8 +554,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblFrameDepth.Height = 0.2!
         Me.lblFrameDepth.Left = 13.0!
         Me.lblFrameDepth.Name = "lblFrameDepth"
-        Me.lblFrameDepth.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical" & _
-    "-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
+        Me.lblFrameDepth.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: right; vertica" & _
+    "l-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblFrameDepth.Text = "lblFrameDepth"
         Me.lblFrameDepth.Top = 1.2!
         Me.lblFrameDepth.Width = 1.0!
@@ -569,8 +570,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblDoorset.Height = 0.2!
         Me.lblDoorset.Left = 22.0!
         Me.lblDoorset.Name = "lblDoorset"
-        Me.lblDoorset.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical" & _
-    "-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
+        Me.lblDoorset.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: right; vertica" & _
+    "l-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblDoorset.Text = "lblDoorset"
         Me.lblDoorset.Top = 1.2!
         Me.lblDoorset.Width = 1.0!
@@ -601,8 +602,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblThickness.Height = 0.2!
         Me.lblThickness.Left = 7.0!
         Me.lblThickness.Name = "lblThickness"
-        Me.lblThickness.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical" & _
-    "-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
+        Me.lblThickness.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: right; vertica" & _
+    "l-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblThickness.Text = "lblThickness"
         Me.lblThickness.Top = 1.2!
         Me.lblThickness.Width = 1.0!
@@ -697,8 +698,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblSOWidth.Height = 0.2!
         Me.lblSOWidth.Left = 14.0!
         Me.lblSOWidth.Name = "lblSOWidth"
-        Me.lblSOWidth.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical" & _
-    "-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
+        Me.lblSOWidth.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: right; vertica" & _
+    "l-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblSOWidth.Text = "lblSOWidth"
         Me.lblSOWidth.Top = 1.2!
         Me.lblSOWidth.Width = 1.0!
@@ -713,8 +714,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblSOHeight.Height = 0.2!
         Me.lblSOHeight.Left = 15.0!
         Me.lblSOHeight.Name = "lblSOHeight"
-        Me.lblSOHeight.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical" & _
-    "-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
+        Me.lblSOHeight.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: right; vertica" & _
+    "l-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblSOHeight.Text = "lblSOHeight"
         Me.lblSOHeight.Top = 1.2!
         Me.lblSOHeight.Width = 1.0!
@@ -793,8 +794,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblIronmongery.Height = 0.2!
         Me.lblIronmongery.Left = 23.0!
         Me.lblIronmongery.Name = "lblIronmongery"
-        Me.lblIronmongery.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical" & _
-    "-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
+        Me.lblIronmongery.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: right; vertica" & _
+    "l-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblIronmongery.Text = "lblIronmongery"
         Me.lblIronmongery.Top = 1.2!
         Me.lblIronmongery.Width = 1.0!
@@ -825,8 +826,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblTotal.Height = 0.2!
         Me.lblTotal.Left = 25.0!
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical" & _
-    "-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
+        Me.lblTotal.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: right; vertica" & _
+    "l-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblTotal.Text = "lblTotal"
         Me.lblTotal.Top = 1.2!
         Me.lblTotal.Width = 1.0!
@@ -939,8 +940,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.FrameDepthValue.Left = 13.0!
         Me.FrameDepthValue.Name = "FrameDepthValue"
         Me.FrameDepthValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
-    ": left; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-m" & _
-    "ode: nowrap"
+    ": right; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-" & _
+    "mode: nowrap"
         Me.FrameDepthValue.Text = "Frame Depth"
         Me.FrameDepthValue.Top = 0.0!
         Me.FrameDepthValue.Width = 1.0!
@@ -975,8 +976,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.ThicknessValue.Left = 7.0!
         Me.ThicknessValue.Name = "ThicknessValue"
         Me.ThicknessValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
-    ": left; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-m" & _
-    "ode: nowrap"
+    ": right; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-" & _
+    "mode: nowrap"
         Me.ThicknessValue.Text = "Thickness"
         Me.ThicknessValue.Top = 0.0!
         Me.ThicknessValue.Width = 1.0!
@@ -1083,8 +1084,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.SOWidthValue.Left = 14.0!
         Me.SOWidthValue.Name = "SOWidthValue"
         Me.SOWidthValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
-    ": left; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-m" & _
-    "ode: nowrap"
+    ": right; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-" & _
+    "mode: nowrap"
         Me.SOWidthValue.Text = "S/O Width"
         Me.SOWidthValue.Top = 0.0!
         Me.SOWidthValue.Width = 1.0!
@@ -1101,8 +1102,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.SOHeightValue.Left = 15.0!
         Me.SOHeightValue.Name = "SOHeightValue"
         Me.SOHeightValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
-    ": left; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-m" & _
-    "ode: nowrap"
+    ": right; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-" & _
+    "mode: nowrap"
         Me.SOHeightValue.Text = "S/O Height"
         Me.SOHeightValue.Top = 0.0!
         Me.SOHeightValue.Width = 1.0!
@@ -1137,8 +1138,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.DoorPriceValue.Left = 22.0!
         Me.DoorPriceValue.Name = "DoorPriceValue"
         Me.DoorPriceValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
-    ": left; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-m" & _
-    "ode: nowrap"
+    ": right; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-" & _
+    "mode: nowrap"
         Me.DoorPriceValue.Text = "Door Price"
         Me.DoorPriceValue.Top = 0.0!
         Me.DoorPriceValue.Width = 1.0!
@@ -1155,8 +1156,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.FrameWidthValue.Left = 16.0!
         Me.FrameWidthValue.Name = "FrameWidthValue"
         Me.FrameWidthValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
-    ": left; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-m" & _
-    "ode: nowrap"
+    ": right; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-" & _
+    "mode: nowrap"
         Me.FrameWidthValue.Text = "Frame Width"
         Me.FrameWidthValue.Top = 0.0!
         Me.FrameWidthValue.Width = 1.0!
@@ -1173,8 +1174,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.FrameHeightValue.Left = 17.0!
         Me.FrameHeightValue.Name = "FrameHeightValue"
         Me.FrameHeightValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
-    ": left; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-m" & _
-    "ode: nowrap"
+    ": right; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-" & _
+    "mode: nowrap"
         Me.FrameHeightValue.Text = "Frame Height"
         Me.FrameHeightValue.Top = 0.0!
         Me.FrameHeightValue.Width = 1.0!
@@ -1263,8 +1264,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.HWPriceValue.Left = 23.0!
         Me.HWPriceValue.Name = "HWPriceValue"
         Me.HWPriceValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
-    ": left; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-m" & _
-    "ode: nowrap"
+    ": right; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-" & _
+    "mode: nowrap"
         Me.HWPriceValue.Text = "HW Price"
         Me.HWPriceValue.Top = 0.0!
         Me.HWPriceValue.Width = 1.0!
@@ -1299,15 +1300,15 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.TotalValue.Left = 25.0!
         Me.TotalValue.Name = "TotalValue"
         Me.TotalValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
-    ": left; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-m" & _
-    "ode: nowrap"
+    ": right; vertical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-" & _
+    "mode: nowrap"
         Me.TotalValue.Text = "Total"
         Me.TotalValue.Top = 0.0!
         Me.TotalValue.Width = 1.0!
         '
         'GroupHeader
         '
-        Me.GroupHeader.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.imgLogoNO, Me.DateValue, Me.ProjectOwnerValue, Me.lblDate, Me.lblProjectOwner, Me.lblPage, Me.CurrentPageNumber, Me.lblOf, Me.PageCount, Me.imgLogoEN, Me.ProjectNameValue, Me.lblProjectName, Me.lblRevisionNo, Me.lblProjectRef, Me.ProjectRefValue, Me.RevisionNoValue, Me.lblDoorRef, Me.lblFromRoom, Me.lblToRoom, Me.lblDoorType, Me.lblFireRating, Me.lblAcousticRating, Me.lblUndercut, Me.lblThickness, Me.lblDoorFinish, Me.lblDoorEdge, Me.lblIronmongerySet, Me.lblGlassType, Me.lblAperture, Me.lblFrameHeight, Me.lblFrameDepth, Me.lblDoorset, Me.lblFrameWidth, Me.lblSOWidth, Me.lblSOHeight, Me.lblFrameFinish, Me.lblThreshold, Me.lblNotes, Me.lblHanding, Me.lblIronmongery, Me.lblFitting, Me.lblTotal, Me.Spacer})
+        Me.GroupHeader.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.imgLogoNO, Me.DateValue, Me.ProjectOwnerValue, Me.lblDate, Me.lblProjectOwner, Me.lblPage, Me.CurrentPageNumber, Me.lblOf, Me.PageCount, Me.imgLogoEN, Me.ProjectNameValue, Me.lblProjectName, Me.lblRev, Me.lblProjectRef, Me.ProjectRefValue, Me.RevisionValue, Me.lblDoorRef, Me.lblFromRoom, Me.lblToRoom, Me.lblDoorType, Me.lblFireRating, Me.lblAcousticRating, Me.lblUndercut, Me.lblThickness, Me.lblDoorFinish, Me.lblDoorEdge, Me.lblIronmongerySet, Me.lblGlassType, Me.lblAperture, Me.lblFrameHeight, Me.lblFrameDepth, Me.lblDoorset, Me.lblFrameWidth, Me.lblSOWidth, Me.lblSOHeight, Me.lblFrameFinish, Me.lblThreshold, Me.lblNotes, Me.lblHanding, Me.lblIronmongery, Me.lblFitting, Me.lblTotal, Me.Spacer})
         Me.GroupHeader.Height = 1.4!
         Me.GroupHeader.Name = "GroupHeader"
         '
@@ -1381,7 +1382,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.DoorsetSumValue.Left = 22.0!
         Me.DoorsetSumValue.Name = "DoorsetSumValue"
         Me.DoorsetSumValue.OutputFormat = resources.GetString("DoorsetSumValue.OutputFormat")
-        Me.DoorsetSumValue.Style = "color: Black; font-weight: bold; vertical-align: middle; ddo-char-set: 1"
+        Me.DoorsetSumValue.Style = "color: Black; font-weight: bold; text-align: right; vertical-align: middle; ddo-c" & _
+    "har-set: 1"
         Me.DoorsetSumValue.SummaryType = GrapeCity.ActiveReports.SectionReportModel.SummaryType.GrandTotal
         Me.DoorsetSumValue.Text = "Door Price Total"
         Me.DoorsetSumValue.Top = 0.0!
@@ -1397,7 +1399,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.HWSumValue.Height = 0.2!
         Me.HWSumValue.Left = 23.0!
         Me.HWSumValue.Name = "HWSumValue"
-        Me.HWSumValue.Style = "color: Black; font-weight: bold; vertical-align: middle; ddo-char-set: 1"
+        Me.HWSumValue.Style = "color: Black; font-weight: bold; text-align: right; vertical-align: middle; ddo-c" & _
+    "har-set: 1"
         Me.HWSumValue.SummaryType = GrapeCity.ActiveReports.SectionReportModel.SummaryType.GrandTotal
         Me.HWSumValue.Text = "HW Price Total"
         Me.HWSumValue.Top = 0.0!
@@ -1413,7 +1416,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.GrandTotalValue.Height = 0.2!
         Me.GrandTotalValue.Left = 25.0!
         Me.GrandTotalValue.Name = "GrandTotalValue"
-        Me.GrandTotalValue.Style = "color: Black; font-weight: bold; vertical-align: middle; ddo-char-set: 1"
+        Me.GrandTotalValue.Style = "color: Black; font-weight: bold; text-align: right; vertical-align: middle; ddo-c" & _
+    "har-set: 1"
         Me.GrandTotalValue.SummaryType = GrapeCity.ActiveReports.SectionReportModel.SummaryType.GrandTotal
         Me.GrandTotalValue.Text = "Grand Total"
         Me.GrandTotalValue.Top = 0.0!
@@ -1430,9 +1434,9 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.imgDoorHandingDiagramEN.ImageData = CType(resources.GetObject("imgDoorHandingDiagramEN.ImageData"), System.IO.Stream)
         Me.imgDoorHandingDiagramEN.Left = 0.0!
         Me.imgDoorHandingDiagramEN.Name = "imgDoorHandingDiagramEN"
-        Me.imgDoorHandingDiagramEN.SizeMode = GrapeCity.ActiveReports.SectionReportModel.SizeModes.Zoom
+        Me.imgDoorHandingDiagramEN.SizeMode = GrapeCity.ActiveReports.SectionReportModel.SizeModes.Stretch
         Me.imgDoorHandingDiagramEN.Top = 0.4!
-        Me.imgDoorHandingDiagramEN.Width = 6.0!
+        Me.imgDoorHandingDiagramEN.Width = 5.0!
         '
         'lblDrawingsUsed
         '
@@ -1458,13 +1462,27 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.DrawingsUsedValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.DrawingsUsedValue.CanGrow = False
         Me.DrawingsUsedValue.Height = 1.4!
-        Me.DrawingsUsedValue.Left = 6.0!
+        Me.DrawingsUsedValue.Left = 5.0!
         Me.DrawingsUsedValue.Name = "DrawingsUsedValue"
         Me.DrawingsUsedValue.Style = "font-family: Arial; font-size: 9pt; font-weight: normal; text-align: left; vertic" & _
     "al-align: top; ddo-char-set: 1"
         Me.DrawingsUsedValue.Text = "TBD"
         Me.DrawingsUsedValue.Top = 0.4!
-        Me.DrawingsUsedValue.Width = 6.0!
+        Me.DrawingsUsedValue.Width = 7.0!
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.TextBox1.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.TextBox1.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.TextBox1.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.TextBox1.Height = 0.2!
+        Me.TextBox1.Left = 24.0!
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Style = "color: Black; font-weight: bold; vertical-align: middle; ddo-char-set: 1"
+        Me.TextBox1.Text = Nothing
+        Me.TextBox1.Top = 0.0!
+        Me.TextBox1.Width = 1.000002!
         '
         'lblDoorHandingDiagram
         '
@@ -1496,24 +1514,14 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.Spacer2.Top = 0.0!
         Me.Spacer2.Width = 1.0!
         '
-        'TextBox1
-        '
-        Me.TextBox1.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.TextBox1.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.TextBox1.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.TextBox1.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.TextBox1.Height = 0.2!
-        Me.TextBox1.Left = 24.0!
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Style = "color: Black; font-weight: bold; vertical-align: middle; ddo-char-set: 1"
-        Me.TextBox1.Top = 0.0!
-        Me.TextBox1.Width = 1.000002!
-        '
         'rptEMEADetailDoorSchedule
         '
         Me.MasterReport = False
-        Me.PageSettings.PaperHeight = 11.0!
-        Me.PageSettings.PaperWidth = 8.5!
+        Me.PageSettings.DefaultPaperSize = False
+        Me.PageSettings.Orientation = GrapeCity.ActiveReports.Document.Section.PageOrientation.Landscape
+        Me.PageSettings.PaperHeight = 11.69291!
+        Me.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.A4
+        Me.PageSettings.PaperWidth = 11.69!
         Me.PrintWidth = 26.0!
         Me.Sections.Add(Me.GroupHeader)
         Me.Sections.Add(Me.Detail)
@@ -1524,8 +1532,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: ita" & _
             "lic", "Heading2", "Normal"))
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-size: 13pt; font-weight: bold", "Heading3", "Normal"))
-        CType(Me.RevisionNoValue, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblRevisionNo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RevisionValue, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblRev, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblProjectRef, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProjectNameValue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProjectRefValue, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1600,14 +1608,14 @@ Partial Public Class rptEMEADetailDoorSchedule
         CType(Me.imgDoorHandingDiagramEN, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblDrawingsUsed, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DrawingsUsedValue, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblDoorHandingDiagram, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Spacer2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
-    Private WithEvents RevisionNoValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents lblRevisionNo As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents RevisionValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents lblRev As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents lblProjectRef As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents ProjectNameValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents ProjectRefValue As GrapeCity.ActiveReports.SectionReportModel.TextBox

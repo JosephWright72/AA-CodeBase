@@ -80,11 +80,9 @@ Public Class rptEMEACoverLetter
         txtContractor.Visible = optContractor
         txtOwner.Visible = optOwner
 
-        txtRev.Text = sRevisionText
-
         lblPrjName.Text = sHash.Item("lblPrjName")
         lblPrjRef.Text = sHash.Item("lblPrjRef")
-        lblRevNo.Text = sHash.Item("lblRevNo")
+        lblRev.Text = sHash.Item("lblRev")
         lblPrjOwner.Text = sHash.Item("lblPrjOwner")
         lblContactNo.Text = sHash.Item("lblContactNo")
         lblEmail.Text = sHash.Item("lblEmail")

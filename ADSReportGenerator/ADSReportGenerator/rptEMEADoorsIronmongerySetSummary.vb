@@ -14,13 +14,13 @@ Public Class rptEMEADoorsIronmongerySetSummary
 
         lblProjectName.Text = sHash.Item("lblPrjName")
         lblProjectRef.Text = sHash.Item("lblPrjRef")
-        lblRevisionNo.Text = sHash.Item("lblRevNo")
+        lblRev.Text = sHash.Item("lblRev")
         lblProjectOwner.Text = sHash.Item("lblPrjOwner")
         lblOf.Text = sHash.Item("lblOf")
         lblPage.Text = sHash.Item("lblPage")
         lblDate.Text = sHash.Item("lblDate")
 
-        RevisionNoValue.Text = sRevisionText
+        'RevisionValue.Text = sRevisionText
 
         lblDoorRef.Text = sHash.Item("lblDoorRef")
         lblFunction.Text = sHash.Item("lblFunction")
@@ -61,6 +61,14 @@ Public Class rptEMEADoorsIronmongerySetSummary
         UnitRateValue.OutputFormat = sHash.Item("lblCurSymbol") + "#,##0.00"
         TotalSumValue.OutputFormat = sHash.Item("lblCurSymbol") + "#,##0.00"
 
+    End Sub
+
+    Private Sub Detail_Format(sender As Object, e As EventArgs) Handles Detail.Format
+        If UnitRateValue.Text.Length < 8 Then UnitRateValue.Text = Space(8 - UnitRateValue.Text.Length) & UnitRateValue.Text
+    End Sub
+
+    Private Sub GroupFooter_Format(sender As Object, e As EventArgs) Handles GroupFooter.Format
+        If TotalSumValue.Text.Length < 10 Then TotalSumValue.Text = Space(10 - TotalSumValue.Text.Length) & TotalSumValue.Text
     End Sub
 
 End Class

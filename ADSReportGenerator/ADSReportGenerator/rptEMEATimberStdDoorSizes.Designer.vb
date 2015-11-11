@@ -367,7 +367,7 @@ Partial Public Class rptEMEATimberStdDoorSizes
         Me.PageSettings.Orientation = GrapeCity.ActiveReports.Document.Section.PageOrientation.Portrait
         Me.PageSettings.PaperHeight = 11.69!
         Me.PageSettings.PaperWidth = 8.27!
-        Me.PrintWidth = 8.194918!
+        Me.PrintWidth = 8.2!
         Me.Sections.Add(Me.PageHeader)
         Me.Sections.Add(Me.SubGroupHeader)
         Me.Sections.Add(Me.LeafGroupHeader)

@@ -23,8 +23,9 @@ Public Class rptEMEAQuoteTerms
     Public sReportTitle As String
     Public sHash As Hashtable
     Public ISO As String
+    Public sReportVariant As String
 
-    Private Sub Detail1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Detail1.Format
+    Private Sub Detail1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Detail.Format
 
 
 
@@ -61,11 +62,11 @@ Public Class rptEMEAQuoteTerms
         IsListFinished = True
     End Sub
 
-    Private Sub PageFooter1_BeforePrint(ByVal sender As Object, ByVal e As System.EventArgs) Handles PageFooter1.BeforePrint
+    Private Sub PageFooter1_BeforePrint(ByVal sender As Object, ByVal e As System.EventArgs) Handles PageFooter.BeforePrint
         'lblPageNumber.Text = "Page " & txtPageNumber.Text & " of " & txtPageCount.Text
     End Sub
 
-    Private Sub PageFooter1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PageFooter1.Format
+    Private Sub PageFooter1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PageFooter.Format
         'lblDateTime.Text = Now
         'lblPageNumber.Text = "Page " & txtPageNumber.Text & " of " & txtPageCount.Text
     End Sub
@@ -75,12 +76,10 @@ Public Class rptEMEAQuoteTerms
         ' lblCurSymbol2.Visible = optShowExtendedRate
 
 
-        txtRev.Text = sRevisionText
-
         lblTitle.Text = sHash.Item("lblTitle")
         lblPrjName.Text = sHash.Item("lblPrjName")
         lblPrjRef.Text = sHash.Item("lblPrjRef")
-        lblRevNo.Text = sHash.Item("lblRevNo")
+        lblRev.Text = sHash.Item("lblRev")
         lblPrjOwner.Text = sHash.Item("lblPrjOwner")
         lblOf.Text = sHash.Item("lblOf")
         lblPage.Text = sHash.Item("lblPage")
@@ -90,13 +89,24 @@ Public Class rptEMEAQuoteTerms
 
         lblAddDet.Text = sHash.Item("lblAddDet")
         lblGenCon.Text = sHash.Item("lblGenCon")
-        lblGenRem.Text = sHash.Item("lblGenRem")
+
+        Select sReportVariant
+            Case "QUOTETERMS"
+                lblGenRem.Text = sHash.Item("lblGenRem")
+                txtGenRem.Text = sHash.Item("txtGenRem")
+                txtGenRem.Visible = True
+                DrawingsUsedValue.Visible = False
+            Case "QUOTETERMSDOORS"
+                lblGenRem.Text = sHash.Item("lblDrawingsUsed")
+                txtGenRem.Visible = False
+                DrawingsUsedValue.Visible = True
+        End Select
+
         lblTechNote.Text = sHash.Item("lblTechNote")
 
         txtFooter.Text = sHash.Item("txtFooter")
         txtAddDet.Text = sHash.Item("txtAddDet")
         txtGenCon.Text = sHash.Item("txtGenCon")
-        txtGenRem.Text = sHash.Item("txtGenRem")
         txtTechNote.Text = sHash.Item("txtTechNote")
 
         If ISO.Equals("EN") Then
@@ -130,8 +140,4 @@ Public Class rptEMEAQuoteTerms
 
     End Sub
 
-    Private Sub ReportFooter1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-
-    End Sub
 End Class
