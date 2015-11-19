@@ -27,6 +27,7 @@ Public Class rptEMEAHWScheduleSummary
     Public sRevisionText As String
     Public sHash As Hashtable
     Public imgHash As Hashtable
+    Public pdfHash As Hashtable
     Public ISO As String
     Public sReportTitle As String
 
@@ -51,6 +52,18 @@ Public Class rptEMEAHWScheduleSummary
             End Try
         End If
 
+        txtProductCode.HyperLink = Nothing
+        If (pdfHash.Count = 0) Then Exit Sub
+
+        If (pdfHash.ContainsKey(Me.txtDescription.Value)) Then
+            Try
+                Dim path = pdfHash.Item(Me.txtDescription.Value)
+
+                txtProductCode.HyperLink = path
+            Catch ex As Exception
+                Console.WriteLine("Error Setting PDF" + ex.Message)
+            End Try
+        End If
     End Sub
 
     Private Sub ghManufacturer_Format(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -84,7 +97,7 @@ Public Class rptEMEAHWScheduleSummary
         'lblPageNumber.Text = "Page " & txtPageNumber.Text & " of " & txtPageCount.Text
     End Sub
 
-    Private Sub rptHWEstimate_ReportStart(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ReportStart
+    Private Sub rpt_ReportStart(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ReportStart
         lblTitle.Text = sReportTitle
         If Not optShowImages Then Detail1.Height = 0.15
         Picture1.Visible = optShowImages
@@ -151,11 +164,6 @@ Public Class rptEMEAHWScheduleSummary
             txtEmail.DataField = "SpecConEmail"
         End If
 
-
     End Sub
 
-    Private Sub ReportFooter1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReportFooter1.Format
-
-
-    End Sub
 End Class

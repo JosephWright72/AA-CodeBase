@@ -4830,7 +4830,8 @@ ErrHandler:
         " (ACS.FirstName + ' ' + ACS.LastName) AS ProjectOwner, " & _
         " CASE WHEN Day(Getdate()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'st ' WHEN Day(Getdate()) IN ( 2, 22 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd ' WHEN Day(Getdate()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd ' ELSE CONVERT(VARCHAR, Day(Getdate())) + 'th ' END + Datename(month, Getdate()) + ' ' " & _
         " + CONVERT(VARCHAR, Year(Getdate()))TodaysDateEN, getdate() TodaysDate, " & _
-        "'" & ImagesPath & "' + CASE WHEN LEFT([FileName], 1) = '\' THEN RIGHT([FileName], LEN([FileName])-1) ELSE [FileName] END as Image," & _
+        "'" & ImagesPath & "' + CASE WHEN LEFT(img.[FileName], 1) = '\' THEN RIGHT(img.[FileName], LEN(img.[FileName])-1) ELSE img.[FileName] END as Image," & _
+        "'file:' + REPLACE('" & ImagesPath & "' + CASE WHEN LEFT(pdf.[FileName], 1) = '\' THEN RIGHT(pdf.[FileName], LEN(pdf.[FileName])-1) ELSE pdf.[FileName] END, '\', '/') as PDF," & _
         " HW.Description ProductCode, " & _
         " HW.TypeDescription   ProductDescription, " & _
         " PH.UOM, " & _
@@ -4870,6 +4871,27 @@ ErrHandler:
         " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
         " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
         " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON APH.ImageID= img.Image_ID " & _
+        " LEFT OUTER JOIN ( " & _
+        " SELECT [Description], MIN(x.ImageID) AS ImageID, ProjectID FROM AAOSProjectHardware APH " & _
+        " INNER JOIN ( " & _
+        " SELECT A.ID, Split.a.value('.', 'VARCHAR(MAX)') AS ImageID " & _
+        " FROM  ( " & _
+        " SELECT ID,  CAST ('<M>' + REPLACE([imageids], ',', '</M><M>') + '</M>' AS XML) AS String " & _
+        " FROM  AAOSProjectHardware " & _
+        " WHERE ProjectID = @ProjectID) " & _
+        " AS A CROSS APPLY String.nodes ('/M') AS Split(a) " & _
+        " WHERE ISNULL(Split.a.value('.', 'VARCHAR(MAX)'),'') <> '' " & _
+        " UNION " & _
+        " SELECT ID,ImageIDs FROM AAOSProjectHardware where ProjectID = @ProjectID AND ISNULL(ImageIDs,'') ='' ) x " & _
+        " INNER JOIN " & _
+        " (SELECT Image_id, [Filename] " & _
+        " FROM AAOS_UAT_UK.dbo.images img " & _
+        " WHERE ((UPPER([Filename]) LIKE '%.PDF') OR ISNULL([Filename],'') = '')) img " & _
+        " ON  x.ImageID = img.Image_id " & _
+        " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH2 " & _
+        " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH2.[description] AS VARBINARY(MAX)) " & _
+        " AND APH2.ProjectID=HW.PROJECTID " & _
+        " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images pdf ON APH2.ImageID= pdf.Image_ID " & _
         " LEFT OUTER JOIN (SELECT ProjectID, " & _
         " SetName, " & _
         " Sum(Cast (QTY AS INT)) Qty, " & _
@@ -4899,7 +4921,7 @@ ErrHandler:
         " AND ISNULL(NULLIF(HW.Qty, ''), 0) != 0 " & _
         " AND ISNULL(CASE WHEN DOORS.QTY = 0 THEN 0 WHEN DOORS.QTY > 0 THEN 1 END, 0) = " & _
         " CASE @DOORFILTER WHEN 0 THEN 1 WHEN 1 THEN 0 ELSE ISNULL(CASE WHEN DOORS.QTY = 0 THEN 0 WHEN DOORS.QTY > 0 THEN 1 END, 0) END" & _
-        " GROUP  BY AP.ID,AP.ProjectName,AP.OriginalProjectID,AP.RevisionNumber,PH.DHI, (ACS.FirstName + ' '  + ACS.LastName),HW.Description,HW.TypeDescription,CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2)),PH.UOM, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title,[Filename]" & _
+        " GROUP  BY AP.ID,AP.ProjectName,AP.OriginalProjectID,AP.RevisionNumber,PH.DHI, (ACS.FirstName + ' '  + ACS.LastName),HW.Description,HW.TypeDescription,CAST((HW.PRICE/CASE WHEN HW.Qty = 0 THEN 1 ELSE HW.Qty END) AS DECIMAL(18, 2)),PH.UOM, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title,img.[Filename],pdf.[Filename]" & _
         " ORDER  BY PH.DHI "
 
 
@@ -4917,6 +4939,16 @@ ErrHandler:
             Next
         End If
 
+        Dim pdfHash As Hashtable = New Hashtable()
+        For i As Integer = 0 To dc1.DT.Rows.Count - 1
+            Dim Desc As String = dc1.DT.Rows(i).Item("ProductDescription")
+            Dim Path As String = NullCheckStr(dc1.DT.Rows(i).Item("PDF"))
+            If (String.IsNullOrEmpty(Path)) Then Continue For
+            If (Not pdfHash.ContainsKey(Desc)) Then
+                pdfHash.Add(Desc, Path)
+            End If
+        Next
+        
         Dim iQty As Integer
         Dim dv1 As New DataView(dc1.DT.Clone)
         Dim iFind As Integer
@@ -4940,6 +4972,7 @@ ErrHandler:
         rpt.sRevisionText = RevisionTxt
         rpt.sHash = Hash
         rpt.imgHash = imgHash
+        rpt.pdfHash = pdfHash
         rpt.ISO = ReportLangISO
         rpt.Run()
 

@@ -2540,23 +2540,14 @@
   <data name="txtExtendedRate.OutputFormat" xml:space="preserve">
     <value>#,##0.00</value>
   </data>
-  <data name="txtQty.OutputFormat" xml:space="preserve">
-    <value>#,##0</value>
-  </data>
-  <data name="txtUnits.OutputFormat" xml:space="preserve">
-    <value>#,##0.00</value>
-  </data>
-  <data name="txtUnitRate.OutputFormat" xml:space="preserve">
-    <value>#,##0.00</value>
-  </data>
-  <data name="txtExtendedRate.OutputFormat" xml:space="preserve">
-    <value>#,##0.00</value>
-  </data>
   <data name="txtFooter.OutputFormat" xml:space="preserve">
     <value>#,##</value>
   </data>
   <data name="txtFooter.OutputFormat" xml:space="preserve">
     <value>#,##</value>
+  </data>
+  <data name="txtTotalForProject.OutputFormat" xml:space="preserve">
+    <value>#,##0.00</value>
   </data>
   <data name="txtTotalForProject.OutputFormat" xml:space="preserve">
     <value>#,##0.00</value>
