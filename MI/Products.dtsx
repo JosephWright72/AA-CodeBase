@@ -1,40 +1,40 @@
 <?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="11/19/2015 11:09:53 AM"
+  DTS:CreationDate="11/20/2015 12:17:50 PM"
   DTS:CreationName="SSIS.Package.3"
   DTS:CreatorComputerName="UK-L8A065590H"
   DTS:CreatorName="GROUPINFRA\wrightj"
   DTS:Description="SSIS Package Description"
-  DTS:DTSID="{34116628-9B53-4296-B78B-632DDB8549B5}"
+  DTS:DTSID="{C9A357F2-1A45-4950-80DF-75AA87BCC4BC}"
   DTS:ExecutableType="SSIS.Package.3"
   DTS:LastModifiedProductVersion="11.0.5058.0"
   DTS:LocaleID="2057"
   DTS:MaxErrorCount="0"
   DTS:ObjectName="Products"
-  DTS:VersionGUID="{2A8E6FD5-FE11-4951-93A2-DA572F050960}">
+  DTS:VersionGUID="{F9933864-F95D-4856-AA2E-70BAF185A66B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{63C44E1A-8839-4C93-AABB-4748F28FA633}"
+      DTS:DTSID="{EDD2C370-528C-4322-96C6-3EB303AC810F}"
       DTS:ObjectName="DestinationConnectionOLEDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=SEGBGSDB05\SQL2;User ID=PowerBI;Password=Ferret2468;Initial Catalog=MI_STAGING;Provider=SQLNCLI11;Auto Translate=false;">
+          DTS:ConnectionString="Data Source=SEGBGSDB05\SQL2;User ID=PowerBI;Initial Catalog=MI_STAGING;Provider=SQLNCLI11;Auto Translate=false;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAhiOPpyI8BUatKYBknF3LSwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACdYNP0KoD2g687/lcsHzdEAAAAAASAAACgAAAAEAAAAKBS/oyeavAO0vFP5NXZha8YAAAAcU1R6VWpSygtrL3RIxscnTve2ErGgXdiFAAAADt67ecDBV+9xU5KTWh/J69LhmOB</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAbGAuAglWKUm7hE3Ib0pHDQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADHP+2bMjx+2S+Y4knTHfR/AAAAAASAAACgAAAAEAAAAKvg5XNkBGMUI7PwdBJijO0YAAAAMMEVIew8PG5sXUIlnvAFKrJ3Vi8NlU1kFAAAAIoia/pXMT02Ot1H6Pm9BuRSSh6r</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[SourceConnectionFlatFile]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{0ACECF3C-514A-464D-9A80-64771306C983}"
+      DTS:DTSID="{2E6D0C6C-7EC8-497A-8924-AB06C931D632}"
       DTS:ObjectName="SourceConnectionFlatFile">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -49,102 +49,102 @@
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vendor"
-              DTS:DTSID="{CD8E6FC9-14D5-45C7-838E-338DE572998C}"
+              DTS:DTSID="{2CF7A5CA-CFE7-48CF-AE9C-233A334AC1BE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="VendorAbbr"
-              DTS:DTSID="{23B5D321-50A4-4427-998C-525B2D63D53A}"
+              DTS:DTSID="{D28F8E80-7312-40BB-83F1-ABC4608157E6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CountryCode"
-              DTS:DTSID="{F300CFEA-3658-4DFF-932D-2148817E328C}"
+              DTS:DTSID="{7F260EBF-DE0A-44C8-92D8-3B21D86AD2B7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ProductID"
-              DTS:DTSID="{5AA5ABBD-F4B1-48A6-BA5D-396905C43BFF}"
+              DTS:DTSID="{8AC2D90F-F108-461E-A24C-DF426B3D461A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ProductDescription"
-              DTS:DTSID="{64D16EDE-F392-436C-BBF4-F2669A76EE3C}"
+              DTS:DTSID="{4A3CF921-6041-49D9-BA8B-B1731F41C7CD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ProductType"
-              DTS:DTSID="{8C028A56-69D8-4486-B50F-4F83A1AD45DD}"
+              DTS:DTSID="{87E47583-4975-4977-AC3C-582D86EA2C4B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ProductLine"
-              DTS:DTSID="{47F645A6-E9E4-4622-8243-75C84B882FC0}"
+              DTS:DTSID="{1029A326-A074-44D2-BE66-AEB18261C169}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Finish"
-              DTS:DTSID="{EDE6E637-D08C-4DAF-997A-E7FD0BAF4AC4}"
+              DTS:DTSID="{82577232-7DA5-491D-8EDD-D9CCFC9FC6E1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="UOM"
-              DTS:DTSID="{B42A8BE6-F9F2-4D4E-9BA1-CF46FA57B9E9}"
+              DTS:DTSID="{492F042D-2042-4523-8A00-0366C42C02AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Zero81"
-              DTS:DTSID="{F4BB616E-1973-4A9B-B810-D28ABAD21DFC}"
+              DTS:DTSID="{CE369E75-51D2-4FA0-9742-B5494B9908D2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PkQtyForPricing"
-              DTS:DTSID="{B88B5DB5-78B3-45D8-8EA4-6217B3196A8D}"
+              DTS:DTSID="{5C9B454E-2C5F-41E5-9C37-A62478822226}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -153,7 +153,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Keynote"
-              DTS:DTSID="{3D3B56A3-9CD6-4EB9-8B78-A216FE00A054}"
+              DTS:DTSID="{AEF66CB9-A46D-4418-A623-9A6D1AC8C613}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -165,7 +165,7 @@
     <DTS:Executable
       DTS:refId="Package\Data Flow Task 1"
       DTS:CreationName="SSIS.Pipeline.3"
-      DTS:DTSID="{4AD559EC-72BF-4D5A-BFD1-2ED1B42AD5CD}"
+      DTS:DTSID="{A6D4DC06-DC76-40AE-A39A-2E49E020911F}"
       DTS:ExecutableType="SSIS.Pipeline.3"
       DTS:FailPackageOnFailure="True"
       DTS:LocaleID="-1"
