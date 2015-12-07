@@ -18,7 +18,7 @@ Public Class rptEMEATimberStdDoorSizesSub
 
     End Sub
 
-    Private Sub GroupFooter1_Format(sender As Object, e As EventArgs) Handles GroupFooter1.Format
+    Private Sub GroupFooter1_Format(sender As Object, e As EventArgs)
 
     End Sub
 End Class

@@ -17,7 +17,7 @@ Partial Public Class rptEMEADetailDoorSchedule
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rptEMEADetailDoorSchedule))
         Me.RevisionValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.lblRev = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.lblRevNo = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.lblProjectRef = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.ProjectNameValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.ProjectRefValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
@@ -98,8 +98,29 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.TextBox1 = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblDoorHandingDiagram = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.Spacer2 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label2 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label3 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label4 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label5 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label6 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label7 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label8 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label9 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label10 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label11 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label12 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label14 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label1 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label13 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label15 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label16 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label17 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label18 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label19 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label20 = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.Label21 = New GrapeCity.ActiveReports.SectionReportModel.Label()
         CType(Me.RevisionValue, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblRev, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblRevNo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblProjectRef, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProjectNameValue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProjectRefValue, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -177,14 +198,31 @@ Partial Public Class rptEMEADetailDoorSchedule
         CType(Me.TextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblDoorHandingDiagram, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Spacer2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'RevisionValue
         '
-        Me.RevisionValue.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.RevisionValue.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.RevisionValue.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.RevisionValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.RevisionValue.CanGrow = False
         Me.RevisionValue.DataField = "Revision"
         Me.RevisionValue.Height = 0.2!
@@ -197,28 +235,20 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.RevisionValue.Top = 1.0!
         Me.RevisionValue.Width = 3.0!
         '
-        'lblRev
+        'lblRevNo
         '
-        Me.lblRev.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblRev.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.lblRev.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblRev.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblRev.Height = 0.2!
-        Me.lblRev.HyperLink = Nothing
-        Me.lblRev.Left = 0.0!
-        Me.lblRev.Name = "lblRev"
-        Me.lblRev.Style = "font-weight: bold; text-align: left; white-space: nowrap; ddo-char-set: 1; ddo-wr" & _
+        Me.lblRevNo.Height = 0.2!
+        Me.lblRevNo.HyperLink = Nothing
+        Me.lblRevNo.Left = 0.0!
+        Me.lblRevNo.Name = "lblRevNo"
+        Me.lblRevNo.Style = "font-weight: bold; text-align: left; white-space: nowrap; ddo-char-set: 1; ddo-wr" & _
     "ap-mode: nowrap"
-        Me.lblRev.Text = "lblRev"
-        Me.lblRev.Top = 1.0!
-        Me.lblRev.Width = 2.0!
+        Me.lblRevNo.Text = "lblRevNo"
+        Me.lblRevNo.Top = 1.0!
+        Me.lblRevNo.Width = 2.0!
         '
         'lblProjectRef
         '
-        Me.lblProjectRef.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblProjectRef.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.lblProjectRef.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblProjectRef.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblProjectRef.Height = 0.2!
         Me.lblProjectRef.HyperLink = Nothing
         Me.lblProjectRef.Left = 0.0!
@@ -231,10 +261,6 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'ProjectNameValue
         '
-        Me.ProjectNameValue.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.ProjectNameValue.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.ProjectNameValue.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.ProjectNameValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.ProjectNameValue.CanGrow = False
         Me.ProjectNameValue.DataField = "ProjectName"
         Me.ProjectNameValue.Height = 0.2!
@@ -248,12 +274,8 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'ProjectRefValue
         '
-        Me.ProjectRefValue.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.ProjectRefValue.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.ProjectRefValue.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.ProjectRefValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.ProjectRefValue.CanGrow = False
-        Me.ProjectRefValue.DataField = "ID"
+        Me.ProjectRefValue.DataField = "ProjectReference"
         Me.ProjectRefValue.Height = 0.2!
         Me.ProjectRefValue.Left = 2.0!
         Me.ProjectRefValue.Name = "ProjectRefValue"
@@ -265,10 +287,6 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblProjectOwner
         '
-        Me.lblProjectOwner.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblProjectOwner.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblProjectOwner.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblProjectOwner.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblProjectOwner.Height = 0.2!
         Me.lblProjectOwner.HyperLink = Nothing
         Me.lblProjectOwner.Left = 21.0!
@@ -277,14 +295,10 @@ Partial Public Class rptEMEADetailDoorSchedule
     "ical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblProjectOwner.Text = "lblProjectOwner"
         Me.lblProjectOwner.Top = 0.6!
-        Me.lblProjectOwner.Width = 2.000002!
+        Me.lblProjectOwner.Width = 2.0!
         '
         'ProjectOwnerValue
         '
-        Me.ProjectOwnerValue.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.ProjectOwnerValue.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.ProjectOwnerValue.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.ProjectOwnerValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.ProjectOwnerValue.CanGrow = False
         Me.ProjectOwnerValue.DataField = "ProjectOwner"
         Me.ProjectOwnerValue.Height = 0.2!
@@ -294,14 +308,10 @@ Partial Public Class rptEMEADetailDoorSchedule
     "rap"
         Me.ProjectOwnerValue.Text = "ProjectOwner"
         Me.ProjectOwnerValue.Top = 0.6!
-        Me.ProjectOwnerValue.Width = 3.000002!
+        Me.ProjectOwnerValue.Width = 3.0!
         '
         'lblProjectName
         '
-        Me.lblProjectName.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblProjectName.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.lblProjectName.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblProjectName.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblProjectName.Height = 0.2!
         Me.lblProjectName.HyperLink = Nothing
         Me.lblProjectName.Left = 0.0!
@@ -314,10 +324,6 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblDate
         '
-        Me.lblDate.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblDate.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblDate.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblDate.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblDate.Height = 0.2!
         Me.lblDate.HyperLink = Nothing
         Me.lblDate.Left = 21.0!
@@ -326,14 +332,10 @@ Partial Public Class rptEMEADetailDoorSchedule
     "ical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblDate.Text = "lblDate"
         Me.lblDate.Top = 0.8!
-        Me.lblDate.Width = 2.000002!
+        Me.lblDate.Width = 2.0!
         '
         'DateValue
         '
-        Me.DateValue.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.DateValue.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.DateValue.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.DateValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.DateValue.CanGrow = False
         Me.DateValue.DataField = "TodaysDate"
         Me.DateValue.Height = 0.2!
@@ -343,14 +345,10 @@ Partial Public Class rptEMEADetailDoorSchedule
     "rap"
         Me.DateValue.Text = "TodaysDate"
         Me.DateValue.Top = 0.8!
-        Me.DateValue.Width = 3.000002!
+        Me.DateValue.Width = 3.0!
         '
         'lblPage
         '
-        Me.lblPage.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblPage.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblPage.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblPage.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblPage.Height = 0.2!
         Me.lblPage.HyperLink = Nothing
         Me.lblPage.Left = 21.0!
@@ -359,14 +357,10 @@ Partial Public Class rptEMEADetailDoorSchedule
     "ical-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblPage.Text = "lblPage"
         Me.lblPage.Top = 1.0!
-        Me.lblPage.Width = 2.000002!
+        Me.lblPage.Width = 2.0!
         '
         'CurrentPageNumber
         '
-        Me.CurrentPageNumber.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.CurrentPageNumber.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.CurrentPageNumber.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.CurrentPageNumber.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.CurrentPageNumber.CanGrow = False
         Me.CurrentPageNumber.FormatString = "{PageNumber}"
         Me.CurrentPageNumber.Height = 0.2!
@@ -380,10 +374,6 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblOf
         '
-        Me.lblOf.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblOf.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblOf.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblOf.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblOf.CanGrow = False
         Me.lblOf.Height = 0.2!
         Me.lblOf.Left = 24.0!
@@ -398,10 +388,6 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'PageCount
         '
-        Me.PageCount.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.PageCount.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.PageCount.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.PageCount.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.PageCount.CanGrow = False
         Me.PageCount.Height = 0.2!
         Me.PageCount.Left = 25.0!
@@ -418,10 +404,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblFromRoom
         '
-        Me.lblFromRoom.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblFromRoom.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFromRoom.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFromRoom.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblFromRoom.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblFromRoom.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblFromRoom.CanGrow = False
         Me.lblFromRoom.Height = 0.2!
         Me.lblFromRoom.Left = 2.0!
@@ -434,10 +420,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblDoorRef
         '
-        Me.lblDoorRef.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblDoorRef.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblDoorRef.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblDoorRef.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblDoorRef.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblDoorRef.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblDoorRef.CanGrow = False
         Me.lblDoorRef.Height = 0.2!
         Me.lblDoorRef.Left = 0.0!
@@ -450,10 +436,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblToRoom
         '
-        Me.lblToRoom.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblToRoom.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblToRoom.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblToRoom.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblToRoom.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblToRoom.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblToRoom.CanGrow = False
         Me.lblToRoom.Height = 0.2!
         Me.lblToRoom.Left = 1.0!
@@ -466,10 +452,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblDoorType
         '
-        Me.lblDoorType.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblDoorType.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblDoorType.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblDoorType.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblDoorType.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblDoorType.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblDoorType.CanGrow = False
         Me.lblDoorType.Height = 0.2!
         Me.lblDoorType.Left = 3.0!
@@ -482,10 +468,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblFireRating
         '
-        Me.lblFireRating.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblFireRating.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFireRating.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFireRating.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblFireRating.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblFireRating.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblFireRating.CanGrow = False
         Me.lblFireRating.Height = 0.2!
         Me.lblFireRating.Left = 4.0!
@@ -498,10 +484,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblAcousticRating
         '
-        Me.lblAcousticRating.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblAcousticRating.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblAcousticRating.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblAcousticRating.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblAcousticRating.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblAcousticRating.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblAcousticRating.CanGrow = False
         Me.lblAcousticRating.Height = 0.2!
         Me.lblAcousticRating.Left = 5.0!
@@ -514,10 +500,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblFrameWidth
         '
-        Me.lblFrameWidth.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblFrameWidth.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFrameWidth.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFrameWidth.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblFrameWidth.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblFrameWidth.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblFrameWidth.CanGrow = False
         Me.lblFrameWidth.Height = 0.2!
         Me.lblFrameWidth.Left = 16.0!
@@ -530,10 +516,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblFrameHeight
         '
-        Me.lblFrameHeight.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblFrameHeight.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFrameHeight.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFrameHeight.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblFrameHeight.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblFrameHeight.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblFrameHeight.CanGrow = False
         Me.lblFrameHeight.Height = 0.2!
         Me.lblFrameHeight.Left = 17.0!
@@ -546,10 +532,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblFrameDepth
         '
-        Me.lblFrameDepth.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblFrameDepth.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFrameDepth.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFrameDepth.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblFrameDepth.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblFrameDepth.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblFrameDepth.CanGrow = False
         Me.lblFrameDepth.Height = 0.2!
         Me.lblFrameDepth.Left = 13.0!
@@ -562,10 +548,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblDoorset
         '
-        Me.lblDoorset.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblDoorset.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblDoorset.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblDoorset.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblDoorset.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblDoorset.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblDoorset.CanGrow = False
         Me.lblDoorset.Height = 0.2!
         Me.lblDoorset.Left = 22.0!
@@ -578,10 +564,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblUndercut
         '
-        Me.lblUndercut.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblUndercut.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblUndercut.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblUndercut.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblUndercut.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblUndercut.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblUndercut.CanGrow = False
         Me.lblUndercut.Height = 0.2!
         Me.lblUndercut.Left = 6.0!
@@ -594,10 +580,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblThickness
         '
-        Me.lblThickness.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblThickness.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblThickness.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblThickness.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblThickness.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblThickness.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblThickness.CanGrow = False
         Me.lblThickness.Height = 0.2!
         Me.lblThickness.Left = 7.0!
@@ -610,10 +596,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblDoorFinish
         '
-        Me.lblDoorFinish.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblDoorFinish.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblDoorFinish.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblDoorFinish.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblDoorFinish.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblDoorFinish.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblDoorFinish.CanGrow = False
         Me.lblDoorFinish.Height = 0.2!
         Me.lblDoorFinish.Left = 8.0!
@@ -626,10 +612,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblDoorEdge
         '
-        Me.lblDoorEdge.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblDoorEdge.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblDoorEdge.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblDoorEdge.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblDoorEdge.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblDoorEdge.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblDoorEdge.CanGrow = False
         Me.lblDoorEdge.Height = 0.2!
         Me.lblDoorEdge.Left = 9.0!
@@ -642,10 +628,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblIronmongerySet
         '
-        Me.lblIronmongerySet.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblIronmongerySet.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblIronmongerySet.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblIronmongerySet.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblIronmongerySet.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblIronmongerySet.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblIronmongerySet.CanGrow = False
         Me.lblIronmongerySet.Height = 0.2!
         Me.lblIronmongerySet.Left = 10.0!
@@ -654,14 +640,14 @@ Partial Public Class rptEMEADetailDoorSchedule
     "-align: middle; white-space: nowrap; ddo-char-set: 1; ddo-wrap-mode: nowrap"
         Me.lblIronmongerySet.Text = "lblIronmongerySet"
         Me.lblIronmongerySet.Top = 1.2!
-        Me.lblIronmongerySet.Width = 1.0!
+        Me.lblIronmongerySet.Width = 2.0!
         '
         'lblGlassType
         '
-        Me.lblGlassType.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblGlassType.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblGlassType.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblGlassType.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblGlassType.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblGlassType.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblGlassType.CanGrow = False
         Me.lblGlassType.Height = 0.2!
         Me.lblGlassType.Left = 11.0!
@@ -674,10 +660,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblAperture
         '
-        Me.lblAperture.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblAperture.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblAperture.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblAperture.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblAperture.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblAperture.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblAperture.CanGrow = False
         Me.lblAperture.Height = 0.2!
         Me.lblAperture.Left = 12.0!
@@ -690,10 +676,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblSOWidth
         '
-        Me.lblSOWidth.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblSOWidth.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblSOWidth.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblSOWidth.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblSOWidth.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblSOWidth.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblSOWidth.CanGrow = False
         Me.lblSOWidth.Height = 0.2!
         Me.lblSOWidth.Left = 14.0!
@@ -706,10 +692,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblSOHeight
         '
-        Me.lblSOHeight.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblSOHeight.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblSOHeight.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblSOHeight.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblSOHeight.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblSOHeight.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblSOHeight.CanGrow = False
         Me.lblSOHeight.Height = 0.2!
         Me.lblSOHeight.Left = 15.0!
@@ -722,10 +708,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblFrameFinish
         '
-        Me.lblFrameFinish.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblFrameFinish.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFrameFinish.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFrameFinish.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblFrameFinish.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblFrameFinish.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblFrameFinish.CanGrow = False
         Me.lblFrameFinish.Height = 0.2!
         Me.lblFrameFinish.Left = 18.0!
@@ -738,10 +724,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblThreshold
         '
-        Me.lblThreshold.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblThreshold.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblThreshold.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblThreshold.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblThreshold.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblThreshold.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblThreshold.CanGrow = False
         Me.lblThreshold.Height = 0.2!
         Me.lblThreshold.Left = 19.0!
@@ -754,10 +740,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblNotes
         '
-        Me.lblNotes.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblNotes.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblNotes.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblNotes.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblNotes.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblNotes.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblNotes.CanGrow = False
         Me.lblNotes.Height = 0.2!
         Me.lblNotes.Left = 20.0!
@@ -770,10 +756,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblHanding
         '
-        Me.lblHanding.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblHanding.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblHanding.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblHanding.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblHanding.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblHanding.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblHanding.CanGrow = False
         Me.lblHanding.Height = 0.2!
         Me.lblHanding.Left = 21.0!
@@ -786,10 +772,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblIronmongery
         '
-        Me.lblIronmongery.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblIronmongery.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblIronmongery.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblIronmongery.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblIronmongery.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblIronmongery.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblIronmongery.CanGrow = False
         Me.lblIronmongery.Height = 0.2!
         Me.lblIronmongery.Left = 23.0!
@@ -802,10 +788,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblFitting
         '
-        Me.lblFitting.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblFitting.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFitting.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblFitting.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblFitting.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblFitting.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblFitting.CanGrow = False
         Me.lblFitting.Height = 0.2!
         Me.lblFitting.Left = 24.0!
@@ -818,10 +804,10 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'lblTotal
         '
-        Me.lblTotal.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblTotal.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblTotal.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblTotal.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.lblTotal.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.lblTotal.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblTotal.CanGrow = False
         Me.lblTotal.Height = 0.2!
         Me.lblTotal.Left = 25.0!
@@ -1308,7 +1294,7 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'GroupHeader
         '
-        Me.GroupHeader.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.imgLogoNO, Me.DateValue, Me.ProjectOwnerValue, Me.lblDate, Me.lblProjectOwner, Me.lblPage, Me.CurrentPageNumber, Me.lblOf, Me.PageCount, Me.imgLogoEN, Me.ProjectNameValue, Me.lblProjectName, Me.lblRev, Me.lblProjectRef, Me.ProjectRefValue, Me.RevisionValue, Me.lblDoorRef, Me.lblFromRoom, Me.lblToRoom, Me.lblDoorType, Me.lblFireRating, Me.lblAcousticRating, Me.lblUndercut, Me.lblThickness, Me.lblDoorFinish, Me.lblDoorEdge, Me.lblIronmongerySet, Me.lblGlassType, Me.lblAperture, Me.lblFrameHeight, Me.lblFrameDepth, Me.lblDoorset, Me.lblFrameWidth, Me.lblSOWidth, Me.lblSOHeight, Me.lblFrameFinish, Me.lblThreshold, Me.lblNotes, Me.lblHanding, Me.lblIronmongery, Me.lblFitting, Me.lblTotal, Me.Spacer})
+        Me.GroupHeader.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.imgLogoNO, Me.DateValue, Me.ProjectOwnerValue, Me.lblDate, Me.lblProjectOwner, Me.lblPage, Me.CurrentPageNumber, Me.lblOf, Me.PageCount, Me.imgLogoEN, Me.ProjectNameValue, Me.lblProjectName, Me.lblRevNo, Me.lblProjectRef, Me.ProjectRefValue, Me.RevisionValue, Me.lblDoorRef, Me.lblFromRoom, Me.lblToRoom, Me.lblDoorType, Me.lblFireRating, Me.lblAcousticRating, Me.lblUndercut, Me.lblThickness, Me.lblDoorFinish, Me.lblDoorEdge, Me.lblIronmongerySet, Me.lblGlassType, Me.lblAperture, Me.lblFrameHeight, Me.lblFrameDepth, Me.lblDoorset, Me.lblFrameWidth, Me.lblSOWidth, Me.lblSOHeight, Me.lblFrameFinish, Me.lblThreshold, Me.lblNotes, Me.lblHanding, Me.lblIronmongery, Me.lblFitting, Me.lblTotal, Me.Spacer})
         Me.GroupHeader.Height = 1.4!
         Me.GroupHeader.Name = "GroupHeader"
         '
@@ -1336,9 +1322,6 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'Spacer
         '
-        Me.Spacer.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.Spacer.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.Spacer.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.Spacer.CanGrow = False
         Me.Spacer.Height = 0.2!
         Me.Spacer.Left = 5.0!
@@ -1351,16 +1334,16 @@ Partial Public Class rptEMEADetailDoorSchedule
         '
         'GroupFooter
         '
-        Me.GroupFooter.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblTotalSum, Me.DoorsetSumValue, Me.HWSumValue, Me.GrandTotalValue, Me.imgDoorHandingDiagramEN, Me.lblDrawingsUsed, Me.DrawingsUsedValue, Me.TextBox1, Me.lblDoorHandingDiagram, Me.Spacer2})
+        Me.GroupFooter.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblTotalSum, Me.DoorsetSumValue, Me.HWSumValue, Me.GrandTotalValue, Me.imgDoorHandingDiagramEN, Me.lblDrawingsUsed, Me.DrawingsUsedValue, Me.TextBox1, Me.lblDoorHandingDiagram, Me.Spacer2, Me.Label2, Me.Label3, Me.Label4, Me.Label5, Me.Label6, Me.Label7, Me.Label8, Me.Label9, Me.Label10, Me.Label11, Me.Label12, Me.Label14, Me.Label1, Me.Label13, Me.Label15, Me.Label16, Me.Label17, Me.Label18, Me.Label19, Me.Label20, Me.Label21})
         Me.GroupFooter.Height = 1.8!
         Me.GroupFooter.Name = "GroupFooter"
         '
         'lblTotalSum
         '
         Me.lblTotalSum.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.lblTotalSum.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblTotalSum.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.ExtraThickSolid
         Me.lblTotalSum.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.lblTotalSum.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.lblTotalSum.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.lblTotalSum.Height = 0.2!
         Me.lblTotalSum.HyperLink = Nothing
         Me.lblTotalSum.Left = 21.0!
@@ -1376,7 +1359,7 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.DoorsetSumValue.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.DoorsetSumValue.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.DoorsetSumValue.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.DoorsetSumValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.DoorsetSumValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.DoorsetSumValue.DataField = "DoorNetPrice"
         Me.DoorsetSumValue.Height = 0.2!
         Me.DoorsetSumValue.Left = 22.0!
@@ -1394,7 +1377,7 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.HWSumValue.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.HWSumValue.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.HWSumValue.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.HWSumValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.HWSumValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.HWSumValue.DataField = "HWSetNetPrice"
         Me.HWSumValue.Height = 0.2!
         Me.HWSumValue.Left = 23.0!
@@ -1404,14 +1387,14 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.HWSumValue.SummaryType = GrapeCity.ActiveReports.SectionReportModel.SummaryType.GrandTotal
         Me.HWSumValue.Text = "HW Price Total"
         Me.HWSumValue.Top = 0.0!
-        Me.HWSumValue.Width = 1.000002!
+        Me.HWSumValue.Width = 1.0!
         '
         'GrandTotalValue
         '
         Me.GrandTotalValue.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.GrandTotalValue.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.GrandTotalValue.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.GrandTotalValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.GrandTotalValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.GrandTotalValue.DataField = "Total"
         Me.GrandTotalValue.Height = 0.2!
         Me.GrandTotalValue.Left = 25.0!
@@ -1446,18 +1429,18 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.lblDrawingsUsed.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.lblDrawingsUsed.CanGrow = False
         Me.lblDrawingsUsed.Height = 0.2!
-        Me.lblDrawingsUsed.Left = 6.0!
+        Me.lblDrawingsUsed.Left = 5.0!
         Me.lblDrawingsUsed.Name = "lblDrawingsUsed"
         Me.lblDrawingsUsed.Style = "font-family: Arial; font-size: 9pt; font-weight: bold; text-align: left; vertical" & _
     "-align: top; ddo-char-set: 1"
         Me.lblDrawingsUsed.Text = "lblDrawingsUsed"
         Me.lblDrawingsUsed.Top = 0.2!
-        Me.lblDrawingsUsed.Width = 6.0!
+        Me.lblDrawingsUsed.Width = 7.0!
         '
         'DrawingsUsedValue
         '
         Me.DrawingsUsedValue.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.DrawingsUsedValue.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.DrawingsUsedValue.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.DrawingsUsedValue.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.DrawingsUsedValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.DrawingsUsedValue.CanGrow = False
@@ -1475,14 +1458,14 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.TextBox1.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.TextBox1.Border.LeftStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.TextBox1.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
-        Me.TextBox1.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.TextBox1.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
         Me.TextBox1.Height = 0.2!
         Me.TextBox1.Left = 24.0!
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Style = "color: Black; font-weight: bold; vertical-align: middle; ddo-char-set: 1"
         Me.TextBox1.Text = Nothing
         Me.TextBox1.Top = 0.0!
-        Me.TextBox1.Width = 1.000002!
+        Me.TextBox1.Width = 1.0!
         '
         'lblDoorHandingDiagram
         '
@@ -1498,12 +1481,12 @@ Partial Public Class rptEMEADetailDoorSchedule
     "-align: middle; ddo-char-set: 1"
         Me.lblDoorHandingDiagram.Text = "lblDoorHandingDiagram"
         Me.lblDoorHandingDiagram.Top = 0.2!
-        Me.lblDoorHandingDiagram.Width = 6.0!
+        Me.lblDoorHandingDiagram.Width = 5.0!
         '
         'Spacer2
         '
         Me.Spacer2.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
-        Me.Spacer2.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.Spacer2.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
         Me.Spacer2.Height = 0.2!
         Me.Spacer2.HyperLink = Nothing
         Me.Spacer2.Left = 0.0!
@@ -1514,14 +1497,298 @@ Partial Public Class rptEMEADetailDoorSchedule
         Me.Spacer2.Top = 0.0!
         Me.Spacer2.Width = 1.0!
         '
+        'Label2
+        '
+        Me.Label2.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label2.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label2.Height = 0.2!
+        Me.Label2.HyperLink = Nothing
+        Me.Label2.Left = 1.0!
+        Me.Label2.Name = "Label2"
+        Me.Label2.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label2.Text = ""
+        Me.Label2.Top = 0.0!
+        Me.Label2.Width = 1.0!
+        '
+        'Label3
+        '
+        Me.Label3.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label3.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label3.Height = 0.2!
+        Me.Label3.HyperLink = Nothing
+        Me.Label3.Left = 2.0!
+        Me.Label3.Name = "Label3"
+        Me.Label3.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label3.Text = ""
+        Me.Label3.Top = 0.0!
+        Me.Label3.Width = 1.0!
+        '
+        'Label4
+        '
+        Me.Label4.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label4.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label4.Height = 0.2!
+        Me.Label4.HyperLink = Nothing
+        Me.Label4.Left = 3.0!
+        Me.Label4.Name = "Label4"
+        Me.Label4.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label4.Text = ""
+        Me.Label4.Top = 0.0!
+        Me.Label4.Width = 1.0!
+        '
+        'Label5
+        '
+        Me.Label5.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label5.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label5.Height = 0.2!
+        Me.Label5.HyperLink = Nothing
+        Me.Label5.Left = 4.0!
+        Me.Label5.Name = "Label5"
+        Me.Label5.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label5.Text = ""
+        Me.Label5.Top = 0.0!
+        Me.Label5.Width = 1.0!
+        '
+        'Label6
+        '
+        Me.Label6.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label6.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label6.Height = 0.2!
+        Me.Label6.HyperLink = Nothing
+        Me.Label6.Left = 5.0!
+        Me.Label6.Name = "Label6"
+        Me.Label6.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label6.Text = ""
+        Me.Label6.Top = 0.0!
+        Me.Label6.Width = 1.0!
+        '
+        'Label7
+        '
+        Me.Label7.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label7.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label7.Height = 0.2!
+        Me.Label7.HyperLink = Nothing
+        Me.Label7.Left = 6.0!
+        Me.Label7.Name = "Label7"
+        Me.Label7.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label7.Text = ""
+        Me.Label7.Top = 0.0!
+        Me.Label7.Width = 1.0!
+        '
+        'Label8
+        '
+        Me.Label8.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label8.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label8.Height = 0.2!
+        Me.Label8.HyperLink = Nothing
+        Me.Label8.Left = 7.0!
+        Me.Label8.Name = "Label8"
+        Me.Label8.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label8.Text = ""
+        Me.Label8.Top = 0.0!
+        Me.Label8.Width = 1.0!
+        '
+        'Label9
+        '
+        Me.Label9.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label9.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label9.Height = 0.2!
+        Me.Label9.HyperLink = Nothing
+        Me.Label9.Left = 8.0!
+        Me.Label9.Name = "Label9"
+        Me.Label9.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label9.Text = ""
+        Me.Label9.Top = 0.0!
+        Me.Label9.Width = 1.0!
+        '
+        'Label10
+        '
+        Me.Label10.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label10.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label10.Height = 0.2!
+        Me.Label10.HyperLink = Nothing
+        Me.Label10.Left = 9.0!
+        Me.Label10.Name = "Label10"
+        Me.Label10.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label10.Text = ""
+        Me.Label10.Top = 0.0!
+        Me.Label10.Width = 1.0!
+        '
+        'Label11
+        '
+        Me.Label11.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label11.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label11.Height = 0.2!
+        Me.Label11.HyperLink = Nothing
+        Me.Label11.Left = 10.0!
+        Me.Label11.Name = "Label11"
+        Me.Label11.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label11.Text = ""
+        Me.Label11.Top = 0.0!
+        Me.Label11.Width = 1.0!
+        '
+        'Label12
+        '
+        Me.Label12.Border.BottomStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label12.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label12.Height = 0.2!
+        Me.Label12.HyperLink = Nothing
+        Me.Label12.Left = 11.0!
+        Me.Label12.Name = "Label12"
+        Me.Label12.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label12.Text = ""
+        Me.Label12.Top = 0.0!
+        Me.Label12.Width = 1.0!
+        '
+        'Label14
+        '
+        Me.Label14.Height = 0.2!
+        Me.Label14.HyperLink = Nothing
+        Me.Label14.Left = 13.0!
+        Me.Label14.Name = "Label14"
+        Me.Label14.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label14.Text = ""
+        Me.Label14.Top = 0.0!
+        Me.Label14.Width = 1.0!
+        '
+        'Label1
+        '
+        Me.Label1.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label1.Height = 0.2!
+        Me.Label1.HyperLink = Nothing
+        Me.Label1.Left = 12.0!
+        Me.Label1.Name = "Label1"
+        Me.Label1.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label1.Text = ""
+        Me.Label1.Top = 0.0!
+        Me.Label1.Width = 1.0!
+        '
+        'Label13
+        '
+        Me.Label13.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label13.Height = 0.2!
+        Me.Label13.HyperLink = Nothing
+        Me.Label13.Left = 13.0!
+        Me.Label13.Name = "Label13"
+        Me.Label13.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label13.Text = ""
+        Me.Label13.Top = 0.0!
+        Me.Label13.Width = 1.0!
+        '
+        'Label15
+        '
+        Me.Label15.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label15.Height = 0.2!
+        Me.Label15.HyperLink = Nothing
+        Me.Label15.Left = 14.0!
+        Me.Label15.Name = "Label15"
+        Me.Label15.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label15.Text = ""
+        Me.Label15.Top = 0.0!
+        Me.Label15.Width = 1.0!
+        '
+        'Label16
+        '
+        Me.Label16.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label16.Height = 0.2!
+        Me.Label16.HyperLink = Nothing
+        Me.Label16.Left = 15.0!
+        Me.Label16.Name = "Label16"
+        Me.Label16.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label16.Text = ""
+        Me.Label16.Top = 0.0!
+        Me.Label16.Width = 1.0!
+        '
+        'Label17
+        '
+        Me.Label17.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label17.Height = 0.2!
+        Me.Label17.HyperLink = Nothing
+        Me.Label17.Left = 16.0!
+        Me.Label17.Name = "Label17"
+        Me.Label17.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label17.Text = ""
+        Me.Label17.Top = 0.0!
+        Me.Label17.Width = 1.0!
+        '
+        'Label18
+        '
+        Me.Label18.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label18.Height = 0.2!
+        Me.Label18.HyperLink = Nothing
+        Me.Label18.Left = 17.0!
+        Me.Label18.Name = "Label18"
+        Me.Label18.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label18.Text = ""
+        Me.Label18.Top = 0.0!
+        Me.Label18.Width = 1.0!
+        '
+        'Label19
+        '
+        Me.Label19.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label19.Height = 0.2!
+        Me.Label19.HyperLink = Nothing
+        Me.Label19.Left = 18.0!
+        Me.Label19.Name = "Label19"
+        Me.Label19.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label19.Text = ""
+        Me.Label19.Top = 0.0!
+        Me.Label19.Width = 1.0!
+        '
+        'Label20
+        '
+        Me.Label20.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label20.Height = 0.2!
+        Me.Label20.HyperLink = Nothing
+        Me.Label20.Left = 19.0!
+        Me.Label20.Name = "Label20"
+        Me.Label20.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label20.Text = ""
+        Me.Label20.Top = 0.0!
+        Me.Label20.Width = 1.0!
+        '
+        'Label21
+        '
+        Me.Label21.Border.RightStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label21.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.ThickSolid
+        Me.Label21.Height = 0.2!
+        Me.Label21.HyperLink = Nothing
+        Me.Label21.Left = 20.0!
+        Me.Label21.Name = "Label21"
+        Me.Label21.Style = "color: Black; font-size: 10pt; font-weight: bold; text-align: right; vertical-ali" & _
+    "gn: middle; ddo-char-set: 1"
+        Me.Label21.Text = ""
+        Me.Label21.Top = 0.0!
+        Me.Label21.Width = 1.0!
+        '
         'rptEMEADetailDoorSchedule
         '
         Me.MasterReport = False
         Me.PageSettings.DefaultPaperSize = False
         Me.PageSettings.Orientation = GrapeCity.ActiveReports.Document.Section.PageOrientation.Landscape
-        Me.PageSettings.PaperHeight = 11.69291!
+        Me.PageSettings.PaperHeight = 11.69!
         Me.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.A4
-        Me.PageSettings.PaperWidth = 11.69!
+        Me.PageSettings.PaperWidth = 8.27!
         Me.PrintWidth = 26.0!
         Me.Sections.Add(Me.GroupHeader)
         Me.Sections.Add(Me.Detail)
@@ -1533,7 +1800,7 @@ Partial Public Class rptEMEADetailDoorSchedule
             "lic", "Heading2", "Normal"))
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-size: 13pt; font-weight: bold", "Heading3", "Normal"))
         CType(Me.RevisionValue, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblRev, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblRevNo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblProjectRef, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProjectNameValue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProjectRefValue, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1611,11 +1878,32 @@ Partial Public Class rptEMEADetailDoorSchedule
         CType(Me.TextBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblDoorHandingDiagram, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Spacer2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
     Private WithEvents RevisionValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents lblRev As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents lblRevNo As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents lblProjectRef As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents ProjectNameValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents ProjectRefValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
@@ -1695,4 +1983,25 @@ Partial Public Class rptEMEADetailDoorSchedule
     Private WithEvents Spacer As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents Spacer2 As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents TextBox1 As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents Label2 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label3 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label4 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label5 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label6 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label7 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label8 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label9 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label10 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label11 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label12 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label14 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label1 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label13 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label15 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label16 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label17 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label18 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label19 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label20 As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents Label21 As GrapeCity.ActiveReports.SectionReportModel.Label
 End Class

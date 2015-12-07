@@ -30,7 +30,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblExtendedRate = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.imgLogoEN = New GrapeCity.ActiveReports.SectionReportModel.Picture()
         Me.txtRev = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.lblRevNo = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.lblRev = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.lblPrjRef = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.txtProjectName = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.txtPrjRef = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
@@ -66,51 +66,53 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblTotalSum = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.lblCurSymbol = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.txtTotalForProject = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        CType(Me.lblThumbnailImg,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblProductDesc,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblQuantity,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblTitle,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblUnit,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblUnitRate,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblProductCode,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblExtendedRate,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.imgLogoEN,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtRev,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblRevNo,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblPrjRef,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtProjectName,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtPrjRef,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblPrjOwner,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtProjectOwner,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblPrjName,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblDate,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtDate,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblPage,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.ReportInfo1,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.ReportInfo3,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblOf,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtContactNumber,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblContactNo,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblEmail,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtEmail,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.imgLogoNO,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtProductCode,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtDescription,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtQty,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtUnits,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtUnitRate,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtExtendedRate,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.Picture1,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtFooter,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtghSetName,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblTotalSum,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lblCurSymbol,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtTotalForProject,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.txtPrjRef2 = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        CType(Me.lblThumbnailImg, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblProductDesc, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblTitle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblUnit, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblUnitRate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblProductCode, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblExtendedRate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgLogoEN, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtRev, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblRev, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPrjRef, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtProjectName, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtPrjRef, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPrjOwner, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtProjectOwner, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPrjName, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblDate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtDate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReportInfo1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReportInfo3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblOf, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtContactNumber, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblContactNo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblEmail, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtEmail, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgLogoNO, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtProductCode, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtDescription, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtQty, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtUnits, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtUnitRate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtExtendedRate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Picture1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtFooter, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtghSetName, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblTotalSum, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblCurSymbol, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtTotalForProject, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtPrjRef2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'PageHeader1
         '
-        Me.PageHeader1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblThumbnailImg, Me.lblProductDesc, Me.lblQuantity, Me.lblTitle, Me.lblUnit, Me.lblUnitRate, Me.Line1, Me.lblProductCode, Me.lblExtendedRate, Me.imgLogoEN, Me.txtRev, Me.lblRevNo, Me.lblPrjRef, Me.txtProjectName, Me.txtPrjRef, Me.lblPrjOwner, Me.txtProjectOwner, Me.lblPrjName, Me.lblDate, Me.txtDate, Me.lblPage, Me.ReportInfo1, Me.ReportInfo3, Me.lblOf, Me.txtContactNumber, Me.lblContactNo, Me.lblEmail, Me.txtEmail, Me.imgLogoNO})
+        Me.PageHeader1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblThumbnailImg, Me.lblProductDesc, Me.lblQuantity, Me.lblTitle, Me.lblUnit, Me.lblUnitRate, Me.Line1, Me.lblProductCode, Me.lblExtendedRate, Me.imgLogoEN, Me.txtRev, Me.lblRev, Me.lblPrjRef, Me.txtProjectName, Me.txtPrjRef, Me.lblPrjOwner, Me.txtProjectOwner, Me.lblPrjName, Me.lblDate, Me.txtDate, Me.lblPage, Me.ReportInfo1, Me.ReportInfo3, Me.lblOf, Me.txtContactNumber, Me.lblContactNo, Me.lblEmail, Me.txtEmail, Me.imgLogoNO, Me.txtPrjRef2})
         Me.PageHeader1.Height = 2.500417!
         Me.PageHeader1.Name = "PageHeader1"
         '
@@ -118,11 +120,11 @@ Partial Public Class rptEMEAHWScheduleSummary
         '
         Me.lblThumbnailImg.Height = 0.3565834!
         Me.lblThumbnailImg.HyperLink = Nothing
-        Me.lblThumbnailImg.Left = 0!
+        Me.lblThumbnailImg.Left = 0.0!
         Me.lblThumbnailImg.Name = "lblThumbnailImg"
-        Me.lblThumbnailImg.Style = "font-size: 9.75pt; font-weight: bold; text-align: center; text-decoration: none; "& _ 
+        Me.lblThumbnailImg.Style = "font-size: 9.75pt; font-weight: bold; text-align: center; text-decoration: none; " & _
     "vertical-align: middle; ddo-char-set: 0"
-        Me.lblThumbnailImg.Text = "Thumb Nail"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Image"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblThumbnailImg.Text = "Thumb Nail" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Image" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.lblThumbnailImg.Top = 2.06!
         Me.lblThumbnailImg.Width = 0.9960001!
         '
@@ -132,7 +134,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblProductDesc.HyperLink = Nothing
         Me.lblProductDesc.Left = 3.034!
         Me.lblProductDesc.Name = "lblProductDesc"
-        Me.lblProductDesc.Style = "font-size: 9.75pt; font-weight: bold; text-align: left; text-decoration: none; ve"& _ 
+        Me.lblProductDesc.Style = "font-size: 9.75pt; font-weight: bold; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 0"
         Me.lblProductDesc.Text = "Product Description"
         Me.lblProductDesc.Top = 2.177!
@@ -144,7 +146,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblQuantity.HyperLink = Nothing
         Me.lblQuantity.Left = 4.698!
         Me.lblQuantity.Name = "lblQuantity"
-        Me.lblQuantity.Style = "font-size: 9.75pt; font-weight: bold; text-align: center; text-decoration: none; "& _ 
+        Me.lblQuantity.Style = "font-size: 9.75pt; font-weight: bold; text-align: center; text-decoration: none; " & _
     "vertical-align: middle; ddo-char-set: 0"
         Me.lblQuantity.Text = "Quantity"
         Me.lblQuantity.Top = 2.177!
@@ -154,11 +156,11 @@ Partial Public Class rptEMEAHWScheduleSummary
         '
         Me.lblTitle.Height = 0.302!
         Me.lblTitle.HyperLink = Nothing
-        Me.lblTitle.Left = 0!
+        Me.lblTitle.Left = 0.0!
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Style = "font-size: 18pt; font-weight: normal; text-align: left; ddo-char-set: 1"
-        Me.lblTitle.Text = "Ironmongery Schedule Summary"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
-        Me.lblTitle.Top = 0!
+        Me.lblTitle.Text = "Ironmongery Schedule Summary" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblTitle.Top = 0.0!
         Me.lblTitle.Width = 4.007!
         '
         'lblUnit
@@ -167,7 +169,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblUnit.HyperLink = Nothing
         Me.lblUnit.Left = 5.652!
         Me.lblUnit.Name = "lblUnit"
-        Me.lblUnit.Style = "font-size: 9.75pt; font-weight: bold; text-align: center; text-decoration: none; "& _ 
+        Me.lblUnit.Style = "font-size: 9.75pt; font-weight: bold; text-align: center; text-decoration: none; " & _
     "vertical-align: middle; ddo-char-set: 0"
         Me.lblUnit.Text = "Unit"
         Me.lblUnit.Top = 2.177!
@@ -179,22 +181,22 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblUnitRate.HyperLink = Nothing
         Me.lblUnitRate.Left = 6.396!
         Me.lblUnitRate.Name = "lblUnitRate"
-        Me.lblUnitRate.Style = "font-size: 9.75pt; font-weight: bold; text-align: center; text-decoration: none; "& _ 
+        Me.lblUnitRate.Style = "font-size: 9.75pt; font-weight: bold; text-align: center; text-decoration: none; " & _
     "vertical-align: middle; ddo-char-set: 0"
-        Me.lblUnitRate.Text = "Unit"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" Rate"
+        Me.lblUnitRate.Text = "Unit" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Rate"
         Me.lblUnitRate.Top = 2.06!
         Me.lblUnitRate.Width = 0.566!
         '
         'Line1
         '
         Me.Line1.Height = 0.007999897!
-        Me.Line1.Left = 0!
-        Me.Line1.LineWeight = 2!
+        Me.Line1.Left = 0.0!
+        Me.Line1.LineWeight = 2.0!
         Me.Line1.Name = "Line1"
         Me.Line1.Top = 2.006!
         Me.Line1.Width = 8.193001!
         Me.Line1.X1 = 8.193001!
-        Me.Line1.X2 = 0!
+        Me.Line1.X2 = 0.0!
         Me.Line1.Y1 = 2.006!
         Me.Line1.Y2 = 2.014!
         '
@@ -204,7 +206,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblProductCode.HyperLink = Nothing
         Me.lblProductCode.Left = 1.264!
         Me.lblProductCode.Name = "lblProductCode"
-        Me.lblProductCode.Style = "font-size: 9.75pt; font-weight: bold; text-align: left; text-decoration: none; ve"& _ 
+        Me.lblProductCode.Style = "font-size: 9.75pt; font-weight: bold; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 0"
         Me.lblProductCode.Text = "Product Code"
         Me.lblProductCode.Top = 2.177!
@@ -216,9 +218,9 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblExtendedRate.HyperLink = Nothing
         Me.lblExtendedRate.Left = 7.095!
         Me.lblExtendedRate.Name = "lblExtendedRate"
-        Me.lblExtendedRate.Style = "font-size: 9.75pt; font-weight: bold; text-align: center; text-decoration: none; "& _ 
+        Me.lblExtendedRate.Style = "font-size: 9.75pt; font-weight: bold; text-align: center; text-decoration: none; " & _
     "vertical-align: middle; ddo-char-set: 0"
-        Me.lblExtendedRate.Text = "Extended"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" Rate"
+        Me.lblExtendedRate.Text = "Extended" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Rate"
         Me.lblExtendedRate.Top = 2.06!
         Me.lblExtendedRate.Width = 0.77!
         '
@@ -226,15 +228,16 @@ Partial Public Class rptEMEAHWScheduleSummary
         '
         Me.imgLogoEN.Height = 0.302!
         Me.imgLogoEN.HyperLink = Nothing
-        Me.imgLogoEN.ImageData = CType(resources.GetObject("imgLogoEN.ImageData"),System.IO.Stream)
+        Me.imgLogoEN.ImageData = CType(resources.GetObject("imgLogoEN.ImageData"), System.IO.Stream)
         Me.imgLogoEN.Left = 6.369!
         Me.imgLogoEN.Name = "imgLogoEN"
         Me.imgLogoEN.SizeMode = GrapeCity.ActiveReports.SectionReportModel.SizeModes.Zoom
-        Me.imgLogoEN.Top = 0!
+        Me.imgLogoEN.Top = 0.0!
         Me.imgLogoEN.Width = 1.824!
         '
         'txtRev
         '
+        Me.txtRev.DataField = "Revision"
         Me.txtRev.Height = 0.2!
         Me.txtRev.Left = 1.246!
         Me.txtRev.Name = "txtRev"
@@ -244,24 +247,24 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.txtRev.Top = 1.399!
         Me.txtRev.Width = 1.742!
         '
-        'lblRevNo
+        'lblRev
         '
-        Me.lblRevNo.Height = 0.2!
-        Me.lblRevNo.HyperLink = Nothing
-        Me.lblRevNo.Left = 0!
-        Me.lblRevNo.Name = "lblRevNo"
-        Me.lblRevNo.Style = "text-align: left"
-        Me.lblRevNo.Text = "Revision No."
-        Me.lblRevNo.Top = 1.399!
-        Me.lblRevNo.Width = 1.066!
+        Me.lblRev.Height = 0.2!
+        Me.lblRev.HyperLink = Nothing
+        Me.lblRev.Left = 0.0!
+        Me.lblRev.Name = "lblRev"
+        Me.lblRev.Style = "text-align: left"
+        Me.lblRev.Text = "lblRev"
+        Me.lblRev.Top = 1.399!
+        Me.lblRev.Width = 1.066!
         '
         'lblPrjRef
         '
         Me.lblPrjRef.Height = 0.2!
         Me.lblPrjRef.HyperLink = Nothing
-        Me.lblPrjRef.Left = 0!
+        Me.lblPrjRef.Left = 0.0!
         Me.lblPrjRef.Name = "lblPrjRef"
-        Me.lblPrjRef.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
+        Me.lblPrjRef.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblPrjRef.Text = "Project Ref."
         Me.lblPrjRef.Top = 1.199!
@@ -295,7 +298,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblPrjOwner.HyperLink = Nothing
         Me.lblPrjOwner.Left = 4.698!
         Me.lblPrjOwner.Name = "lblPrjOwner"
-        Me.lblPrjOwner.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
+        Me.lblPrjOwner.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblPrjOwner.Text = "Project Owner"
         Me.lblPrjOwner.Top = 0.9990001!
@@ -316,9 +319,9 @@ Partial Public Class rptEMEAHWScheduleSummary
         '
         Me.lblPrjName.Height = 0.2!
         Me.lblPrjName.HyperLink = Nothing
-        Me.lblPrjName.Left = 0!
+        Me.lblPrjName.Left = 0.0!
         Me.lblPrjName.Name = "lblPrjName"
-        Me.lblPrjName.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
+        Me.lblPrjName.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblPrjName.Text = "Project Name"
         Me.lblPrjName.Top = 0.9990001!
@@ -328,9 +331,9 @@ Partial Public Class rptEMEAHWScheduleSummary
         '
         Me.lblDate.Height = 0.2!
         Me.lblDate.HyperLink = Nothing
-        Me.lblDate.Left = 0!
+        Me.lblDate.Left = 0.0!
         Me.lblDate.Name = "lblDate"
-        Me.lblDate.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
+        Me.lblDate.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblDate.Text = "Date"
         Me.lblDate.Top = 1.599!
@@ -353,9 +356,9 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblPage.HyperLink = Nothing
         Me.lblPage.Left = 4.698!
         Me.lblPage.Name = "lblPage"
-        Me.lblPage.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
+        Me.lblPage.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 1"
-        Me.lblPage.Text = "Page"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblPage.Text = "Page" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.lblPage.Top = 1.599!
         Me.lblPage.Width = 1.181!
         '
@@ -364,7 +367,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.ReportInfo1.FormatString = "{PageNumber}"
         Me.ReportInfo1.Height = 0.2!
         Me.ReportInfo1.Left = 6.017!
-        Me.ReportInfo1.MultiLine = false
+        Me.ReportInfo1.MultiLine = False
         Me.ReportInfo1.Name = "ReportInfo1"
         Me.ReportInfo1.Style = "font-size: 10pt; text-align: left; ddo-char-set: 1"
         Me.ReportInfo1.Top = 1.599!
@@ -372,11 +375,11 @@ Partial Public Class rptEMEAHWScheduleSummary
         '
         'ReportInfo3
         '
-        Me.ReportInfo3.CanShrink = true
+        Me.ReportInfo3.CanShrink = True
         Me.ReportInfo3.FormatString = "{PageCount}"
         Me.ReportInfo3.Height = 0.2!
         Me.ReportInfo3.Left = 6.396!
-        Me.ReportInfo3.MultiLine = false
+        Me.ReportInfo3.MultiLine = False
         Me.ReportInfo3.Name = "ReportInfo3"
         Me.ReportInfo3.Style = "font-size: 10pt; text-align: left; ddo-char-set: 1"
         Me.ReportInfo3.Top = 1.599!
@@ -386,7 +389,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         '
         Me.lblOf.Height = 0.2!
         Me.lblOf.Left = 6.083!
-        Me.lblOf.MultiLine = false
+        Me.lblOf.MultiLine = False
         Me.lblOf.Name = "lblOf"
         Me.lblOf.Style = "font-size: 10pt; text-align: center; ddo-char-set: 1"
         Me.lblOf.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Max
@@ -401,7 +404,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.txtContactNumber.Left = 6.017!
         Me.txtContactNumber.Name = "txtContactNumber"
         Me.txtContactNumber.Style = "text-align: left; vertical-align: middle"
-        Me.txtContactNumber.Text = "ContactNumber"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+        Me.txtContactNumber.Text = "ContactNumber" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.txtContactNumber.Top = 1.199!
         Me.txtContactNumber.Width = 1.824!
         '
@@ -411,7 +414,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblContactNo.HyperLink = Nothing
         Me.lblContactNo.Left = 4.698!
         Me.lblContactNo.Name = "lblContactNo"
-        Me.lblContactNo.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
+        Me.lblContactNo.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblContactNo.Text = "Contact Number"
         Me.lblContactNo.Top = 1.199!
@@ -423,7 +426,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblEmail.HyperLink = Nothing
         Me.lblEmail.Left = 4.698!
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
+        Me.lblEmail.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblEmail.Text = "Email"
         Me.lblEmail.Top = 1.399!
@@ -444,16 +447,16 @@ Partial Public Class rptEMEAHWScheduleSummary
         '
         Me.imgLogoNO.Height = 0.567!
         Me.imgLogoNO.HyperLink = Nothing
-        Me.imgLogoNO.ImageData = CType(resources.GetObject("imgLogoNO.ImageData"),System.IO.Stream)
+        Me.imgLogoNO.ImageData = CType(resources.GetObject("imgLogoNO.ImageData"), System.IO.Stream)
         Me.imgLogoNO.Left = 6.976!
         Me.imgLogoNO.Name = "imgLogoNO"
         Me.imgLogoNO.SizeMode = GrapeCity.ActiveReports.SectionReportModel.SizeModes.Zoom
-        Me.imgLogoNO.Top = 0!
+        Me.imgLogoNO.Top = 0.0!
         Me.imgLogoNO.Width = 1.218999!
         '
         'Detail1
         '
-        Me.Detail1.CanShrink = true
+        Me.Detail1.CanShrink = True
         Me.Detail1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.txtProductCode, Me.txtDescription, Me.txtQty, Me.txtUnits, Me.txtUnitRate, Me.txtExtendedRate, Me.Picture1})
         Me.Detail1.Height = 1.1!
         Me.Detail1.Name = "Detail1"
@@ -466,7 +469,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.txtProductCode.Name = "txtProductCode"
         Me.txtProductCode.Style = "font-size: 9pt; font-weight: normal; text-align: center; ddo-char-set: 1"
         Me.txtProductCode.Text = "Product Code"
-        Me.txtProductCode.Top = 0!
+        Me.txtProductCode.Top = 0.0!
         Me.txtProductCode.Width = 1.521!
         '
         'txtDescription
@@ -477,7 +480,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.txtDescription.Name = "txtDescription"
         Me.txtDescription.Style = "font-size: 9pt; text-align: center; ddo-char-set: 1"
         Me.txtDescription.Text = "Product"
-        Me.txtDescription.Top = 0!
+        Me.txtDescription.Top = 0.0!
         Me.txtDescription.Width = 1.989!
         '
         'txtQty
@@ -489,7 +492,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.txtQty.OutputFormat = resources.GetString("txtQty.OutputFormat")
         Me.txtQty.Style = "font-size: 9pt; text-align: center; ddo-char-set: 1"
         Me.txtQty.Text = "Qty"
-        Me.txtQty.Top = 0!
+        Me.txtQty.Top = 0.0!
         Me.txtQty.Width = 0.6989994!
         '
         'txtUnits
@@ -501,7 +504,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.txtUnits.OutputFormat = resources.GetString("txtUnits.OutputFormat")
         Me.txtUnits.Style = "font-size: 9pt; text-align: center; ddo-char-set: 1"
         Me.txtUnits.Text = "Units"
-        Me.txtUnits.Top = 0!
+        Me.txtUnits.Top = 0.0!
         Me.txtUnits.Width = 0.6490002!
         '
         'txtUnitRate
@@ -513,7 +516,7 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.txtUnitRate.OutputFormat = resources.GetString("txtUnitRate.OutputFormat")
         Me.txtUnitRate.Style = "font-size: 9pt; text-align: center; ddo-char-set: 1"
         Me.txtUnitRate.Text = "Rate"
-        Me.txtUnitRate.Top = 0!
+        Me.txtUnitRate.Top = 0.0!
         Me.txtUnitRate.Width = 0.7939997!
         '
         'txtExtendedRate
@@ -525,19 +528,19 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.txtExtendedRate.OutputFormat = resources.GetString("txtExtendedRate.OutputFormat")
         Me.txtExtendedRate.Style = "font-size: 9pt; text-align: center; ddo-char-set: 1"
         Me.txtExtendedRate.Text = "ExRate"
-        Me.txtExtendedRate.Top = 0!
+        Me.txtExtendedRate.Top = 0.0!
         Me.txtExtendedRate.Width = 0.7939993!
         '
         'Picture1
         '
-        Me.Picture1.Height = 1!
+        Me.Picture1.Height = 1.0!
         Me.Picture1.HyperLink = Nothing
         Me.Picture1.ImageData = Nothing
-        Me.Picture1.Left = 0!
+        Me.Picture1.Left = 0.0!
         Me.Picture1.Name = "Picture1"
         Me.Picture1.SizeMode = GrapeCity.ActiveReports.SectionReportModel.SizeModes.Zoom
         Me.Picture1.Top = 0.05!
-        Me.Picture1.Width = 1!
+        Me.Picture1.Width = 1.0!
         '
         'PageFooter1
         '
@@ -552,30 +555,30 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.txtFooter.Left = 0.1785004!
         Me.txtFooter.Name = "txtFooter"
         Me.txtFooter.OutputFormat = resources.GetString("txtFooter.OutputFormat")
-        Me.txtFooter.Style = "color: DimGray; font-size: 6.5pt; text-align: center; vertical-align: middle; ddo"& _ 
+        Me.txtFooter.Style = "color: DimGray; font-size: 6.5pt; text-align: center; vertical-align: middle; ddo" & _
     "-char-set: 1"
-        Me.txtFooter.Text = "ASSA ABLOY UK Specification"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"School Street, Willenhall, West Midlands, UK, WV13 3"& _ 
-    "PWT"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"T: +44 (0)845 223 2124 F: +44 (0)845 223 2125 "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"E: info@assaabloy.co.uk W: "& _ 
+        Me.txtFooter.Text = "ASSA ABLOY UK Specification" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "School Street, Willenhall, West Midlands, UK, WV13 3" & _
+    "PWT" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "T: +44 (0)845 223 2124 F: +44 (0)845 223 2125 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "E: info@assaabloy.co.uk W: " & _
     "www.assaabloy.co.uk"
-        Me.txtFooter.Top = 0!
+        Me.txtFooter.Top = 0.0!
         Me.txtFooter.Width = 7.847!
         '
         'ReportHeader1
         '
-        Me.ReportHeader1.Height = 0!
+        Me.ReportHeader1.Height = 0.0!
         Me.ReportHeader1.Name = "ReportHeader1"
         '
         'ReportFooter1
         '
-        Me.ReportFooter1.Height = 0!
+        Me.ReportFooter1.Height = 0.0!
         Me.ReportFooter1.Name = "ReportFooter1"
         '
         'GroupHeader1
         '
         Me.GroupHeader1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.txtghSetName})
         Me.GroupHeader1.DataField = "SetName"
-        Me.GroupHeader1.Height = 0!
-        Me.GroupHeader1.KeepTogether = true
+        Me.GroupHeader1.Height = 0.0!
+        Me.GroupHeader1.KeepTogether = True
         Me.GroupHeader1.Name = "GroupHeader1"
         Me.GroupHeader1.NewPage = GrapeCity.ActiveReports.SectionReportModel.NewPage.Before
         '
@@ -583,18 +586,18 @@ Partial Public Class rptEMEAHWScheduleSummary
         '
         Me.txtghSetName.DataField = "SetName"
         Me.txtghSetName.Height = 0.1979167!
-        Me.txtghSetName.Left = 0!
+        Me.txtghSetName.Left = 0.0!
         Me.txtghSetName.Name = "txtghSetName"
         Me.txtghSetName.Style = "font-size: 11pt; font-weight: bold; text-decoration: underline; ddo-char-set: 1"
         Me.txtghSetName.Text = "TextBox1"
-        Me.txtghSetName.Top = 0!
-        Me.txtghSetName.Visible = false
-        Me.txtghSetName.Width = 10!
+        Me.txtghSetName.Top = 0.0!
+        Me.txtghSetName.Visible = False
+        Me.txtghSetName.Width = 10.0!
         '
         'GroupFooter1
         '
         Me.GroupFooter1.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblTotalSum, Me.lblCurSymbol, Me.txtTotalForProject})
-        Me.GroupFooter1.Height = 1!
+        Me.GroupFooter1.Height = 1.0!
         Me.GroupFooter1.Name = "GroupFooter1"
         '
         'lblTotalSum
@@ -603,8 +606,8 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.lblTotalSum.HyperLink = Nothing
         Me.lblTotalSum.Left = 5.231!
         Me.lblTotalSum.Name = "lblTotalSum"
-        Me.lblTotalSum.RightToLeft = true
-        Me.lblTotalSum.Style = "font-size: 10pt; font-weight: bold; text-align: left; vertical-align: middle; ddo"& _ 
+        Me.lblTotalSum.RightToLeft = True
+        Me.lblTotalSum.Style = "font-size: 10pt; font-weight: bold; text-align: left; vertical-align: middle; ddo" & _
     "-char-set: 1"
         Me.lblTotalSum.Text = "Total Sum"
         Me.lblTotalSum.Top = 0.204!
@@ -633,16 +636,25 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.txtTotalForProject.Top = 0.233!
         Me.txtTotalForProject.Width = 0.9350004!
         '
+        'txtPrjRef2
+        '
+        Me.txtPrjRef2.DataField = "ProjectReference"
+        Me.txtPrjRef2.Height = 0.2!
+        Me.txtPrjRef2.Left = 1.246!
+        Me.txtPrjRef2.Name = "txtPrjRef2"
+        Me.txtPrjRef2.Style = "font-size: 10pt; text-align: left; vertical-align: middle; ddo-char-set: 1"
+        Me.txtPrjRef2.Text = "ProjRef"
+        Me.txtPrjRef2.Top = 1.199!
+        Me.txtPrjRef2.Width = 1.806!
+        '
         'rptEMEAHWScheduleSummary
         '
-        Me.MasterReport = false
-        Me.PageSettings.Margins.Bottom = 0.2!
-        Me.PageSettings.Margins.Left = 0.2!
-        Me.PageSettings.Margins.Right = 0.2!
-        Me.PageSettings.Margins.Top = 0.2!
+        Me.MasterReport = False
+        Me.PageSettings.DefaultPaperSize = False
         Me.PageSettings.Orientation = GrapeCity.ActiveReports.Document.Section.PageOrientation.Portrait
-        Me.PageSettings.PaperHeight = 11.69!
-        Me.PageSettings.PaperWidth = 8.27!
+        Me.PageSettings.PaperHeight = 11.69291!
+        Me.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.A4
+        Me.PageSettings.PaperWidth = 8.267716!
         Me.PrintWidth = 8.195!
         Me.Sections.Add(Me.ReportHeader1)
         Me.Sections.Add(Me.PageHeader1)
@@ -651,55 +663,56 @@ Partial Public Class rptEMEAHWScheduleSummary
         Me.Sections.Add(Me.GroupFooter1)
         Me.Sections.Add(Me.PageFooter1)
         Me.Sections.Add(Me.ReportFooter1)
-        Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-family: Arial; font-style: normal; text-decoration: none; font-weight: norma"& _ 
+        Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-family: Arial; font-style: normal; text-decoration: none; font-weight: norma" & _
             "l; font-size: 10pt; color: Black; ddo-char-set: 204", "Normal"))
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-size: 16pt; font-weight: bold", "Heading1", "Normal"))
-        Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: ita"& _ 
+        Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: ita" & _
             "lic", "Heading2", "Normal"))
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-size: 13pt; font-weight: bold", "Heading3", "Normal"))
-        CType(Me.lblThumbnailImg,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblProductDesc,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblQuantity,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblTitle,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblUnit,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblUnitRate,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblProductCode,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblExtendedRate,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.imgLogoEN,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtRev,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblRevNo,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblPrjRef,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtProjectName,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtPrjRef,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblPrjOwner,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtProjectOwner,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblPrjName,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblDate,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtDate,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblPage,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.ReportInfo1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.ReportInfo3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblOf,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtContactNumber,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblContactNo,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblEmail,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtEmail,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.imgLogoNO,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtProductCode,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtDescription,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtQty,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtUnits,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtUnitRate,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtExtendedRate,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.Picture1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtFooter,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtghSetName,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblTotalSum,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblCurSymbol,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtTotalForProject,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblThumbnailImg, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblProductDesc, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblQuantity, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblTitle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblUnit, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblUnitRate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblProductCode, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblExtendedRate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgLogoEN, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtRev, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblRev, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPrjRef, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtProjectName, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtPrjRef, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPrjOwner, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtProjectOwner, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPrjName, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblDate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtDate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReportInfo1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReportInfo3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblOf, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtContactNumber, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblContactNo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblEmail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtEmail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgLogoNO, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtProductCode, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtDescription, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtQty, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtUnits, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtUnitRate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtExtendedRate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Picture1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtFooter, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtghSetName, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblTotalSum, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblCurSymbol, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtTotalForProject, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtPrjRef2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
-End Sub
+    End Sub
     Private WithEvents txtProductCode As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents lblThumbnailImg As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents lblProductDesc As GrapeCity.ActiveReports.SectionReportModel.Label
@@ -735,7 +748,7 @@ End Sub
     Private WithEvents imgLogoEN As GrapeCity.ActiveReports.SectionReportModel.Picture
     Private WithEvents txtFooter As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents txtRev As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents lblRevNo As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents lblRev As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents lblPrjRef As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents txtProjectName As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents txtPrjRef As GrapeCity.ActiveReports.SectionReportModel.TextBox
@@ -754,4 +767,5 @@ End Sub
     Private WithEvents txtEmail As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents imgLogoNO As GrapeCity.ActiveReports.SectionReportModel.Picture
     Private WithEvents Picture1 As GrapeCity.ActiveReports.SectionReportModel.Picture
+    Private WithEvents txtPrjRef2 As GrapeCity.ActiveReports.SectionReportModel.TextBox
 End Class

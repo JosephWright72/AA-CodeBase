@@ -51,7 +51,12 @@ Public Class rptEMEATimberStdDoorSizes
         lblDoorLeafSize.Text = sHash.Item("lblDoorLeafSize")
         lblKickplateSize.Text = sHash.Item("lblKickplateSize")
         lblDoorTypes.Text = sHash.Item("lblDoorTypes")
+        lblDoorTypes2.Text = sHash.Item("lblDoorTypes2")
         txtAllSizesIn.Text = sHash.Item("txtAllSizesIn")
+        lblPrimedPainted.Text = sHash.Item("lblPrimedPainted")
+        lblHardwood.Text = sHash.Item("lblHardwood")
+        lblVeneered.Text = sHash.Item("lblVeneered")
+        txtNBRatings.Text = sHash.Item("txtNBRatings")
 
         Footer.Text = sHash.Item("txtFooter")
 
@@ -86,21 +91,44 @@ Public Class rptEMEATimberStdDoorSizes
         Me.EMEATimberStdDoorSizesSub.Report = rpt
 
         If METRIC_OUTPUT = 1 Then
-            FrameDepthList.Text = FrameDepthList.Text + FEETINCH(Val("-1")).Replace("-1", "")
+            FrameDepthListPrimedPainted.Text = FrameDepthListPrimedPainted.Text + FEETINCH(Val("-1")).Replace("-1", "")
+            FrameDepthListHardwood.Text = FrameDepthListHardwood.Text + FEETINCH(Val("-1")).Replace("-1", "")
+            FrameDepthListVeneered.Text = FrameDepthListVeneered.Text + FEETINCH(Val("-1")).Replace("-1", "")
             txtSizeInfo.Text = sHash.Item("txtSizeInfo")
         Else
-            Dim FrameDepthArray As Object
+            Dim FrameDepthArrayPrimedPainted As Object
+            Dim FrameDepthArrayHardwood As Object
+            Dim FrameDepthArrayVeneered As Object
             Dim i As Long
 
-            FrameDepthArray = Split(FrameDepthList.Text, ",")
-            FrameDepthList.Text = ""
-            For i = 0 To UBound(FrameDepthArray)
-                FrameDepthList.Text = FrameDepthList.Text + FEETINCH(Val(FrameDepthArray(i))) + ", "
+            FrameDepthArrayPrimedPainted = Split(FrameDepthListPrimedPainted.Text, ",")
+            FrameDepthListPrimedPainted.Text = ""
+
+            For i = 0 To UBound(FrameDepthArrayPrimedPainted)
+                FrameDepthListPrimedPainted.Text = FrameDepthListPrimedPainted.Text + FEETINCH(Val(FrameDepthArrayPrimedPainted(i))) + ", "
             Next i
 
-            FrameDepthList.Text = FrameDepthList.Text.Substring(0, FrameDepthList.Text.Length - 2)
+            FrameDepthListPrimedPainted.Text = FrameDepthListPrimedPainted.Text.Substring(0, FrameDepthListPrimedPainted.Text.Length - 2)
 
-            txtSizeInfo.Text = sHash.Item("txtSizeInfo").ToString.Replace("63mm", FEETINCH(Val(63 * 0.0032808)))
+            FrameDepthArrayHardwood = Split(FrameDepthListHardwood.Text, ",")
+            FrameDepthListHardwood.Text = ""
+
+            For i = 0 To UBound(FrameDepthArrayHardwood)
+                FrameDepthListHardwood.Text = FrameDepthListHardwood.Text + FEETINCH(Val(FrameDepthArrayHardwood(i))) + ", "
+            Next i
+
+            FrameDepthListHardwood.Text = FrameDepthListHardwood.Text.Substring(0, FrameDepthListHardwood.Text.Length - 2)
+
+            FrameDepthArrayVeneered = Split(FrameDepthListVeneered.Text, ",")
+            FrameDepthListVeneered.Text = ""
+
+            For i = 0 To UBound(FrameDepthArrayVeneered)
+                FrameDepthListVeneered.Text = FrameDepthListVeneered.Text + FEETINCH(Val(FrameDepthArrayVeneered(i))) + ", "
+            Next i
+
+            FrameDepthListVeneered.Text = FrameDepthListVeneered.Text.Substring(0, FrameDepthListVeneered.Text.Length - 2)
+
+            txtSizeInfo.Text = sHash.Item("txtSizeInfo").ToString.Replace("62mm", FEETINCH(Val(6 * 0.0032808)))
         End If
 
     End Sub

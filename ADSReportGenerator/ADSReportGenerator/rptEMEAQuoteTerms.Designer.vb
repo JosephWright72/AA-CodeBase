@@ -23,7 +23,7 @@ Partial Public Class rptEMEAQuoteTerms
         Me.lblTitle = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.imgLogoEN = New GrapeCity.ActiveReports.SectionReportModel.Picture()
         Me.lblEmail = New GrapeCity.ActiveReports.SectionReportModel.Label()
-        Me.RevisionValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.txtRev = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblRev = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.lblPrjRef = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.txtProjectName = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
@@ -50,80 +50,80 @@ Partial Public Class rptEMEAQuoteTerms
         Me.lblAddDet = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.lblGenRem = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.txtGenRem = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.DrawingsUsedValue = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.PageFooter = New GrapeCity.ActiveReports.SectionReportModel.PageFooter()
         Me.txtFooter = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        CType(Me.lblTitle, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.imgLogoEN, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblEmail, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RevisionValue, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblRev, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblPrjRef, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtProjectName, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtPrjRef, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblPrjOwner, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtProjectOwner, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblPrjName, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblDate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtDate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblPage, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtContactNumber, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblContactNo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtEmail, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.imgLogoNO, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CurrentPageNumber, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblOf, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PageCount, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtGenCon, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTechNote, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtAddDet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblGenCon, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblTechNote, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblAddDet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblGenRem, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtGenRem, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DrawingsUsedValue, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtFooter, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.txtPrjRef2 = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        CType(Me.lblTitle,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.imgLogoEN,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblEmail,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtRev,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblRev,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblPrjRef,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtProjectName,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtPrjRef,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblPrjOwner,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtProjectOwner,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblPrjName,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblDate,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtDate,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblPage,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtContactNumber,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblContactNo,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtEmail,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.imgLogoNO,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.CurrentPageNumber,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblOf,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PageCount,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtGenCon,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtTechNote,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtAddDet,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblGenCon,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblTechNote,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblAddDet,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.lblGenRem,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtGenRem,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtFooter,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.txtPrjRef2,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me,System.ComponentModel.ISupportInitialize).BeginInit
         '
         'PageHeader
         '
-        Me.PageHeader.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.Line1, Me.lblTitle, Me.imgLogoEN, Me.lblEmail, Me.RevisionValue, Me.lblRev, Me.lblPrjRef, Me.txtProjectName, Me.txtPrjRef, Me.lblPrjOwner, Me.txtProjectOwner, Me.lblPrjName, Me.lblDate, Me.txtDate, Me.lblPage, Me.txtContactNumber, Me.lblContactNo, Me.txtEmail, Me.imgLogoNO, Me.CurrentPageNumber, Me.lblOf, Me.PageCount})
+        Me.PageHeader.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.Line1, Me.lblTitle, Me.imgLogoEN, Me.lblEmail, Me.txtRev, Me.lblRev, Me.lblPrjRef, Me.txtProjectName, Me.txtPrjRef, Me.lblPrjOwner, Me.txtProjectOwner, Me.lblPrjName, Me.lblDate, Me.txtDate, Me.lblPage, Me.txtContactNumber, Me.lblContactNo, Me.txtEmail, Me.imgLogoNO, Me.CurrentPageNumber, Me.lblOf, Me.PageCount, Me.txtPrjRef2})
         Me.PageHeader.Height = 2.125833!
         Me.PageHeader.Name = "PageHeader"
         '
         'Line1
         '
-        Me.Line1.Height = 0.0!
+        Me.Line1.Height = 0!
         Me.Line1.Left = 9.313226E-10!
-        Me.Line1.LineWeight = 2.0!
+        Me.Line1.LineWeight = 2!
         Me.Line1.Name = "Line1"
-        Me.Line1.Top = 2.0!
+        Me.Line1.Top = 2!
         Me.Line1.Width = 8.193001!
         Me.Line1.X1 = 8.193001!
         Me.Line1.X2 = 9.313226E-10!
-        Me.Line1.Y1 = 2.0!
-        Me.Line1.Y2 = 2.0!
+        Me.Line1.Y1 = 2!
+        Me.Line1.Y2 = 2!
         '
         'lblTitle
         '
         Me.lblTitle.Height = 0.6!
-        Me.lblTitle.Left = 0.0!
+        Me.lblTitle.Left = 0!
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Style = "font-size: 18pt; ddo-char-set: 1"
         Me.lblTitle.Text = "Quotation Qualifications & Implied Terms "
-        Me.lblTitle.Top = 0.0!
-        Me.lblTitle.Width = 6.0!
+        Me.lblTitle.Top = 0!
+        Me.lblTitle.Width = 6!
         '
         'imgLogoEN
         '
         Me.imgLogoEN.Height = 0.316!
         Me.imgLogoEN.HyperLink = Nothing
-        Me.imgLogoEN.ImageData = CType(resources.GetObject("imgLogoEN.ImageData"), System.IO.Stream)
+        Me.imgLogoEN.ImageData = CType(resources.GetObject("imgLogoEN.ImageData"),System.IO.Stream)
         Me.imgLogoEN.Left = 6.369!
         Me.imgLogoEN.Name = "imgLogoEN"
         Me.imgLogoEN.SizeMode = GrapeCity.ActiveReports.SectionReportModel.SizeModes.Zoom
-        Me.imgLogoEN.Top = 0.0!
+        Me.imgLogoEN.Top = 0!
         Me.imgLogoEN.Width = 1.824!
         '
         'lblEmail
@@ -132,29 +132,29 @@ Partial Public Class rptEMEAQuoteTerms
         Me.lblEmail.HyperLink = Nothing
         Me.lblEmail.Left = 4.698001!
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
+        Me.lblEmail.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblEmail.Text = "Email"
         Me.lblEmail.Top = 1.402!
         Me.lblEmail.Width = 1.181!
         '
-        'RevisionValue
+        'txtRev
         '
-        Me.RevisionValue.DataField = "Revision"
-        Me.RevisionValue.Height = 0.2!
-        Me.RevisionValue.Left = 1.246!
-        Me.RevisionValue.Name = "RevisionValue"
-        Me.RevisionValue.Style = "font-size: 10pt; text-align: left; ddo-char-set: 1"
-        Me.RevisionValue.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Max
-        Me.RevisionValue.Text = "Revision"
-        Me.RevisionValue.Top = 1.402!
-        Me.RevisionValue.Width = 1.742!
+        Me.txtRev.DataField = "Revision"
+        Me.txtRev.Height = 0.2!
+        Me.txtRev.Left = 1.246!
+        Me.txtRev.Name = "txtRev"
+        Me.txtRev.Style = "font-size: 10pt; text-align: left; ddo-char-set: 1"
+        Me.txtRev.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Max
+        Me.txtRev.Text = "Revision"
+        Me.txtRev.Top = 1.402!
+        Me.txtRev.Width = 1.742!
         '
         'lblRev
         '
         Me.lblRev.Height = 0.2!
         Me.lblRev.HyperLink = Nothing
-        Me.lblRev.Left = 0.0!
+        Me.lblRev.Left = 0!
         Me.lblRev.Name = "lblRev"
         Me.lblRev.Style = "text-align: left"
         Me.lblRev.Text = "lblRev"
@@ -165,9 +165,9 @@ Partial Public Class rptEMEAQuoteTerms
         '
         Me.lblPrjRef.Height = 0.2!
         Me.lblPrjRef.HyperLink = Nothing
-        Me.lblPrjRef.Left = 0.0!
+        Me.lblPrjRef.Left = 0!
         Me.lblPrjRef.Name = "lblPrjRef"
-        Me.lblPrjRef.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
+        Me.lblPrjRef.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve"& _ 
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblPrjRef.Text = "Project Ref."
         Me.lblPrjRef.Top = 1.202!
@@ -186,7 +186,7 @@ Partial Public Class rptEMEAQuoteTerms
         '
         'txtPrjRef
         '
-        Me.txtPrjRef.DataField = "ProjectReference"
+        Me.txtPrjRef.DataField = "NewProjID"
         Me.txtPrjRef.Height = 0.2!
         Me.txtPrjRef.Left = 1.246!
         Me.txtPrjRef.Name = "txtPrjRef"
@@ -350,7 +350,7 @@ Partial Public Class rptEMEAQuoteTerms
         'Detail
         '
         Me.Detail.CanShrink = True
-        Me.Detail.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.txtGenCon, Me.txtTechNote, Me.txtAddDet, Me.lblGenCon, Me.lblTechNote, Me.lblAddDet, Me.lblGenRem, Me.txtGenRem, Me.DrawingsUsedValue})
+        Me.Detail.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.txtGenCon, Me.txtTechNote, Me.txtAddDet, Me.lblGenCon, Me.lblTechNote, Me.lblAddDet, Me.lblGenRem, Me.txtGenRem})
         Me.Detail.Height = 6.548!
         Me.Detail.Name = "Detail"
         '
@@ -438,17 +438,6 @@ Partial Public Class rptEMEAQuoteTerms
         Me.txtGenRem.Top = 5.458!
         Me.txtGenRem.Width = 7.944!
         '
-        'DrawingsUsedValue
-        '
-        Me.DrawingsUsedValue.Height = 1.0!
-        Me.DrawingsUsedValue.HyperLink = Nothing
-        Me.DrawingsUsedValue.Left = 0.0!
-        Me.DrawingsUsedValue.Name = "DrawingsUsedValue"
-        Me.DrawingsUsedValue.Style = "font-style: italic; ddo-char-set: 1"
-        Me.DrawingsUsedValue.Text = "Free text field to allow for drawings used for this schedule"
-        Me.DrawingsUsedValue.Top = 5.5!
-        Me.DrawingsUsedValue.Width = 8.0!
-        '
         'PageFooter
         '
         Me.PageFooter.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.txtFooter})
@@ -470,62 +459,69 @@ Partial Public Class rptEMEAQuoteTerms
         Me.txtFooter.Top = 0.0!
         Me.txtFooter.Width = 7.847!
         '
+        'txtPrjRef2
+        '
+        Me.txtPrjRef2.DataField = "ProjectReference"
+        Me.txtPrjRef2.Height = 0.2!
+        Me.txtPrjRef2.Left = 1.246!
+        Me.txtPrjRef2.Name = "txtPrjRef2"
+        Me.txtPrjRef2.Style = "font-size: 10pt; text-align: left; vertical-align: middle; ddo-char-set: 1"
+        Me.txtPrjRef2.Text = "ProjRef"
+        Me.txtPrjRef2.Top = 1.202!
+        Me.txtPrjRef2.Width = 1.806!
+        '
         'rptEMEAQuoteTerms
         '
-        Me.MasterReport = False
-        Me.PageSettings.DefaultPaperSize = False
-        Me.PageSettings.Margins.Bottom = 0.2!
-        Me.PageSettings.Margins.Left = 0.2!
-        Me.PageSettings.Margins.Right = 0.2!
-        Me.PageSettings.Margins.Top = 0.2!
+        Me.MasterReport = false
+        Me.PageSettings.DefaultPaperSize = false
         Me.PageSettings.Orientation = GrapeCity.ActiveReports.Document.Section.PageOrientation.Portrait
         Me.PageSettings.PaperHeight = 11.69291!
         Me.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.A4
-        Me.PageSettings.PaperWidth = 8.27!
+        Me.PageSettings.PaperWidth = 8.267716!
         Me.PrintWidth = 8.2!
         Me.Sections.Add(Me.PageHeader)
         Me.Sections.Add(Me.Detail)
         Me.Sections.Add(Me.PageFooter)
-        Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-family: Arial; font-style: normal; text-decoration: none; font-weight: norma" & _
+        Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-family: Arial; font-style: normal; text-decoration: none; font-weight: norma"& _ 
             "l; font-size: 10pt; color: Black; ddo-char-set: 204", "Normal"))
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-size: 16pt; font-weight: bold", "Heading1", "Normal"))
-        Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: ita" & _
+        Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: ita"& _ 
             "lic", "Heading2", "Normal"))
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-size: 13pt; font-weight: bold", "Heading3", "Normal"))
-        CType(Me.lblTitle, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.imgLogoEN, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblEmail, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RevisionValue, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblRev, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblPrjRef, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtProjectName, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtPrjRef, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblPrjOwner, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtProjectOwner, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblPrjName, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblDate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtDate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblPage, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtContactNumber, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblContactNo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtEmail, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.imgLogoNO, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CurrentPageNumber, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblOf, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PageCount, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtGenCon, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTechNote, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtAddDet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblGenCon, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblTechNote, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblAddDet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblGenRem, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtGenRem, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DrawingsUsedValue, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtFooter, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblTitle,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.imgLogoEN,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblEmail,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtRev,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblRev,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblPrjRef,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtProjectName,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtPrjRef,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblPrjOwner,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtProjectOwner,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblPrjName,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblDate,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtDate,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblPage,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtContactNumber,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblContactNo,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtEmail,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.imgLogoNO,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.CurrentPageNumber,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblOf,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PageCount,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtGenCon,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtTechNote,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtAddDet,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblGenCon,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblTechNote,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblAddDet,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblGenRem,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtGenRem,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtFooter,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.txtPrjRef2,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me,System.ComponentModel.ISupportInitialize).EndInit
 
-    End Sub
+End Sub
 
     Public Sub New()
 
@@ -547,7 +543,7 @@ Partial Public Class rptEMEAQuoteTerms
     Private WithEvents lblAddDet As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents lblGenRem As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents lblEmail As GrapeCity.ActiveReports.SectionReportModel.Label
-    Private WithEvents RevisionValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents txtRev As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents lblRev As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents lblPrjRef As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents txtProjectName As GrapeCity.ActiveReports.SectionReportModel.TextBox
@@ -566,5 +562,5 @@ Partial Public Class rptEMEAQuoteTerms
     Private WithEvents lblOf As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents PageCount As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents txtGenRem As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents DrawingsUsedValue As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents txtPrjRef2 As GrapeCity.ActiveReports.SectionReportModel.TextBox
 End Class

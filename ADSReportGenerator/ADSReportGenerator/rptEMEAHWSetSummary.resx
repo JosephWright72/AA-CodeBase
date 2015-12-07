@@ -2537,6 +2537,18 @@
   <data name="txtExtended.OutputFormat" xml:space="preserve">
     <value>#,##0.00</value>
   </data>
+  <data name="txtDoorQty.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPrice.OutputFormat" xml:space="preserve">
+    <value>#,##0.00</value>
+  </data>
+  <data name="txtExtended.OutputFormat" xml:space="preserve">
+    <value>#,##0.00</value>
+  </data>
+  <data name="txtFooter.OutputFormat" xml:space="preserve">
+    <value>#,##</value>
+  </data>
   <data name="txtFooter.OutputFormat" xml:space="preserve">
     <value>#,##</value>
   </data>

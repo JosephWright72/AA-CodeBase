@@ -32,8 +32,7 @@ Partial Public Class rptEMEATimberStdDoorSizes
         Me.EMEATimberStdDoorSizesSub = New GrapeCity.ActiveReports.SectionReportModel.SubReport()
         Me.PageFooter = New GrapeCity.ActiveReports.SectionReportModel.PageFooter()
         Me.Footer = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.txtSizeInfo = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.FrameDepthList = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.FrameDepthListPrimedPainted = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.txtStandardFrameDepths = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblDoorTypes = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblModuleSize = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
@@ -46,7 +45,15 @@ Partial Public Class rptEMEATimberStdDoorSizes
         Me.txtAllSizesIn = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.LeafGroupFooter = New GrapeCity.ActiveReports.SectionReportModel.GroupFooter()
         Me.SubGroupHeader = New GrapeCity.ActiveReports.SectionReportModel.GroupHeader()
+        Me.lblDoorTypes2 = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.txtSizeInfo = New GrapeCity.ActiveReports.SectionReportModel.Label()
+        Me.lblPrimedPainted = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.lblHardwood = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.lblVeneered = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.FrameDepthListHardwood = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
+        Me.FrameDepthListVeneered = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.SubGroupFooter = New GrapeCity.ActiveReports.SectionReportModel.GroupFooter()
+        Me.txtNBRatings = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         CType(Me.lblReportName, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgLogoEN, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgLogoNO, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,8 +64,7 @@ Partial Public Class rptEMEATimberStdDoorSizes
         CType(Me.KickPlateSizeValue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DoorTypesValue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Footer, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtSizeInfo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FrameDepthList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FrameDepthListPrimedPainted, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtStandardFrameDepths, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblDoorTypes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblModuleSize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,12 +74,20 @@ Partial Public Class rptEMEATimberStdDoorSizes
         CType(Me.lblKickplateSize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LeafValue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtAllSizesIn, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblDoorTypes2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtSizeInfo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPrimedPainted, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblHardwood, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblVeneered, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FrameDepthListHardwood, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FrameDepthListVeneered, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtNBRatings, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'PageHeader
         '
         Me.PageHeader.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblReportName, Me.imgLogoEN, Me.imgLogoNO})
-        Me.PageHeader.Height = 0.6!
+        Me.PageHeader.Height = 0.3!
         Me.PageHeader.Name = "PageHeader"
         '
         'lblReportName
@@ -120,11 +134,12 @@ Partial Public Class rptEMEATimberStdDoorSizes
         'TimberFrameSizeValue
         '
         Me.TimberFrameSizeValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.TimberFrameSizeValue.CanShrink = True
         Me.TimberFrameSizeValue.DataField = "TimberFrameSize"
         Me.TimberFrameSizeValue.Height = 0.2!
         Me.TimberFrameSizeValue.Left = 2.0!
         Me.TimberFrameSizeValue.Name = "TimberFrameSizeValue"
-        Me.TimberFrameSizeValue.Style = "font-size: 9pt; font-weight: normal; text-align: center; ddo-char-set: 1"
+        Me.TimberFrameSizeValue.Style = "font-size: 8pt; font-weight: normal; text-align: center; ddo-char-set: 1"
         Me.TimberFrameSizeValue.Text = "TimberFrameSizeValue"
         Me.TimberFrameSizeValue.Top = 0.0!
         Me.TimberFrameSizeValue.Width = 1.25!
@@ -132,11 +147,12 @@ Partial Public Class rptEMEATimberStdDoorSizes
         'StructuralOpeningSizeValue
         '
         Me.StructuralOpeningSizeValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.StructuralOpeningSizeValue.CanShrink = True
         Me.StructuralOpeningSizeValue.DataField = "StructuralOpeningSize"
         Me.StructuralOpeningSizeValue.Height = 0.2!
         Me.StructuralOpeningSizeValue.Left = 0.75!
         Me.StructuralOpeningSizeValue.Name = "StructuralOpeningSizeValue"
-        Me.StructuralOpeningSizeValue.Style = "font-size: 9pt; font-weight: normal; text-align: center; ddo-char-set: 1"
+        Me.StructuralOpeningSizeValue.Style = "font-size: 8pt; font-weight: normal; text-align: center; ddo-char-set: 1"
         Me.StructuralOpeningSizeValue.Text = "StructuralOpeningSizeValue"
         Me.StructuralOpeningSizeValue.Top = 0.0!
         Me.StructuralOpeningSizeValue.Width = 1.25!
@@ -144,11 +160,12 @@ Partial Public Class rptEMEATimberStdDoorSizes
         'DoorLeafSizeValue
         '
         Me.DoorLeafSizeValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.DoorLeafSizeValue.CanShrink = True
         Me.DoorLeafSizeValue.DataField = "DoorLeafSize"
         Me.DoorLeafSizeValue.Height = 0.2!
         Me.DoorLeafSizeValue.Left = 3.25!
         Me.DoorLeafSizeValue.Name = "DoorLeafSizeValue"
-        Me.DoorLeafSizeValue.Style = "font-size: 9pt; font-weight: normal; text-align: center; ddo-char-set: 1"
+        Me.DoorLeafSizeValue.Style = "font-size: 8pt; font-weight: normal; text-align: center; ddo-char-set: 1"
         Me.DoorLeafSizeValue.Text = "DoorLeafSizeValue"
         Me.DoorLeafSizeValue.Top = 0.0!
         Me.DoorLeafSizeValue.Width = 1.25!
@@ -156,11 +173,12 @@ Partial Public Class rptEMEATimberStdDoorSizes
         'ModuleSizeValue
         '
         Me.ModuleSizeValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.ModuleSizeValue.CanShrink = True
         Me.ModuleSizeValue.DataField = "ModuleSize"
         Me.ModuleSizeValue.Height = 0.2!
         Me.ModuleSizeValue.Left = 0.0!
         Me.ModuleSizeValue.Name = "ModuleSizeValue"
-        Me.ModuleSizeValue.Style = "font-size: 9pt; font-weight: normal; text-align: center; ddo-char-set: 1"
+        Me.ModuleSizeValue.Style = "font-size: 8pt; font-weight: normal; text-align: center; ddo-char-set: 1"
         Me.ModuleSizeValue.Text = "ModuleSizeValue"
         Me.ModuleSizeValue.Top = 0.0!
         Me.ModuleSizeValue.Width = 0.75!
@@ -168,11 +186,12 @@ Partial Public Class rptEMEATimberStdDoorSizes
         'KickPlateSizeValue
         '
         Me.KickPlateSizeValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.KickPlateSizeValue.CanShrink = True
         Me.KickPlateSizeValue.DataField = "KickPlateSize"
         Me.KickPlateSizeValue.Height = 0.2!
         Me.KickPlateSizeValue.Left = 4.5!
         Me.KickPlateSizeValue.Name = "KickPlateSizeValue"
-        Me.KickPlateSizeValue.Style = "font-size: 9pt; font-weight: normal; text-align: center; ddo-char-set: 1"
+        Me.KickPlateSizeValue.Style = "font-size: 8pt; font-weight: normal; text-align: center; ddo-char-set: 1"
         Me.KickPlateSizeValue.Text = "KickPlateSizeValue"
         Me.KickPlateSizeValue.Top = 0.0!
         Me.KickPlateSizeValue.Width = 1.0!
@@ -180,11 +199,12 @@ Partial Public Class rptEMEATimberStdDoorSizes
         'DoorTypesValue
         '
         Me.DoorTypesValue.Border.TopStyle = GrapeCity.ActiveReports.BorderLineStyle.Solid
+        Me.DoorTypesValue.CanShrink = True
         Me.DoorTypesValue.DataField = "DoorTypes"
         Me.DoorTypesValue.Height = 0.2!
         Me.DoorTypesValue.Left = 5.5!
         Me.DoorTypesValue.Name = "DoorTypesValue"
-        Me.DoorTypesValue.Style = "font-size: 9pt; font-weight: normal; text-align: center; ddo-char-set: 1"
+        Me.DoorTypesValue.Style = "font-size: 8pt; font-weight: normal; text-align: center; ddo-char-set: 1"
         Me.DoorTypesValue.Text = "DoorTypesValue"
         Me.DoorTypesValue.Top = 0.0!
         Me.DoorTypesValue.Width = 2.5!
@@ -193,13 +213,13 @@ Partial Public Class rptEMEATimberStdDoorSizes
         '
         Me.EMEATimberStdDoorSizesSub.CanShrink = False
         Me.EMEATimberStdDoorSizesSub.CloseBorder = False
-        Me.EMEATimberStdDoorSizesSub.Height = 0.2!
-        Me.EMEATimberStdDoorSizesSub.Left = 3.0!
+        Me.EMEATimberStdDoorSizesSub.Height = 0.15!
+        Me.EMEATimberStdDoorSizesSub.Left = 3.25!
         Me.EMEATimberStdDoorSizesSub.Name = "EMEATimberStdDoorSizesSub"
         Me.EMEATimberStdDoorSizesSub.Report = Nothing
         Me.EMEATimberStdDoorSizesSub.ReportName = "EMEATimberStdDoorSizesSub"
         Me.EMEATimberStdDoorSizesSub.Top = 0.0!
-        Me.EMEATimberStdDoorSizesSub.Width = 5.0!
+        Me.EMEATimberStdDoorSizesSub.Width = 4.75!
         '
         'PageFooter
         '
@@ -220,125 +240,128 @@ Partial Public Class rptEMEATimberStdDoorSizes
         Me.Footer.Top = 0.0!
         Me.Footer.Width = 8.27!
         '
-        'txtSizeInfo
+        'FrameDepthListPrimedPainted
         '
-        Me.txtSizeInfo.DataField = "SetName"
-        Me.txtSizeInfo.Height = 0.2!
-        Me.txtSizeInfo.Left = 0.0!
-        Me.txtSizeInfo.Name = "txtSizeInfo"
-        Me.txtSizeInfo.Style = "font-size: 9pt; font-weight: bold; text-align: left; ddo-char-set: 1"
-        Me.txtSizeInfo.Text = "txtSizeInfo"
-        Me.txtSizeInfo.Top = 0.0!
-        Me.txtSizeInfo.Width = 3.0!
-        '
-        'FrameDepthList
-        '
-        Me.FrameDepthList.DataField = "FrameDepthList"
-        Me.FrameDepthList.Height = 0.2!
-        Me.FrameDepthList.Left = 2.0!
-        Me.FrameDepthList.Name = "FrameDepthList"
-        Me.FrameDepthList.Style = "font-size: 9pt; font-weight: normal; text-align: left; ddo-char-set: 1"
-        Me.FrameDepthList.Text = "Frame DepthList"
-        Me.FrameDepthList.Top = 0.2!
-        Me.FrameDepthList.Width = 4.0!
+        Me.FrameDepthListPrimedPainted.DataField = "FrameDepthListPrimedPainted"
+        Me.FrameDepthListPrimedPainted.Height = 0.15!
+        Me.FrameDepthListPrimedPainted.Left = 3.25!
+        Me.FrameDepthListPrimedPainted.Name = "FrameDepthListPrimedPainted"
+        Me.FrameDepthListPrimedPainted.Style = "font-size: 8pt; font-weight: normal; text-align: left; ddo-char-set: 1"
+        Me.FrameDepthListPrimedPainted.Text = "Frame DepthListPrimedPainted"
+        Me.FrameDepthListPrimedPainted.Top = 0.85!
+        Me.FrameDepthListPrimedPainted.Width = 4.75!
         '
         'txtStandardFrameDepths
         '
-        Me.txtStandardFrameDepths.Height = 0.2!
+        Me.txtStandardFrameDepths.Height = 0.15!
         Me.txtStandardFrameDepths.Left = 0.0!
         Me.txtStandardFrameDepths.Name = "txtStandardFrameDepths"
-        Me.txtStandardFrameDepths.Style = "font-size: 9pt; font-weight: bold; text-align: left; ddo-char-set: 1"
+        Me.txtStandardFrameDepths.Style = "font-size: 8pt; font-weight: bold; text-align: left; ddo-char-set: 1"
         Me.txtStandardFrameDepths.Text = "txtStandardFrameDepths"
-        Me.txtStandardFrameDepths.Top = 0.2!
+        Me.txtStandardFrameDepths.Top = 0.85!
         Me.txtStandardFrameDepths.Width = 2.0!
         '
         'lblDoorTypes
         '
+        Me.lblDoorTypes.CanShrink = True
+        Me.lblDoorTypes.DataField = "Header6"
         Me.lblDoorTypes.Height = 0.2!
         Me.lblDoorTypes.Left = 5.5!
         Me.lblDoorTypes.Name = "lblDoorTypes"
-        Me.lblDoorTypes.Style = "font-size: 9pt; font-weight: bold; text-align: center; ddo-char-set: 1"
-        Me.lblDoorTypes.Text = "lblDoorTypes"
-        Me.lblDoorTypes.Top = 0.4!
+        Me.lblDoorTypes.Style = "font-size: 8pt; font-weight: bold; text-align: center; ddo-char-set: 1"
+        Me.lblDoorTypes.Text = "Header6"
+        Me.lblDoorTypes.Top = 0.25!
         Me.lblDoorTypes.Width = 2.5!
         '
         'lblModuleSize
         '
+        Me.lblModuleSize.CanShrink = True
+        Me.lblModuleSize.DataField = "Header1"
         Me.lblModuleSize.Height = 0.2!
         Me.lblModuleSize.Left = 0.0!
         Me.lblModuleSize.Name = "lblModuleSize"
-        Me.lblModuleSize.Style = "font-size: 9pt; font-weight: bold; text-align: center; ddo-char-set: 1"
-        Me.lblModuleSize.Text = "lblModuleSize"
-        Me.lblModuleSize.Top = 0.4!
+        Me.lblModuleSize.Style = "font-size: 8pt; font-weight: bold; text-align: center; ddo-char-set: 1"
+        Me.lblModuleSize.Text = "Header1"
+        Me.lblModuleSize.Top = 0.25!
         Me.lblModuleSize.Width = 0.75!
         '
         'lblStructuralOpeningSize
         '
+        Me.lblStructuralOpeningSize.CanShrink = True
+        Me.lblStructuralOpeningSize.DataField = "Header2"
         Me.lblStructuralOpeningSize.Height = 0.2!
         Me.lblStructuralOpeningSize.Left = 0.75!
         Me.lblStructuralOpeningSize.Name = "lblStructuralOpeningSize"
-        Me.lblStructuralOpeningSize.Style = "font-size: 9pt; font-weight: bold; text-align: center; ddo-char-set: 1"
-        Me.lblStructuralOpeningSize.Text = "lblStructuralOpeningSize"
-        Me.lblStructuralOpeningSize.Top = 0.4!
+        Me.lblStructuralOpeningSize.Style = "font-size: 8pt; font-weight: bold; text-align: center; ddo-char-set: 1"
+        Me.lblStructuralOpeningSize.Text = "Header2"
+        Me.lblStructuralOpeningSize.Top = 0.25!
         Me.lblStructuralOpeningSize.Width = 1.25!
         '
         'lblTimberFrameSize
         '
+        Me.lblTimberFrameSize.CanShrink = True
+        Me.lblTimberFrameSize.DataField = "Header3"
         Me.lblTimberFrameSize.Height = 0.2!
         Me.lblTimberFrameSize.Left = 2.0!
         Me.lblTimberFrameSize.Name = "lblTimberFrameSize"
-        Me.lblTimberFrameSize.Style = "font-size: 9pt; font-weight: bold; text-align: center; ddo-char-set: 1"
-        Me.lblTimberFrameSize.Text = "lblTimberFrameSize"
-        Me.lblTimberFrameSize.Top = 0.4!
+        Me.lblTimberFrameSize.Style = "font-size: 8pt; font-weight: bold; text-align: center; ddo-char-set: 1"
+        Me.lblTimberFrameSize.Text = "Header3"
+        Me.lblTimberFrameSize.Top = 0.25!
         Me.lblTimberFrameSize.Width = 1.25!
         '
         'lblDoorLeafSize
         '
+        Me.lblDoorLeafSize.CanShrink = True
+        Me.lblDoorLeafSize.DataField = "Header4"
         Me.lblDoorLeafSize.Height = 0.2!
         Me.lblDoorLeafSize.Left = 3.25!
         Me.lblDoorLeafSize.Name = "lblDoorLeafSize"
-        Me.lblDoorLeafSize.Style = "font-size: 9pt; font-weight: bold; text-align: center; ddo-char-set: 1"
-        Me.lblDoorLeafSize.Text = "lblDoorLeafSize"
-        Me.lblDoorLeafSize.Top = 0.4!
+        Me.lblDoorLeafSize.Style = "font-size: 8pt; font-weight: bold; text-align: center; ddo-char-set: 1"
+        Me.lblDoorLeafSize.Text = "Header4"
+        Me.lblDoorLeafSize.Top = 0.25!
         Me.lblDoorLeafSize.Width = 1.25!
         '
         'lblKickplateSize
         '
+        Me.lblKickplateSize.CanShrink = True
+        Me.lblKickplateSize.DataField = "Header5"
         Me.lblKickplateSize.Height = 0.2!
         Me.lblKickplateSize.Left = 4.5!
         Me.lblKickplateSize.Name = "lblKickplateSize"
-        Me.lblKickplateSize.Style = "font-size: 9pt; font-weight: bold; text-align: center; ddo-char-set: 1"
-        Me.lblKickplateSize.Text = "lblKickplateSize"
-        Me.lblKickplateSize.Top = 0.4!
+        Me.lblKickplateSize.Style = "font-size: 8pt; font-weight: bold; text-align: center; ddo-char-set: 1"
+        Me.lblKickplateSize.Text = "Header5"
+        Me.lblKickplateSize.Top = 0.25!
         Me.lblKickplateSize.Width = 1.0!
         '
         'LeafValue
         '
+        Me.LeafValue.CanShrink = True
         Me.LeafValue.DataField = "Leaf"
         Me.LeafValue.Height = 0.2!
         Me.LeafValue.Left = 0.0!
         Me.LeafValue.Name = "LeafValue"
-        Me.LeafValue.Style = "font-size: 9pt; font-weight: bold; text-align: left; ddo-char-set: 1"
+        Me.LeafValue.Style = "font-size: 8pt; font-weight: bold; text-align: left; ddo-char-set: 1"
         Me.LeafValue.Text = "Leaf"
-        Me.LeafValue.Top = 0.2!
+        Me.LeafValue.Top = 0.05!
         Me.LeafValue.Width = 2.0!
         '
         'LeafGroupHeader
         '
         Me.LeafGroupHeader.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.LeafValue, Me.lblModuleSize, Me.lblDoorTypes, Me.lblKickplateSize, Me.lblDoorLeafSize, Me.lblTimberFrameSize, Me.lblStructuralOpeningSize, Me.txtAllSizesIn})
         Me.LeafGroupHeader.DataField = "Leaf"
-        Me.LeafGroupHeader.Height = 0.6!
+        Me.LeafGroupHeader.Height = 0.45!
         Me.LeafGroupHeader.Name = "LeafGroupHeader"
         Me.LeafGroupHeader.RepeatStyle = GrapeCity.ActiveReports.SectionReportModel.RepeatStyle.OnPage
         '
         'txtAllSizesIn
         '
+        Me.txtAllSizesIn.CanShrink = True
         Me.txtAllSizesIn.Height = 0.2!
         Me.txtAllSizesIn.Left = 6.0!
         Me.txtAllSizesIn.Name = "txtAllSizesIn"
-        Me.txtAllSizesIn.Style = "font-size: 9pt; font-weight: normal; text-align: left; ddo-char-set: 1"
+        Me.txtAllSizesIn.Style = "font-size: 8pt; font-weight: normal; text-align: left; ddo-char-set: 1"
         Me.txtAllSizesIn.Text = "txtAllSizesIn"
-        Me.txtAllSizesIn.Top = 0.2!
+        Me.txtAllSizesIn.Top = 0.05!
         Me.txtAllSizesIn.Width = 2.0!
         '
         'LeafGroupFooter
@@ -348,24 +371,108 @@ Partial Public Class rptEMEATimberStdDoorSizes
         '
         'SubGroupHeader
         '
-        Me.SubGroupHeader.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.EMEATimberStdDoorSizesSub, Me.txtSizeInfo, Me.FrameDepthList, Me.txtStandardFrameDepths})
-        Me.SubGroupHeader.Height = 0.4!
+        Me.SubGroupHeader.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.EMEATimberStdDoorSizesSub, Me.FrameDepthListPrimedPainted, Me.txtStandardFrameDepths, Me.lblDoorTypes2, Me.txtSizeInfo, Me.lblPrimedPainted, Me.lblHardwood, Me.lblVeneered, Me.FrameDepthListHardwood, Me.FrameDepthListVeneered})
+        Me.SubGroupHeader.Height = 1.3!
         Me.SubGroupHeader.Name = "SubGroupHeader"
+        '
+        'lblDoorTypes2
+        '
+        Me.lblDoorTypes2.CanShrink = True
+        Me.lblDoorTypes2.Height = 0.15!
+        Me.lblDoorTypes2.Left = 2.0!
+        Me.lblDoorTypes2.Name = "lblDoorTypes2"
+        Me.lblDoorTypes2.Style = "font-size: 8pt; font-weight: bold; text-align: center; ddo-char-set: 1"
+        Me.lblDoorTypes2.Text = "lblDoorTypes2"
+        Me.lblDoorTypes2.Top = 0.0!
+        Me.lblDoorTypes2.Width = 1.25!
+        '
+        'txtSizeInfo
+        '
+        Me.txtSizeInfo.Height = 0.8!
+        Me.txtSizeInfo.HyperLink = Nothing
+        Me.txtSizeInfo.Left = 0.0!
+        Me.txtSizeInfo.Name = "txtSizeInfo"
+        Me.txtSizeInfo.Style = "font-size: 8pt; font-weight: bold; ddo-char-set: 1"
+        Me.txtSizeInfo.Text = "txtSizeInfo"
+        Me.txtSizeInfo.Top = 0.0!
+        Me.txtSizeInfo.Width = 2.0!
+        '
+        'lblPrimedPainted
+        '
+        Me.lblPrimedPainted.Height = 0.15!
+        Me.lblPrimedPainted.Left = 2.0!
+        Me.lblPrimedPainted.Name = "lblPrimedPainted"
+        Me.lblPrimedPainted.Style = "font-size: 8pt; font-weight: normal; text-align: left; ddo-char-set: 1"
+        Me.lblPrimedPainted.Text = "lblPrimedPainted"
+        Me.lblPrimedPainted.Top = 0.85!
+        Me.lblPrimedPainted.Width = 1.25!
+        '
+        'lblHardwood
+        '
+        Me.lblHardwood.Height = 0.15!
+        Me.lblHardwood.Left = 2.0!
+        Me.lblHardwood.Name = "lblHardwood"
+        Me.lblHardwood.Style = "font-size: 8pt; font-weight: normal; text-align: left; ddo-char-set: 1"
+        Me.lblHardwood.Text = "lblHardwood"
+        Me.lblHardwood.Top = 1.0!
+        Me.lblHardwood.Width = 1.25!
+        '
+        'lblVeneered
+        '
+        Me.lblVeneered.Height = 0.15!
+        Me.lblVeneered.Left = 2.0!
+        Me.lblVeneered.Name = "lblVeneered"
+        Me.lblVeneered.Style = "font-size: 8pt; font-weight: normal; text-align: left; ddo-char-set: 1"
+        Me.lblVeneered.Text = "lblVeneered"
+        Me.lblVeneered.Top = 1.15!
+        Me.lblVeneered.Width = 1.25!
+        '
+        'FrameDepthListHardwood
+        '
+        Me.FrameDepthListHardwood.DataField = "FrameDepthListHardwood"
+        Me.FrameDepthListHardwood.Height = 0.15!
+        Me.FrameDepthListHardwood.Left = 3.25!
+        Me.FrameDepthListHardwood.Name = "FrameDepthListHardwood"
+        Me.FrameDepthListHardwood.Style = "font-size: 8pt; font-weight: normal; text-align: left; ddo-char-set: 1"
+        Me.FrameDepthListHardwood.Text = "FrameDepthListHardwood"
+        Me.FrameDepthListHardwood.Top = 1.0!
+        Me.FrameDepthListHardwood.Width = 4.75!
+        '
+        'FrameDepthListVeneered
+        '
+        Me.FrameDepthListVeneered.DataField = "FrameDepthListVeneered"
+        Me.FrameDepthListVeneered.Height = 0.15!
+        Me.FrameDepthListVeneered.Left = 3.25!
+        Me.FrameDepthListVeneered.Name = "FrameDepthListVeneered"
+        Me.FrameDepthListVeneered.Style = "font-size: 8pt; font-weight: normal; text-align: left; ddo-char-set: 1"
+        Me.FrameDepthListVeneered.Text = "FrameDepthListVeneered"
+        Me.FrameDepthListVeneered.Top = 1.15!
+        Me.FrameDepthListVeneered.Width = 4.75!
         '
         'SubGroupFooter
         '
-        Me.SubGroupFooter.Height = 0.0!
+        Me.SubGroupFooter.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.txtNBRatings})
+        Me.SubGroupFooter.Height = 0.2!
         Me.SubGroupFooter.Name = "SubGroupFooter"
+        '
+        'txtNBRatings
+        '
+        Me.txtNBRatings.CanShrink = True
+        Me.txtNBRatings.Height = 0.2!
+        Me.txtNBRatings.Left = 0.0!
+        Me.txtNBRatings.Name = "txtNBRatings"
+        Me.txtNBRatings.Style = "font-size: 8pt; font-weight: normal; text-align: left; ddo-char-set: 1"
+        Me.txtNBRatings.Text = "txtNBRatings"
+        Me.txtNBRatings.Top = 0.0!
+        Me.txtNBRatings.Width = 8.0!
         '
         'rptEMEATimberStdDoorSizes
         '
         Me.MasterReport = False
-        Me.PageSettings.Margins.Bottom = 0.2!
-        Me.PageSettings.Margins.Left = 0.2!
-        Me.PageSettings.Margins.Right = 0.2!
-        Me.PageSettings.Margins.Top = 0.2!
+        Me.PageSettings.DefaultPaperSize = False
         Me.PageSettings.Orientation = GrapeCity.ActiveReports.Document.Section.PageOrientation.Portrait
         Me.PageSettings.PaperHeight = 11.69!
+        Me.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.A4
         Me.PageSettings.PaperWidth = 8.27!
         Me.PrintWidth = 8.2!
         Me.Sections.Add(Me.PageHeader)
@@ -391,8 +498,7 @@ Partial Public Class rptEMEATimberStdDoorSizes
         CType(Me.KickPlateSizeValue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DoorTypesValue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Footer, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtSizeInfo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FrameDepthList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FrameDepthListPrimedPainted, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtStandardFrameDepths, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblDoorTypes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblModuleSize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -402,6 +508,14 @@ Partial Public Class rptEMEATimberStdDoorSizes
         CType(Me.lblKickplateSize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LeafValue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtAllSizesIn, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblDoorTypes2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtSizeInfo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPrimedPainted, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblHardwood, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblVeneered, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FrameDepthListHardwood, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FrameDepthListVeneered, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtNBRatings, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -434,10 +548,17 @@ Partial Public Class rptEMEATimberStdDoorSizes
     Private WithEvents LeafValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents LeafGroupHeader As GrapeCity.ActiveReports.SectionReportModel.GroupHeader
     Private WithEvents LeafGroupFooter As GrapeCity.ActiveReports.SectionReportModel.GroupFooter
-    Private WithEvents txtSizeInfo As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents FrameDepthList As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents FrameDepthListPrimedPainted As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents txtStandardFrameDepths As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents SubGroupHeader As GrapeCity.ActiveReports.SectionReportModel.GroupHeader
     Private WithEvents SubGroupFooter As GrapeCity.ActiveReports.SectionReportModel.GroupFooter
     Private WithEvents txtAllSizesIn As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents lblDoorTypes2 As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents txtSizeInfo As GrapeCity.ActiveReports.SectionReportModel.Label
+    Private WithEvents lblPrimedPainted As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents lblHardwood As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents lblVeneered As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents FrameDepthListHardwood As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents FrameDepthListVeneered As GrapeCity.ActiveReports.SectionReportModel.TextBox
+    Private WithEvents txtNBRatings As GrapeCity.ActiveReports.SectionReportModel.TextBox
 End Class

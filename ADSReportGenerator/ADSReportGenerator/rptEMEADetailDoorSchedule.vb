@@ -12,7 +12,7 @@ Public Class rptEMEADetailDoorSchedule
 
         lblProjectName.Text = sHash.Item("lblPrjName")
         lblProjectRef.Text = sHash.Item("lblPrjRef")
-        lblRev.Text = sHash.Item("lblRev")
+        lblRevNo.Text = sHash.Item("lblRevNo")
         lblProjectOwner.Text = sHash.Item("lblPrjOwner")
         lblOf.Text = sHash.Item("lblOf")
         lblPage.Text = sHash.Item("lblPage")

@@ -304,6 +304,12 @@
     <Compile Include="rptEMEADetailDoorSchedule.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptEMEAQuoteTermsDoors.Designer.vb">
+      <DependentUpon>rptEMEAQuoteTermsDoors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEMEAQuoteTermsDoors.vb">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="rptEMEADetailDoorSchedule.resx">
@@ -317,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="rptEMEADoorsIronmongerySetSummary.resx">
       <DependentUpon>rptEMEADoorsIronmongerySetSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEMEAQuoteTermsDoors.resx">
+      <DependentUpon>rptEMEAQuoteTermsDoors.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rptEMEATimberStdDoorSizes.resx">
       <DependentUpon>rptEMEATimberStdDoorSizes.vb</DependentUpon>

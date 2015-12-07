@@ -82,7 +82,20 @@ Public Class rptEMEACoverLetter
 
         lblPrjName.Text = sHash.Item("lblPrjName")
         lblPrjRef.Text = sHash.Item("lblPrjRef")
-        lblRev.Text = sHash.Item("lblRev")
+
+        If ISO.Equals("EN") Then
+            lblRev.Text = sHash.Item("lblRevNo")
+            txtRev.Text = txtRev.DataField
+            txtPrjRef.Visible = False
+            txtPrjRef2.Visible = True
+        Else
+            lblRev.Text = sHash.Item("lblRev")
+            txtRev.DataField = ""
+            txtRev.Text = sRevisionText
+            txtPrjRef.Visible = True
+            txtPrjRef2.Visible = False
+        End If
+
         lblPrjOwner.Text = sHash.Item("lblPrjOwner")
         lblContactNo.Text = sHash.Item("lblContactNo")
         lblEmail.Text = sHash.Item("lblEmail")
@@ -112,17 +125,17 @@ Public Class rptEMEACoverLetter
             imgLogoNO.Visible = ISO.Equals("NO")
         End If
 
-            txtEmailSO.Visible = ISO.Equals("BE")
+        txtEmailSO.Visible = ISO.Equals("BE")
 
-            If ISO.Equals("BE") Then
-                txtProjectOwner.DataField = "SpecConsult"
-                txtContactNumber.DataField = "SpecConNumber"
-                txtPrjOwnSO.DataField = "SpecConsult"
-                txtTitleSO.DataField = "SpecConTitle"
-                txtConNumSO.DataField = "SpecConNumber"
-                txtEmailSO.DataField = "SpecConEmail"
-                txtEmail.DataField = "SpecConEmail"
-            End If
+        If ISO.Equals("BE") Then
+            txtProjectOwner.DataField = "SpecConsult"
+            txtContactNumber.DataField = "SpecConNumber"
+            txtPrjOwnSO.DataField = "SpecConsult"
+            txtTitleSO.DataField = "SpecConTitle"
+            txtConNumSO.DataField = "SpecConNumber"
+            txtEmailSO.DataField = "SpecConEmail"
+            txtEmail.DataField = "SpecConEmail"
+        End If
 
 
     End Sub

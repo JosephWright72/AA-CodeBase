@@ -134,40 +134,40 @@ Module ModMain
                 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
                 ' emea ironmongery set summary
-                'IRONMONGERYSETSUMMARYúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Ironmongery_Set_Summary.pdfúPDFúúIronmongery Set Summaryú4344útrueúRev72
+                'IRONMONGERYSETSUMMARYúMETRICú28502úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Ironmongery_Set_Summary.pdfúPDFúúIronmongery Set Summaryú4344útrueúRev72
 
                 ' emea ironmongery schedule
-                'IRONMONGERYSCHEDULEúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Ironmongery_Schedule.pdfúPDFúúIronmongery Scheduleú4344ú2ú2útrueútrueútrueútrueúRev72
+                'IRONMONGERYSCHEDULEúMETRICú28520úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Ironmongery_Schedule.pdfúPDFúúIronmongery Scheduleú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea ironmongery schedule summary
-                'IRONMONGERYSCHEDULESUMMARYúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Ironmongery_Schedule_Summary.pdfúPDFúúIronmongery Schedule Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
+                'IRONMONGERYSCHEDULESUMMARYúMETRICú28502úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Ironmongery_Schedule_Summary.pdfúPDFúúIronmongery Schedule Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea door summary
-                'DOORSUMMARYúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Door_Summary.pdfúPDFúúDoor Summaryú4344úRev72
+                'DOORSUMMARYúMETRICú28500úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Door_Summary.pdfúPDFúúDoor Summaryú4344úRev72
 
                 ' emea quotations terms
-                'QUOTETERMSúMETRICú28423úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Quote_Terms.pdfúPDFúúú4344úRev72
+                'QUOTETERMSúMETRICú28487úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Quote_Terms.pdfúPDFúúú4344úRev72
 
                 ' emea cover letter
-                'COVERLETTERúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Cover_Letter.pdfúPDFúúú4344úTrueúFalseúFalseúRev72
+                'COVERLETTERúMETRICú28500úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Cover_Letter.rtfúRTFúúú4344úTrueúFalseúFalseúRev72
 
                 ' emea quotations terms doors
-                'QUOTETERMSDOORSúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Quote_Terms.rtfúRTFúúú4344úRev72
+                'QUOTETERMSDOORSúMETRICú28487úúC:\Users\wrightj\Documents\CGI\AA\Output\UK_Quote_Terms_Doors.rtfúRTFúúú4344úRev72
 
                 ' emea timber standard door sizes report
                 'TIMBERSTDDOORSIZESúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\Timber_Std_Door_Sizes.pdfúPDFúúú4344úRev72
 
                 ' emea door schedule summary report
-                'DOORSCHEDULESUMMARYúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary.rtfúRTFúúDoor Schedule Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
+                'DOORSCHEDULESUMMARYúMETRICú28500úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary.rtfúRTFúúDoor Schedule Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea door schedule summary by door type report
-                'DOORSCHEDULESUMMARYBYDOORTYPEúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary_By_Door_Type.rtfúRTFúúDoor Schedule Summary By Door Typeú4344ú2ú2útrueútrueútrueútrueúRev72
+                'DOORSCHEDULESUMMARYBYDOORTYPEúMETRICú28500úúC:\Users\wrightj\Documents\CGI\AA\Output\Door_Schedule_Summary_By_Door_Type.rtfúRTFúúDoor Schedule Summary By Door Typeú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea doors and ironmongery set summary report
-                'DOORSANDIRONMONGERYSETSUMMARYúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\Doors_And_Ironmongery_Set_Summary.pdfúPDFúúDoors and Ironmongery Set Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
+                'DOORSANDIRONMONGERYSETSUMMARYúMETRICú28500úúC:\Users\wrightj\Documents\CGI\AA\Output\Doors_And_Ironmongery_Set_Summary.pdfúPDFúúDoors and Ironmongery Set Summaryú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 ' emea detail door schedule report
-                'DETAILDOORSCHEDULEúMETRICú28478úúC:\Users\wrightj\Documents\CGI\AA\Output\Detail_Door_Schedule.xlsúXLSúúDetail Door Scheduleú4344ú2ú2útrueútrueútrueútrueúRev72
+                'DETAILDOORSCHEDULEúMETRICú28500úúC:\Users\wrightj\Documents\CGI\AA\Output\Detail_Door_Schedule.xlsúXLSúúDetail Door Scheduleú4344ú2ú2útrueútrueútrueútrueúRev72
 
                 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -317,7 +317,7 @@ GetOut:
                     End
                     Exit Sub
                 Case "QUOTETERMSDOORS"
-                    CreateQuoteTerms(arguments)
+                    CreateQuoteTermsDoors(arguments)
                     End
                     Exit Sub
                 Case "HARDWARESCHEDULE"
@@ -2911,70 +2911,71 @@ ErrHandler:
 
 
         strQ = " DECLARE @PROJECTID INT" & _
-       " SET @PROJECTID = " & PrjID1.ToString & _
-       " SET ARITHABORT ON" & _
-       " SELECT AP.PROJECTNAME," & _
-       " AP.ID ProjectReference," & _
-       "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
-       "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
-       "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
-       " HW.SETNAME,HW.SETDESC," & _
-       " Max(TOTALS.PRICE) AS Price," & _
-       " Max(DOORS.QTY) AS Qty," & _
-       " Max(TOTALS.PRICE)*Max(DOORS.QTY) AS ExtendedPrice," & _
-       " (ACS.FIRSTNAME+' '+ACS.LASTNAME) AS SalesRep," & _
-       " ACS.EMAIL as Email," & _
-       " CASE WHEN Day(Getdate()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'st ' WHEN Day(Getdate()) IN ( 2, 22 ) " & _
-                " THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd ' WHEN Day(Getdate()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd ' " & _
-                " ELSE CONVERT(VARCHAR, Day(Getdate())) + 'th ' END+Datename(MONTH, Getdate())+' ' " & _
-                " +CONVERT(VARCHAR, Year(Getdate())) as TodaysDateEN, " & _
-       " getdate() as TodaysDate,Ltrim(NOTES.LIST) SetNotes, " & _
-                " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
-         " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
-         " ACS.Email AS PrjOwnEmail ," & _
-         " CS.Email AS SpecConEmail ," & _
-         " ACS.Phone PrjOwnNumber, " & _
-         " CS.Phone SpecConNumber, " & _
-         " ACS.Title PrjOwnTitle, " & _
-         " CS.Title SpecConTitle " & _
-       " FROM   AAOSHWSETS HW " & _
-       " LEFT OUTER JOIN AAOSPROJECTS AP ON HW.PROJECTID=AP.ID " & _
-       " LEFT OUTER JOIN AAOSCONSULTANTS ACS ON AP.ARCHCONSULTANT=ACS.ID " & _
-         " left outer join AAOSConsultants CS on AP.consultant = CS.id" & _
-       " LEFT OUTER JOIN AAOSDOORS AD ON AD.PROJECTID=@PROJECTID AND AD.HWSET=HW.SETNAME " & _
-       " LEFT OUTER JOIN (SELECT DISTINCT (PROJECTID) ProjectID,Stuff((SELECT '  '+Char(13),+SETNOTES [text()] " & _
-                        " FROM   (SELECT DISTINCT (PROJECTID),CASE WHEN Len(SETNOTES)>0 THEN (SETNAME+' : ' " & _
-                                    " +Replace(Replace(SETNOTES, Char(13), ' '), Char(10), ' ')) " & _
-                                    " ELSE NULL " & _
-                                   " END AS SetNotes " & _
-                                   " FROM   AAOSHWSETS T " & _
-                                   " WHERE  PROJECTID=@PROJECTID AND " & _
-                                   " SETNOTES!='' " & _
-                                   " GROUP  BY PROJECTID,SETNAME,SETNOTES) A " & _
-                            " WHERE  PROJECTID=@PROJECTID " & _
-                            " FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
-                            " FROM   AAOSHWSETS T " & _
-                           " WHERE  PROJECTID=@PROJECTID " & _
-                           " GROUP  BY PROJECTID,SETNOTES) NOTES ON NOTES.PROJECTID=HW.PROJECTID " & _
-       " LEFT OUTER JOIN (SELECT PROJECTID,HWSET,Sum(QTY) Qty,Stuff((SELECT ', '+Cast(MARK AS VARCHAR(250)) [text()] " & _
-                                    " FROM   AAOSDOORS " & _
-                                    " WHERE  HWSET=T.HWSET AND " & _
-                                    " PROJECTID=@PROJECTID " & _
-                                    " FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
-                            " FROM   AAOSDOORS T " & _
-                            " WHERE  PROJECTID=@PROJECTID AND " & _
-                            " (Charindex('deleted', CHANGELOG)<1) " & _
-                        " GROUP  BY PROJECTID,HWSET) DOORS ON DOORS.HWSET=HW.SETNAME AND " & _
-                        " DOORS.PROJECTID=HW.PROJECTID " & _
-       " LEFT OUTER JOIN (SELECT PROJECTID,SETNAME,Sum(Cast (QTY AS INT)) Qty," & _
-                        "" & _
-                        " SUM(CASE WHEN LEN(AAOSHWSets.Price) = 0 THEN '0.00' ELSE CAST(AAOSHWSets.Price AS DECIMAL(18,2)) END * CAST (Qty AS INT)) Price" & _
-                        "" & _
-                        " FROM   AAOSHWSETS " & _
-                        " WHERE  AAOSHWSETS.PROJECTID=@PROJECTID " & _
-                        " GROUP  BY AAOSHWSETS.PROJECTID,SETNAME) TOTALS ON TOTALS.PROJECTID=HW.PROJECTID AND TOTALS.SETNAME=HW.SETNAME " & _
-       " WHERE  HW.PROJECTID=@PROJECTID " & _
-       " GROUP  BY AP.PROJECTNAME,AP.ID,AP.OriginalProjectID, AP.RevisionNumber, HW.SETNAME,HW.SETDESC,ACS.FIRSTNAME,ACS.LASTNAME,ACS.EMAIL,NOTES.LIST, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title "
+        " SET @PROJECTID = " & PrjID1.ToString & _
+        " SET ARITHABORT ON" & _
+        " SELECT AP.PROJECTNAME," & _
+        " AP.ID ProjectReference," & _
+        "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
+        "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+        "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
+        " CAST(AP.RevisionNumber AS nvarchar(max)) AS Revision, " & _
+        " HW.SETNAME,HW.SETDESC," & _
+        " Max(TOTALS.PRICE) AS Price," & _
+        " Max(DOORS.QTY) AS Qty," & _
+        " Max(TOTALS.PRICE)*Max(DOORS.QTY) AS ExtendedPrice," & _
+        " (ACS.FIRSTNAME+' '+ACS.LASTNAME) AS SalesRep," & _
+        " ACS.EMAIL as Email," & _
+        " CASE WHEN Day(Getdate()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'st ' WHEN Day(Getdate()) IN ( 2, 22 ) " & _
+        " THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd ' WHEN Day(Getdate()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd ' " & _
+        " ELSE CONVERT(VARCHAR, Day(Getdate())) + 'th ' END+Datename(MONTH, Getdate())+' ' " & _
+        " +CONVERT(VARCHAR, Year(Getdate())) as TodaysDateEN, " & _
+        " getdate() as TodaysDate,Ltrim(NOTES.LIST) SetNotes, " & _
+        " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
+        " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
+        " ACS.Email AS PrjOwnEmail ," & _
+        " CS.Email AS SpecConEmail ," & _
+        " ACS.Phone PrjOwnNumber, " & _
+        " CS.Phone SpecConNumber, " & _
+        " ACS.Title PrjOwnTitle, " & _
+        " CS.Title SpecConTitle " & _
+        " FROM   AAOSHWSETS HW " & _
+        " LEFT OUTER JOIN AAOSPROJECTS AP ON HW.PROJECTID=AP.ID " & _
+        " LEFT OUTER JOIN AAOSCONSULTANTS ACS ON AP.ARCHCONSULTANT=ACS.ID " & _
+        " left outer join AAOSConsultants CS on AP.consultant = CS.id" & _
+        " LEFT OUTER JOIN AAOSDOORS AD ON AD.PROJECTID=@PROJECTID AND AD.HWSET=HW.SETNAME " & _
+        " LEFT OUTER JOIN (SELECT DISTINCT (PROJECTID) ProjectID,Stuff((SELECT '  '+Char(13),+SETNOTES [text()] " & _
+        " FROM   (SELECT DISTINCT (PROJECTID),CASE WHEN Len(SETNOTES)>0 THEN (SETNAME+' : ' " & _
+        " +Replace(Replace(SETNOTES, Char(13), ' '), Char(10), ' ')) " & _
+        " ELSE NULL " & _
+        " END AS SetNotes " & _
+        " FROM   AAOSHWSETS T " & _
+        " WHERE  PROJECTID=@PROJECTID AND " & _
+        " SETNOTES!='' " & _
+        " GROUP  BY PROJECTID,SETNAME,SETNOTES) A " & _
+        " WHERE  PROJECTID=@PROJECTID " & _
+        " FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
+        " FROM   AAOSHWSETS T " & _
+        " WHERE  PROJECTID=@PROJECTID " & _
+        " GROUP  BY PROJECTID,SETNOTES) NOTES ON NOTES.PROJECTID=HW.PROJECTID " & _
+        " LEFT OUTER JOIN (SELECT PROJECTID,HWSET,Sum(QTY) Qty,Stuff((SELECT ', '+Cast(MARK AS VARCHAR(250)) [text()] " & _
+        " FROM   AAOSDOORS " & _
+        " WHERE  HWSET=T.HWSET AND " & _
+        " PROJECTID=@PROJECTID " & _
+        " FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
+        " FROM   AAOSDOORS T " & _
+        " WHERE  PROJECTID=@PROJECTID AND " & _
+        " (Charindex('deleted', CHANGELOG)<1) " & _
+        " GROUP  BY PROJECTID,HWSET) DOORS ON DOORS.HWSET=HW.SETNAME AND " & _
+        " DOORS.PROJECTID=HW.PROJECTID " & _
+        " LEFT OUTER JOIN (SELECT PROJECTID,SETNAME,Sum(Cast (QTY AS INT)) Qty," & _
+        "" & _
+        " SUM(CASE WHEN LEN(AAOSHWSets.Price) = 0 THEN '0.00' ELSE CAST(AAOSHWSets.Price AS DECIMAL(18,2)) END * CAST (Qty AS INT)) Price" & _
+        "" & _
+        " FROM   AAOSHWSETS " & _
+        " WHERE  AAOSHWSETS.PROJECTID=@PROJECTID " & _
+        " GROUP  BY AAOSHWSETS.PROJECTID,SETNAME) TOTALS ON TOTALS.PROJECTID=HW.PROJECTID AND TOTALS.SETNAME=HW.SETNAME " & _
+        " WHERE  HW.PROJECTID=@PROJECTID " & _
+        " GROUP  BY AP.PROJECTNAME,AP.ID,AP.OriginalProjectID, AP.RevisionNumber, HW.SETNAME,HW.SETDESC,ACS.FIRSTNAME,ACS.LASTNAME,ACS.EMAIL,NOTES.LIST, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title "
 
 
 
@@ -3154,283 +3155,281 @@ ErrHandler:
         Dim strQ As String
 
         strQ = " DECLARE @PROJECTID INT" & _
-       " DECLARE @DOORFILTER INT" & _
-       " SET @PROJECTID = " & PrjID1.ToString & _
-       " SET @DOORFILTER = " & optHWSetFilter.ToString & _
-       " SET ARITHABORT ON" & _
-       " IF @DOORFILTER=2 " & _
-       " SELECT " & _
-       " '2' AS Filter," & _
-       " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT([FileName], 1) = '\' THEN RIGHT([FileName], LEN([FileName])-1) ELSE [FileName] END as Image," & _
-       " CASE WHEN Len(HW.PRICE)=0 THEN '0' ELSE HW.PRICE END AS totSetItemPrice," & _
-       " HW.PRODUCT," & _
-       " CASE WHEN HW.QTY = '' THEN 0 ELSE ISNULL(HW.QTY,0) END AS QTY," & _
-       " HW.DESCRIPTION," & _
-       " HW.TYPEDESCRIPTION," & _
-       " AP.PROJECTNAME," & _
-       " AP.ID ProjectReference," & _
-       " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
-       " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
-       " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID, " & _
-       " CASE WHEN Len(PH.PRICE)=0 THEN '0' ELSE PH.PRICE END AS singlePrice," & _
-       " PH.UOM," & _
-       " (ACS.FIRSTNAME+' ' +ACS.LASTNAME) as SalesRep," & _
-       " ACS.EMAIL as Email, " & _
-       " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
-       " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
-       " ACS.Email AS PrjOwnEmail ," & _
-       " CS.Email AS SpecConEmail ," & _
-       " ACS.Phone PrjOwnNumber, " & _
-       " CS.Phone SpecConNumber, " & _
-       " ACS.Title PrjOwnTitle, " & _
-       " CS.Title SpecConTitle, " & _
-       " HW.Finish as Finish,ISNULL(DOORS.QTY, 0) AS TotDoors," & _
-       " TOTALS.PRICE TotSetPrice," & _
-       " CASE " & _
-       "    WHEN Day(Getdate()) IN ( 1, 21, 31 ) " & _
-       "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'st '" & _
-       "    WHEN Day(Getdate()) IN ( 2, 22 ) " & _
-       "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd '" & _
-       "    WHEN Day(Getdate()) IN ( 3, 23 ) " & _
-       "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd '" & _
-       " ELSE " & _
-       "    CONVERT(VARCHAR, Day(Getdate())) + 'th ' END+Datename(MONTH, Getdate())+' '+CONVERT(VARCHAR, Year(Getdate())) TodaysDateEN," & _
-       " getdate() TodaysDate," & _
-       " ISNULL(DOORS.LIST, 'N/A') AS Mark," & _
-       " CASE WHEN Len(HW.SETNOTES)>0 THEN (HW.SETNAME+' : ' +Replace(Replace(HW.SETNOTES, Char(13), ' '), Char(10), ' ')) ELSE NULL END AS SetNotes " & _
-       " FROM   AAOSPROJECTHARDWARE PH" & _
-       " RIGHT OUTER JOIN AAOSHWSETS HW ON PH.ITEM=HW.PRODUCT " & _
-       " LEFT OUTER JOIN AAOSPROJECTS AP ON HW.PROJECTID=AP.ID " & _
-       " LEFT OUTER JOIN AAOSCONSULTANTS ACS ON AP.ARCHCONSULTANT=ACS.ID " & _
-       " left outer join AAOSConsultants CS on AP.consultant = CS.id" & _
-       " LEFT OUTER JOIN (SELECT PROJECTID,SETNAME,Sum(Cast (QTY AS INT)) Qty,Sum(Cast(CASE WHEN Len(AAOSHWSETS.PRICE)=0 THEN '0' " & _
-       "                    ELSE AAOSHWSETS.PRICE " & _
-       "                    END AS DECIMAL(18, 2))*Cast (QTY AS INT)) Price " & _
-       "                    FROM   AAOSHWSETS " & _
-       "                    WHERE  AAOSHWSETS.PROJECTID=@PROJECTID " & _
-       "                    GROUP  BY AAOSHWSETS.PROJECTID,SETNAME) TOTALS" &
-       "                    ON TOTALS.PROJECTID=HW.PROJECTID AND TOTALS.SETNAME=HW.SETNAME " & _
-       " LEFT OUTER JOIN (SELECT PROJECTID,HWSET,Sum(QTY) Qty,Stuff((SELECT ', '+Cast(MARK AS VARCHAR(250)) [text()] " & _
-       "                    FROM   AAOSDOORS " & _
-       "                    WHERE  HWSET=T.HWSET AND " & _
-       "                    PROJECTID=@PROJECTID " & _
-       "                    FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
-       "                    FROM   AAOSDOORS T " & _
-       "                    WHERE  PROJECTID=@PROJECTID AND " & _
-       "                    (Charindex('deleted', CHANGELOG)<1) " & _
-       "                    GROUP  BY PROJECTID,HWSET) DOORS" & _
-       "                    ON DOORS.HWSET=HW.SETNAME AND DOORS.PROJECTID=HW.PROJECTID " & _
-       " LEFT OUTER JOIN (" & _
-       " SELECT [Description], MIN(x.ImageID) AS ImageID, ProjectID FROM AAOSProjectHardware APH" & _
-       " INNER JOIN (" & _
-       " SELECT A.ID, Split.a.value('.', 'VARCHAR(MAX)') AS ImageID " & _
-       " FROM  (" & _
-       " SELECT ID,  CAST ('<M>' + REPLACE([imageids], ',', '</M><M>') + '</M>' AS XML) AS String" & _
-       " FROM  AAOSProjectHardware" & _
-       " WHERE ProjectID = @ProjectID)" & _
-       " AS A CROSS APPLY String.nodes ('/M') AS Split(a)" & _
-       " WHERE ISNULL(Split.a.value('.', 'VARCHAR(MAX)'),'') <> ''" & _
-       " UNION" & _
-       " SELECT ID,ImageIDs FROM AAOSProjectHardware where ProjectID = @ProjectID AND ISNULL(ImageIDs,'') ='' ) x" & _
-       " INNER JOIN" & _
-       " (SELECT Image_id, [Filename]" & _
-       " FROM " & AAOSDBName & ".dbo.images img" & _
-       " WHERE (NOT (UPPER([Filename]) LIKE '%.PDF') OR ISNULL([Filename],'') = '')) img" & _
-       " ON  x.ImageID = img.Image_id" & _
-       " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
-       " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
-       " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON APH.ImageID= img.Image_ID " & _
-       "  WHERE  (HW.PROJECTID=@PROJECTID) " & _
-       "  AND ( AP.ID=@PROJECTID)" & _
-       "  AND (PH.PROJECTID=@PROJECTID) " & _
-       "  ORDER  BY HW.SETNAME,PH.DHI " & _
-       " ELSE BEGIN " & _
-       "" & _
-       "" & _
-       "" & _
-       "    IF @DOORFILTER=0 " & _
-       " SELECT " & _
-       " '1' AS Filter," & _
-       " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT([FileName], 1) = '\' THEN RIGHT([FileName], LEN([FileName])-1) ELSE [FileName] END as Image," & _
-       " CASE WHEN Len(HW.PRICE)=0 THEN '0' ELSE HW.PRICE END AS totSetItemPrice," & _
-       " HW.PRODUCT," & _
-       " CASE WHEN HW.QTY = '' THEN 0 ELSE ISNULL(HW.QTY,0) END AS QTY," & _
-       " HW.DESCRIPTION," & _
-       " HW.TYPEDESCRIPTION," & _
-       " AP.PROJECTNAME," & _
-       " AP.ID ProjectReference," & _
-       " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
-       " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
-       " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID, " & _
-       " CASE WHEN Len(PH.PRICE)=0 THEN '0' ELSE PH.PRICE END AS singlePrice," & _
-       " PH.UOM," & _
-       " (ACS.FIRSTNAME+' ' +ACS.LASTNAME) as SalesRep," & _
-       " ACS.EMAIL as Email, " & _
-       " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
-       " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
-       " ACS.Email AS PrjOwnEmail ," & _
-       " CS.Email AS SpecConEmail ," & _
-       " ACS.Phone PrjOwnNumber, " & _
-       " CS.Phone SpecConNumber, " & _
-       " ACS.Title PrjOwnTitle, " & _
-       " CS.Title SpecConTitle, " & _
-       " HW.Finish as Finish,ISNULL(DOORS.QTY, 0) AS TotDoors," & _
-       " TOTALS.PRICE TotSetPrice," & _
-       " CASE " & _
-       "    WHEN Day(Getdate()) IN ( 1, 21, 31 ) " & _
-       "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'st '" & _
-       "    WHEN Day(Getdate()) IN ( 2, 22 ) " & _
-       "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd '" & _
-       "    WHEN Day(Getdate()) IN ( 3, 23 ) " & _
-       "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd '" & _
-       " ELSE " & _
-       "    CONVERT(VARCHAR, Day(Getdate())) + 'th ' END+Datename(MONTH, Getdate())+' '+CONVERT(VARCHAR, Year(Getdate())) TodaysDateEN," & _
-       " getdate() TodaysDate," & _
-       " ISNULL(DOORS.LIST, 'N/A') AS Mark," & _
-       " CASE WHEN Len(HW.SETNOTES)>0 THEN (HW.SETNAME+' : ' +Replace(Replace(HW.SETNOTES, Char(13), ' '), Char(10), ' ')) ELSE NULL END AS SetNotes " & _
-       " FROM   AAOSPROJECTHARDWARE PH" & _
-       " RIGHT OUTER JOIN AAOSHWSETS HW ON PH.ITEM=HW.PRODUCT " & _
-       " LEFT OUTER JOIN AAOSPROJECTS AP ON HW.PROJECTID=AP.ID " & _
-       " LEFT OUTER JOIN AAOSCONSULTANTS ACS ON AP.ARCHCONSULTANT=ACS.ID " & _
-       " left outer join AAOSConsultants CS on AP.consultant = CS.id" & _
-       " LEFT OUTER JOIN (SELECT PROJECTID,SETNAME,Sum(Cast (QTY AS INT)) Qty,Sum(Cast(CASE WHEN Len(AAOSHWSETS.PRICE)=0 THEN '0' " & _
-       "                    ELSE AAOSHWSETS.PRICE " & _
-       "                    END AS DECIMAL(18, 2))*Cast (QTY AS INT)) Price " & _
-       "                    FROM   AAOSHWSETS " & _
-       "                    WHERE  AAOSHWSETS.PROJECTID=@PROJECTID " & _
-       "                    GROUP  BY AAOSHWSETS.PROJECTID,SETNAME) TOTALS" &
-       "                    ON TOTALS.PROJECTID=HW.PROJECTID AND TOTALS.SETNAME=HW.SETNAME " & _
-       " LEFT OUTER JOIN (SELECT PROJECTID,HWSET,Sum(QTY) Qty,Stuff((SELECT ', '+Cast(MARK AS VARCHAR(250)) [text()] " & _
-       "                    FROM   AAOSDOORS " & _
-       "                    WHERE  HWSET=T.HWSET AND " & _
-       "                    PROJECTID=@PROJECTID " & _
-       "                    FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
-       "                    FROM   AAOSDOORS T " & _
-       "                    WHERE  PROJECTID=@PROJECTID AND " & _
-       "                    (Charindex('deleted', CHANGELOG)<1) " & _
-       "                    GROUP  BY PROJECTID,HWSET) DOORS" & _
-       "                    ON DOORS.HWSET=HW.SETNAME AND DOORS.PROJECTID=HW.PROJECTID " & _
-       " LEFT OUTER JOIN (" & _
-       " SELECT [Description], MIN(x.ImageID) AS ImageID, ProjectID FROM AAOSProjectHardware APH" & _
-       " INNER JOIN (" & _
-       " SELECT A.ID, Split.a.value('.', 'VARCHAR(MAX)') AS ImageID " & _
-       " FROM  (" & _
-       " SELECT ID,  CAST ('<M>' + REPLACE([imageids], ',', '</M><M>') + '</M>' AS XML) AS String" & _
-       " FROM  AAOSProjectHardware" & _
-       " WHERE ProjectID = @ProjectID)" & _
-       " AS A CROSS APPLY String.nodes ('/M') AS Split(a)" & _
-       " WHERE ISNULL(Split.a.value('.', 'VARCHAR(MAX)'),'') <> ''" & _
-       " UNION" & _
-       " SELECT ID,ImageIDs FROM AAOSProjectHardware where ProjectID = @ProjectID AND ISNULL(ImageIDs,'') ='' ) x" & _
-       " INNER JOIN" & _
-       " (SELECT Image_id, [Filename]" & _
-       " FROM " & AAOSDBName & ".dbo.images img" & _
-       " WHERE (NOT (UPPER([Filename]) LIKE '%.PDF') OR ISNULL([Filename],'') = '')) img" & _
-       " ON  x.ImageID = img.Image_id" & _
-       " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
-       " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
-       " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON APH.ImageID= img.Image_ID " & _
-       "      WHERE  (HW.PROJECTID=@PROJECTID) AND " & _
-       "      (AP.ID=@PROJECTID) AND " & _
-       "      (PH.PROJECTID=@PROJECTID) AND " & _
-       "      ISNULL(DOORS.QTY, 0)!=0 " & _
-       "      ORDER  BY HW.SETNAME,PH.DHI " & _
-       "    ELSE " & _
-       "" & _
-       "" & _
-       "" & _
-       " SELECT " & _
-       " '0' AS Filter," & _
-       " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT([FileName], 1) = '\' THEN RIGHT([FileName], LEN([FileName])-1) ELSE [FileName] END as Image," & _
-       " CASE WHEN Len(HW.PRICE)=0 THEN '0' ELSE HW.PRICE END AS totSetItemPrice," & _
-       " HW.PRODUCT," & _
-       " CASE WHEN HW.QTY = '' THEN 0 ELSE ISNULL(HW.QTY,0) END AS QTY," & _
-       " HW.DESCRIPTION," & _
-       " HW.TYPEDESCRIPTION," & _
-       " AP.PROJECTNAME," & _
-       " AP.ID ProjectReference," & _
-       " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
-       " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
-       " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID, " & _
-       " CASE WHEN Len(PH.PRICE)=0 THEN '0' ELSE PH.PRICE END AS singlePrice," & _
-       " PH.UOM," & _
-       " (ACS.FIRSTNAME+' ' +ACS.LASTNAME) as SalesRep," & _
-       " ACS.EMAIL as Email, " & _
-       " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
-       " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
-       " ACS.Email AS PrjOwnEmail ," & _
-       " CS.Email AS SpecConEmail ," & _
-       " ACS.Phone PrjOwnNumber, " & _
-       " CS.Phone SpecConNumber, " & _
-       " ACS.Title PrjOwnTitle, " & _
-       " CS.Title SpecConTitle, " & _
-       " HW.Finish as Finish,ISNULL(DOORS.QTY, 0) AS TotDoors," & _
-       " TOTALS.PRICE TotSetPrice," & _
-       " CASE " & _
-       "    WHEN Day(Getdate()) IN ( 1, 21, 31 ) " & _
-       "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'st '" & _
-       "    WHEN Day(Getdate()) IN ( 2, 22 ) " & _
-       "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd '" & _
-       "    WHEN Day(Getdate()) IN ( 3, 23 ) " & _
-       "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd '" & _
-       " ELSE " & _
-       "    CONVERT(VARCHAR, Day(Getdate())) + 'th ' END+Datename(MONTH, Getdate())+' '+CONVERT(VARCHAR, Year(Getdate())) TodaysDateEN," & _
-       " getdate() TodaysDate," & _
-       " ISNULL(DOORS.LIST, 'N/A') AS Mark," & _
-       " CASE WHEN Len(HW.SETNOTES)>0 THEN (HW.SETNAME+' : ' +Replace(Replace(HW.SETNOTES, Char(13), ' '), Char(10), ' ')) ELSE NULL END AS SetNotes " & _
-       " FROM   AAOSPROJECTHARDWARE PH" & _
-       " RIGHT OUTER JOIN AAOSHWSETS HW ON PH.ITEM=HW.PRODUCT " & _
-       " LEFT OUTER JOIN AAOSPROJECTS AP ON HW.PROJECTID=AP.ID " & _
-       " LEFT OUTER JOIN AAOSCONSULTANTS ACS ON AP.ARCHCONSULTANT=ACS.ID " & _
-       " left outer join AAOSConsultants CS on AP.consultant = CS.id" & _
-       " LEFT OUTER JOIN (SELECT PROJECTID,SETNAME,Sum(Cast (QTY AS INT)) Qty,Sum(Cast(CASE WHEN Len(AAOSHWSETS.PRICE)=0 THEN '0' " & _
-       "                    ELSE AAOSHWSETS.PRICE " & _
-       "                    END AS DECIMAL(18, 2))*Cast (QTY AS INT)) Price " & _
-       "                    FROM   AAOSHWSETS " & _
-       "                    WHERE  AAOSHWSETS.PROJECTID=@PROJECTID " & _
-       "                    GROUP  BY AAOSHWSETS.PROJECTID,SETNAME) TOTALS" &
-       "                    ON TOTALS.PROJECTID=HW.PROJECTID AND TOTALS.SETNAME=HW.SETNAME " & _
-       " LEFT OUTER JOIN (SELECT PROJECTID,HWSET,Sum(QTY) Qty,Stuff((SELECT ', '+Cast(MARK AS VARCHAR(250)) [text()] " & _
-       "                    FROM   AAOSDOORS " & _
-       "                    WHERE  HWSET=T.HWSET AND " & _
-       "                    PROJECTID=@PROJECTID " & _
-       "                    FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
-       "                    FROM   AAOSDOORS T " & _
-       "                    WHERE  PROJECTID=@PROJECTID AND " & _
-       "                    (Charindex('deleted', CHANGELOG)<1) " & _
-       "                    GROUP  BY PROJECTID,HWSET) DOORS" & _
-       "                    ON DOORS.HWSET=HW.SETNAME AND DOORS.PROJECTID=HW.PROJECTID " & _
-       " LEFT OUTER JOIN (" & _
-       " SELECT [Description], MIN(x.ImageID) AS ImageID, ProjectID FROM AAOSProjectHardware APH" & _
-       " INNER JOIN (" & _
-       " SELECT A.ID, Split.a.value('.', 'VARCHAR(MAX)') AS ImageID " & _
-       " FROM  (" & _
-       " SELECT ID,  CAST ('<M>' + REPLACE([imageids], ',', '</M><M>') + '</M>' AS XML) AS String" & _
-       " FROM  AAOSProjectHardware" & _
-       " WHERE ProjectID = @ProjectID)" & _
-       " AS A CROSS APPLY String.nodes ('/M') AS Split(a)" & _
-       " WHERE ISNULL(Split.a.value('.', 'VARCHAR(MAX)'),'') <> ''" & _
-       " UNION" & _
-       " SELECT ID,ImageIDs FROM AAOSProjectHardware where ProjectID = @ProjectID AND ISNULL(ImageIDs,'') ='' ) x" & _
-       " INNER JOIN" & _
-       " (SELECT Image_id, [Filename]" & _
-       " FROM " & AAOSDBName & ".dbo.images img" & _
-       " WHERE (NOT (UPPER([Filename]) LIKE '%.PDF') OR ISNULL([Filename],'') = '')) img" & _
-       " ON  x.ImageID = img.Image_id" & _
-       " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
-       " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
-       " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON APH.ImageID= img.Image_ID " & _
-       "      WHERE  (HW.PROJECTID=@PROJECTID) AND " & _
-       "      (AP.ID=@PROJECTID) AND " & _
-       "      (PH.PROJECTID=@PROJECTID) AND " & _
-       "      ISNULL(DOORS.QTY, 0)=0 " & _
-       "      ORDER  BY HW.SETNAME,PH.DHI " & _
-       " END "
-
-        Dim file As System.IO.StreamWriter
-        file = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\wrightj\Documents\test.txt", True)
-        file.WriteLine(strQ)
-        file.Close()
+        " DECLARE @DOORFILTER INT" & _
+        " SET @PROJECTID = " & PrjID1.ToString & _
+        " SET @DOORFILTER = " & optHWSetFilter.ToString & _
+        " SET ARITHABORT ON" & _
+        " IF @DOORFILTER=2 " & _
+        " SELECT " & _
+        " '2' AS Filter," & _
+        " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT([FileName], 1) = '\' THEN RIGHT([FileName], LEN([FileName])-1) ELSE [FileName] END as Image," & _
+        " CASE WHEN Len(HW.PRICE)=0 THEN '0' ELSE HW.PRICE END AS totSetItemPrice," & _
+        " HW.PRODUCT," & _
+        " CASE WHEN HW.QTY = '' THEN 0 ELSE ISNULL(HW.QTY,0) END AS QTY," & _
+        " HW.DESCRIPTION," & _
+        " HW.TYPEDESCRIPTION," & _
+        " AP.PROJECTNAME," & _
+        " AP.ID ProjectReference," & _
+        " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
+        " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+        " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
+        " CAST(AP.RevisionNumber AS nvarchar(max)) AS Revision, " & _
+        " CASE WHEN Len(PH.PRICE)=0 THEN '0' ELSE PH.PRICE END AS singlePrice," & _
+        " PH.UOM," & _
+        " (ACS.FIRSTNAME+' ' +ACS.LASTNAME) as SalesRep," & _
+        " ACS.EMAIL as Email, " & _
+        " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
+        " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
+        " ACS.Email AS PrjOwnEmail ," & _
+        " CS.Email AS SpecConEmail ," & _
+        " ACS.Phone PrjOwnNumber, " & _
+        " CS.Phone SpecConNumber, " & _
+        " ACS.Title PrjOwnTitle, " & _
+        " CS.Title SpecConTitle, " & _
+        " HW.Finish as Finish,ISNULL(DOORS.QTY, 0) AS TotDoors," & _
+        " TOTALS.PRICE TotSetPrice," & _
+        " CASE " & _
+        "    WHEN Day(Getdate()) IN ( 1, 21, 31 ) " & _
+        "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'st '" & _
+        "    WHEN Day(Getdate()) IN ( 2, 22 ) " & _
+        "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd '" & _
+        "    WHEN Day(Getdate()) IN ( 3, 23 ) " & _
+        "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd '" & _
+        " ELSE " & _
+        "    CONVERT(VARCHAR, Day(Getdate())) + 'th ' END+Datename(MONTH, Getdate())+' '+CONVERT(VARCHAR, Year(Getdate())) TodaysDateEN," & _
+        " getdate() TodaysDate," & _
+        " ISNULL(DOORS.LIST, 'N/A') AS Mark," & _
+        " CASE WHEN Len(HW.SETNOTES)>0 THEN (HW.SETNAME+' : ' +Replace(Replace(HW.SETNOTES, Char(13), ' '), Char(10), ' ')) ELSE NULL END AS SetNotes " & _
+        " FROM   AAOSPROJECTHARDWARE PH" & _
+        " RIGHT OUTER JOIN AAOSHWSETS HW ON PH.ITEM=HW.PRODUCT " & _
+        " LEFT OUTER JOIN AAOSPROJECTS AP ON HW.PROJECTID=AP.ID " & _
+        " LEFT OUTER JOIN AAOSCONSULTANTS ACS ON AP.ARCHCONSULTANT=ACS.ID " & _
+        " left outer join AAOSConsultants CS on AP.consultant = CS.id" & _
+        " LEFT OUTER JOIN (SELECT PROJECTID,SETNAME,Sum(Cast (QTY AS INT)) Qty,Sum(Cast(CASE WHEN Len(AAOSHWSETS.PRICE)=0 THEN '0' " & _
+        "                    ELSE AAOSHWSETS.PRICE " & _
+        "                    END AS DECIMAL(18, 2))*Cast (QTY AS INT)) Price " & _
+        "                    FROM   AAOSHWSETS " & _
+        "                    WHERE  AAOSHWSETS.PROJECTID=@PROJECTID " & _
+        "                    GROUP  BY AAOSHWSETS.PROJECTID,SETNAME) TOTALS" &
+        "                    ON TOTALS.PROJECTID=HW.PROJECTID AND TOTALS.SETNAME=HW.SETNAME " & _
+        " LEFT OUTER JOIN (SELECT PROJECTID,HWSET,Sum(QTY) Qty,Stuff((SELECT ', '+Cast(MARK AS VARCHAR(250)) [text()] " & _
+        "                    FROM   AAOSDOORS " & _
+        "                    WHERE  HWSET=T.HWSET AND " & _
+        "                    PROJECTID=@PROJECTID " & _
+        "                    FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
+        "                    FROM   AAOSDOORS T " & _
+        "                    WHERE  PROJECTID=@PROJECTID AND " & _
+        "                    (Charindex('deleted', CHANGELOG)<1) " & _
+        "                    GROUP  BY PROJECTID,HWSET) DOORS" & _
+        "                    ON DOORS.HWSET=HW.SETNAME AND DOORS.PROJECTID=HW.PROJECTID " & _
+        " LEFT OUTER JOIN (" & _
+        " SELECT [Description], MIN(x.ImageID) AS ImageID, ProjectID FROM AAOSProjectHardware APH" & _
+        " INNER JOIN (" & _
+        " SELECT A.ID, Split.a.value('.', 'VARCHAR(MAX)') AS ImageID " & _
+        " FROM  (" & _
+        " SELECT ID,  CAST ('<M>' + REPLACE([imageids], ',', '</M><M>') + '</M>' AS XML) AS String" & _
+        " FROM  AAOSProjectHardware" & _
+        " WHERE ProjectID = @ProjectID)" & _
+        " AS A CROSS APPLY String.nodes ('/M') AS Split(a)" & _
+        " WHERE ISNULL(Split.a.value('.', 'VARCHAR(MAX)'),'') <> ''" & _
+        " UNION" & _
+        " SELECT ID,ImageIDs FROM AAOSProjectHardware where ProjectID = @ProjectID AND ISNULL(ImageIDs,'') ='' ) x" & _
+        " INNER JOIN" & _
+        " (SELECT Image_id, [Filename]" & _
+        " FROM " & AAOSDBName & ".dbo.images img" & _
+        " WHERE (NOT (UPPER([Filename]) LIKE '%.PDF') OR ISNULL([Filename],'') = '')) img" & _
+        " ON  x.ImageID = img.Image_id" & _
+        " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
+        " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
+        " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON APH.ImageID= img.Image_ID " & _
+        "  WHERE  (HW.PROJECTID=@PROJECTID) " & _
+        "  AND ( AP.ID=@PROJECTID)" & _
+        "  AND (PH.PROJECTID=@PROJECTID) " & _
+        "  ORDER  BY HW.SETNAME,PH.DHI " & _
+        " ELSE BEGIN " & _
+        "" & _
+        "" & _
+        "" & _
+        "    IF @DOORFILTER=0 " & _
+        " SELECT " & _
+        " '1' AS Filter," & _
+        " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT([FileName], 1) = '\' THEN RIGHT([FileName], LEN([FileName])-1) ELSE [FileName] END as Image," & _
+        " CASE WHEN Len(HW.PRICE)=0 THEN '0' ELSE HW.PRICE END AS totSetItemPrice," & _
+        " HW.PRODUCT," & _
+        " CASE WHEN HW.QTY = '' THEN 0 ELSE ISNULL(HW.QTY,0) END AS QTY," & _
+        " HW.DESCRIPTION," & _
+        " HW.TYPEDESCRIPTION," & _
+        " AP.PROJECTNAME," & _
+        " AP.ID ProjectReference," & _
+        " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
+        " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+        " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID, " & _
+        " CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
+        " CASE WHEN Len(PH.PRICE)=0 THEN '0' ELSE PH.PRICE END AS singlePrice," & _
+        " PH.UOM," & _
+        " (ACS.FIRSTNAME+' ' +ACS.LASTNAME) as SalesRep," & _
+        " ACS.EMAIL as Email, " & _
+        " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
+        " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
+        " ACS.Email AS PrjOwnEmail ," & _
+        " CS.Email AS SpecConEmail ," & _
+        " ACS.Phone PrjOwnNumber, " & _
+        " CS.Phone SpecConNumber, " & _
+        " ACS.Title PrjOwnTitle, " & _
+        " CS.Title SpecConTitle, " & _
+        " HW.Finish as Finish,ISNULL(DOORS.QTY, 0) AS TotDoors," & _
+        " TOTALS.PRICE TotSetPrice," & _
+        " CASE " & _
+        "    WHEN Day(Getdate()) IN ( 1, 21, 31 ) " & _
+        "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'st '" & _
+        "    WHEN Day(Getdate()) IN ( 2, 22 ) " & _
+        "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd '" & _
+        "    WHEN Day(Getdate()) IN ( 3, 23 ) " & _
+        "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd '" & _
+        " ELSE " & _
+        "    CONVERT(VARCHAR, Day(Getdate())) + 'th ' END+Datename(MONTH, Getdate())+' '+CONVERT(VARCHAR, Year(Getdate())) TodaysDateEN," & _
+        " getdate() TodaysDate," & _
+        " ISNULL(DOORS.LIST, 'N/A') AS Mark," & _
+        " CASE WHEN Len(HW.SETNOTES)>0 THEN (HW.SETNAME+' : ' +Replace(Replace(HW.SETNOTES, Char(13), ' '), Char(10), ' ')) ELSE NULL END AS SetNotes " & _
+        " FROM   AAOSPROJECTHARDWARE PH" & _
+        " RIGHT OUTER JOIN AAOSHWSETS HW ON PH.ITEM=HW.PRODUCT " & _
+        " LEFT OUTER JOIN AAOSPROJECTS AP ON HW.PROJECTID=AP.ID " & _
+        " LEFT OUTER JOIN AAOSCONSULTANTS ACS ON AP.ARCHCONSULTANT=ACS.ID " & _
+        " left outer join AAOSConsultants CS on AP.consultant = CS.id" & _
+        " LEFT OUTER JOIN (SELECT PROJECTID,SETNAME,Sum(Cast (QTY AS INT)) Qty,Sum(Cast(CASE WHEN Len(AAOSHWSETS.PRICE)=0 THEN '0' " & _
+        "                    ELSE AAOSHWSETS.PRICE " & _
+        "                    END AS DECIMAL(18, 2))*Cast (QTY AS INT)) Price " & _
+        "                    FROM   AAOSHWSETS " & _
+        "                    WHERE  AAOSHWSETS.PROJECTID=@PROJECTID " & _
+        "                    GROUP  BY AAOSHWSETS.PROJECTID,SETNAME) TOTALS" &
+        "                    ON TOTALS.PROJECTID=HW.PROJECTID AND TOTALS.SETNAME=HW.SETNAME " & _
+        " LEFT OUTER JOIN (SELECT PROJECTID,HWSET,Sum(QTY) Qty,Stuff((SELECT ', '+Cast(MARK AS VARCHAR(250)) [text()] " & _
+        "                    FROM   AAOSDOORS " & _
+        "                    WHERE  HWSET=T.HWSET AND " & _
+        "                    PROJECTID=@PROJECTID " & _
+        "                    FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
+        "                    FROM   AAOSDOORS T " & _
+        "                    WHERE  PROJECTID=@PROJECTID AND " & _
+        "                    (Charindex('deleted', CHANGELOG)<1) " & _
+        "                    GROUP  BY PROJECTID,HWSET) DOORS" & _
+        "                    ON DOORS.HWSET=HW.SETNAME AND DOORS.PROJECTID=HW.PROJECTID " & _
+        " LEFT OUTER JOIN (" & _
+        " SELECT [Description], MIN(x.ImageID) AS ImageID, ProjectID FROM AAOSProjectHardware APH" & _
+        " INNER JOIN (" & _
+        " SELECT A.ID, Split.a.value('.', 'VARCHAR(MAX)') AS ImageID " & _
+        " FROM  (" & _
+        " SELECT ID,  CAST ('<M>' + REPLACE([imageids], ',', '</M><M>') + '</M>' AS XML) AS String" & _
+        " FROM  AAOSProjectHardware" & _
+        " WHERE ProjectID = @ProjectID)" & _
+        " AS A CROSS APPLY String.nodes ('/M') AS Split(a)" & _
+        " WHERE ISNULL(Split.a.value('.', 'VARCHAR(MAX)'),'') <> ''" & _
+        " UNION" & _
+        " SELECT ID,ImageIDs FROM AAOSProjectHardware where ProjectID = @ProjectID AND ISNULL(ImageIDs,'') ='' ) x" & _
+        " INNER JOIN" & _
+        " (SELECT Image_id, [Filename]" & _
+        " FROM " & AAOSDBName & ".dbo.images img" & _
+        " WHERE (NOT (UPPER([Filename]) LIKE '%.PDF') OR ISNULL([Filename],'') = '')) img" & _
+        " ON  x.ImageID = img.Image_id" & _
+        " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
+        " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
+        " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON APH.ImageID= img.Image_ID " & _
+        "      WHERE  (HW.PROJECTID=@PROJECTID) AND " & _
+        "      (AP.ID=@PROJECTID) AND " & _
+        "      (PH.PROJECTID=@PROJECTID) AND " & _
+        "      ISNULL(DOORS.QTY, 0)!=0 " & _
+        "      ORDER  BY HW.SETNAME,PH.DHI " & _
+        "    ELSE " & _
+        "" & _
+        "" & _
+        "" & _
+        " SELECT " & _
+        " '0' AS Filter," & _
+        " HW.SETNAME,'" & ImagesPath & "' + CASE WHEN LEFT([FileName], 1) = '\' THEN RIGHT([FileName], LEN([FileName])-1) ELSE [FileName] END as Image," & _
+        " CASE WHEN Len(HW.PRICE)=0 THEN '0' ELSE HW.PRICE END AS totSetItemPrice," & _
+        " HW.PRODUCT," & _
+        " CASE WHEN HW.QTY = '' THEN 0 ELSE ISNULL(HW.QTY,0) END AS QTY," & _
+        " HW.DESCRIPTION," & _
+        " HW.TYPEDESCRIPTION," & _
+        " AP.PROJECTNAME," & _
+        " AP.ID ProjectReference," & _
+        " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
+        " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+        " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID, " & _
+        " CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
+        " CASE WHEN Len(PH.PRICE)=0 THEN '0' ELSE PH.PRICE END AS singlePrice," & _
+        " PH.UOM," & _
+        " (ACS.FIRSTNAME+' ' +ACS.LASTNAME) as SalesRep," & _
+        " ACS.EMAIL as Email, " & _
+        " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
+        " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
+        " ACS.Email AS PrjOwnEmail ," & _
+        " CS.Email AS SpecConEmail ," & _
+        " ACS.Phone PrjOwnNumber, " & _
+        " CS.Phone SpecConNumber, " & _
+        " ACS.Title PrjOwnTitle, " & _
+        " CS.Title SpecConTitle, " & _
+        " HW.Finish as Finish,ISNULL(DOORS.QTY, 0) AS TotDoors," & _
+        " TOTALS.PRICE TotSetPrice," & _
+        " CASE " & _
+        "    WHEN Day(Getdate()) IN ( 1, 21, 31 ) " & _
+        "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'st '" & _
+        "    WHEN Day(Getdate()) IN ( 2, 22 ) " & _
+        "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd '" & _
+        "    WHEN Day(Getdate()) IN ( 3, 23 ) " & _
+        "        THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd '" & _
+        " ELSE " & _
+        "    CONVERT(VARCHAR, Day(Getdate())) + 'th ' END+Datename(MONTH, Getdate())+' '+CONVERT(VARCHAR, Year(Getdate())) TodaysDateEN," & _
+        " getdate() TodaysDate," & _
+        " ISNULL(DOORS.LIST, 'N/A') AS Mark," & _
+        " CASE WHEN Len(HW.SETNOTES)>0 THEN (HW.SETNAME+' : ' +Replace(Replace(HW.SETNOTES, Char(13), ' '), Char(10), ' ')) ELSE NULL END AS SetNotes " & _
+        " FROM   AAOSPROJECTHARDWARE PH" & _
+        " RIGHT OUTER JOIN AAOSHWSETS HW ON PH.ITEM=HW.PRODUCT " & _
+        " LEFT OUTER JOIN AAOSPROJECTS AP ON HW.PROJECTID=AP.ID " & _
+        " LEFT OUTER JOIN AAOSCONSULTANTS ACS ON AP.ARCHCONSULTANT=ACS.ID " & _
+        " left outer join AAOSConsultants CS on AP.consultant = CS.id" & _
+        " LEFT OUTER JOIN (SELECT PROJECTID,SETNAME,Sum(Cast (QTY AS INT)) Qty,Sum(Cast(CASE WHEN Len(AAOSHWSETS.PRICE)=0 THEN '0' " & _
+        "                    ELSE AAOSHWSETS.PRICE " & _
+        "                    END AS DECIMAL(18, 2))*Cast (QTY AS INT)) Price " & _
+        "                    FROM   AAOSHWSETS " & _
+        "                    WHERE  AAOSHWSETS.PROJECTID=@PROJECTID " & _
+        "                    GROUP  BY AAOSHWSETS.PROJECTID,SETNAME) TOTALS" &
+        "                    ON TOTALS.PROJECTID=HW.PROJECTID AND TOTALS.SETNAME=HW.SETNAME " & _
+        " LEFT OUTER JOIN (SELECT PROJECTID,HWSET,Sum(QTY) Qty,Stuff((SELECT ', '+Cast(MARK AS VARCHAR(250)) [text()] " & _
+        "                    FROM   AAOSDOORS " & _
+        "                    WHERE  HWSET=T.HWSET AND " & _
+        "                    PROJECTID=@PROJECTID " & _
+        "                    FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
+        "                    FROM   AAOSDOORS T " & _
+        "                    WHERE  PROJECTID=@PROJECTID AND " & _
+        "                    (Charindex('deleted', CHANGELOG)<1) " & _
+        "                    GROUP  BY PROJECTID,HWSET) DOORS" & _
+        "                    ON DOORS.HWSET=HW.SETNAME AND DOORS.PROJECTID=HW.PROJECTID " & _
+        " LEFT OUTER JOIN (" & _
+        " SELECT [Description], MIN(x.ImageID) AS ImageID, ProjectID FROM AAOSProjectHardware APH" & _
+        " INNER JOIN (" & _
+        " SELECT A.ID, Split.a.value('.', 'VARCHAR(MAX)') AS ImageID " & _
+        " FROM  (" & _
+        " SELECT ID,  CAST ('<M>' + REPLACE([imageids], ',', '</M><M>') + '</M>' AS XML) AS String" & _
+        " FROM  AAOSProjectHardware" & _
+        " WHERE ProjectID = @ProjectID)" & _
+        " AS A CROSS APPLY String.nodes ('/M') AS Split(a)" & _
+        " WHERE ISNULL(Split.a.value('.', 'VARCHAR(MAX)'),'') <> ''" & _
+        " UNION" & _
+        " SELECT ID,ImageIDs FROM AAOSProjectHardware where ProjectID = @ProjectID AND ISNULL(ImageIDs,'') ='' ) x" & _
+        " INNER JOIN" & _
+        " (SELECT Image_id, [Filename]" & _
+        " FROM " & AAOSDBName & ".dbo.images img" & _
+        " WHERE (NOT (UPPER([Filename]) LIKE '%.PDF') OR ISNULL([Filename],'') = '')) img" & _
+        " ON  x.ImageID = img.Image_id" & _
+        " ON x.ID = APH.ID  GROUP BY [Description], ProjectID ) APH" & _
+        " ON  CAST(HW.[DESCRIPTION] AS VARBINARY(MAX)) =  CAST(APH.[description] AS VARBINARY(MAX)) AND APH.ProjectID=HW.PROJECTID " & _
+        " LEFT OUTER JOIN " & AAOSDBName & ".dbo.images img ON APH.ImageID= img.Image_ID " & _
+        "      WHERE  (HW.PROJECTID=@PROJECTID) AND " & _
+        "      (AP.ID=@PROJECTID) AND " & _
+        "      (PH.PROJECTID=@PROJECTID) AND " & _
+        "      ISNULL(DOORS.QTY, 0)=0 " & _
+        "      ORDER  BY HW.SETNAME,PH.DHI " & _
+        " END "
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
@@ -3820,33 +3819,34 @@ ErrHandler:
         Dim strQ As String
 
         strQ = " DECLARE @ProjectID INT" & _
-       " SET @ProjectID = " & PrjID1.ToString & _
-       " SELECT AP.id   ProjectReference, " & _
-       "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
-       "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
-       "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
-       "AP.projectname ProjectName, " & _
-       "AD.Mark DoorNumber, " & _
-       "AH.setname     SetReference, " & _
-       "CASE WHEN Day(Getdate()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'st ' WHEN Day(Getdate()) IN ( 2, 22 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd ' WHEN Day(Getdate()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd ' ELSE CONVERT(VARCHAR, Day(Getdate())) + 'th ' END + Datename(month, Getdate()) + ' ' " & _
-       "+ CONVERT(VARCHAR, Year(Getdate())) TodaysDateEN, getdate() TodaysDate ," & _
-       " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
-         " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
-         " ACS.Email AS PrjOwnEmail ," & _
-         " CS.Email AS SpecConEmail ," & _
-         " ACS.Phone PrjOwnNumber, " & _
-         " CS.Phone SpecConNumber, " & _
-         " ACS.Title PrjOwnTitle, " & _
-         " CS.Title SpecConTitle " & _
-       " FROM   [AAOSProjects] AP " & _
-       " left outer join AAOSConsultants ACS on AP.archconsultant = ACS.id" & _
-       " left outer join AAOSConsultants CS on AP.consultant = CS.id" & _
-       " INNER JOIN AAOSDoors AD ON AP.id = AD.ProjectID " & _
-       " LEFT OUTER JOIN AAOSHWSets AH ON AP.id = AH.ProjectID AND " & _
-       "  AD.hwset = AH.setname " & _
-       " WHERE  AP.id = @ProjectID " & _
-       " GROUP  BY AP.id,AP.projectname,AP.OriginalProjectID,AP.RevisionNumber,AD.Mark,AH.setname,AD.id, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title" & _
-       " ORDER  BY AD.id "
+        " SET @ProjectID = " & PrjID1.ToString & _
+        " SELECT AP.id   ProjectReference, " & _
+        " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
+        " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+        " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
+        " CAST(AP.RevisionNumber AS nvarchar(max)) AS Revision, " & _
+        "AP.projectname ProjectName, " & _
+        "AD.Mark DoorNumber, " & _
+        "AH.setname     SetReference, " & _
+        "CASE WHEN Day(Getdate()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'st ' WHEN Day(Getdate()) IN ( 2, 22 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd ' WHEN Day(Getdate()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd ' ELSE CONVERT(VARCHAR, Day(Getdate())) + 'th ' END + Datename(month, Getdate()) + ' ' " & _
+        "+ CONVERT(VARCHAR, Year(Getdate())) TodaysDateEN, getdate() TodaysDate ," & _
+        " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
+        " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
+        " ACS.Email AS PrjOwnEmail ," & _
+        " CS.Email AS SpecConEmail ," & _
+        " ACS.Phone PrjOwnNumber, " & _
+        " CS.Phone SpecConNumber, " & _
+        " ACS.Title PrjOwnTitle, " & _
+        " CS.Title SpecConTitle " & _
+        " FROM   [AAOSProjects] AP " & _
+        " left outer join AAOSConsultants ACS on AP.archconsultant = ACS.id" & _
+        " left outer join AAOSConsultants CS on AP.consultant = CS.id" & _
+        " INNER JOIN AAOSDoors AD ON AP.id = AD.ProjectID " & _
+        " LEFT OUTER JOIN AAOSHWSets AH ON AP.id = AH.ProjectID AND " & _
+        "  AD.hwset = AH.setname " & _
+        " WHERE  AP.id = @ProjectID " & _
+        " GROUP  BY AP.id,AP.projectname,AP.OriginalProjectID,AP.RevisionNumber,AD.Mark,AH.setname,AD.id, ACS.firstname + ' ' + ACS.lastname, CS.firstname + ' ' + CS.lastname, ACS.Email, CS.Email, ACS.Phone, CS.Phone, ACS.Title, CS.Title" & _
+        " ORDER  BY AD.id "
 
 
 
@@ -4009,15 +4009,43 @@ ErrHandler:
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
         Dim strQ2 As String
-        strQ2 = " SELECT PARSENAME(FF.Usage2Value, 1) AS Leaf, PARSENAME(FF.Usage1Value,4) AS ModuleSize, " & _
-                "   PARSENAME(FF.Usage1Value,3) AS StructuralOpeningSize, PARSENAME(FF.Usage1Value,2) AS TimberFrameSize, " & _
-                "   PARSENAME(FF.Usage1Value,2) AS DoorLeafSize, PARSENAME(FF.Usage2Value,3) AS KickPlateSize, " & _
-                "   FF2.Usage1Value AS FrameDepthList, PARSENAME(FF.Usage2Value,2) AS DoorTypes " & _
+        strQ2 = " SELECT FF.ColNumber, CAST (PARSENAME(FF.Usage1Value,4) AS INT) AS Grouping_, " & _
+                " PARSENAME(FF.Usage2Value, 1) AS Leaf, PARSENAME(FF.Usage1Value,4) AS ModuleSize,  " & _
+                " PARSENAME(FF.Usage1Value,3) AS StructuralOpeningSize, PARSENAME(FF.Usage1Value,2) AS TimberFrameSize, " & _
+                " PARSENAME(FF.Usage1Value,1) AS DoorLeafSize, PARSENAME(FF.Usage2Value,3) AS KickPlateSize, " & _
+                " FF2.Usage1Value AS FrameDepthListPrimedPainted, " & _
+                " FF3.Usage1Value AS FrameDepthListHardwood, " & _
+                " FF4.Usage1Value AS FrameDepthListVeneered, " & _
+                " PARSENAME(FF.Usage2Value,2) AS DoorTypes, " & _
+                "'" & Hash.Item("lblModuleSize") & "' AS Header1, " & _
+                "'" & Hash.Item("lblStructuralOpeningSize") & "' AS Header2, " & _
+                "'" & Hash.Item("lblTimberFrameSize") & "' AS Header3, " & _
+                "'" & Hash.Item("lblDoorLeafSize") & "' AS Header4, " & _
+                "'" & Hash.Item("lblKickplateSize") & "' AS Header5, " & _
+                "'" & Hash.Item("lblDoorTypes") & "' AS Header6 " & _
                 " FROM FormFields FF " & _
-                "   INNER JOIN (SELECT FF.Usage1Value FROM FormFields FF WHERE FF.FormName = 'rptEMEATimberStdDoorSizes' " & _
-                "   AND FF.ColName = 'STD_FRAME_DEPTHS') FF2 ON 1=1 " & _
-                "   WHERE FF.FormName = 'rptEMEATimberStdDoorSizes' AND FF.ColName LIKE 'STD_DOOR_SIZES%' " & _
-                "   ORDER BY FF.ColNumber, CAST (PARSENAME(FF.Usage1Value,4) AS INT) "
+                " INNER JOIN (SELECT FF.Usage1Value FROM FormFields FF WHERE FF.FormName = 'rptEMEATimberStdDoorSizes' " & _
+                " AND FF.ColName = 'STD_FRAME_DEPTHS_PRIMED_PAINTED') FF2 ON 1=1 " & _
+                " INNER JOIN (SELECT FF.Usage1Value FROM FormFields FF WHERE FF.FormName = 'rptEMEATimberStdDoorSizes' " & _
+                " AND FF.ColName = 'STD_FRAME_DEPTHS_HARDWOOD') FF3 ON 1=1 " & _
+                " INNER JOIN (SELECT FF.Usage1Value FROM FormFields FF WHERE FF.FormName = 'rptEMEATimberStdDoorSizes' " & _
+                " AND FF.ColName = 'STD_FRAME_DEPTHS_VENEERED') FF4 ON 1=1 " & _
+                " WHERE FF.FormName = 'rptEMEATimberStdDoorSizes' AND FF.ColName LIKE 'STD_DOOR_SIZES%' " & _
+                " UNION " & _
+                " SELECT FF.ColNumber, CAST (PARSENAME(FF.Usage1Value,4) AS INT) AS Grouping_, " & _
+                " 'Glass descriptions' AS Leaf,PARSENAME(FF.Usage1Value, 3) AS Reference, PARSENAME(FF.Usage1Value,2) AS [Type], " & _
+                " PARSENAME(FF.Usage1Value,1) AS Thickness, PARSENAME(FF.Usage2Value,3) AS FireRatings, " & _
+                " PARSENAME(FF.Usage2Value,2) AS RwdBRatings, PARSENAME(FF.Usage2Value,1) AS ENClassifications, " & _
+                " '' AS FrameDepthListPrimedPainted, '' AS FrameDepthListHardwood, '' AS FrameDepthListVeneered, " & _
+                "'" & Hash.Item("lblReference") & "' AS Header1, " & _
+                "'" & Hash.Item("lblType") & "' AS Header2, " & _
+                "'" & Hash.Item("lblThickness") & "' AS Header3, " & _
+                "'" & Hash.Item("lblFireRatings") & "' AS Header4, " & _
+                "'" & Hash.Item("lblRwdBRatings") & "' AS Header5, " & _
+                "'" & Hash.Item("lblENClassifications") & "' AS Header6 " & _
+                " FROM FormFields FF  " & _
+                " WHERE FF.FormName = 'rptEMEATimberStdDoorSizes' AND FF.ColName LIKE 'STD_GLASS_DESC%' " & _
+                " ORDER BY FF.ColNumber, CAST (PARSENAME(FF.Usage1Value,4) AS INT) "
 
         Dim dc2 As New DataCls(strQ2, DataDB, False, False, False)
 
@@ -4156,27 +4184,26 @@ ErrHandler:
         Dim strQ As String
 
         strQ = " DECLARE @ProjectID INT SET @ProjectID = " & PrjID1.ToString & " SET ARITHABORT ON" & _
-                " SELECT AP.ID, AP.ProjectName, CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
-                "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
-                "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
-                "   CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
-                "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AD.ToRoom, AD.FromRoom, " & _
-                "   AD.DoorMaterial, CASE MAX(AH.Leaf) WHEN 'A' THEN 'Single' WHEN 'B' THEN 'Equal Pair' WHEN  'I' THEN 'Unequal Pairs'  " & _
-                "   ELSE 'Single' END AS Leaf, AD.Qty, AD.FireRating, AD.AcousticRating, ROUND(AD.RoughWidth,1) AS FrameWidth, " & _
-                "   ROUND(AD.RoughHeight,1) AS FrameHeight, AD.FrameDepth, " & _
-                "   CAST((AD.DoorPrice/CASE WHEN AD.Qty = 0 THEN 1 ELSE AD.Qty END) AS DECIMAL(18, 2)) AS UnitRate, " & _
-                "   CASE WHEN DAY(GETDATE()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'st ' WHEN DAY(GETDATE()) IN ( 2, 22 ) " & _
-                "   THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'nd ' WHEN DAY(GETDATE()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'rd ' " & _
-                "   ELSE CONVERT(VARCHAR, DAY(GETDATE())) + 'th ' END + DATENAME(MONTH, GETDATE()) + ' '  + CONVERT(VARCHAR, YEAR(GETDATE())) " & _
-                "   TodaysDateEN, GETDATE() TodaysDate " & _
-                " FROM AAOSDoors AD " & _
-                " LEFT OUTER JOIN AAOSProjects AP ON AP.ID = AD.ProjectID " & _
-                " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
-                " LEFT OUTER JOIN AAOSHWSets AH ON AP.ID = AH.ProjectID AND AD.HWSet = AH.SetName " & _
-                " WHERE AP.ID = @ProjectID " & _
-                " GROUP BY AP.ID, AP.ProjectName, AP.OriginalProjectID, AP.RevisionNumber, ACS.FirstName, ACS.LastName, AD.Mark, AD.ToRoom, AD.FromRoom, " & _
-                " AD.DoorMaterial, AD.UOM, AD.Qty, AD.FireRating, AD.AcousticRating, AD.RoughWidth, AD.RoughHeight, AD.FrameDepth, AD.DoorPrice, AD.Qty " & _
-                " ORDER BY AD.Mark ASC "
+        " SELECT AP.ID, AP.ProjectName, " & _
+        " CAST(AP.ID AS NVARCHAR(MAX)) AS ProjectReference, " & _
+        "   CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
+        "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AD.ToRoom, AD.FromRoom, " & _
+        "   AD.DoorMaterial, CASE MAX(AH.Leaf) WHEN 'A' THEN 'Single' WHEN 'B' THEN 'Equal Pair' WHEN  'I' THEN 'Unequal Pairs'  " & _
+        "   ELSE 'Single' END AS Leaf, AD.Qty, AD.FireRating, AD.AcousticRating, ROUND(AD.RoughWidth,1) AS FrameWidth, " & _
+        "   ROUND(AD.RoughHeight,1) AS FrameHeight, AD.FrameDepth, " & _
+        "   CAST((AD.DoorPrice/CASE WHEN AD.Qty = 0 THEN 1 ELSE AD.Qty END) AS DECIMAL(18, 2)) AS UnitRate, " & _
+        "   CASE WHEN DAY(GETDATE()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'st ' WHEN DAY(GETDATE()) IN ( 2, 22 ) " & _
+        "   THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'nd ' WHEN DAY(GETDATE()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'rd ' " & _
+        "   ELSE CONVERT(VARCHAR, DAY(GETDATE())) + 'th ' END + DATENAME(MONTH, GETDATE()) + ' '  + CONVERT(VARCHAR, YEAR(GETDATE())) " & _
+        "   TodaysDateEN, GETDATE() TodaysDate " & _
+        " FROM AAOSDoors AD " & _
+        " LEFT OUTER JOIN AAOSProjects AP ON AP.ID = AD.ProjectID " & _
+        " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
+        " LEFT OUTER JOIN AAOSHWSets AH ON AP.ID = AH.ProjectID AND AD.HWSet = AH.SetName " & _
+        " WHERE AP.ID = @ProjectID " & _
+        " GROUP BY AP.ID, AP.ProjectName, AP.OriginalProjectID, AP.RevisionNumber, ACS.FirstName, ACS.LastName, AD.Mark, AD.ToRoom, AD.FromRoom, " & _
+        " AD.DoorMaterial, AD.UOM, AD.Qty, AD.FireRating, AD.AcousticRating, AD.RoughWidth, AD.RoughHeight, AD.FrameDepth, AD.DoorPrice, AD.Qty " & _
+        " ORDER BY AD.Mark ASC "
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
@@ -4316,40 +4343,39 @@ ErrHandler:
         Dim strQ As String
 
         strQ = " DECLARE @ProjectID INT SET @ProjectID = " & PrjID1.ToString & " SET ARITHABORT ON" & _
-                " SELECT AP.ID, AP.ProjectName, CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
-                "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
-                "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
-                "   CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
-                "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AH.SetDesc, AH.SetName, AD.Qty, " & _
-                "   CAST((AD.DoorPrice/CASE WHEN AD.Qty = 0 THEN 1 ELSE AD.Qty END) AS DECIMAL(18, 2)) AS UnitRate, " & _
-                "   CASE WHEN DAY(GETDATE()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'st ' WHEN DAY(GETDATE()) IN ( 2, 22 ) " & _
-                "   THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'nd ' WHEN DAY(GETDATE()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'rd ' " & _
-                "   ELSE CONVERT(VARCHAR, DAY(GETDATE())) + 'th ' END + DATENAME(MONTH, GETDATE()) + ' '  + CONVERT(VARCHAR, YEAR(GETDATE())) " & _
-                "   TodaysDateEN, GETDATE() TodaysDate, " & _
-                "   LTRIM(MAX(Notes.List)) AS SetNotes " & _
-                " FROM AAOSDoors AD " & _
-                " LEFT OUTER JOIN AAOSProjects AP ON AP.ID = AD.ProjectID " & _
-                " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
-                " LEFT OUTER JOIN AAOSHWSets AH ON AP.ID = AH.ProjectID AND AD.HWSet = AH.SetName " & _
-                " LEFT OUTER JOIN ( " & _
-                "   SELECT DISTINCT (ProjectID)ProjectID, STUFF(( " & _
-                "       SELECT ' ',  Char(13),  +SetNotes [text()] " & _
-                "       FROM   ( " & _
-                "           SELECT DISTINCT (ProjectID), " & _
-                "               CASE WHEN Len(SetNotes) > 0 THEN (SetName + ' : '  + Replace(Replace(SetNotes, Char(13), ' '), Char(10), ' ')) " & _
-                "               ELSE NULL  END SetNotes  " & _
-                "           FROM  AAOSHWSets T " & _
-                "           WHERE ProjectID = @ProjectID AND SetNotes != '' " & _
-                "           GROUP BY ProjectID,	SetName, SetNotes) A " & _
-                "       WHERE ProjectID = @ProjectID  FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
-                "   FROM AAOSHWSets T " & _
-                "   WHERE ProjectID = @ProjectID " & _
-                "   GROUP BY ProjectID,	SetNotes) Notes " & _
-                " ON Notes.ProjectID = AP.ID " & _
-                " WHERE AP.ID = @ProjectID " & _
-                " GROUP BY AP.ID, AP.ProjectName, AP.OriginalProjectID, AP.RevisionNumber, ACS.FirstName, ACS.LastName, AD.Mark, AH.SetDesc, AH.SetName, " & _
-                " AD.DoorPrice, AD.Qty " & _
-                " ORDER BY AD.Mark ASC "
+            " SELECT AP.ID, AP.ProjectName, " & _
+            " CAST(AP.ID AS NVARCHAR(MAX)) AS ProjectReference, " & _
+            " CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
+            "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AH.SetDesc, AH.SetName, AD.Qty, " & _
+            "   CAST((AD.DoorPrice/CASE WHEN AD.Qty = 0 THEN 1 ELSE AD.Qty END) AS DECIMAL(18, 2)) AS UnitRate, " & _
+            "   CASE WHEN DAY(GETDATE()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'st ' WHEN DAY(GETDATE()) IN ( 2, 22 ) " & _
+            "   THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'nd ' WHEN DAY(GETDATE()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'rd ' " & _
+            "   ELSE CONVERT(VARCHAR, DAY(GETDATE())) + 'th ' END + DATENAME(MONTH, GETDATE()) + ' '  + CONVERT(VARCHAR, YEAR(GETDATE())) " & _
+            "   TodaysDateEN, GETDATE() TodaysDate, " & _
+            "   LTRIM(MAX(Notes.List)) AS SetNotes " & _
+            " FROM AAOSDoors AD " & _
+            " LEFT OUTER JOIN AAOSProjects AP ON AP.ID = AD.ProjectID " & _
+            " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
+            " LEFT OUTER JOIN AAOSHWSets AH ON AP.ID = AH.ProjectID AND AD.HWSet = AH.SetName " & _
+            " LEFT OUTER JOIN ( " & _
+            "   SELECT DISTINCT (ProjectID)ProjectID, STUFF(( " & _
+            "       SELECT ' ',  Char(13),  +SetNotes [text()] " & _
+            "       FROM   ( " & _
+            "           SELECT DISTINCT (ProjectID), " & _
+            "               CASE WHEN Len(SetNotes) > 0 THEN (SetName + ' : '  + Replace(Replace(SetNotes, Char(13), ' '), Char(10), ' ')) " & _
+            "               ELSE NULL  END SetNotes  " & _
+            "           FROM  AAOSHWSets T " & _
+            "           WHERE ProjectID = @ProjectID AND SetNotes != '' " & _
+            "           GROUP BY ProjectID,	SetName, SetNotes) A " & _
+            "       WHERE ProjectID = @ProjectID  FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 2, ' ') List " & _
+            "   FROM AAOSHWSets T " & _
+            "   WHERE ProjectID = @ProjectID " & _
+            "   GROUP BY ProjectID,	SetNotes) Notes " & _
+            " ON Notes.ProjectID = AP.ID " & _
+            " WHERE AP.ID = @ProjectID " & _
+            " GROUP BY AP.ID, AP.ProjectName, AP.OriginalProjectID, AP.RevisionNumber, ACS.FirstName, ACS.LastName, AD.Mark, AH.SetDesc, AH.SetName, " & _
+            " AD.DoorPrice, AD.Qty " & _
+            " ORDER BY AD.Mark ASC "
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
@@ -4488,26 +4514,25 @@ ErrHandler:
         Dim strQ As String
 
         strQ = " DECLARE @ProjectID INT SET @ProjectID = " & PrjID1.ToString & " SET ARITHABORT ON" & _
-                " SELECT AP.ID, AP.ProjectName, CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
-                "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
-                "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
-                "   CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
-                "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.DoorElevation, AD.ArchDoorType, AD.DoorMaterial, " & _
-                "   CASE MAX(AH.Leaf) WHEN 'A' THEN 'Single' WHEN 'B' THEN 'Equal Pair' WHEN  'I' THEN 'Unequal Pairs' " & _
-                "   ELSE 'Single' END AS Leaf, AD.Qty, AD.FireRating, AD.AcousticRating, " & _
-                "   CAST((AD.DoorPrice/CASE WHEN AD.Qty = 0 THEN 1 ELSE AD.Qty END) AS DECIMAL(18, 2)) AS UnitRate, " & _
-                "   CASE WHEN DAY(GETDATE()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'st ' WHEN DAY(GETDATE()) IN ( 2, 22 ) " & _
-                "   THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'nd ' WHEN DAY(GETDATE()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'rd ' " & _
-                "   ELSE CONVERT(VARCHAR, DAY(GETDATE())) + 'th ' END + DATENAME(MONTH, GETDATE()) + ' '  + CONVERT(VARCHAR, YEAR(GETDATE())) " & _
-                "   TodaysDateEN, GETDATE() TodaysDate " & _
-                " FROM AAOSDoors AD " & _
-                " LEFT OUTER JOIN AAOSProjects AP ON AP.ID = AD.ProjectID " & _
-                " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
-                " LEFT OUTER JOIN AAOSHWSets AH ON AP.ID = AH.ProjectID AND AD.HWSet = AH.SetName " & _
-                " WHERE AP.ID = @ProjectID " & _
-                " GROUP BY AP.ID, AP.ProjectName, AP.OriginalProjectID, AP.RevisionNumber, ACS.FirstName, ACS.LastName, AD.Mark, AD.DoorElevation, AD.ArchDoorType, " & _
-                " AD.DoorMaterial, AD.UOM, AD.Qty, AD.FireRating, AD.AcousticRating, AD.Qty, AD.DoorPrice " & _
-                " ORDER BY AD.DoorElevation ASC "
+            " SELECT AP.ID, AP.ProjectName, " & _
+            " CAST(AP.ID AS NVARCHAR(MAX)) AS ProjectReference, " & _
+            " CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
+            "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.DoorElevation, AD.ArchDoorType, AD.DoorMaterial, " & _
+            "   CASE MAX(AH.Leaf) WHEN 'A' THEN 'Single' WHEN 'B' THEN 'Equal Pair' WHEN  'I' THEN 'Unequal Pairs' " & _
+            "   ELSE 'Single' END AS Leaf, AD.Qty, AD.FireRating, AD.AcousticRating, " & _
+            "   CAST((AD.DoorPrice/CASE WHEN AD.Qty = 0 THEN 1 ELSE AD.Qty END) AS DECIMAL(18, 2)) AS UnitRate, " & _
+            "   CASE WHEN DAY(GETDATE()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'st ' WHEN DAY(GETDATE()) IN ( 2, 22 ) " & _
+            "   THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'nd ' WHEN DAY(GETDATE()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'rd ' " & _
+            "   ELSE CONVERT(VARCHAR, DAY(GETDATE())) + 'th ' END + DATENAME(MONTH, GETDATE()) + ' '  + CONVERT(VARCHAR, YEAR(GETDATE())) " & _
+            "   TodaysDateEN, GETDATE() TodaysDate " & _
+            " FROM AAOSDoors AD " & _
+            " LEFT OUTER JOIN AAOSProjects AP ON AP.ID = AD.ProjectID " & _
+            " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
+            " LEFT OUTER JOIN AAOSHWSets AH ON AP.ID = AH.ProjectID AND AD.HWSet = AH.SetName " & _
+            " WHERE AP.ID = @ProjectID " & _
+            " GROUP BY AP.ID, AP.ProjectName, AP.OriginalProjectID, AP.RevisionNumber, ACS.FirstName, ACS.LastName, AD.Mark, AD.DoorElevation, AD.ArchDoorType, " & _
+            " AD.DoorMaterial, AD.UOM, AD.Qty, AD.FireRating, AD.AcousticRating, AD.Qty, AD.DoorPrice " & _
+            " ORDER BY AD.DoorElevation ASC "
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
@@ -4645,28 +4670,27 @@ ErrHandler:
         Dim strQ As String
 
         strQ = " DECLARE @ProjectID INT SET @ProjectID = " & PrjID1.ToString & " SET ARITHABORT ON" & _
-                " SELECT AP.ID, AP.ProjectName, CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
-                "   THEN CAST(AP.OriginalProjectID AS NVARCHAR(MAX))  +  '-'  +  CAST(AP.RevisionNumber AS NVARCHAR(MAX)) " & _
-                "   ELSE CAST(AP.ID AS NVARCHAR(MAX)) END AS NewProjID, " & _
-                "   CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
-                "   ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AD.ToRoom, AD.FromRoom, AD.DoorElevation, AD.FireRating, " & _
-                "   AD.AcousticRating, AD.Undercut, AD.Thickness, AD.DoorFinish, AD.DoorEdge, AH.SetName, 'TBD' AS Glass, 'TBD' AS Aperture, " & _
-                "   AD.FrameDepth, AD.Extra1, AD.Extra2,  ROUND(AD.RoughWidth,1) AS FrameWidth, ROUND(AD.RoughHeight,1) AS FrameHeight, " & _
-                "   AD.ArchFrameFinish, AD.DoorSeries AS Threshold, AD.SpecifierRemarks, AD.Handing, " & _
-                "   CAST((AD.DoorPrice/CASE WHEN AD.Qty = 0 THEN 1 ELSE AD.Qty END) AS DECIMAL(18, 2)) AS DoorNetPrice, " & _
-                "   CAST((AH.PRICE/CASE WHEN AH.Qty = 0 THEN 1 ELSE AH.Qty END) AS DECIMAL(18, 2)) AS HWSetNetPrice, 'TBD' AS Fitting, " & _
-                "   CAST((AD.DoorPrice/CASE WHEN AD.Qty = 0 THEN 1 ELSE AD.Qty END) AS DECIMAL(18, 2)) + " & _
-                "   CAST((AH.PRICE/CASE WHEN AH.Qty = 0 THEN 1 ELSE AH.Qty END) AS DECIMAL(18, 2)) AS Total, " & _
-                "   CASE WHEN DAY(GETDATE()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'st ' WHEN DAY(GETDATE()) IN ( 2, 22 ) " & _
-                "   THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'nd ' WHEN DAY(GETDATE()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'rd ' " & _
-                "   ELSE CONVERT(VARCHAR, DAY(GETDATE())) + 'th ' END + DATENAME(MONTH, GETDATE()) + ' '  + CONVERT(VARCHAR, YEAR(GETDATE())) " & _
-                "   TodaysDateEN, GETDATE() TodaysDate " & _
-                " FROM AAOSDoors AD " & _
-                " LEFT OUTER JOIN AAOSProjects AP ON AP.ID = AD.ProjectID " & _
-                " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
-                " LEFT OUTER JOIN AAOSHWSets AH ON AP.ID = AH.ProjectID AND AD.HWSet = AH.SetName " & _
-                " WHERE AP.ID = @ProjectID " & _
-                " ORDER BY AD.Mark ASC "
+            " SELECT AP.ID, AP.ProjectName, " & _
+            " CAST(AP.ID AS NVARCHAR(MAX)) AS ProjectReference, " & _
+            " CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
+            " ACS.FirstName + ' ' + ACS.LastName ProjectOwner, AD.Mark, AD.ToRoom, AD.FromRoom, AD.DoorElevation, AD.FireRating, " & _
+            " AD.AcousticRating, AD.Undercut, AD.Thickness, AD.DoorFinish, AD.DoorEdge, AH.SetName, 'TBD' AS Glass, 'TBD' AS Aperture, " & _
+            " AD.FrameDepth, AD.Extra1, AD.Extra2,  ROUND(AD.RoughWidth,1) AS FrameWidth, ROUND(AD.RoughHeight,1) AS FrameHeight, " & _
+            " AD.ArchFrameFinish, AD.DoorSeries AS Threshold, AD.SpecifierRemarks, AD.Handing, " & _
+            " CAST((AD.DoorPrice/CASE WHEN AD.Qty = 0 THEN 1 ELSE AD.Qty END) AS DECIMAL(18, 2)) AS DoorNetPrice, " & _
+            " CAST((AH.PRICE/CASE WHEN AH.Qty = 0 THEN 1 ELSE AH.Qty END) AS DECIMAL(18, 2)) AS HWSetNetPrice, 'TBD' AS Fitting, " & _
+            " CAST((AD.DoorPrice/CASE WHEN AD.Qty = 0 THEN 1 ELSE AD.Qty END) AS DECIMAL(18, 2)) + " & _
+            " CAST((AH.PRICE/CASE WHEN AH.Qty = 0 THEN 1 ELSE AH.Qty END) AS DECIMAL(18, 2)) AS Total, " & _
+            " CASE WHEN DAY(GETDATE()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'st ' WHEN DAY(GETDATE()) IN ( 2, 22 ) " & _
+            " THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'nd ' WHEN DAY(GETDATE()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, DAY(GETDATE())) + 'rd ' " & _
+            " ELSE CONVERT(VARCHAR, DAY(GETDATE())) + 'th ' END + DATENAME(MONTH, GETDATE()) + ' '  + CONVERT(VARCHAR, YEAR(GETDATE())) " & _
+            " TodaysDateEN, GETDATE() TodaysDate " & _
+            " FROM AAOSDoors AD " & _
+            " LEFT OUTER JOIN AAOSProjects AP ON AP.ID = AD.ProjectID " & _
+            " LEFT OUTER JOIN AAOSConsultants ACS ON AP.ArchConsultant = ACS.ID " & _
+            " LEFT OUTER JOIN AAOSHWSets AH ON AP.ID = AH.ProjectID AND AD.HWSet = AH.SetName " & _
+            " WHERE AP.ID = @ProjectID " & _
+            " ORDER BY AD.Mark ASC "
 
         Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
 
@@ -4824,9 +4848,10 @@ ErrHandler:
         "" & _
         " SELECT AP.ID ProjectReference, " & _
         " AP.ProjectName, " & _
-         "CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
-         "THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
-         "ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
+        " CASE WHEN ISNULL(AP.OriginalProjectID, 0) <> 0 " & _
+        " THEN CAST(AP.OriginalProjectID AS nvarchar(max))  +  '-'  +  CAST(AP.RevisionNumber AS nvarchar(max)) " & _
+        " ELSE CAST(AP.ID AS nvarchar(max)) END as NewProjID," & _
+        " CAST(AP.RevisionNumber AS nvarchar(max)) AS Revision, " & _
         " (ACS.FirstName + ' ' + ACS.LastName) AS ProjectOwner, " & _
         " CASE WHEN Day(Getdate()) IN ( 1, 21, 31 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'st ' WHEN Day(Getdate()) IN ( 2, 22 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'nd ' WHEN Day(Getdate()) IN ( 3, 23 ) THEN CONVERT(VARCHAR, Day(Getdate())) + 'rd ' ELSE CONVERT(VARCHAR, Day(Getdate())) + 'th ' END + Datename(month, Getdate()) + ' ' " & _
         " + CONVERT(VARCHAR, Year(Getdate()))TodaysDateEN, getdate() TodaysDate, " & _
@@ -4948,7 +4973,7 @@ ErrHandler:
                 pdfHash.Add(Desc, Path)
             End If
         Next
-        
+
         Dim iQty As Integer
         Dim dv1 As New DataView(dc1.DT.Clone)
         Dim iFind As Integer
@@ -5168,7 +5193,6 @@ ErrHandler:
         rpt.sRevisionText = RevisionTxt
         rpt.sHash = Hash
         rpt.ISO = ReportLangISO
-        rpt.sReportVariant = arguments(0)
         rpt.Run()
 
         If My.Computer.FileSystem.DirectoryExists(Path.GetDirectoryName(arguments(4))) = False Then
@@ -5217,6 +5241,177 @@ GetOut:
         Exit Sub
 ErrHandler:
         WriteToConsole("ERROR - CreateEMEAQuoteTerms " & Err.Description)
+        GoTo GetOut
+        Exit Sub
+        Resume Next
+        Resume
+    End Sub
+
+    '// Quote Terms Doors
+    'Arguments
+    '1 - Report Name
+    '2 - UOM - Imperial or Metric
+    '3 - ProjectID 1
+    '4 - ProjectID 2
+    '5 - Save To Path
+    '6 - File Format - PDF or EXCEL
+    '7 - SQL Statement or Where clause
+    '8 - Report Title
+    '9 - RevNo
+
+    Private Sub CreateQuoteTermsDoors(ByVal arguments() As String)
+        On Error GoTo ErrHandler
+
+        Dim PrjID As Integer = arguments(2)
+        Dim UsrID As Integer = arguments(8)
+        Dim RevisionTxt As String = arguments(9)
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        'Translation Start
+
+        DataDB = New SqlClient.SqlConnection("Data Source=SQLOLEDB.1;Password=" & DBPass & ";Persist Security Info=True;User ID=" & DBUser & ";Initial Catalog=" & AAOSDBName & ";Data Source=" & DBServerPort)
+        DataDB.Open()
+
+        Dim strQLang As String
+
+        strQLang = "SELECT Locale" & _
+        ", FormName" & _
+        ", ColName" & _
+        ", VisibleColText" & _
+        " FROM dbo.FormFields" & _
+        " WHERE Locale = '" & ReportLangISO.ToString & "'" & _
+        " and FormName in ('rptEMEAQuoteTermsDoors','rptGenericHeaders') and Usage2Name != 'Text Box'"
+
+        Dim dcLANG As New DataCls(strQLang, DataDB, False, False, False)
+
+        Dim dvLANG As New DataView(dcLANG.DT)
+
+        Dim Hash As Hashtable = New Hashtable()
+
+        For Each rowView As DataRowView In dvLANG
+            Hash.Add(rowView("ColName"), rowView("VisibleColText"))
+        Next
+
+        DataDB.Close()
+
+        DataDB = New SqlClient.SqlConnection("Data Source=SQLOLEDB.1;Password=" & DBPass & ";Persist Security Info=True;User ID=" & DBUser & ";Initial Catalog=" & AAOSDBName & ";Data Source=" & DBServerPort)
+        DataDB.Open()
+
+        Dim strQFooter As String
+
+        strQFooter = "SELECT Locale" & _
+        ", FormName" & _
+        ", ColName" & _
+        ", Usage2Value" & _
+        " FROM dbo.FormFields" & _
+        " WHERE Locale = '" & ReportLangISO.ToString & "'" & _
+        " and FormName in ('rptPageFooters', 'rptEMEAQuoteTermsDoors') AND Usage2Name != 'SimpleView'"
+
+        Dim dcFOOT As New DataCls(strQFooter, DataDB, False, False, False)
+
+        Dim dvFOOT As New DataView(dcFOOT.DT)
+
+        For Each rowView As DataRowView In dvFOOT
+            Hash.Add(rowView("ColName"), rowView("Usage2Value"))
+        Next
+
+        DataDB.Close()
+
+        'Translation End
+        ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+        DataDB = New SqlClient.SqlConnection("Data Source=SQLOLEDB.1;Password=" & DBPass & ";Persist Security Info=True;User ID=" & DBUser & ";Initial Catalog=" & ADSDBName & ";Data Source=" & DBServerPort)
+        DataDB.Open()
+        Dim strQ As String
+
+        strQ = "SELECT " & _
+         " AP.projectname ProjectName, " & _
+         " AP.id ProjectReference, " & _
+         " CAST(AP.ID AS NVARCHAR(MAX)) AS ProjectReference, " & _
+         " CAST(AP.RevisionNumber AS NVARCHAR(MAX)) AS Revision, " & _
+         " CASE WHEN DAY(getdate()) in (1,21,31) THEN convert(varchar,DAY(getdate())) + 'st '" & _
+         " WHEN DAY(getdate()) IN (2,22) then convert(varchar,DAY(getdate())) + 'nd '" & _
+         " WHEN DAY(getdate()) IN (3,23) then convert(varchar,DAY(getdate())) + 'rd ' " & _
+         " ELSE convert(varchar,DAY(getdate())) + 'th ' end + " & _
+         " DATENAME(month, getdate())  + ' ' + convert(varchar,year(getdate())) TodaysDateEN, getdate() TodaysDate," & _
+         " ACS.firstname + ' ' + ACS.lastname ProjectOwner, " & _
+         " ACS.Phone PrjOwnNumber, " & _
+         " ACS.Email AS PrjOwnEmail ," & _
+         " CS.firstname + ' ' + CS.lastname SpecConsult, " & _
+         " CS.Phone SpecConNumber, " & _
+         " CS.Email AS SpecConEmail, " & _
+         " AP.Notes " & _
+         " FROM AAOSProjects AP" & _
+         " LEFT OUTER JOIN AAOSConsultants ACS ON AP.archconsultant = ACS.id" & _
+         " LEFT OUTER JOIN AAOSCONSULTANTS CS ON AP.consultant = CS.id" & _
+         " WHERE AP.id = " & PrjID.ToString & " ORDER BY AP.id"
+
+        Dim dc1 As New DataCls(strQ, DataDB, False, False, False)
+
+        Dim iQty As Integer
+        Dim dv1 As New DataView(dc1.DT.Clone)
+        Dim iFind As Integer
+        Dim drv As DataRowView
+        Dim str1 As String = ""
+        Dim dValue As Double
+        Dim curSet As String = ""
+        Dim curQty As Integer = 0
+        Dim curMarkList As String = ""
+        Dim curTotPrice As Double
+
+
+        Dim rpt As New rptEMEAQuoteTermsDoors
+        rpt.DataSource = dc1.DT
+        rpt.sRevisionText = RevisionTxt
+        rpt.sHash = Hash
+        rpt.ISO = ReportLangISO
+        rpt.Run()
+
+        If My.Computer.FileSystem.DirectoryExists(Path.GetDirectoryName(arguments(4))) = False Then
+            My.Computer.FileSystem.CreateDirectory(Path.GetDirectoryName(arguments(4)))
+        End If
+
+
+        Select Case arguments(5).ToUpper
+            Case "PDF"
+                'Dim rptexp As New DataDynamics.ActiveReports.Export.Pdf.PdfExport
+                Dim rptexp As New GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport
+                rptexp.Export(rpt.Document, arguments(4))
+                rptexp.Dispose()
+                rptexp = Nothing
+            Case "XLS", "EXCEL"
+                'Dim rptxls As New DataDynamics.ActiveReports.Export.Xls.XlsExport
+                Dim rptxls As New GrapeCity.ActiveReports.Export.Excel.Section.XlsExport
+                rptxls.Export(rpt.Document, arguments(4))
+                rptxls.Dispose()
+                rptxls = Nothing
+            Case "RTF"
+                'Dim rptrtf As New DataDynamics.ActiveReports.Export.Rtf.RtfExport
+                Dim rptrtf As New GrapeCity.ActiveReports.Export.Word.Section.RtfExport
+                rptrtf.EnableShapes = True
+                rptrtf.Export(rpt.Document, arguments(4))
+                rptrtf.Dispose()
+                rptrtf = Nothing
+        End Select
+        rpt.Dispose()
+        rpt = Nothing
+
+        WriteToConsole("SUCCESSFUL")
+
+GetOut:
+        If dc1 IsNot Nothing Then
+            dc1.Dispose()
+            dc1 = Nothing
+        End If
+
+
+        If DataDB IsNot Nothing Then
+            If DataDB.State <> ConnectionState.Closed Then DataDB.Close()
+            DataDB.Dispose()
+            DataDB = Nothing
+        End If
+        Exit Sub
+ErrHandler:
+        WriteToConsole("ERROR - CreateEMEAQuoteTermsDoors " & Err.Description)
         GoTo GetOut
         Exit Sub
         Resume Next

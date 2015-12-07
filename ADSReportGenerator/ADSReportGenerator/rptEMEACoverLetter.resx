@@ -2528,32 +2528,6 @@
         xV2KuxV2KuxV/9kL
 </value>
   </data>
-  <data name="txtMainBody.Text" xml:space="preserve">
-    <value>All prices are subject to VAT at the ruling rate on the day of dispatch.
-
-This document, the specifications and schedules that are contained herein are the copyright of ASSA ABLOY UK Ltd. It has been
-produced for the sole use of the project team and no licence is implied or given for their dissemination or distribution to any other
-parties without prior consent in writing from ASSA ABLOY UK Ltd.
-
-ASSA ABLOY has prepared this schedule in good faith and based on the available information at the date of issue. It remains the
-responsibility of the contractor or his appointed ASSA ABLOY distributor to ensure that the information is correct based on the most
-recent version of relevant contract drawings and specifications. Any discrepancy between those documents and this schedule is not
-the responsibility of ASSA ABLOY unless said documents have been recorded as issued to us for revision.
-
-This quotation is subject to our Terms and Conditions, a copy of which are attached. This quotation is open for acceptance for a
-period of 30 days from the date of its issue. Prices are fixed for all deliveries made within a period of 60 days from the date of
-acceptance and are subject to VAT at the rate applicable on the date of dispatch.
-
-We reserve the right to re-quote these prices at the end of the above fixed price period.
-
-
-
-Yours faithfully,
-</value>
-  </data>
-  <data name="txtFooter.OutputFormat" xml:space="preserve">
-    <value>#,##</value>
-  </data>
   <data name="txtFooter.OutputFormat" xml:space="preserve">
     <value>#,##</value>
   </data>

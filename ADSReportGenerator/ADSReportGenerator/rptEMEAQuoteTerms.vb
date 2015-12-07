@@ -23,7 +23,6 @@ Public Class rptEMEAQuoteTerms
     Public sReportTitle As String
     Public sHash As Hashtable
     Public ISO As String
-    Public sReportVariant As String
 
     Private Sub Detail1_Format(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Detail.Format
 
@@ -79,7 +78,20 @@ Public Class rptEMEAQuoteTerms
         lblTitle.Text = sHash.Item("lblTitle")
         lblPrjName.Text = sHash.Item("lblPrjName")
         lblPrjRef.Text = sHash.Item("lblPrjRef")
-        lblRev.Text = sHash.Item("lblRev")
+
+        If ISO.Equals("EN") Then
+            lblRev.Text = sHash.Item("lblRevNo")
+            txtRev.Text = txtRev.DataField
+            txtPrjRef.Visible = False
+            txtPrjRef2.Visible = True
+        Else
+            lblRev.Text = sHash.Item("lblRev")
+            txtRev.DataField = ""
+            txtRev.Text = sRevisionText
+            txtPrjRef.Visible = True
+            txtPrjRef2.Visible = False
+        End If
+
         lblPrjOwner.Text = sHash.Item("lblPrjOwner")
         lblOf.Text = sHash.Item("lblOf")
         lblPage.Text = sHash.Item("lblPage")
@@ -90,17 +102,9 @@ Public Class rptEMEAQuoteTerms
         lblAddDet.Text = sHash.Item("lblAddDet")
         lblGenCon.Text = sHash.Item("lblGenCon")
 
-        Select sReportVariant
-            Case "QUOTETERMS"
-                lblGenRem.Text = sHash.Item("lblGenRem")
-                txtGenRem.Text = sHash.Item("txtGenRem")
-                txtGenRem.Visible = True
-                DrawingsUsedValue.Visible = False
-            Case "QUOTETERMSDOORS"
-                lblGenRem.Text = sHash.Item("lblDrawingsUsed")
-                txtGenRem.Visible = False
-                DrawingsUsedValue.Visible = True
-        End Select
+        lblGenRem.Text = sHash.Item("lblGenRem")
+        txtGenRem.Text = sHash.Item("txtGenRem")
+        txtGenRem.Visible = True
 
         lblTechNote.Text = sHash.Item("lblTechNote")
 

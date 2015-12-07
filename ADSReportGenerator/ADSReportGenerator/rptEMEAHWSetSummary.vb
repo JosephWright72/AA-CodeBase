@@ -46,12 +46,24 @@ Public Class rptEMEAHWSetSummary
         txtExtended.Visible = ShowCost
         lblCurSymbol.Visible = ShowCost
         txtTotExtended.Visible = ShowCost
-        txtRev.Text = sRevisionText
 
         lblTitle.Text = sHash.Item("lblTitle")
         lblPrjName.Text = sHash.Item("lblPrjName")
         lblPrjRef.Text = sHash.Item("lblPrjRef")
-        lblRevNo.Text = sHash.Item("lblRevNo")
+
+        If ISO.Equals("EN") Then
+            lblRev.Text = sHash.Item("lblRevNo")
+            txtRev.Text = txtRev.DataField
+            txtPrjRef.Visible = False
+            txtPrjRef2.Visible = True
+        Else
+            lblRev.Text = sHash.Item("lblRev")
+            txtRev.DataField = ""
+            txtRev.Text = sRevisionText
+            txtPrjRef.Visible = True
+            txtPrjRef2.Visible = False
+        End If
+
         lblPrjOwner.Text = sHash.Item("lblPrjOwner")
         lblOf.Text = sHash.Item("lblOf")
         lblPage.Text = sHash.Item("lblPage")

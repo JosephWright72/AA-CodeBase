@@ -14,7 +14,7 @@ Public Class rptEMEADoorScheduleSummary
 
         lblProjectName.Text = sHash.Item("lblPrjName")
         lblProjectRef.Text = sHash.Item("lblPrjRef")
-        lblRev.Text = sHash.Item("lblRev")
+        lblRev.Text = sHash.Item("lblRevNo")
         lblProjectOwner.Text = sHash.Item("lblPrjOwner")
         lblOf.Text = sHash.Item("lblOf")
         lblPage.Text = sHash.Item("lblPage")
@@ -36,6 +36,14 @@ Public Class rptEMEADoorScheduleSummary
         lblUnitRate.Text = sHash.Item("lblUnitRate")
         lblTotalSum.Text = sHash.Item("lblTotalSum")
         lblTotDoors.Text = sHash.Item("lblTotDoors")
+
+        txtAllSizesIn.Text = sHash.Item("txtAllSizesIn")
+
+        If METRIC_OUTPUT = 1 Then
+            txtAllSizesIn.Text = txtAllSizesIn.Text + FEETINCH(Val("1")).Replace("1", "")
+        Else
+            txtAllSizesIn.Text = txtAllSizesIn.Text + " feet and inches"
+        End If
 
         Footer.Text = sHash.Item("txtFooter")
 
@@ -67,16 +75,6 @@ Public Class rptEMEADoorScheduleSummary
 
         UnitRateValue.OutputFormat = sHash.Item("lblCurSymbol") + "#,##0.00"
         TotalSumValue.OutputFormat = sHash.Item("lblCurSymbol") + "#,##0.00"
-
-        If METRIC_OUTPUT = 1 Then
-            lblFrameWidth.Text = lblFrameWidth.Text + " (mm)"
-            lblFrameHeight.Text = lblFrameHeight.Text + " (mm)"
-            lblFrameDepth.Text = lblFrameDepth.Text + " (mm)"
-        Else
-            lblFrameWidth.Text = lblFrameWidth.Text + " (feet and inches)"
-            lblFrameHeight.Text = lblFrameHeight.Text + " (feet and inches)"
-            lblFrameDepth.Text = lblFrameDepth.Text + " (feet and inches)"
-        End If
 
     End Sub
 

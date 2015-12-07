@@ -54,8 +54,6 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         Me.TotalSumValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.lblTotDoors = New GrapeCity.ActiveReports.SectionReportModel.Label()
         Me.TotalDoorsValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.lblNotes = New GrapeCity.ActiveReports.SectionReportModel.Label()
-        Me.SetNotesValue = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         CType(Me.lblReportName, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgLogoEN, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgLogoNO, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,8 +84,6 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         CType(Me.TotalSumValue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblTotDoors, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TotalDoorsValue, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblNotes, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SetNotesValue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'PageHeader
@@ -106,14 +102,14 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
     "ical-align: middle; ddo-char-set: 1"
         Me.lblReportName.Text = "lblReportName"
         Me.lblReportName.Top = 0.0!
-        Me.lblReportName.Width = 7.0!
+        Me.lblReportName.Width = 6.0!
         '
         'imgLogoEN
         '
         Me.imgLogoEN.Height = 0.3!
         Me.imgLogoEN.HyperLink = Nothing
         Me.imgLogoEN.ImageData = CType(resources.GetObject("imgLogoEN.ImageData"), System.IO.Stream)
-        Me.imgLogoEN.Left = 8.0!
+        Me.imgLogoEN.Left = 6.0!
         Me.imgLogoEN.Name = "imgLogoEN"
         Me.imgLogoEN.SizeMode = GrapeCity.ActiveReports.SectionReportModel.SizeModes.Zoom
         Me.imgLogoEN.Top = 0.0!
@@ -124,7 +120,7 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         Me.imgLogoNO.Height = 0.56!
         Me.imgLogoNO.HyperLink = Nothing
         Me.imgLogoNO.ImageData = CType(resources.GetObject("imgLogoNO.ImageData"), System.IO.Stream)
-        Me.imgLogoNO.Left = 8.6!
+        Me.imgLogoNO.Left = 6.6!
         Me.imgLogoNO.Name = "imgLogoNO"
         Me.imgLogoNO.SizeMode = GrapeCity.ActiveReports.SectionReportModel.SizeModes.Zoom
         Me.imgLogoNO.Top = 0.0!
@@ -140,7 +136,7 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         Me.RevisionValue.SummaryFunc = GrapeCity.ActiveReports.SectionReportModel.SummaryFunc.Max
         Me.RevisionValue.Text = "Revision"
         Me.RevisionValue.Top = 1.2!
-        Me.RevisionValue.Width = 3.0!
+        Me.RevisionValue.Width = 2.0!
         '
         'lblRev
         '
@@ -151,7 +147,7 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         Me.lblRev.Style = "text-align: left"
         Me.lblRev.Text = "lblRev"
         Me.lblRev.Top = 1.2!
-        Me.lblRev.Width = 2.0!
+        Me.lblRev.Width = 1.75!
         '
         'lblProjectRef
         '
@@ -163,7 +159,7 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblProjectRef.Text = "lblProjectRef"
         Me.lblProjectRef.Top = 1.0!
-        Me.lblProjectRef.Width = 2.0!
+        Me.lblProjectRef.Width = 1.75!
         '
         'ProjectNameValue
         '
@@ -174,41 +170,41 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         Me.ProjectNameValue.Style = "text-align: left; vertical-align: middle"
         Me.ProjectNameValue.Text = "ProjectName"
         Me.ProjectNameValue.Top = 0.8!
-        Me.ProjectNameValue.Width = 3.0!
+        Me.ProjectNameValue.Width = 2.0!
         '
         'ProjectRefValue
         '
-        Me.ProjectRefValue.DataField = "ID"
+        Me.ProjectRefValue.DataField = "ProjectReference"
         Me.ProjectRefValue.Height = 0.2!
         Me.ProjectRefValue.Left = 2.0!
         Me.ProjectRefValue.Name = "ProjectRefValue"
         Me.ProjectRefValue.Style = "text-align: left; vertical-align: middle"
         Me.ProjectRefValue.Text = "Project Ref"
         Me.ProjectRefValue.Top = 1.0!
-        Me.ProjectRefValue.Width = 3.0!
+        Me.ProjectRefValue.Width = 2.0!
         '
         'lblProjectOwner
         '
         Me.lblProjectOwner.Height = 0.2!
         Me.lblProjectOwner.HyperLink = Nothing
-        Me.lblProjectOwner.Left = 5.5!
+        Me.lblProjectOwner.Left = 4.25!
         Me.lblProjectOwner.Name = "lblProjectOwner"
         Me.lblProjectOwner.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblProjectOwner.Text = "lblProjectOwner"
         Me.lblProjectOwner.Top = 0.8!
-        Me.lblProjectOwner.Width = 2.0!
+        Me.lblProjectOwner.Width = 1.75!
         '
         'ProjectOwnerValue
         '
         Me.ProjectOwnerValue.DataField = "ProjectOwner"
         Me.ProjectOwnerValue.Height = 0.2!
-        Me.ProjectOwnerValue.Left = 7.5!
+        Me.ProjectOwnerValue.Left = 6.25!
         Me.ProjectOwnerValue.Name = "ProjectOwnerValue"
         Me.ProjectOwnerValue.Style = "text-align: left; vertical-align: middle"
         Me.ProjectOwnerValue.Text = "ProjectOwner"
         Me.ProjectOwnerValue.Top = 0.8!
-        Me.ProjectOwnerValue.Width = 2.5!
+        Me.ProjectOwnerValue.Width = 1.75!
         '
         'lblProjectName
         '
@@ -220,42 +216,42 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblProjectName.Text = "lblProjectName"
         Me.lblProjectName.Top = 0.8!
-        Me.lblProjectName.Width = 2.0!
+        Me.lblProjectName.Width = 1.75!
         '
         'lblDate
         '
         Me.lblDate.Height = 0.2!
         Me.lblDate.HyperLink = Nothing
-        Me.lblDate.Left = 5.5!
+        Me.lblDate.Left = 4.25!
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblDate.Text = "lblDate"
         Me.lblDate.Top = 1.0!
-        Me.lblDate.Width = 2.0!
+        Me.lblDate.Width = 1.75!
         '
         'DateValue
         '
         Me.DateValue.DataField = "TodaysDate"
         Me.DateValue.Height = 0.2!
-        Me.DateValue.Left = 7.5!
+        Me.DateValue.Left = 6.25!
         Me.DateValue.Name = "DateValue"
         Me.DateValue.Style = "text-align: left; vertical-align: middle"
         Me.DateValue.Text = "TodaysDate"
         Me.DateValue.Top = 1.0!
-        Me.DateValue.Width = 2.5!
+        Me.DateValue.Width = 1.75!
         '
         'lblPage
         '
         Me.lblPage.Height = 0.2!
         Me.lblPage.HyperLink = Nothing
-        Me.lblPage.Left = 5.5!
+        Me.lblPage.Left = 4.25!
         Me.lblPage.Name = "lblPage"
         Me.lblPage.Style = "font-size: 10pt; font-weight: normal; text-align: left; text-decoration: none; ve" & _
     "rtical-align: middle; ddo-char-set: 1"
         Me.lblPage.Text = "lblPage"
         Me.lblPage.Top = 1.2!
-        Me.lblPage.Width = 2.0!
+        Me.lblPage.Width = 1.75!
         '
         'Line
         '
@@ -264,8 +260,8 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         Me.Line.LineWeight = 2.0!
         Me.Line.Name = "Line"
         Me.Line.Top = 1.6!
-        Me.Line.Width = 10.0!
-        Me.Line.X1 = 10.0!
+        Me.Line.Width = 8.0!
+        Me.Line.X1 = 8.0!
         Me.Line.X2 = 0.0!
         Me.Line.Y1 = 1.6!
         Me.Line.Y2 = 1.6!
@@ -318,7 +314,7 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         '
         Me.CurrentPageNumber.FormatString = "{PageNumber}"
         Me.CurrentPageNumber.Height = 0.2!
-        Me.CurrentPageNumber.Left = 7.5!
+        Me.CurrentPageNumber.Left = 6.25!
         Me.CurrentPageNumber.MultiLine = False
         Me.CurrentPageNumber.Name = "CurrentPageNumber"
         Me.CurrentPageNumber.Style = "font-size: 10pt; text-align: justify; ddo-char-set: 1"
@@ -328,7 +324,7 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         'lblOf
         '
         Me.lblOf.Height = 0.2!
-        Me.lblOf.Left = 7.7!
+        Me.lblOf.Left = 6.45!
         Me.lblOf.MultiLine = False
         Me.lblOf.Name = "lblOf"
         Me.lblOf.Style = "font-size: 10pt; text-align: center; ddo-char-set: 1"
@@ -340,7 +336,7 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         'PageCount
         '
         Me.PageCount.Height = 0.2!
-        Me.PageCount.Left = 8.0!
+        Me.PageCount.Left = 6.75!
         Me.PageCount.MultiLine = False
         Me.PageCount.Name = "PageCount"
         Me.PageCount.OutputFormat = resources.GetString("PageCount.OutputFormat")
@@ -364,8 +360,8 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         Me.UnitRateValue.Height = 0.2!
         Me.UnitRateValue.Left = 5.5!
         Me.UnitRateValue.Name = "UnitRateValue"
-        Me.UnitRateValue.Style = "color: Blue; font-family: Arial; font-size: 9pt; font-weight: normal; text-align:" & _
-    " right; vertical-align: middle; ddo-char-set: 1"
+        Me.UnitRateValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
+    ": right; vertical-align: middle; ddo-char-set: 1"
         Me.UnitRateValue.Text = "Unit Rate Value"
         Me.UnitRateValue.Top = 0.0!
         Me.UnitRateValue.Width = 0.75!
@@ -377,8 +373,8 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         Me.DoorRefValue.Height = 0.2!
         Me.DoorRefValue.Left = 0.0!
         Me.DoorRefValue.Name = "DoorRefValue"
-        Me.DoorRefValue.Style = "color: Blue; font-family: Arial; font-size: 9pt; font-weight: normal; text-align:" & _
-    " left; vertical-align: middle; ddo-char-set: 1"
+        Me.DoorRefValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
+    ": left; vertical-align: middle; ddo-char-set: 1"
         Me.DoorRefValue.Text = "Mark Value"
         Me.DoorRefValue.Top = 0.0!
         Me.DoorRefValue.Width = 1.0!
@@ -390,8 +386,8 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         Me.FunctionValue.Height = 0.2!
         Me.FunctionValue.Left = 1.0!
         Me.FunctionValue.Name = "FunctionValue"
-        Me.FunctionValue.Style = "color: Blue; font-family: Arial; font-size: 9pt; font-weight: normal; text-align:" & _
-    " left; vertical-align: middle; ddo-char-set: 1"
+        Me.FunctionValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
+    ": left; vertical-align: middle; ddo-char-set: 1"
         Me.FunctionValue.Text = "Function Value"
         Me.FunctionValue.Top = 0.0!
         Me.FunctionValue.Width = 3.0!
@@ -403,8 +399,8 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         Me.SetNameValue.Height = 0.2!
         Me.SetNameValue.Left = 4.0!
         Me.SetNameValue.Name = "SetNameValue"
-        Me.SetNameValue.Style = "color: Blue; font-family: Arial; font-size: 9pt; font-weight: normal; text-align:" & _
-    " left; vertical-align: middle; ddo-char-set: 1"
+        Me.SetNameValue.Style = "color: Black; font-family: Arial; font-size: 9pt; font-weight: normal; text-align" & _
+    ": left; vertical-align: middle; ddo-char-set: 1"
         Me.SetNameValue.Text = "Set Name Value"
         Me.SetNameValue.Top = 0.0!
         Me.SetNameValue.Width = 1.5!
@@ -426,7 +422,7 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
     "-char-set: 1"
         Me.Footer.Text = "Footer Text"
         Me.Footer.Top = 0.0!
-        Me.Footer.Width = 10.0!
+        Me.Footer.Width = 8.0!
         '
         'GroupHeader
         '
@@ -435,8 +431,8 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         '
         'GroupFooter
         '
-        Me.GroupFooter.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblTotalSum, Me.TotalSumValue, Me.lblTotDoors, Me.TotalDoorsValue, Me.lblNotes, Me.SetNotesValue})
-        Me.GroupFooter.Height = 1.4!
+        Me.GroupFooter.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.lblTotalSum, Me.TotalSumValue, Me.lblTotDoors, Me.TotalDoorsValue})
+        Me.GroupFooter.Height = 0.2!
         Me.GroupFooter.Name = "GroupFooter"
         '
         'lblTotalSum
@@ -458,8 +454,8 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         Me.TotalSumValue.Left = 5.25!
         Me.TotalSumValue.Name = "TotalSumValue"
         Me.TotalSumValue.OutputFormat = resources.GetString("TotalSumValue.OutputFormat")
-        Me.TotalSumValue.Style = "color: Blue; font-weight: bold; text-align: right; vertical-align: middle; ddo-ch" & _
-    "ar-set: 1"
+        Me.TotalSumValue.Style = "color: Black; font-weight: bold; text-align: right; vertical-align: middle; ddo-c" & _
+    "har-set: 1"
         Me.TotalSumValue.SummaryType = GrapeCity.ActiveReports.SectionReportModel.SummaryType.GrandTotal
         Me.TotalSumValue.Text = Nothing
         Me.TotalSumValue.Top = 0.0!
@@ -484,45 +480,22 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         Me.TotalDoorsValue.Left = 3.0!
         Me.TotalDoorsValue.Name = "TotalDoorsValue"
         Me.TotalDoorsValue.OutputFormat = resources.GetString("TotalDoorsValue.OutputFormat")
-        Me.TotalDoorsValue.Style = "color: Blue; font-weight: bold; text-align: right; vertical-align: middle; ddo-ch" & _
-    "ar-set: 1"
+        Me.TotalDoorsValue.Style = "color: Black; font-weight: bold; text-align: right; vertical-align: middle; ddo-c" & _
+    "har-set: 1"
         Me.TotalDoorsValue.SummaryType = GrapeCity.ActiveReports.SectionReportModel.SummaryType.GrandTotal
         Me.TotalDoorsValue.Text = Nothing
         Me.TotalDoorsValue.Top = 0.0!
         Me.TotalDoorsValue.Width = 0.5!
         '
-        'lblNotes
-        '
-        Me.lblNotes.Height = 0.2!
-        Me.lblNotes.HyperLink = Nothing
-        Me.lblNotes.Left = 0.0!
-        Me.lblNotes.Name = "lblNotes"
-        Me.lblNotes.Style = "font-size: 10pt; font-weight: bold; text-align: left; vertical-align: middle; ddo" & _
-    "-char-set: 1"
-        Me.lblNotes.Text = "lblNotes"
-        Me.lblNotes.Top = 0.3!
-        Me.lblNotes.Width = 2.0!
-        '
-        'SetNotesValue
-        '
-        Me.SetNotesValue.CanShrink = True
-        Me.SetNotesValue.DataField = "SetNotes"
-        Me.SetNotesValue.Height = 0.7!
-        Me.SetNotesValue.Left = 0.0!
-        Me.SetNotesValue.Name = "SetNotesValue"
-        Me.SetNotesValue.Text = "Set Notes"
-        Me.SetNotesValue.Top = 0.6!
-        Me.SetNotesValue.Width = 10.0!
-        '
         'rptEMEADoorsIronmongerySetSummary
         '
         Me.MasterReport = False
         Me.PageSettings.DefaultPaperSize = False
-        Me.PageSettings.Orientation = GrapeCity.ActiveReports.Document.Section.PageOrientation.Landscape
-        Me.PageSettings.PaperHeight = 11.69291!
+        Me.PageSettings.Orientation = GrapeCity.ActiveReports.Document.Section.PageOrientation.Portrait
+        Me.PageSettings.PaperHeight = 11.69!
         Me.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.A4
-        Me.PageSettings.PaperWidth = 11.69!
-        Me.PrintWidth = 10.0!
+        Me.PageSettings.PaperWidth = 8.27!
+        Me.PrintWidth = 7.979167!
         Me.Sections.Add(Me.PageHeader)
         Me.Sections.Add(Me.GroupHeader)
         Me.Sections.Add(Me.Detail)
@@ -564,8 +537,6 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
         CType(Me.TotalSumValue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblTotDoors, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TotalDoorsValue, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblNotes, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SetNotesValue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -599,8 +570,6 @@ Partial Public Class rptEMEADoorsIronmongerySetSummary
     Private WithEvents lblTotDoors As GrapeCity.ActiveReports.SectionReportModel.Label
     Private WithEvents TotalDoorsValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents Footer As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents lblNotes As GrapeCity.ActiveReports.SectionReportModel.Label
-    Private WithEvents SetNotesValue As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents CurrentPageNumber As GrapeCity.ActiveReports.SectionReportModel.ReportInfo
     Private WithEvents lblOf As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents PageCount As GrapeCity.ActiveReports.SectionReportModel.TextBox

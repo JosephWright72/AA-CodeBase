@@ -20,8 +20,6 @@ Partial Public Class rptEMEATimberStdDoorSizesSub
         Me.HWSet = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.Thickness = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
         Me.Rating = New GrapeCity.ActiveReports.SectionReportModel.TextBox()
-        Me.GroupHeader1 = New GrapeCity.ActiveReports.SectionReportModel.GroupHeader()
-        Me.GroupFooter1 = New GrapeCity.ActiveReports.SectionReportModel.GroupFooter()
         CType(Me.HWSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Thickness, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Rating, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -30,60 +28,54 @@ Partial Public Class rptEMEATimberStdDoorSizesSub
         'Detail
         '
         Me.Detail.Controls.AddRange(New GrapeCity.ActiveReports.SectionReportModel.ARControl() {Me.HWSet, Me.Thickness, Me.Rating})
-        Me.Detail.Height = 0.2!
+        Me.Detail.Height = 0.15!
         Me.Detail.Name = "Detail"
         '
         'HWSet
         '
         Me.HWSet.DataField = "SetName"
-        Me.HWSet.Height = 0.2!
-        Me.HWSet.Left = 1.0!
+        Me.HWSet.Height = 0.15!
+        Me.HWSet.Left = 0.0!
         Me.HWSet.Name = "HWSet"
-        Me.HWSet.Style = "font-size: 9pt; font-weight: bold; text-align: left; ddo-char-set: 1"
+        Me.HWSet.Style = "font-size: 8pt; font-weight: bold; text-align: left; ddo-char-set: 1"
         Me.HWSet.Text = "HW Set"
         Me.HWSet.Top = 0.0!
-        Me.HWSet.Width = 1.0!
+        Me.HWSet.Width = 1.25!
         '
         'Thickness
         '
+        Me.Thickness.CanShrink = True
         Me.Thickness.DataField = "Thickness"
-        Me.Thickness.Height = 0.2!
-        Me.Thickness.Left = 2.0!
+        Me.Thickness.Height = 0.15!
+        Me.Thickness.Left = 1.25!
         Me.Thickness.Name = "Thickness"
-        Me.Thickness.Style = "font-size: 9pt; font-weight: bold; text-align: left; ddo-char-set: 1"
+        Me.Thickness.Style = "font-size: 8pt; font-weight: bold; text-align: left; ddo-char-set: 1"
         Me.Thickness.Text = "Thickness"
         Me.Thickness.Top = 0.0!
         Me.Thickness.Width = 1.0!
         '
         'Rating
         '
+        Me.Rating.CanShrink = True
         Me.Rating.DataField = "Rating"
-        Me.Rating.Height = 0.2!
-        Me.Rating.Left = 3.0!
+        Me.Rating.Height = 0.15!
+        Me.Rating.Left = 2.25!
         Me.Rating.Name = "Rating"
-        Me.Rating.Style = "font-size: 9pt; font-weight: bold; text-align: left; ddo-char-set: 1"
+        Me.Rating.Style = "font-size: 8pt; font-weight: bold; text-align: left; ddo-char-set: 1"
         Me.Rating.Text = "Rating"
         Me.Rating.Top = 0.0!
-        Me.Rating.Width = 1.0!
-        '
-        'GroupHeader1
-        '
-        Me.GroupHeader1.Height = 0.0!
-        Me.GroupHeader1.Name = "GroupHeader1"
-        '
-        'GroupFooter1
-        '
-        Me.GroupFooter1.Name = "GroupFooter1"
+        Me.Rating.Width = 2.5!
         '
         'rptEMEATimberStdDoorSizesSub
         '
         Me.MasterReport = False
-        Me.PageSettings.PaperHeight = 11.0!
-        Me.PageSettings.PaperWidth = 8.5!
-        Me.PrintWidth = 3.989584!
-        Me.Sections.Add(Me.GroupHeader1)
+        Me.PageSettings.DefaultPaperSize = False
+        Me.PageSettings.Orientation = GrapeCity.ActiveReports.Document.Section.PageOrientation.Portrait
+        Me.PageSettings.PaperHeight = 11.69!
+        Me.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.A4
+        Me.PageSettings.PaperWidth = 8.27!
+        Me.PrintWidth = 4.74!
         Me.Sections.Add(Me.Detail)
-        Me.Sections.Add(Me.GroupFooter1)
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-family: Arial; font-style: normal; text-decoration: none; font-weight: norma" & _
             "l; font-size: 10pt; color: Black; ddo-char-set: 204", "Normal"))
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-size: 16pt; font-weight: bold", "Heading1", "Normal"))
@@ -99,6 +91,4 @@ Partial Public Class rptEMEATimberStdDoorSizesSub
     Private WithEvents HWSet As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents Thickness As GrapeCity.ActiveReports.SectionReportModel.TextBox
     Private WithEvents Rating As GrapeCity.ActiveReports.SectionReportModel.TextBox
-    Private WithEvents GroupHeader1 As GrapeCity.ActiveReports.SectionReportModel.GroupHeader
-    Private WithEvents GroupFooter1 As GrapeCity.ActiveReports.SectionReportModel.GroupFooter
 End Class

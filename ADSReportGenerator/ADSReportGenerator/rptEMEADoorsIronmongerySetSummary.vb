@@ -14,7 +14,7 @@ Public Class rptEMEADoorsIronmongerySetSummary
 
         lblProjectName.Text = sHash.Item("lblPrjName")
         lblProjectRef.Text = sHash.Item("lblPrjRef")
-        lblRev.Text = sHash.Item("lblRev")
+        lblRev.Text = sHash.Item("lblRevNo")
         lblProjectOwner.Text = sHash.Item("lblPrjOwner")
         lblOf.Text = sHash.Item("lblOf")
         lblPage.Text = sHash.Item("lblPage")
@@ -28,7 +28,6 @@ Public Class rptEMEADoorsIronmongerySetSummary
         lblUnitRate.Text = sHash.Item("lblUnitRate")
         lblTotalSum.Text = sHash.Item("lblTotalSum")
         lblTotDoors.Text = sHash.Item("lblTotDoors")
-        lblNotes.Text = sHash.Item("lblNotes")
 
         Footer.Text = sHash.Item("txtFooter")
 
